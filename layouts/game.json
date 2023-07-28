@@ -1,0 +1,4459 @@
+{
+  "b": 209,
+  "disableInputWhenNotFocused": true,
+  "mangledName": "Game",
+  "name": "Game",
+  "r": 209,
+  "standardSortMethod": true,
+  "stopSoundsOnStartup": true,
+  "title": "",
+  "v": 209,
+  "uiSettings": {
+    "grid": true,
+    "gridType": "rectangular",
+    "gridWidth": 32,
+    "gridHeight": 32,
+    "gridOffsetX": 0,
+    "gridOffsetY": 0,
+    "gridColor": 10401023,
+    "gridAlpha": 0.8,
+    "snap": true,
+    "zoomFactor": 0.39091049650571097,
+    "windowMask": false
+  },
+  "objectsGroups": [
+    {
+      "name": "TouchScreenTutorial",
+      "objects": [
+        {
+          "name": "Limit"
+        },
+        {
+          "name": "TutorialTouchscreenJump"
+        },
+        {
+          "name": "TutorialTouchscreenDuck"
+        }
+      ]
+    },
+    {
+      "name": "TutorialObjects",
+      "objects": [
+        {
+          "name": "TutorialTouchscreenJump"
+        },
+        {
+          "name": "TutorialTouchscreenDuck"
+        },
+        {
+          "name": "Limit"
+        },
+        {
+          "name": "TutorialSprite"
+        }
+      ]
+    },
+    {
+      "name": "MovingObjects",
+      "objects": [
+        {
+          "name": "CactusObstacle"
+        },
+        {
+          "name": "IslandObstacle"
+        },
+        {
+          "name": "BonusObject"
+        }
+      ]
+    }
+  ],
+  "variables": [
+    {
+      "name": "ObstacleType",
+      "type": "number",
+      "value": 0
+    },
+    {
+      "name": "GameStatus",
+      "type": "string",
+      "value": "Preparing"
+    },
+    {
+      "name": "PlayerName",
+      "type": "string",
+      "value": ""
+    },
+    {
+      "name": "ObstacleSpeed",
+      "type": "number",
+      "value": 550
+    },
+    {
+      "name": "ObstacleSpawnDelay",
+      "type": "string",
+      "value": "2"
+    },
+    {
+      "name": "CactusInField",
+      "type": "number",
+      "value": 0
+    },
+    {
+      "name": "SpawnedCactusInField",
+      "type": "number",
+      "value": 0
+    }
+  ],
+  "instances": [
+    {
+      "angle": 0,
+      "customSize": true,
+      "height": 64,
+      "layer": "",
+      "name": "Platform",
+      "persistentUuid": "59a6a8b0-78a3-4661-85c0-62f4cc9ef72e",
+      "width": 960,
+      "x": 0,
+      "y": 1152,
+      "zOrder": 4,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 0,
+      "height": 44,
+      "layer": "",
+      "name": "ScoreText",
+      "persistentUuid": "b4cdf63a-8d7e-4bd0-83ee-8dfd60fd49dd",
+      "width": 541,
+      "x": 21,
+      "y": 480,
+      "zOrder": 14,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 0,
+      "height": 960,
+      "layer": "Background",
+      "name": "Background",
+      "persistentUuid": "48c699d8-eec9-4115-ae30-822d8389a521",
+      "width": 992,
+      "x": 0,
+      "y": 192,
+      "zOrder": 17,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 0,
+      "height": 429,
+      "layer": "",
+      "name": "TutorialSprite",
+      "persistentUuid": "20ccb8d2-a0f4-4d6b-a908-74bb4a0149fe",
+      "width": 520,
+      "x": 56,
+      "y": 553,
+      "zOrder": 27,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "TouchButtons",
+      "name": "JumpButton",
+      "persistentUuid": "e5f23674-5d6a-451c-b857-44c5a0f9ff51",
+      "width": 0,
+      "x": 0,
+      "y": 0,
+      "zOrder": 29,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "height": 294,
+      "layer": "TouchButtons",
+      "name": "DuckButton",
+      "persistentUuid": "31cb7b91-db5c-40c9-8d70-550f41d6157b",
+      "width": 960,
+      "x": 0,
+      "y": 250,
+      "zOrder": 30,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "name": "TutorialTouchscreenJump",
+      "persistentUuid": "f007fe19-0b98-419e-a9d4-3911b45fbbcb",
+      "width": 0,
+      "x": 576,
+      "y": 704,
+      "zOrder": 31,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "name": "TutorialTouchscreenDuck",
+      "persistentUuid": "b5dec053-e367-4c4c-a9c9-4b98ee19087a",
+      "width": 0,
+      "x": 576,
+      "y": 916,
+      "zOrder": 32,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "height": 32,
+      "layer": "",
+      "name": "Limit",
+      "persistentUuid": "ba58fff4-f170-43ac-b897-f9885c348dcd",
+      "width": 960,
+      "x": 0,
+      "y": 960,
+      "zOrder": 33,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 0,
+      "height": 169,
+      "layer": "",
+      "name": "Dino",
+      "persistentUuid": "4355f663-4fd5-41b2-83c2-2c5f313938d9",
+      "width": 221,
+      "x": 70,
+      "y": 993,
+      "zOrder": 34,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    }
+  ],
+  "objects": [
+    {
+      "adaptCollisionMaskAutomatically": false,
+      "assetStoreId": "",
+      "name": "CactusObstacle",
+      "tags": "",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [
+        {
+          "name": "DestroyOutside",
+          "type": "DestroyOutsideBehavior::DestroyOutside",
+          "extraBorder": 1000
+        }
+      ],
+      "animations": [
+        {
+          "name": "Cactus3",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": true,
+              "timeBetweenFrames": 0.02500000037252903,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets/Cactus3-1.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 43,
+                    "y": 96
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0.01171875,
+                        "y": 38.86328125
+                      },
+                      {
+                        "x": 86,
+                        "y": 0
+                      },
+                      {
+                        "x": 86,
+                        "y": 96
+                      },
+                      {
+                        "x": 0,
+                        "y": 96
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "adaptCollisionMaskAutomatically": false,
+      "assetStoreId": "",
+      "name": "IslandObstacle",
+      "tags": "",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [
+        {
+          "name": "Reward",
+          "type": "number",
+          "value": 0
+        }
+      ],
+      "effects": [],
+      "behaviors": [
+        {
+          "name": "DestroyOutside",
+          "type": "DestroyOutsideBehavior::DestroyOutside",
+          "extraBorder": 1000
+        },
+        {
+          "name": "Platform",
+          "type": "PlatformBehavior::PlatformBehavior",
+          "platformType": "NormalPlatform",
+          "canBeGrabbed": false,
+          "yGrabOffset": 0
+        }
+      ],
+      "animations": [
+        {
+          "name": "",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets/Duck_Island.png",
+                  "points": [
+                    {
+                      "name": "RewardUp",
+                      "x": 62,
+                      "y": -32
+                    },
+                    {
+                      "name": "RewardDown",
+                      "x": 62,
+                      "y": 104
+                    }
+                  ],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 62,
+                    "y": 66
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 0
+                      },
+                      {
+                        "x": 128,
+                        "y": 0
+                      },
+                      {
+                        "x": 128,
+                        "y": 66
+                      },
+                      {
+                        "x": 0,
+                        "y": 66
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "assetStoreId": "",
+      "bold": false,
+      "italic": false,
+      "name": "ScoreText",
+      "smoothed": true,
+      "tags": "",
+      "type": "TextObject::Text",
+      "underlined": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "string": "Press any key to start running.",
+      "font": "Nathaniel-19.otf",
+      "textAlignment": "",
+      "characterSize": 30,
+      "color": {
+        "b": 42,
+        "g": 87,
+        "r": 139
+      }
+    },
+    {
+      "adaptCollisionMaskAutomatically": false,
+      "assetStoreId": "",
+      "name": "TutorialSprite",
+      "tags": "",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "animations": [
+        {
+          "name": "Desktop",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "assets/tutorial.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "adaptCollisionMaskAutomatically": false,
+      "assetStoreId": "",
+      "name": "BonusObject",
+      "tags": "",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [],
+      "effects": [
+        {
+          "effectType": "Glow",
+          "name": "Effect",
+          "doubleParameters": {
+            "distance": 15,
+            "innerStrength": 1,
+            "outerStrength": 2
+          },
+          "stringParameters": {
+            "color": "51;220;255"
+          },
+          "booleanParameters": {}
+        }
+      ],
+      "behaviors": [
+        {
+          "name": "DestroyOutside",
+          "type": "DestroyOutsideBehavior::DestroyOutside",
+          "extraBorder": 1000
+        }
+      ],
+      "animations": [
+        {
+          "name": "Bonus",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": true,
+              "timeBetweenFrames": 0.02500000037252903,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "assets/CarGirlWheel-1.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 30,
+                    "y": 30
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "additive": false,
+      "assetStoreId": "",
+      "destroyWhenNoParticles": true,
+      "emitterAngleA": 0,
+      "emitterAngleB": 90,
+      "emitterForceMax": 85,
+      "emitterForceMin": 45,
+      "flow": 20,
+      "jumpForwardInTimeOnCreation": 0,
+      "maxParticleNb": 10,
+      "name": "BonusParticle",
+      "particleAlpha1": 204,
+      "particleAlpha2": 0,
+      "particleAlphaRandomness1": 0,
+      "particleAlphaRandomness2": 0,
+      "particleAngle1": 0,
+      "particleAngle2": 0,
+      "particleAngleRandomness1": 0,
+      "particleAngleRandomness2": 0,
+      "particleBlue1": 226,
+      "particleBlue2": 255,
+      "particleGravityX": 0,
+      "particleGravityY": 0,
+      "particleGreen1": 173,
+      "particleGreen2": 239,
+      "particleLifeTimeMax": 1.5,
+      "particleLifeTimeMin": 0.5,
+      "particleRed1": 74,
+      "particleRed2": 17,
+      "particleSize1": 100,
+      "particleSize2": 100,
+      "particleSizeRandomness1": 0,
+      "particleSizeRandomness2": 0,
+      "rendererParam1": 3,
+      "rendererParam2": 1,
+      "rendererType": "Point",
+      "tags": "",
+      "tank": 10,
+      "textureParticleName": "",
+      "type": "ParticleSystem::ParticleEmitter",
+      "zoneRadius": 32,
+      "variables": [],
+      "effects": [],
+      "behaviors": []
+    },
+    {
+      "adaptCollisionMaskAutomatically": false,
+      "assetStoreId": "",
+      "name": "TutorialTouchscreenJump",
+      "tags": "",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "animations": [
+        {
+          "name": "",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": true,
+              "timeBetweenFrames": 0.5,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "assets/tutorialTouchScreen_1.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                },
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "assets/tutorialTouchScreen_2.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                },
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "assets/tutorialTouchScreen_3.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "adaptCollisionMaskAutomatically": false,
+      "assetStoreId": "",
+      "name": "TutorialTouchscreenDuck",
+      "tags": "",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "animations": [
+        {
+          "name": "",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": true,
+              "timeBetweenFrames": 0.5,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "assets/tutorialTouchScreen_duck_1.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                },
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "assets/tutorialTouchScreen_duck_2.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                },
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "assets/tutorialTouchScreen_duck_3.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "adaptCollisionMaskAutomatically": false,
+      "assetStoreId": "",
+      "name": "JumpButton",
+      "tags": "",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "animations": [
+        {
+          "name": "JumpButton",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.07999999821186066,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "DuckButton-1.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "adaptCollisionMaskAutomatically": false,
+      "assetStoreId": "",
+      "name": "DuckButton",
+      "tags": "",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "animations": [
+        {
+          "name": "DuckButton",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.07999999821186066,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "JumpButton-1-0.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "assetStoreId": "",
+      "height": 32,
+      "name": "Limit",
+      "tags": "",
+      "texture": "NewFile-1.png",
+      "type": "TiledSpriteObject::TiledSprite",
+      "width": 32,
+      "variables": [],
+      "effects": [],
+      "behaviors": []
+    },
+    {
+      "adaptCollisionMaskAutomatically": false,
+      "assetStoreId": "",
+      "name": "Dino",
+      "tags": "",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [
+        {
+          "name": "Anchor",
+          "type": "AnchorBehavior::AnchorBehavior",
+          "bottomEdgeAnchor": 0,
+          "leftEdgeAnchor": 1,
+          "relativeToOriginalWindowSize": true,
+          "rightEdgeAnchor": 0,
+          "topEdgeAnchor": 0
+        },
+        {
+          "name": "PlatformerObject",
+          "type": "PlatformBehavior::PlatformerObjectBehavior",
+          "acceleration": 1500,
+          "canGoDownFromJumpthru": true,
+          "canGrabPlatforms": false,
+          "canGrabWithoutMoving": false,
+          "deceleration": 1500,
+          "gravity": 2300,
+          "ignoreDefaultControls": true,
+          "jumpSpeed": 1500,
+          "jumpSustainTime": 0,
+          "ladderClimbingSpeed": 150,
+          "maxFallingSpeed": 3000,
+          "maxSpeed": 250,
+          "slopeMaxAngle": 60,
+          "useLegacyTrajectory": false,
+          "xGrabTolerance": 10,
+          "yGrabOffset": 0
+        }
+      ],
+      "animations": [
+        {
+          "name": "Run",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": true,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets/Dino/Dino_Run_1.png",
+                  "points": [
+                    {
+                      "name": "DustProjection",
+                      "x": 25,
+                      "y": 103
+                    }
+                  ],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 90,
+                        "y": 19
+                      },
+                      {
+                        "x": 114,
+                        "y": 40
+                      },
+                      {
+                        "x": 72,
+                        "y": 104
+                      },
+                      {
+                        "x": 32,
+                        "y": 104
+                      },
+                      {
+                        "x": 32,
+                        "y": 19
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets/Dino/Dino_Run_2.png",
+                  "points": [
+                    {
+                      "name": "DustProjection",
+                      "x": 25,
+                      "y": 103
+                    }
+                  ],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 90,
+                        "y": 19
+                      },
+                      {
+                        "x": 114,
+                        "y": 40
+                      },
+                      {
+                        "x": 72,
+                        "y": 104
+                      },
+                      {
+                        "x": 32,
+                        "y": 104
+                      },
+                      {
+                        "x": 32,
+                        "y": 19
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets/Dino/Dino_Run_3.png",
+                  "points": [
+                    {
+                      "name": "DustProjection",
+                      "x": 25,
+                      "y": 103
+                    }
+                  ],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 90,
+                        "y": 19
+                      },
+                      {
+                        "x": 114,
+                        "y": 40
+                      },
+                      {
+                        "x": 72,
+                        "y": 104
+                      },
+                      {
+                        "x": 32,
+                        "y": 104
+                      },
+                      {
+                        "x": 32,
+                        "y": 19
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets/Dino/Dino_Run_4.png",
+                  "points": [
+                    {
+                      "name": "DustProjection",
+                      "x": 25,
+                      "y": 103
+                    }
+                  ],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 90,
+                        "y": 19
+                      },
+                      {
+                        "x": 114,
+                        "y": 40
+                      },
+                      {
+                        "x": 72,
+                        "y": 104
+                      },
+                      {
+                        "x": 32,
+                        "y": 104
+                      },
+                      {
+                        "x": 32,
+                        "y": 19
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets/Dino/Dino_Run_5.png",
+                  "points": [
+                    {
+                      "name": "DustProjection",
+                      "x": 25,
+                      "y": 103
+                    }
+                  ],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 90,
+                        "y": 19
+                      },
+                      {
+                        "x": 114,
+                        "y": 40
+                      },
+                      {
+                        "x": 72,
+                        "y": 104
+                      },
+                      {
+                        "x": 32,
+                        "y": 104
+                      },
+                      {
+                        "x": 32,
+                        "y": 19
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets/Dino/Dino_Run_6.png",
+                  "points": [
+                    {
+                      "name": "DustProjection",
+                      "x": 25,
+                      "y": 103
+                    }
+                  ],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 90,
+                        "y": 19
+                      },
+                      {
+                        "x": 114,
+                        "y": 40
+                      },
+                      {
+                        "x": 72,
+                        "y": 104
+                      },
+                      {
+                        "x": 32,
+                        "y": 104
+                      },
+                      {
+                        "x": 32,
+                        "y": 19
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets/Dino/Dino_Run_7.png",
+                  "points": [
+                    {
+                      "name": "DustProjection",
+                      "x": 25,
+                      "y": 103
+                    }
+                  ],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 90,
+                        "y": 19
+                      },
+                      {
+                        "x": 114,
+                        "y": 40
+                      },
+                      {
+                        "x": 72,
+                        "y": 104
+                      },
+                      {
+                        "x": 32,
+                        "y": 104
+                      },
+                      {
+                        "x": 32,
+                        "y": 19
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets/Dino/Dino_Run_8.png",
+                  "points": [
+                    {
+                      "name": "DustProjection",
+                      "x": 25,
+                      "y": 103
+                    }
+                  ],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 90,
+                        "y": 19
+                      },
+                      {
+                        "x": 114,
+                        "y": 40
+                      },
+                      {
+                        "x": 72,
+                        "y": 104
+                      },
+                      {
+                        "x": 32,
+                        "y": 104
+                      },
+                      {
+                        "x": 32,
+                        "y": 19
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Idle",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": true,
+              "timeBetweenFrames": 0.10000000149011612,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets/Dino/Dino_Idle_1.png",
+                  "points": [
+                    {
+                      "name": "DustProjection",
+                      "x": 25,
+                      "y": 103
+                    }
+                  ],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 90,
+                        "y": 19
+                      },
+                      {
+                        "x": 114,
+                        "y": 40
+                      },
+                      {
+                        "x": 72,
+                        "y": 104
+                      },
+                      {
+                        "x": 32,
+                        "y": 104
+                      },
+                      {
+                        "x": 32,
+                        "y": 19
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets/Dino/Dino_Idle_2.png",
+                  "points": [
+                    {
+                      "name": "DustProjection",
+                      "x": 25,
+                      "y": 103
+                    }
+                  ],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 90,
+                        "y": 19
+                      },
+                      {
+                        "x": 114,
+                        "y": 40
+                      },
+                      {
+                        "x": 72,
+                        "y": 104
+                      },
+                      {
+                        "x": 32,
+                        "y": 104
+                      },
+                      {
+                        "x": 32,
+                        "y": 19
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets/Dino/Dino_Idle_3.png",
+                  "points": [
+                    {
+                      "name": "DustProjection",
+                      "x": 25,
+                      "y": 103
+                    }
+                  ],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 90,
+                        "y": 19
+                      },
+                      {
+                        "x": 114,
+                        "y": 40
+                      },
+                      {
+                        "x": 72,
+                        "y": 104
+                      },
+                      {
+                        "x": 32,
+                        "y": 104
+                      },
+                      {
+                        "x": 32,
+                        "y": 19
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets/Dino/Dino_Idle_4.png",
+                  "points": [
+                    {
+                      "name": "DustProjection",
+                      "x": 25,
+                      "y": 103
+                    }
+                  ],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 90,
+                        "y": 19
+                      },
+                      {
+                        "x": 114,
+                        "y": 40
+                      },
+                      {
+                        "x": 72,
+                        "y": 104
+                      },
+                      {
+                        "x": 32,
+                        "y": 104
+                      },
+                      {
+                        "x": 32,
+                        "y": 19
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets/Dino/Dino_Idle_5.png",
+                  "points": [
+                    {
+                      "name": "DustProjection",
+                      "x": 25,
+                      "y": 103
+                    }
+                  ],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 90,
+                        "y": 19
+                      },
+                      {
+                        "x": 114,
+                        "y": 40
+                      },
+                      {
+                        "x": 72,
+                        "y": 104
+                      },
+                      {
+                        "x": 32,
+                        "y": 104
+                      },
+                      {
+                        "x": 32,
+                        "y": 19
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets/Dino/Dino_Idle_6.png",
+                  "points": [
+                    {
+                      "name": "DustProjection",
+                      "x": 25,
+                      "y": 103
+                    }
+                  ],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 90,
+                        "y": 19
+                      },
+                      {
+                        "x": 114,
+                        "y": 40
+                      },
+                      {
+                        "x": 72,
+                        "y": 104
+                      },
+                      {
+                        "x": 32,
+                        "y": 104
+                      },
+                      {
+                        "x": 32,
+                        "y": 19
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets/Dino/Dino_Idle_7.png",
+                  "points": [
+                    {
+                      "name": "DustProjection",
+                      "x": 25,
+                      "y": 103
+                    }
+                  ],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 90,
+                        "y": 19
+                      },
+                      {
+                        "x": 114,
+                        "y": 40
+                      },
+                      {
+                        "x": 72,
+                        "y": 104
+                      },
+                      {
+                        "x": 32,
+                        "y": 104
+                      },
+                      {
+                        "x": 32,
+                        "y": 19
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets/Dino/Dino_Idle_8.png",
+                  "points": [
+                    {
+                      "name": "DustProjection",
+                      "x": 25,
+                      "y": 103
+                    }
+                  ],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 90,
+                        "y": 19
+                      },
+                      {
+                        "x": 114,
+                        "y": 40
+                      },
+                      {
+                        "x": 72,
+                        "y": 104
+                      },
+                      {
+                        "x": 32,
+                        "y": 104
+                      },
+                      {
+                        "x": 32,
+                        "y": 19
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets/Dino/Dino_Idle_9.png",
+                  "points": [
+                    {
+                      "name": "DustProjection",
+                      "x": 25,
+                      "y": 103
+                    }
+                  ],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 90,
+                        "y": 19
+                      },
+                      {
+                        "x": 114,
+                        "y": 40
+                      },
+                      {
+                        "x": 72,
+                        "y": 104
+                      },
+                      {
+                        "x": 32,
+                        "y": 104
+                      },
+                      {
+                        "x": 32,
+                        "y": 19
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets/Dino/Dino_Idle_10.png",
+                  "points": [
+                    {
+                      "name": "DustProjection",
+                      "x": 25,
+                      "y": 103
+                    }
+                  ],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 90,
+                        "y": 19
+                      },
+                      {
+                        "x": 114,
+                        "y": 40
+                      },
+                      {
+                        "x": 72,
+                        "y": 104
+                      },
+                      {
+                        "x": 32,
+                        "y": 104
+                      },
+                      {
+                        "x": 32,
+                        "y": 19
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Jump",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.10000000149011612,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets/Dino/Dino_Jump_1.png",
+                  "points": [
+                    {
+                      "name": "DustProjection",
+                      "x": 25,
+                      "y": 103
+                    }
+                  ],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 90,
+                        "y": 19
+                      },
+                      {
+                        "x": 114,
+                        "y": 40
+                      },
+                      {
+                        "x": 72,
+                        "y": 104
+                      },
+                      {
+                        "x": 32,
+                        "y": 104
+                      },
+                      {
+                        "x": 32,
+                        "y": 19
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets/Dino/Dino_Jump_4.png",
+                  "points": [
+                    {
+                      "name": "DustProjection",
+                      "x": 25,
+                      "y": 103
+                    }
+                  ],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 90,
+                        "y": 19
+                      },
+                      {
+                        "x": 114,
+                        "y": 40
+                      },
+                      {
+                        "x": 72,
+                        "y": 104
+                      },
+                      {
+                        "x": 32,
+                        "y": 104
+                      },
+                      {
+                        "x": 32,
+                        "y": 19
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets/Dino/Dino_Jump_5.png",
+                  "points": [
+                    {
+                      "name": "DustProjection",
+                      "x": 25,
+                      "y": 103
+                    }
+                  ],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 90,
+                        "y": 19
+                      },
+                      {
+                        "x": 114,
+                        "y": 40
+                      },
+                      {
+                        "x": 72,
+                        "y": 104
+                      },
+                      {
+                        "x": 32,
+                        "y": 104
+                      },
+                      {
+                        "x": 32,
+                        "y": 19
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets/Dino/Dino_Jump_6.png",
+                  "points": [
+                    {
+                      "name": "DustProjection",
+                      "x": 25,
+                      "y": 103
+                    }
+                  ],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 90,
+                        "y": 19
+                      },
+                      {
+                        "x": 114,
+                        "y": 40
+                      },
+                      {
+                        "x": 72,
+                        "y": 104
+                      },
+                      {
+                        "x": 32,
+                        "y": 104
+                      },
+                      {
+                        "x": 32,
+                        "y": 19
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets/Dino/Dino_Jump_10.png",
+                  "points": [
+                    {
+                      "name": "DustProjection",
+                      "x": 25,
+                      "y": 103
+                    }
+                  ],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 90,
+                        "y": 19
+                      },
+                      {
+                        "x": 114,
+                        "y": 40
+                      },
+                      {
+                        "x": 72,
+                        "y": 104
+                      },
+                      {
+                        "x": 32,
+                        "y": 104
+                      },
+                      {
+                        "x": 32,
+                        "y": 19
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets/Dino/Dino_Jump_11.png",
+                  "points": [
+                    {
+                      "name": "DustProjection",
+                      "x": 25,
+                      "y": 103
+                    }
+                  ],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 90,
+                        "y": 19
+                      },
+                      {
+                        "x": 114,
+                        "y": 40
+                      },
+                      {
+                        "x": 72,
+                        "y": 104
+                      },
+                      {
+                        "x": 32,
+                        "y": 104
+                      },
+                      {
+                        "x": 32,
+                        "y": 19
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets/Dino/Dino_Jump_12.png",
+                  "points": [
+                    {
+                      "name": "DustProjection",
+                      "x": 25,
+                      "y": 103
+                    }
+                  ],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 90,
+                        "y": 19
+                      },
+                      {
+                        "x": 114,
+                        "y": 40
+                      },
+                      {
+                        "x": 72,
+                        "y": 104
+                      },
+                      {
+                        "x": 32,
+                        "y": 104
+                      },
+                      {
+                        "x": 32,
+                        "y": 19
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Duck",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.07999999821186066,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets/Dino/Duck-3.png",
+                  "points": [
+                    {
+                      "name": "DustProjection",
+                      "x": 25,
+                      "y": 103
+                    }
+                  ],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 114,
+                        "y": 78
+                      },
+                      {
+                        "x": 114,
+                        "y": 104
+                      },
+                      {
+                        "x": 32,
+                        "y": 104
+                      },
+                      {
+                        "x": 32,
+                        "y": 78
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets/Dino/Duck-4.png",
+                  "points": [
+                    {
+                      "name": "DustProjection",
+                      "x": 25,
+                      "y": 103
+                    }
+                  ],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 114,
+                        "y": 78
+                      },
+                      {
+                        "x": 114,
+                        "y": 104
+                      },
+                      {
+                        "x": 32,
+                        "y": 104
+                      },
+                      {
+                        "x": 32,
+                        "y": 78
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets/Dino/Duck-5-0.png",
+                  "points": [
+                    {
+                      "name": "DustProjection",
+                      "x": 25,
+                      "y": 103
+                    }
+                  ],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 114,
+                        "y": 78
+                      },
+                      {
+                        "x": 114,
+                        "y": 104
+                      },
+                      {
+                        "x": 32,
+                        "y": 104
+                      },
+                      {
+                        "x": 32,
+                        "y": 78
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets/Dino/Duck-6-0.png",
+                  "points": [
+                    {
+                      "name": "DustProjection",
+                      "x": 25,
+                      "y": 103
+                    }
+                  ],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 114,
+                        "y": 78
+                      },
+                      {
+                        "x": 114,
+                        "y": 104
+                      },
+                      {
+                        "x": 32,
+                        "y": 104
+                      },
+                      {
+                        "x": 32,
+                        "y": 78
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets/Dino/Duck-6.png",
+                  "points": [
+                    {
+                      "name": "DustProjection",
+                      "x": 25,
+                      "y": 103
+                    }
+                  ],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 114,
+                        "y": 78
+                      },
+                      {
+                        "x": 114,
+                        "y": 104
+                      },
+                      {
+                        "x": 32,
+                        "y": 104
+                      },
+                      {
+                        "x": 32,
+                        "y": 78
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets/Dino/Duck-9-0.png",
+                  "points": [
+                    {
+                      "name": "DustProjection",
+                      "x": 25,
+                      "y": 103
+                    }
+                  ],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 114,
+                        "y": 78
+                      },
+                      {
+                        "x": 114,
+                        "y": 104
+                      },
+                      {
+                        "x": 32,
+                        "y": 104
+                      },
+                      {
+                        "x": 32,
+                        "y": 78
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets/Dino/Duck-10-0.png",
+                  "points": [
+                    {
+                      "name": "DustProjection",
+                      "x": 25,
+                      "y": 103
+                    }
+                  ],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 114,
+                        "y": 78
+                      },
+                      {
+                        "x": 114,
+                        "y": 104
+                      },
+                      {
+                        "x": 32,
+                        "y": 104
+                      },
+                      {
+                        "x": 32,
+                        "y": 78
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets/Dino/Duck-9.png",
+                  "points": [
+                    {
+                      "name": "DustProjection",
+                      "x": 25,
+                      "y": 103
+                    }
+                  ],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 114,
+                        "y": 78
+                      },
+                      {
+                        "x": 114,
+                        "y": 104
+                      },
+                      {
+                        "x": 32,
+                        "y": 104
+                      },
+                      {
+                        "x": 32,
+                        "y": 78
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets/Dino/Duck-11.png",
+                  "points": [
+                    {
+                      "name": "DustProjection",
+                      "x": 25,
+                      "y": 103
+                    }
+                  ],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 114,
+                        "y": 78
+                      },
+                      {
+                        "x": 114,
+                        "y": 104
+                      },
+                      {
+                        "x": 32,
+                        "y": 104
+                      },
+                      {
+                        "x": 32,
+                        "y": 78
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Dead",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.10000000149011612,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets/Dino/Dead-1.png",
+                  "points": [
+                    {
+                      "name": "DustProjection",
+                      "x": 25,
+                      "y": 103
+                    }
+                  ],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 114,
+                        "y": 78
+                      },
+                      {
+                        "x": 114,
+                        "y": 104
+                      },
+                      {
+                        "x": 32,
+                        "y": 104
+                      },
+                      {
+                        "x": 32,
+                        "y": 78
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets/Dino/Dead-2.png",
+                  "points": [
+                    {
+                      "name": "DustProjection",
+                      "x": 25,
+                      "y": 103
+                    }
+                  ],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 114,
+                        "y": 78
+                      },
+                      {
+                        "x": 114,
+                        "y": 104
+                      },
+                      {
+                        "x": 32,
+                        "y": 104
+                      },
+                      {
+                        "x": 32,
+                        "y": 78
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets/Dino/Dead-3.png",
+                  "points": [
+                    {
+                      "name": "DustProjection",
+                      "x": 25,
+                      "y": 103
+                    }
+                  ],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 114,
+                        "y": 78
+                      },
+                      {
+                        "x": 114,
+                        "y": 104
+                      },
+                      {
+                        "x": 32,
+                        "y": 104
+                      },
+                      {
+                        "x": 32,
+                        "y": 78
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets/Dino/Dead-4.png",
+                  "points": [
+                    {
+                      "name": "DustProjection",
+                      "x": 25,
+                      "y": 103
+                    }
+                  ],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 114,
+                        "y": 78
+                      },
+                      {
+                        "x": 114,
+                        "y": 104
+                      },
+                      {
+                        "x": 32,
+                        "y": 104
+                      },
+                      {
+                        "x": 32,
+                        "y": 78
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets/Dino/Dead-5.png",
+                  "points": [
+                    {
+                      "name": "DustProjection",
+                      "x": 25,
+                      "y": 103
+                    }
+                  ],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 114,
+                        "y": 78
+                      },
+                      {
+                        "x": 114,
+                        "y": 104
+                      },
+                      {
+                        "x": 32,
+                        "y": 104
+                      },
+                      {
+                        "x": 32,
+                        "y": 78
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets/Dino/Dead-6.png",
+                  "points": [
+                    {
+                      "name": "DustProjection",
+                      "x": 25,
+                      "y": 103
+                    }
+                  ],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 114,
+                        "y": 78
+                      },
+                      {
+                        "x": 114,
+                        "y": 104
+                      },
+                      {
+                        "x": 32,
+                        "y": 104
+                      },
+                      {
+                        "x": 32,
+                        "y": 78
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets/Dino/Dead-7.png",
+                  "points": [
+                    {
+                      "name": "DustProjection",
+                      "x": 25,
+                      "y": 103
+                    }
+                  ],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 114,
+                        "y": 78
+                      },
+                      {
+                        "x": 114,
+                        "y": 104
+                      },
+                      {
+                        "x": 32,
+                        "y": 104
+                      },
+                      {
+                        "x": 32,
+                        "y": 78
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets/Dino/Dead-8.png",
+                  "points": [
+                    {
+                      "name": "DustProjection",
+                      "x": 25,
+                      "y": 103
+                    }
+                  ],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 114,
+                        "y": 78
+                      },
+                      {
+                        "x": 114,
+                        "y": 104
+                      },
+                      {
+                        "x": 32,
+                        "y": 104
+                      },
+                      {
+                        "x": 32,
+                        "y": 78
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "events": [
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "value": "DepartScene"
+          },
+          "parameters": [
+            ""
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "SetAnimationName"
+          },
+          "parameters": [
+            "Dino",
+            "\"Idle\""
+          ]
+        },
+        {
+          "type": {
+            "value": "ModVarGlobal"
+          },
+          "parameters": [
+            "Score",
+            "=",
+            "0"
+          ]
+        },
+        {
+          "type": {
+            "value": "ActivateBehavior"
+          },
+          "parameters": [
+            "Dino",
+            "PlatformerObject",
+            ""
+          ]
+        }
+      ],
+      "events": [
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "SystemInfo::HasTouchScreen"
+              },
+              "parameters": [
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "TextObject::String"
+              },
+              "parameters": [
+                "ScoreText",
+                "=",
+                "\"Touch to start running.\""
+              ]
+            },
+            {
+              "type": {
+                "value": "Cache"
+              },
+              "parameters": [
+                "TutorialSprite"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": true,
+                "value": "SystemInfo::HasTouchScreen"
+              },
+              "parameters": [
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "Cache"
+              },
+              "parameters": [
+                "TouchScreenTutorial"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colorB": 228,
+      "colorG": 74,
+      "colorR": 194,
+      "creationTime": 0,
+      "name": "Game states",
+      "source": "",
+      "type": "BuiltinCommonInstructions::Group",
+      "events": [
+        {
+          "colorB": 228,
+          "colorG": 196,
+          "colorR": 74,
+          "creationTime": 0,
+          "name": "Preparing to start",
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "VarSceneTxt"
+                  },
+                  "parameters": [
+                    "GameStatus",
+                    "=",
+                    "\"Preparing\""
+                  ]
+                }
+              ],
+              "actions": [],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::Or"
+                      },
+                      "parameters": [],
+                      "subInstructions": [
+                        {
+                          "type": {
+                            "value": "AnyKeyReleased"
+                          },
+                          "parameters": [
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "MouseButtonPressed"
+                          },
+                          "parameters": [
+                            "Dino",
+                            "Left"
+                          ]
+                        }
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "ModVarSceneTxt"
+                      },
+                      "parameters": [
+                        "GameStatus",
+                        "=",
+                        "\"Playing\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ResetTimer"
+                      },
+                      "parameters": [
+                        "",
+                        "\"obstacle_spawn\""
+                      ]
+                    }
+                  ],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "Cache"
+                          },
+                          "parameters": [
+                            "TutorialObjects"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetAnimationName"
+                          },
+                          "parameters": [
+                            "Dino",
+                            "\"Run\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ActivateBehavior"
+                          },
+                          "parameters": [
+                            "Dino",
+                            "PlatformerObject",
+                            "yes"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "PlayMusic"
+                          },
+                          "parameters": [
+                            "",
+                            "DesertMusic.mp3",
+                            "yes",
+                            "50",
+                            ""
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Link",
+                      "include": {
+                        "includeConfig": 0
+                      },
+                      "target": "DustEmitterSetup"
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "parameters": []
+        },
+        {
+          "colorB": 228,
+          "colorG": 176,
+          "colorR": 74,
+          "creationTime": 0,
+          "name": "Playing the game",
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "VarSceneTxt"
+                  },
+                  "parameters": [
+                    "GameStatus",
+                    "=",
+                    "\"Playing\""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "TextObject::String"
+                  },
+                  "parameters": [
+                    "ScoreText",
+                    "=",
+                    "\"Score   \" + GlobalVariableString(Score)"
+                  ]
+                }
+              ],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Comment",
+                  "color": {
+                    "b": 109,
+                    "g": 230,
+                    "r": 255,
+                    "textB": 0,
+                    "textG": 0,
+                    "textR": 0
+                  },
+                  "comment": "Create the illusion that Dino is moving by moving the background and platform images"
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "TiledSpriteObject::XOffset"
+                      },
+                      "parameters": [
+                        "Platform",
+                        "+",
+                        "Variable(ObstacleSpeed)*TimeDelta()"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "TiledSpriteObject::XOffset"
+                      },
+                      "parameters": [
+                        "Background",
+                        "+",
+                        "(Variable(ObstacleSpeed)/500)*60*TimeDelta()"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "ParticleSystem::EmitterForceMin"
+                      },
+                      "parameters": [
+                        "DustParticles",
+                        "=",
+                        "Variable(ObstacleSpeed)/2"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ParticleSystem::EmitterForceMax"
+                      },
+                      "parameters": [
+                        "DustParticles",
+                        "=",
+                        "Variable(ObstacleSpeed)/2+45"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ParticleSystem::SetFlow"
+                      },
+                      "parameters": [
+                        "DustParticles",
+                        "=",
+                        "(100/1000)*Variable(ObstacleSpeed)"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ParticleSystem::EmitterAngleB"
+                      },
+                      "parameters": [
+                        "DustParticles",
+                        "=",
+                        "(90/1000)*Variable(ObstacleSpeed)"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "colorB": 228,
+                  "colorG": 176,
+                  "colorR": 74,
+                  "creationTime": 0,
+                  "name": "Dino movements",
+                  "source": "",
+                  "type": "BuiltinCommonInstructions::Group",
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "PlatformBehavior::IsOnFloor"
+                          },
+                          "parameters": [
+                            "Dino",
+                            "PlatformerObject"
+                          ]
+                        }
+                      ],
+                      "actions": [],
+                      "events": [
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "AnimationEnded"
+                              },
+                              "parameters": [
+                                "Dino"
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "SetAnimationName"
+                              },
+                              "parameters": [
+                                "Dino",
+                                "\"Run\""
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Comment",
+                          "color": {
+                            "b": 109,
+                            "g": 230,
+                            "r": 255,
+                            "textB": 0,
+                            "textG": 0,
+                            "textR": 0
+                          },
+                          "comment": "Makes ParticleEmitter follow the Dino if he lands on an Island."
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "BuiltinCommonInstructions::Once"
+                              },
+                              "parameters": []
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "MettreXY"
+                              },
+                              "parameters": [
+                                "DustParticles",
+                                "=",
+                                "Dino.PointX(\"DustProjection\")",
+                                "=",
+                                "Dino.PointY(\"DustProjection\")"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "ParticleSystem::StartEmission"
+                              },
+                              "parameters": [
+                                "DustParticles"
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "inverted": true,
+                            "value": "PlatformBehavior::IsOnFloor"
+                          },
+                          "parameters": [
+                            "Dino",
+                            "PlatformerObject"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::Once"
+                          },
+                          "parameters": []
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "ParticleSystem::StopEmission"
+                          },
+                          "parameters": [
+                            "DustParticles"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "colorB": 228,
+                      "colorG": 176,
+                      "colorR": 74,
+                      "creationTime": 0,
+                      "name": "Sounds",
+                      "source": "",
+                      "type": "BuiltinCommonInstructions::Group",
+                      "events": [
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "PlatformBehavior::IsJumping"
+                              },
+                              "parameters": [
+                                "Dino",
+                                "PlatformerObject"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "BuiltinCommonInstructions::Once"
+                              },
+                              "parameters": []
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "PlaySound"
+                              },
+                              "parameters": [
+                                "",
+                                "Jump.mp3",
+                                "",
+                                "100",
+                                "1"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "SetAnimationName"
+                              },
+                              "parameters": [
+                                "Dino",
+                                "\"Jump\""
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "AnimationName"
+                              },
+                              "parameters": [
+                                "Dino",
+                                "\"Duck\""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "BuiltinCommonInstructions::Once"
+                              },
+                              "parameters": []
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "PlaySound"
+                              },
+                              "parameters": [
+                                "",
+                                "Skid.mp3",
+                                "",
+                                "30",
+                                "1"
+                              ]
+                            }
+                          ]
+                        }
+                      ],
+                      "parameters": []
+                    },
+                    {
+                      "colorB": 228,
+                      "colorG": 176,
+                      "colorR": 74,
+                      "creationTime": 0,
+                      "name": "Controls",
+                      "source": "",
+                      "type": "BuiltinCommonInstructions::Group",
+                      "events": [
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "KeyPressed"
+                              },
+                              "parameters": [
+                                "Dino",
+                                "Up"
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "PlatformBehavior::SimulateJumpKey"
+                              },
+                              "parameters": [
+                                "Dino",
+                                "PlatformerObject"
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "KeyPressed"
+                              },
+                              "parameters": [
+                                "Dino",
+                                "Down"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "PlatformBehavior::IsOnFloor"
+                              },
+                              "parameters": [
+                                "Dino",
+                                "PlatformerObject"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "BuiltinCommonInstructions::Once"
+                              },
+                              "parameters": []
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "SetAnimationName"
+                              },
+                              "parameters": [
+                                "Dino",
+                                "\"Duck\""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "MettreX"
+                              },
+                              "parameters": [
+                                "DustParticles",
+                                "=",
+                                "Dino.BoundingBoxRight()"
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Comment",
+                          "color": {
+                            "b": 109,
+                            "g": 230,
+                            "r": 255,
+                            "textB": 0,
+                            "textG": 0,
+                            "textR": 0
+                          },
+                          "comment": "Handle touchscreen."
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "MouseButtonPressed"
+                              },
+                              "parameters": [
+                                "Dino",
+                                "Left"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "BuiltinCommonInstructions::Once"
+                              },
+                              "parameters": []
+                            }
+                          ],
+                          "actions": [],
+                          "events": [
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "value": "SourisSurObjet"
+                                  },
+                                  "parameters": [
+                                    "JumpButton",
+                                    "",
+                                    "",
+                                    ""
+                                  ]
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "PlatformBehavior::SimulateJumpKey"
+                                  },
+                                  "parameters": [
+                                    "Dino",
+                                    "PlatformerObject"
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "value": "SourisSurObjet"
+                                  },
+                                  "parameters": [
+                                    "DuckButton",
+                                    "",
+                                    "",
+                                    ""
+                                  ]
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "SetAnimationName"
+                                  },
+                                  "parameters": [
+                                    "Dino",
+                                    "\"Duck\""
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "MettreX"
+                                  },
+                                  "parameters": [
+                                    "DustParticles",
+                                    "=",
+                                    "Dino.BoundingBoxRight()"
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ],
+                      "parameters": []
+                    }
+                  ],
+                  "parameters": []
+                },
+                {
+                  "colorB": 228,
+                  "colorG": 176,
+                  "colorR": 74,
+                  "creationTime": 0,
+                  "name": "Score",
+                  "source": "",
+                  "type": "BuiltinCommonInstructions::Group",
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "ModVarGlobal"
+                          },
+                          "parameters": [
+                            "Score",
+                            "+",
+                            "round(TimeDelta()*100)"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "CollisionNP"
+                          },
+                          "parameters": [
+                            "Dino",
+                            "BonusObject",
+                            "",
+                            "",
+                            ""
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "ModVarGlobal"
+                          },
+                          "parameters": [
+                            "Score",
+                            "+",
+                            "500"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "Create"
+                          },
+                          "parameters": [
+                            "",
+                            "BonusParticle",
+                            "Dino.CenterX()",
+                            "Dino.CenterY()",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ParticleSystem::EmitterAngle"
+                          },
+                          "parameters": [
+                            "BonusParticle",
+                            "=",
+                            "-90"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "Delete"
+                          },
+                          "parameters": [
+                            "BonusObject",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "PlaySound"
+                          },
+                          "parameters": [
+                            "",
+                            "Bonus.mp3",
+                            "",
+                            "100",
+                            "0.5"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetCenter"
+                          },
+                          "parameters": [
+                            "BonusParticle",
+                            "=",
+                            "Dino.CenterX()",
+                            "=",
+                            "Dino.CenterY()"
+                          ]
+                        }
+                      ]
+                    }
+                  ],
+                  "parameters": []
+                },
+                {
+                  "colorB": 228,
+                  "colorG": 176,
+                  "colorR": 74,
+                  "creationTime": 0,
+                  "name": "Obstacle spawn",
+                  "source": "",
+                  "type": "BuiltinCommonInstructions::Group",
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Comment",
+                      "color": {
+                        "b": 109,
+                        "g": 230,
+                        "r": 255,
+                        "textB": 0,
+                        "textG": 0,
+                        "textR": 0
+                      },
+                      "comment": "Increase difficulty with score by reducing the spawn delay (min. 0.7 second) and increasing obstacle speed (max. 2000)"
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "VarScene"
+                          },
+                          "parameters": [
+                            "ObstacleSpeed",
+                            "<",
+                            "2000"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "ModVarScene"
+                          },
+                          "parameters": [
+                            "ObstacleSpeed",
+                            "+",
+                            "TimeDelta()*8"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "VarScene"
+                          },
+                          "parameters": [
+                            "ObstacleSpawnDelay",
+                            ">",
+                            "0.7"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "ModVarScene"
+                          },
+                          "parameters": [
+                            "ObstacleSpawnDelay",
+                            "-",
+                            "TimeDelta()/30"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Comment",
+                      "color": {
+                        "b": 109,
+                        "g": 230,
+                        "r": 255,
+                        "textB": 0,
+                        "textG": 0,
+                        "textR": 0
+                      },
+                      "comment": "Randomly chose the obstacle type (0: single cactus, 1: island, 2: Cactus field) when spawn delay is reached. Once the obstacle is created, we reset the spawn timer.\nWe want to avoid scaling the force applied to one obstacle when it is already on screen, so we apply a permanent force."
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "CompareTimer"
+                          },
+                          "parameters": [
+                            "",
+                            "\"obstacle_spawn\"",
+                            ">=",
+                            "Variable(ObstacleSpawnDelay)"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "ModVarScene"
+                          },
+                          "parameters": [
+                            "ObstacleType",
+                            "=",
+                            "RandomInRange(0,2)"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ResetTimer"
+                          },
+                          "parameters": [
+                            "",
+                            "\"obstacle_spawn\""
+                          ]
+                        }
+                      ],
+                      "events": [
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "VarScene"
+                              },
+                              "parameters": [
+                                "ObstacleType",
+                                "=",
+                                "0"
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "Create"
+                              },
+                              "parameters": [
+                                "",
+                                "CactusObstacle",
+                                "RandomInRange(75, 125) + SceneWindowWidth()",
+                                "Platform.BoundingBoxTop()",
+                                ""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "AddForceAL"
+                              },
+                              "parameters": [
+                                "CactusObstacle",
+                                "180",
+                                "Variable(ObstacleSpeed)",
+                                "1"
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Comment",
+                          "color": {
+                            "b": 109,
+                            "g": 230,
+                            "r": 255,
+                            "textB": 0,
+                            "textG": 0,
+                            "textR": 0
+                          },
+                          "comment": "Create an island with a reward (0: reward on bottom, 1: reward on top, 3: no reward)."
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "VarScene"
+                              },
+                              "parameters": [
+                                "ObstacleType",
+                                "=",
+                                "1"
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "Create"
+                              },
+                              "parameters": [
+                                "",
+                                "IslandObstacle",
+                                "RandomInRange(75, 125) + SceneWindowWidth()",
+                                "Platform.BoundingBoxTop() - 64",
+                                ""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "ModVarObjet"
+                              },
+                              "parameters": [
+                                "IslandObstacle",
+                                "Reward",
+                                "=",
+                                "RandomInRange(0, 2)"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "AddForceAL"
+                              },
+                              "parameters": [
+                                "IslandObstacle",
+                                "180",
+                                "Variable(ObstacleSpeed)",
+                                "1"
+                              ]
+                            }
+                          ],
+                          "events": [
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "value": "VarObjet"
+                                  },
+                                  "parameters": [
+                                    "IslandObstacle",
+                                    "Reward",
+                                    "=",
+                                    "0"
+                                  ]
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "Create"
+                                  },
+                                  "parameters": [
+                                    "",
+                                    "BonusObject",
+                                    "IslandObstacle.PointX(\"RewardUp\")",
+                                    "IslandObstacle.PointY(\"RewardUp\")",
+                                    ""
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "AddForceAL"
+                                  },
+                                  "parameters": [
+                                    "BonusObject",
+                                    "180",
+                                    "Variable(ObstacleSpeed)",
+                                    "1"
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "value": "VarObjet"
+                                  },
+                                  "parameters": [
+                                    "IslandObstacle",
+                                    "Reward",
+                                    "=",
+                                    "1"
+                                  ]
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "Create"
+                                  },
+                                  "parameters": [
+                                    "",
+                                    "BonusObject",
+                                    "IslandObstacle.PointX(\"RewardDown\")",
+                                    "IslandObstacle.PointY(\"RewardDown\")",
+                                    ""
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "AddForceAL"
+                                  },
+                                  "parameters": [
+                                    "BonusObject",
+                                    "180",
+                                    "Variable(ObstacleSpeed)",
+                                    "1"
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Comment",
+                          "color": {
+                            "b": 109,
+                            "g": 230,
+                            "r": 255,
+                            "textB": 0,
+                            "textG": 0,
+                            "textR": 0
+                          },
+                          "comment": "Spawn a cactus field of length scaling with score (max 4)."
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "VarScene"
+                              },
+                              "parameters": [
+                                "ObstacleType",
+                                "=",
+                                "2"
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "ModVarScene"
+                              },
+                              "parameters": [
+                                "CactusInField",
+                                "=",
+                                "RandomInRange(1, 1 + round(clamp(GlobalVariable(Score)/3000, 0, 4)))"
+                              ]
+                            }
+                          ],
+                          "events": [
+                            {
+                              "infiniteLoopWarning": true,
+                              "type": "BuiltinCommonInstructions::While",
+                              "whileConditions": [
+                                {
+                                  "type": {
+                                    "value": "VarScene"
+                                  },
+                                  "parameters": [
+                                    "SpawnedCactusInField",
+                                    "<",
+                                    "Variable(CactusInField)"
+                                  ]
+                                }
+                              ],
+                              "conditions": [],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "Create"
+                                  },
+                                  "parameters": [
+                                    "",
+                                    "CactusObstacle",
+                                    "100 + SceneWindowWidth()+Variable(SpawnedCactusInField)*70",
+                                    "Platform.BoundingBoxTop()",
+                                    ""
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "AddForceAL"
+                                  },
+                                  "parameters": [
+                                    "CactusObstacle",
+                                    "180",
+                                    "Variable(ObstacleSpeed)",
+                                    "1"
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "ModVarScene"
+                                  },
+                                  "parameters": [
+                                    "SpawnedCactusInField",
+                                    "+",
+                                    "1"
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "ModVarScene"
+                                  },
+                                  "parameters": [
+                                    "SpawnedCactusInField",
+                                    "=",
+                                    "0"
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ],
+                  "parameters": []
+                },
+                {
+                  "colorB": 228,
+                  "colorG": 176,
+                  "colorR": 74,
+                  "creationTime": 0,
+                  "name": "Game Over",
+                  "source": "",
+                  "type": "BuiltinCommonInstructions::Group",
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Comment",
+                      "color": {
+                        "b": 109,
+                        "g": 230,
+                        "r": 255,
+                        "textB": 0,
+                        "textG": 0,
+                        "textR": 0
+                      },
+                      "comment": "Player loses when either of these conditions is checked :\n- Dino collided with a Cactus\n- Dino collided with an Island and is under it (= the played did not duck)"
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::Or"
+                          },
+                          "parameters": [],
+                          "subInstructions": [
+                            {
+                              "type": {
+                                "value": "CollisionNP"
+                              },
+                              "parameters": [
+                                "Dino",
+                                "CactusObstacle",
+                                "",
+                                "",
+                                ""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "BuiltinCommonInstructions::And"
+                              },
+                              "parameters": [],
+                              "subInstructions": [
+                                {
+                                  "type": {
+                                    "value": "CollisionNP"
+                                  },
+                                  "parameters": [
+                                    "Dino",
+                                    "IslandObstacle",
+                                    "",
+                                    "",
+                                    "yes"
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "BoundingBoxBottom"
+                                  },
+                                  "parameters": [
+                                    "Dino",
+                                    ">",
+                                    "IslandObstacle.BoundingBoxCenterY()"
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "PlatformBehavior::PlatformerObjectBehavior::AbortJump"
+                          },
+                          "parameters": [
+                            "Dino",
+                            "PlatformerObject"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetAnimationName"
+                          },
+                          "parameters": [
+                            "Dino",
+                            "\"Dead\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ModVarSceneTxt"
+                          },
+                          "parameters": [
+                            "GameStatus",
+                            "=",
+                            "\"Dead\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "PauseTimer"
+                          },
+                          "parameters": [
+                            "",
+                            "\"obstacle_spawn\""
+                          ]
+                        }
+                      ],
+                      "events": [
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "AjoutObjConcern"
+                              },
+                              "parameters": [
+                                "",
+                                "MovingObjects"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "Arreter"
+                              },
+                              "parameters": [
+                                "MovingObjects"
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "PlaySound"
+                              },
+                              "parameters": [
+                                "",
+                                "Death.mp3",
+                                "",
+                                "30",
+                                "0.5"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "ParticleSystem::StopEmission"
+                              },
+                              "parameters": [
+                                "DustParticles"
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ],
+                  "parameters": []
+                }
+              ]
+            }
+          ],
+          "parameters": []
+        },
+        {
+          "colorB": 228,
+          "colorG": 147,
+          "colorR": 74,
+          "creationTime": 0,
+          "name": "Game lost",
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "VarSceneTxt"
+                  },
+                  "parameters": [
+                    "GameStatus",
+                    "=",
+                    "\"Dead\""
+                  ]
+                }
+              ],
+              "actions": [],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "AnimationName"
+                      },
+                      "parameters": [
+                        "Dino",
+                        "\"Dead\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "AnimationEnded"
+                      },
+                      "parameters": [
+                        "Dino"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Scene"
+                      },
+                      "parameters": [
+                        "",
+                        "\"GameOver\"",
+                        "yes"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "parameters": []
+        }
+      ],
+      "parameters": []
+    }
+  ],
+  "layers": [
+    {
+      "ambientLightColorB": -2147483616,
+      "ambientLightColorG": 6032144,
+      "ambientLightColorR": 6124984,
+      "camera3DFarPlaneDistance": 10000,
+      "camera3DFieldOfView": 45,
+      "camera3DNearPlaneDistance": 0.1,
+      "followBaseLayerCamera": false,
+      "isLightingLayer": false,
+      "isLocked": false,
+      "name": "Background",
+      "renderingType": "",
+      "visibility": true,
+      "cameras": [],
+      "effects": []
+    },
+    {
+      "ambientLightColorB": 32,
+      "ambientLightColorG": 0,
+      "ambientLightColorR": 0,
+      "camera3DFarPlaneDistance": 10000,
+      "camera3DFieldOfView": 45,
+      "camera3DNearPlaneDistance": 0.1,
+      "followBaseLayerCamera": false,
+      "isLightingLayer": false,
+      "isLocked": false,
+      "name": "",
+      "renderingType": "",
+      "visibility": true,
+      "cameras": [
+        {
+          "defaultSize": true,
+          "defaultViewport": true,
+          "height": 0,
+          "viewportBottom": 1,
+          "viewportLeft": 0,
+          "viewportRight": 1,
+          "viewportTop": 0,
+          "width": 0
+        }
+      ],
+      "effects": []
+    },
+    {
+      "ambientLightColorB": 167798124,
+      "ambientLightColorG": 6032144,
+      "ambientLightColorR": 8527640,
+      "camera3DFarPlaneDistance": 10000,
+      "camera3DFieldOfView": 45,
+      "camera3DNearPlaneDistance": 0.1,
+      "followBaseLayerCamera": false,
+      "isLightingLayer": false,
+      "isLocked": false,
+      "name": "Gameover UI",
+      "renderingType": "",
+      "visibility": true,
+      "cameras": [],
+      "effects": []
+    },
+    {
+      "ambientLightColorB": 167800431,
+      "ambientLightColorG": 6034960,
+      "ambientLightColorR": 9655904,
+      "camera3DFarPlaneDistance": 10000,
+      "camera3DFieldOfView": 45,
+      "camera3DNearPlaneDistance": 0.1,
+      "followBaseLayerCamera": false,
+      "isLightingLayer": false,
+      "isLocked": false,
+      "name": "TouchButtons",
+      "renderingType": "",
+      "visibility": false,
+      "cameras": [],
+      "effects": []
+    }
+  ],
+  "behaviorsSharedData": [
+    {
+      "name": "Anchor",
+      "type": "AnchorBehavior::AnchorBehavior"
+    },
+    {
+      "name": "Platform",
+      "type": "PlatformBehavior::PlatformBehavior"
+    },
+    {
+      "name": "PlatformerObject",
+      "type": "PlatformBehavior::PlatformerObjectBehavior"
+    }
+  ]
+}

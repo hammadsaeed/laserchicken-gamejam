@@ -1,0 +1,1227 @@
+{
+  "b": 209,
+  "disableInputWhenNotFocused": true,
+  "mangledName": "GameOver",
+  "name": "GameOver",
+  "r": 209,
+  "standardSortMethod": true,
+  "stopSoundsOnStartup": true,
+  "title": "",
+  "v": 209,
+  "uiSettings": {
+    "grid": true,
+    "gridType": "rectangular",
+    "gridWidth": 32,
+    "gridHeight": 32,
+    "gridOffsetX": 0,
+    "gridOffsetY": 0,
+    "gridColor": 10401023,
+    "gridAlpha": 0.8,
+    "snap": true,
+    "zoomFactor": 0.3434471732515074,
+    "windowMask": false
+  },
+  "objectsGroups": [],
+  "variables": [
+    {
+      "name": "LeaderboardScore",
+      "type": "string",
+      "value": ""
+    }
+  ],
+  "instances": [
+    {
+      "angle": 0,
+      "customSize": true,
+      "height": 64,
+      "layer": "",
+      "name": "Platform",
+      "persistentUuid": "c2c6a11c-e8f8-4ee6-aedb-369f62303136",
+      "width": 1152,
+      "x": 0,
+      "y": 1120,
+      "zOrder": 14,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "height": 896,
+      "layer": "Background",
+      "name": "Background",
+      "persistentUuid": "968c9c47-08c4-44eb-917a-906d2ecee36b",
+      "width": 1024,
+      "x": 0,
+      "y": 224,
+      "zOrder": 15,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "height": 320,
+      "layer": "",
+      "name": "ScorePannel",
+      "persistentUuid": "54d42257-be1c-432d-ba5e-53c9de63c893",
+      "width": 512,
+      "x": 96,
+      "y": 544,
+      "zOrder": 16,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "height": 35,
+      "layer": "",
+      "name": "ScoreText",
+      "persistentUuid": "722f1233-75ba-4128-8905-4ac5dd26bc1e",
+      "width": 384,
+      "x": 160,
+      "y": 608,
+      "zOrder": 18,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "height": 41,
+      "layer": "",
+      "name": "PlayerNameInput",
+      "persistentUuid": "a681abd2-5235-4165-a003-4a9553d79cb5",
+      "width": 320,
+      "x": 192,
+      "y": 661,
+      "zOrder": 19,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "name": "SubmitLoader",
+      "persistentUuid": "8c3bfc51-293f-424c-a7f8-ac3f2c50a905",
+      "width": 0,
+      "x": 228,
+      "y": 744,
+      "zOrder": 23,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "name": "Dino",
+      "persistentUuid": "7492fade-8893-494c-88df-6c989bc40a8a",
+      "width": 0,
+      "x": 64,
+      "y": 1014,
+      "zOrder": 25,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "name": "SubmitButton",
+      "persistentUuid": "7b23f42a-648d-4b42-95bd-aad6c1861b5e",
+      "width": 0,
+      "x": 192,
+      "y": 736,
+      "zOrder": 26,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "name": "ScoresButton",
+      "persistentUuid": "c1ff6a1e-ed5f-406e-82ce-0af69ab646fe",
+      "width": 0,
+      "x": 384,
+      "y": 736,
+      "zOrder": 27,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "name": "RestartButton",
+      "persistentUuid": "d239a731-7dae-42f6-bfcb-f0a21413479b",
+      "width": 0,
+      "x": 288,
+      "y": 800,
+      "zOrder": 28,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    }
+  ],
+  "objects": [
+    {
+      "assetStoreId": "",
+      "bottomMargin": 64,
+      "height": 192,
+      "leftMargin": 64,
+      "name": "ScorePannel",
+      "rightMargin": 64,
+      "tags": "",
+      "texture": "9patch_Desert Tile_all_64.png",
+      "tiled": true,
+      "topMargin": 64,
+      "type": "PanelSpriteObject::PanelSprite",
+      "width": 192,
+      "variables": [],
+      "effects": [],
+      "behaviors": []
+    },
+    {
+      "assetStoreId": "",
+      "bold": false,
+      "italic": false,
+      "name": "ScoreText",
+      "smoothed": true,
+      "tags": "",
+      "type": "TextObject::Text",
+      "underlined": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "string": "Score",
+      "font": "Nathaniel-19.otf",
+      "textAlignment": "",
+      "characterSize": 40,
+      "color": {
+        "b": 255,
+        "g": 255,
+        "r": 255
+      }
+    },
+    {
+      "assetStoreId": "",
+      "name": "PlayerNameInput",
+      "tags": "",
+      "type": "TextInput::TextInputObject",
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "content": {
+        "initialValue": "",
+        "placeholder": "PlayerName",
+        "fontResourceName": "Nathaniel-19.otf",
+        "fontSize": 30,
+        "inputType": "text",
+        "textColor": "0;0;0",
+        "fillColor": "245;166;35",
+        "fillOpacity": 255,
+        "borderColor": "245;166;35",
+        "borderOpacity": 255,
+        "borderWidth": 1,
+        "readOnly": false,
+        "disabled": false
+      }
+    },
+    {
+      "assetStoreId": "",
+      "name": "RestartButton",
+      "tags": "",
+      "type": "PanelSpriteButton::PanelSpriteButton",
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "content": {
+        "HoveredFadeOutDuration": 0
+      },
+      "childrenContent": {
+        "Hovered": {
+          "bottomMargin": 11,
+          "height": 47,
+          "leftMargin": 20,
+          "rightMargin": 20,
+          "texture": "assets\\Buttons\\RestartButton.png",
+          "tiled": false,
+          "topMargin": 11,
+          "width": 128
+        },
+        "Idle": {
+          "bottomMargin": 11,
+          "height": 47,
+          "leftMargin": 20,
+          "rightMargin": 20,
+          "texture": "assets\\Buttons\\RestartButton.png",
+          "tiled": false,
+          "topMargin": 11,
+          "width": 128
+        },
+        "Label": {
+          "bold": false,
+          "italic": false,
+          "smoothed": true,
+          "underlined": false,
+          "string": "RETRY",
+          "font": "Nathaniel-19.otf",
+          "textAlignment": "center",
+          "characterSize": 30,
+          "color": {
+            "b": 255,
+            "g": 255,
+            "r": 255
+          }
+        },
+        "Pressed": {
+          "bottomMargin": 11,
+          "height": 47,
+          "leftMargin": 20,
+          "rightMargin": 20,
+          "texture": "assets\\Buttons\\RestartButton.png",
+          "tiled": false,
+          "topMargin": 11,
+          "width": 128
+        }
+      }
+    },
+    {
+      "assetStoreId": "",
+      "name": "SubmitButton",
+      "tags": "",
+      "type": "PanelSpriteButton::PanelSpriteButton",
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "content": {
+        "HoveredFadeOutDuration": 0
+      },
+      "childrenContent": {
+        "Hovered": {
+          "bottomMargin": 11,
+          "height": 47,
+          "leftMargin": 20,
+          "rightMargin": 20,
+          "texture": "assets\\Buttons\\SubmitButton.png",
+          "tiled": false,
+          "topMargin": 11,
+          "width": 128
+        },
+        "Idle": {
+          "bottomMargin": 11,
+          "height": 47,
+          "leftMargin": 20,
+          "rightMargin": 20,
+          "texture": "assets\\Buttons\\SubmitButton.png",
+          "tiled": false,
+          "topMargin": 11,
+          "width": 128
+        },
+        "Label": {
+          "bold": false,
+          "italic": false,
+          "smoothed": true,
+          "underlined": false,
+          "string": "SUBMIT",
+          "font": "Nathaniel-19.otf",
+          "textAlignment": "center",
+          "characterSize": 30,
+          "color": {
+            "b": 255,
+            "g": 255,
+            "r": 255
+          }
+        },
+        "Pressed": {
+          "bottomMargin": 11,
+          "height": 47,
+          "leftMargin": 20,
+          "rightMargin": 20,
+          "texture": "assets\\Buttons\\SubmitButton.png",
+          "tiled": false,
+          "topMargin": 11,
+          "width": 128
+        }
+      }
+    },
+    {
+      "assetStoreId": "",
+      "name": "ScoresButton",
+      "tags": "",
+      "type": "PanelSpriteButton::PanelSpriteButton",
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "content": {
+        "HoveredFadeOutDuration": 0
+      },
+      "childrenContent": {
+        "Hovered": {
+          "bottomMargin": 11,
+          "height": 47,
+          "leftMargin": 20,
+          "rightMargin": 17,
+          "texture": "assets\\Buttons\\SubmitButton.png",
+          "tiled": false,
+          "topMargin": 11,
+          "width": 128
+        },
+        "Idle": {
+          "bottomMargin": 11,
+          "height": 47,
+          "leftMargin": 20,
+          "rightMargin": 17,
+          "texture": "assets\\Buttons\\SubmitButton.png",
+          "tiled": false,
+          "topMargin": 11,
+          "width": 128
+        },
+        "Label": {
+          "bold": false,
+          "italic": false,
+          "smoothed": true,
+          "underlined": false,
+          "string": "SCORES",
+          "font": "Nathaniel-19.otf",
+          "textAlignment": "center",
+          "characterSize": 30,
+          "color": {
+            "b": 255,
+            "g": 255,
+            "r": 255
+          }
+        },
+        "Pressed": {
+          "bottomMargin": 11,
+          "height": 47,
+          "leftMargin": 20,
+          "rightMargin": 17,
+          "texture": "assets\\Buttons\\SubmitButton.png",
+          "tiled": false,
+          "topMargin": 11,
+          "width": 128
+        }
+      }
+    },
+    {
+      "adaptCollisionMaskAutomatically": false,
+      "assetStoreId": "",
+      "name": "Dino",
+      "tags": "",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [
+        {
+          "name": "LinearMovement",
+          "type": "LinearMovement::LinearMovement",
+          "SpeedX": 200,
+          "SpeedY": 0
+        },
+        {
+          "name": "ScreenWrap",
+          "type": "ScreenWrap::ScreenWrap",
+          "HorizontalWrapping": true,
+          "VerticalWrapping": true,
+          "BorderTop": 0,
+          "BorderLeft": 0,
+          "BorderRight": 0,
+          "BorderBottom": 0,
+          "TriggerOffset": 128
+        }
+      ],
+      "animations": [
+        {
+          "name": "Run",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": true,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "assets/Dino/Dino_Run_1.png",
+                  "points": [
+                    {
+                      "name": "DustProjection",
+                      "x": 25,
+                      "y": 104
+                    }
+                  ],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                },
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "assets/Dino/Dino_Run_2.png",
+                  "points": [
+                    {
+                      "name": "DustProjection",
+                      "x": 25,
+                      "y": 104
+                    }
+                  ],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                },
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "assets/Dino/Dino_Run_3.png",
+                  "points": [
+                    {
+                      "name": "DustProjection",
+                      "x": 25,
+                      "y": 104
+                    }
+                  ],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                },
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "assets/Dino/Dino_Run_4.png",
+                  "points": [
+                    {
+                      "name": "DustProjection",
+                      "x": 25,
+                      "y": 104
+                    }
+                  ],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                },
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "assets/Dino/Dino_Run_5.png",
+                  "points": [
+                    {
+                      "name": "DustProjection",
+                      "x": 25,
+                      "y": 104
+                    }
+                  ],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                },
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "assets/Dino/Dino_Run_6.png",
+                  "points": [
+                    {
+                      "name": "DustProjection",
+                      "x": 25,
+                      "y": 104
+                    }
+                  ],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                },
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "assets/Dino/Dino_Run_7.png",
+                  "points": [
+                    {
+                      "name": "DustProjection",
+                      "x": 25,
+                      "y": 104
+                    }
+                  ],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                },
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "assets/Dino/Dino_Run_8.png",
+                  "points": [
+                    {
+                      "name": "DustProjection",
+                      "x": 25,
+                      "y": 104
+                    }
+                  ],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "events": [
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "value": "DepartScene"
+          },
+          "parameters": [
+            ""
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "TextObject::String"
+          },
+          "parameters": [
+            "ScoreText",
+            "=",
+            "\"Score   \" + GlobalVariableString(Score)"
+          ]
+        },
+        {
+          "type": {
+            "value": "PlayMusic"
+          },
+          "parameters": [
+            "",
+            "LeaderboardMusic.mp3",
+            "yes",
+            "70",
+            ""
+          ]
+        }
+      ],
+      "events": [
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [
+            {
+              "type": {
+                "value": "PlayerAuthentication::DisplayAuthenticationBanner"
+              },
+              "parameters": [
+                ""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "PlayerAuthentication::IsPlayerAuthenticated"
+              },
+              "parameters": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "TextInput::TextInputObject::SetText"
+              },
+              "parameters": [
+                "PlayerNameInput",
+                "=",
+                "PlayerAuthentication::Username()"
+              ]
+            },
+            {
+              "type": {
+                "value": "TextInput::TextInputObject::SetDisabled"
+              },
+              "parameters": [
+                "PlayerNameInput",
+                "yes"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": true,
+                "value": "PlayerAuthentication::IsPlayerAuthenticated"
+              },
+              "parameters": []
+            },
+            {
+              "type": {
+                "value": "VarGlobalTxt"
+              },
+              "parameters": [
+                "PlayerName",
+                "!=",
+                "\"0\""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "TextInput::TextInputObject::SetText"
+              },
+              "parameters": [
+                "PlayerNameInput",
+                "=",
+                "GlobalVariableString(PlayerName)"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "value": "PlayerAuthentication::HasPlayerLoggedIn"
+          },
+          "parameters": []
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "TextInput::TextInputObject::SetText"
+          },
+          "parameters": [
+            "PlayerNameInput",
+            "=",
+            "PlayerAuthentication::Username()"
+          ]
+        },
+        {
+          "type": {
+            "value": "TextInput::TextInputObject::SetDisabled"
+          },
+          "parameters": [
+            "PlayerNameInput",
+            "yes"
+          ]
+        },
+        {
+          "type": {
+            "value": "PlayerAuthentication::DisplayAuthenticationBanner"
+          },
+          "parameters": [
+            ""
+          ]
+        }
+      ]
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "value": "Leaderboards::IsLeaderboardViewErrored"
+          },
+          "parameters": []
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "PlayerAuthentication::DisplayAuthenticationBanner"
+          },
+          "parameters": [
+            ""
+          ]
+        }
+      ]
+    },
+    {
+      "colorB": 214,
+      "colorG": 159,
+      "colorR": 50,
+      "creationTime": 0,
+      "name": "Buttons",
+      "source": "",
+      "type": "BuiltinCommonInstructions::Group",
+      "events": [
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "PanelSpriteButton::PanelSpriteButton::IsClicked"
+              },
+              "parameters": [
+                "RestartButton",
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "PlayerAuthentication::HideAuthenticationBanner"
+              },
+              "parameters": [
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "Scene"
+              },
+              "parameters": [
+                "",
+                "\"Game\"",
+                ""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "Handle leaderboards.\nTo create a leaderboard, make sure your game is registered in Home > Profile > Games Dashboard and then, click on \"Manage game\" > Leaderboards. When a leaderboard is created, it should be available in the actions."
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "PanelSpriteButton::PanelSpriteButton::IsClicked"
+              },
+              "parameters": [
+                "SubmitButton",
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "PlayerAuthentication::HideAuthenticationBanner"
+              },
+              "parameters": [
+                ""
+              ]
+            }
+          ],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "PlayerAuthentication::IsPlayerAuthenticated"
+                  },
+                  "parameters": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Leaderboards::SaveConnectedPlayerScore"
+                  },
+                  "parameters": [
+                    "",
+                    "\"e23f5092-d41d-43ce-bfc7-5a3bd95c4158\"",
+                    "GlobalVariable(Score)"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": true,
+                    "value": "PlayerAuthentication::IsPlayerAuthenticated"
+                  },
+                  "parameters": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Leaderboards::SavePlayerScore"
+                  },
+                  "parameters": [
+                    "",
+                    "\"e23f5092-d41d-43ce-bfc7-5a3bd95c4158\"",
+                    "GlobalVariable(Score)",
+                    "PlayerNameInput.Text()",
+                    "",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ModVarGlobalTxt"
+                  },
+                  "parameters": [
+                    "PlayerName",
+                    "=",
+                    "PlayerNameInput.Text()"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Leaderboards::DisplayLeaderboard"
+                  },
+                  "parameters": [
+                    "",
+                    "\"e23f5092-d41d-43ce-bfc7-5a3bd95c4158\"",
+                    "yes"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetSceneVariableAsBoolean"
+                  },
+                  "parameters": [
+                    "HasSubmitScore",
+                    "True"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "PanelSpriteButton::PanelSpriteButton::IsClicked"
+              },
+              "parameters": [
+                "ScoresButton",
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "PlayerAuthentication::HideAuthenticationBanner"
+              },
+              "parameters": [
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "Leaderboards::DisplayLeaderboard"
+              },
+              "parameters": [
+                "",
+                "\"e23f5092-d41d-43ce-bfc7-5a3bd95c4158\"",
+                "yes"
+              ]
+            }
+          ]
+        }
+      ],
+      "parameters": []
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "value": "Leaderboards::HasPlayerJustClosedLeaderboardView"
+          },
+          "parameters": []
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "PlayerAuthentication::DisplayAuthenticationBanner"
+          },
+          "parameters": [
+            ""
+          ]
+        }
+      ],
+      "events": [
+        {
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "Allow players to submit again the score in case of error."
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "SceneVariableAsBoolean"
+              },
+              "parameters": [
+                "HasSubmitScore",
+                "True"
+              ]
+            },
+            {
+              "type": {
+                "value": "Leaderboards::HasLastSaveSucceeded"
+              },
+              "parameters": [
+                "\"e23f5092-d41d-43ce-bfc7-5a3bd95c4158\""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "PlayerAuthentication::HideAuthenticationBanner"
+              },
+              "parameters": [
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "Scene"
+              },
+              "parameters": [
+                "",
+                "\"Game\"",
+                ""
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colorB": 238,
+      "colorG": 192,
+      "colorR": 100,
+      "creationTime": 0,
+      "name": "Visuals",
+      "source": "",
+      "type": "BuiltinCommonInstructions::Group",
+      "events": [
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "DepartScene"
+              },
+              "parameters": [
+                ""
+              ]
+            }
+          ],
+          "actions": [],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Link",
+              "include": {
+                "includeConfig": 0
+              },
+              "target": "DustEmitterSetup"
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [
+            {
+              "type": {
+                "value": "MettreXY"
+              },
+              "parameters": [
+                "DustParticles",
+                "=",
+                "Dino.PointX(\"DustProjection\")",
+                "=",
+                "Dino.PointY(\"DustProjection\")"
+              ]
+            }
+          ]
+        }
+      ],
+      "parameters": []
+    }
+  ],
+  "layers": [
+    {
+      "ambientLightColorB": 167797870,
+      "ambientLightColorG": 6032144,
+      "ambientLightColorR": 8563600,
+      "camera3DFarPlaneDistance": 10000,
+      "camera3DFieldOfView": 45,
+      "camera3DNearPlaneDistance": 0.1,
+      "followBaseLayerCamera": false,
+      "isLightingLayer": false,
+      "isLocked": false,
+      "name": "Background",
+      "renderingType": "",
+      "visibility": true,
+      "cameras": [],
+      "effects": []
+    },
+    {
+      "ambientLightColorB": 3,
+      "ambientLightColorG": 134217728,
+      "ambientLightColorR": 1597197633,
+      "camera3DFarPlaneDistance": 10000,
+      "camera3DFieldOfView": 45,
+      "camera3DNearPlaneDistance": 0.1,
+      "followBaseLayerCamera": false,
+      "isLightingLayer": false,
+      "isLocked": false,
+      "name": "",
+      "renderingType": "",
+      "visibility": true,
+      "cameras": [
+        {
+          "defaultSize": true,
+          "defaultViewport": true,
+          "height": 0,
+          "viewportBottom": 1,
+          "viewportLeft": 0,
+          "viewportRight": 1,
+          "viewportTop": 0,
+          "width": 0
+        }
+      ],
+      "effects": []
+    }
+  ],
+  "behaviorsSharedData": [
+    {
+      "name": "LinearMovement",
+      "type": "LinearMovement::LinearMovement"
+    },
+    {
+      "name": "Platform",
+      "type": "PlatformBehavior::PlatformBehavior"
+    },
+    {
+      "name": "ScreenWrap",
+      "type": "ScreenWrap::ScreenWrap"
+    }
+  ]
+}

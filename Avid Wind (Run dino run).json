@@ -1704,6 +1704,24 @@
         "name": "assets\\Daniel_Run_1.png",
         "smoothed": true,
         "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/DANIEL_TurnUP_Test_01.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\DANIEL_TurnUP_Test_01.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/DANIEL_TurnDOWN_Test_01.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\DANIEL_TurnDOWN_Test_01.png",
+        "smoothed": true,
+        "userAdded": true
       }
     ],
     "resourceFolders": []

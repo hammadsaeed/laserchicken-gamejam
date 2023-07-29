@@ -3853,6 +3853,102 @@
                   "colorG": 176,
                   "colorR": 74,
                   "creationTime": 0,
+                  "name": "Dino z-index",
+                  "source": "",
+                  "type": "BuiltinCommonInstructions::Group",
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "PlatformBehavior::IsObjectOnGivenFloor"
+                          },
+                          "parameters": [
+                            "Dino",
+                            "PlatformerObject",
+                            "Platform1",
+                            ""
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "ChangePlan"
+                          },
+                          "parameters": [
+                            "Dino",
+                            "=",
+                            "1500000"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "PlatformBehavior::IsObjectOnGivenFloor"
+                          },
+                          "parameters": [
+                            "Dino",
+                            "PlatformerObject",
+                            "Platform2",
+                            ""
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "ChangePlan"
+                          },
+                          "parameters": [
+                            "Dino",
+                            "=",
+                            "1500001"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "PlatformBehavior::IsObjectOnGivenFloor"
+                          },
+                          "parameters": [
+                            "Dino",
+                            "PlatformerObject",
+                            "Platform3",
+                            ""
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "ChangePlan"
+                          },
+                          "parameters": [
+                            "Dino",
+                            "=",
+                            "1500002"
+                          ]
+                        }
+                      ]
+                    }
+                  ],
+                  "parameters": []
+                },
+                {
+                  "colorB": 228,
+                  "colorG": 176,
+                  "colorR": 74,
+                  "creationTime": 0,
                   "name": "Dino movements",
                   "source": "",
                   "type": "BuiltinCommonInstructions::Group",
@@ -6153,90 +6249,6 @@
         }
       ],
       "parameters": []
-    },
-    {
-      "type": "BuiltinCommonInstructions::Standard",
-      "conditions": [
-        {
-          "type": {
-            "value": "PlatformBehavior::IsObjectOnGivenFloor"
-          },
-          "parameters": [
-            "Dino",
-            "PlatformerObject",
-            "Platform1",
-            ""
-          ]
-        }
-      ],
-      "actions": [
-        {
-          "type": {
-            "value": "ChangePlan"
-          },
-          "parameters": [
-            "Dino",
-            "=",
-            "1500000"
-          ]
-        }
-      ]
-    },
-    {
-      "type": "BuiltinCommonInstructions::Standard",
-      "conditions": [
-        {
-          "type": {
-            "value": "PlatformBehavior::IsObjectOnGivenFloor"
-          },
-          "parameters": [
-            "Dino",
-            "PlatformerObject",
-            "Platform2",
-            ""
-          ]
-        }
-      ],
-      "actions": [
-        {
-          "type": {
-            "value": "ChangePlan"
-          },
-          "parameters": [
-            "Dino",
-            "=",
-            "1500001"
-          ]
-        }
-      ]
-    },
-    {
-      "type": "BuiltinCommonInstructions::Standard",
-      "conditions": [
-        {
-          "type": {
-            "value": "PlatformBehavior::IsObjectOnGivenFloor"
-          },
-          "parameters": [
-            "Dino",
-            "PlatformerObject",
-            "Platform3",
-            ""
-          ]
-        }
-      ],
-      "actions": [
-        {
-          "type": {
-            "value": "ChangePlan"
-          },
-          "parameters": [
-            "Dino",
-            "=",
-            "1500002"
-          ]
-        }
-      ]
     }
   ],
   "layers": [

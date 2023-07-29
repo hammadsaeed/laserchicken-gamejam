@@ -18,7 +18,7 @@
     "gridColor": 10401023,
     "gridAlpha": 0.8,
     "snap": true,
-    "zoomFactor": 0.5096849298077984,
+    "zoomFactor": 0.7588195016806983,
     "windowMask": false
   },
   "objectsGroups": [
@@ -244,9 +244,9 @@
       "name": "Dino",
       "persistentUuid": "4355f663-4fd5-41b2-83c2-2c5f313938d9",
       "width": 221,
-      "x": 128,
-      "y": 951,
-      "zOrder": 1500000,
+      "x": 32,
+      "y": 823,
+      "zOrder": 1500005,
       "numberProperties": [],
       "stringProperties": [],
       "initialVariables": []
@@ -271,13 +271,13 @@
       "angle": 0,
       "customSize": true,
       "depth": 0,
-      "height": 64,
+      "height": 96,
       "layer": "",
       "name": "Platform3",
       "persistentUuid": "ae5b3937-aed2-4b49-8975-7360edaa2781",
       "width": 960,
       "x": 0,
-      "y": 1216,
+      "y": 1184,
       "zOrder": 4,
       "numberProperties": [],
       "stringProperties": [],
@@ -287,13 +287,13 @@
       "angle": 0,
       "customSize": true,
       "depth": 0,
-      "height": 64,
+      "height": 96,
       "layer": "",
       "name": "Platform1",
       "persistentUuid": "58340cec-a5f8-4247-831a-cbfdcadd502d",
       "width": 960,
       "x": 0,
-      "y": 1088,
+      "y": 800,
       "zOrder": 4,
       "numberProperties": [],
       "stringProperties": [],
@@ -303,13 +303,13 @@
       "angle": 0,
       "customSize": true,
       "depth": 0,
-      "height": 64,
+      "height": 96,
       "layer": "",
       "name": "Platform2",
       "persistentUuid": "087f94e8-014d-498d-9f68-008f9b4e809f",
       "width": 960,
       "x": 0,
-      "y": 1152,
+      "y": 992,
       "zOrder": 4,
       "numberProperties": [],
       "stringProperties": [],
@@ -326,6 +326,54 @@
       "x": 32,
       "y": 256,
       "zOrder": 1500001,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 0,
+      "height": 96,
+      "layer": "",
+      "name": "RoadTop",
+      "persistentUuid": "188e4596-bd6a-4d87-89c5-5951d6da6f6c",
+      "width": 960,
+      "x": 0,
+      "y": 1088,
+      "zOrder": 1,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 0,
+      "height": 96,
+      "layer": "",
+      "name": "RoadTop",
+      "persistentUuid": "21b78068-d845-4a2f-b7de-13937342365b",
+      "width": 960,
+      "x": 0,
+      "y": 896,
+      "zOrder": 2,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 0,
+      "height": 96,
+      "layer": "",
+      "name": "RoadTop",
+      "persistentUuid": "474996a3-09ed-428a-97da-d2fee9c0f512",
+      "width": 960,
+      "x": 0,
+      "y": 704,
+      "zOrder": 3,
       "numberProperties": [],
       "stringProperties": [],
       "initialVariables": []
@@ -3430,6 +3478,18 @@
           ]
         }
       ]
+    },
+    {
+      "assetStoreId": "",
+      "height": 32,
+      "name": "RoadTop",
+      "tags": "",
+      "texture": "assets\\tileTop.png",
+      "type": "TiledSpriteObject::TiledSprite",
+      "width": 32,
+      "variables": [],
+      "effects": [],
+      "behaviors": []
     }
   ],
   "events": [
@@ -3760,6 +3820,16 @@
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [],
                   "actions": [
+                    {
+                      "type": {
+                        "value": "TiledSpriteObject::XOffset"
+                      },
+                      "parameters": [
+                        "RoadTop",
+                        "+",
+                        "Variable(ObstacleSpeed)*TimeDelta()"
+                      ]
+                    },
                     {
                       "type": {
                         "value": "TiledSpriteObject::XOffset"
@@ -4344,7 +4414,7 @@
                               "parameters": [
                                 "Dino",
                                 "-",
-                                "65"
+                                "200"
                               ]
                             }
                           ]
@@ -4443,7 +4513,7 @@
                               "parameters": [
                                 "Dino",
                                 "+",
-                                "60"
+                                "180"
                               ]
                             }
                           ]
@@ -4905,7 +4975,7 @@
                               "parameters": [
                                 "CactusObstacle",
                                 "=",
-                                "1500000"
+                                "Dino.ZOrder() - 1"
                               ]
                             }
                           ]
@@ -4957,16 +5027,6 @@
                                 "Variable(ObstacleSpeed)",
                                 "1"
                               ]
-                            },
-                            {
-                              "type": {
-                                "value": "ChangePlan"
-                              },
-                              "parameters": [
-                                "CactusObstacle",
-                                "=",
-                                "1500001"
-                              ]
                             }
                           ]
                         },
@@ -5016,16 +5076,6 @@
                                 "180",
                                 "Variable(ObstacleSpeed)",
                                 "1"
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "ChangePlan"
-                              },
-                              "parameters": [
-                                "CactusObstacle",
-                                "=",
-                                "1500002"
                               ]
                             }
                           ]
@@ -5393,7 +5443,7 @@
                               "parameters": [
                                 "BonusObject",
                                 "=",
-                                "1500000"
+                                "Dino.ZOrder() - 1"
                               ]
                             }
                           ]
@@ -5437,6 +5487,16 @@
                             },
                             {
                               "type": {
+                                "value": "ChangePlan"
+                              },
+                              "parameters": [
+                                "BonusObject",
+                                "=",
+                                "Dino.ZOrder() - 1"
+                              ]
+                            },
+                            {
+                              "type": {
                                 "value": "AddForceAL"
                               },
                               "parameters": [
@@ -5444,16 +5504,6 @@
                                 "180",
                                 "Variable(ObstacleSpeed)",
                                 "1"
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "ChangePlan"
-                              },
-                              "parameters": [
-                                "BonusObject",
-                                "=",
-                                "1500000"
                               ]
                             }
                           ]
@@ -5513,7 +5563,7 @@
                               "parameters": [
                                 "BonusObject",
                                 "=",
-                                "1500000"
+                                "Dino.ZOrder() - 1"
                               ]
                             }
                           ]
@@ -5553,6 +5603,16 @@
                                 "RandomInRange(75, 125) + SceneWindowWidth()",
                                 "Platform1.BoundingBoxTop() + 10",
                                 ""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "ChangePlan"
+                              },
+                              "parameters": [
+                                "BonusObject2",
+                                "=",
+                                "Dino.ZOrder() - 1"
                               ]
                             },
                             {
@@ -5664,16 +5724,6 @@
                                 "180",
                                 "Variable(ObstacleSpeed)",
                                 "1"
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "ChangePlan"
-                              },
-                              "parameters": [
-                                "BonusObject2",
-                                "=",
-                                "1500000"
                               ]
                             }
                           ]
@@ -6153,90 +6203,6 @@
         }
       ],
       "parameters": []
-    },
-    {
-      "type": "BuiltinCommonInstructions::Standard",
-      "conditions": [
-        {
-          "type": {
-            "value": "PlatformBehavior::IsObjectOnGivenFloor"
-          },
-          "parameters": [
-            "Dino",
-            "PlatformerObject",
-            "Platform1",
-            ""
-          ]
-        }
-      ],
-      "actions": [
-        {
-          "type": {
-            "value": "ChangePlan"
-          },
-          "parameters": [
-            "Dino",
-            "=",
-            "1500000"
-          ]
-        }
-      ]
-    },
-    {
-      "type": "BuiltinCommonInstructions::Standard",
-      "conditions": [
-        {
-          "type": {
-            "value": "PlatformBehavior::IsObjectOnGivenFloor"
-          },
-          "parameters": [
-            "Dino",
-            "PlatformerObject",
-            "Platform2",
-            ""
-          ]
-        }
-      ],
-      "actions": [
-        {
-          "type": {
-            "value": "ChangePlan"
-          },
-          "parameters": [
-            "Dino",
-            "=",
-            "1500001"
-          ]
-        }
-      ]
-    },
-    {
-      "type": "BuiltinCommonInstructions::Standard",
-      "conditions": [
-        {
-          "type": {
-            "value": "PlatformBehavior::IsObjectOnGivenFloor"
-          },
-          "parameters": [
-            "Dino",
-            "PlatformerObject",
-            "Platform3",
-            ""
-          ]
-        }
-      ],
-      "actions": [
-        {
-          "type": {
-            "value": "ChangePlan"
-          },
-          "parameters": [
-            "Dino",
-            "=",
-            "1500002"
-          ]
-        }
-      ]
     }
   ],
   "layers": [

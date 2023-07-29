@@ -3830,11 +3830,57 @@
                             },
                             {
                               "type": {
-                                "value": "KeyPressed"
+                                "value": "BuiltinCommonInstructions::Or"
                               },
-                              "parameters": [
-                                "",
-                                "Up"
+                              "parameters": [],
+                              "subInstructions": [
+                                {
+                                  "type": {
+                                    "value": "KeyPressed"
+                                  },
+                                  "parameters": [
+                                    "",
+                                    "Up"
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "BuiltinCommonInstructions::And"
+                                  },
+                                  "parameters": [],
+                                  "subInstructions": [
+                                    {
+                                      "type": {
+                                        "value": "SwipeGesture::SwipeDirection_4way"
+                                      },
+                                      "parameters": [
+                                        "",
+                                        "\"Up\"",
+                                        ""
+                                      ]
+                                    },
+                                    {
+                                      "type": {
+                                        "value": "SwipeGesture::Distance"
+                                      },
+                                      "parameters": [
+                                        "",
+                                        ">",
+                                        "70",
+                                        ""
+                                      ]
+                                    },
+                                    {
+                                      "type": {
+                                        "value": "SwipeGesture::HasSwipeJustEnded"
+                                      },
+                                      "parameters": [
+                                        "",
+                                        ""
+                                      ]
+                                    }
+                                  ]
+                                }
                               ]
                             },
                             {
@@ -3883,11 +3929,57 @@
                             },
                             {
                               "type": {
-                                "value": "KeyPressed"
+                                "value": "BuiltinCommonInstructions::Or"
                               },
-                              "parameters": [
-                                "",
-                                "Down"
+                              "parameters": [],
+                              "subInstructions": [
+                                {
+                                  "type": {
+                                    "value": "KeyPressed"
+                                  },
+                                  "parameters": [
+                                    "",
+                                    "Down"
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "BuiltinCommonInstructions::And"
+                                  },
+                                  "parameters": [],
+                                  "subInstructions": [
+                                    {
+                                      "type": {
+                                        "value": "SwipeGesture::SwipeDirection_4way"
+                                      },
+                                      "parameters": [
+                                        "",
+                                        "\"Down\"",
+                                        ""
+                                      ]
+                                    },
+                                    {
+                                      "type": {
+                                        "value": "SwipeGesture::Distance"
+                                      },
+                                      "parameters": [
+                                        "",
+                                        ">",
+                                        "70",
+                                        ""
+                                      ]
+                                    },
+                                    {
+                                      "type": {
+                                        "value": "SwipeGesture::HasSwipeJustEnded"
+                                      },
+                                      "parameters": [
+                                        "",
+                                        ""
+                                      ]
+                                    }
+                                  ]
+                                }
                               ]
                             },
                             {

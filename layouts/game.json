@@ -4756,8 +4756,7 @@
                   "colorG": 176,
                   "colorR": 74,
                   "creationTime": 0,
-                  "folded": true,
-                  "name": "Score",
+                  "name": "Power ups",
                   "source": "",
                   "type": "BuiltinCommonInstructions::Group",
                   "events": [
@@ -4776,6 +4775,18 @@
                           ]
                         }
                       ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Comment",
+                      "color": {
+                        "b": 109,
+                        "g": 230,
+                        "r": 255,
+                        "textB": 0,
+                        "textG": 0,
+                        "textR": 0
+                      },
+                      "comment": "Invincible power up"
                     },
                     {
                       "type": "BuiltinCommonInstructions::Standard",
@@ -4860,104 +4871,16 @@
                       ]
                     },
                     {
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [
-                        {
-                          "type": {
-                            "value": "CollisionNP"
-                          },
-                          "parameters": [
-                            "Dino",
-                            "BonusObject3",
-                            "",
-                            "",
-                            ""
-                          ]
-                        }
-                      ],
-                      "actions": [
-                        {
-                          "type": {
-                            "value": "ModVarGlobal"
-                          },
-                          "parameters": [
-                            "Score",
-                            "+",
-                            "500"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "SetObjectVariableAsBoolean"
-                          },
-                          "parameters": [
-                            "Dino",
-                            "isMagnetOn",
-                            "True"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "Create"
-                          },
-                          "parameters": [
-                            "",
-                            "BonusParticle",
-                            "Dino.CenterX()",
-                            "Dino.CenterY()",
-                            ""
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "ParticleSystem::EmitterAngle"
-                          },
-                          "parameters": [
-                            "BonusParticle",
-                            "=",
-                            "-90"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "Delete"
-                          },
-                          "parameters": [
-                            "BonusObject3",
-                            ""
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "PlaySound"
-                          },
-                          "parameters": [
-                            "",
-                            "Bonus.mp3",
-                            "",
-                            "100",
-                            "0.5"
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [],
-                      "actions": [
-                        {
-                          "type": {
-                            "value": "SetCenter"
-                          },
-                          "parameters": [
-                            "BonusParticle",
-                            "=",
-                            "Dino.CenterX()",
-                            "=",
-                            "Dino.CenterY()"
-                          ]
-                        }
-                      ]
+                      "type": "BuiltinCommonInstructions::Comment",
+                      "color": {
+                        "b": 109,
+                        "g": 230,
+                        "r": 255,
+                        "textB": 0,
+                        "textG": 0,
+                        "textR": 0
+                      },
+                      "comment": "Flying power up"
                     },
                     {
                       "type": "BuiltinCommonInstructions::Standard",
@@ -5095,6 +5018,118 @@
                             "isFlying",
                             "=",
                             "1"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Comment",
+                      "color": {
+                        "b": 109,
+                        "g": 230,
+                        "r": 255,
+                        "textB": 0,
+                        "textG": 0,
+                        "textR": 0
+                      },
+                      "comment": "Magnet power up"
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "CollisionNP"
+                          },
+                          "parameters": [
+                            "Dino",
+                            "BonusObject3",
+                            "",
+                            "",
+                            ""
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "ModVarGlobal"
+                          },
+                          "parameters": [
+                            "Score",
+                            "+",
+                            "500"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetObjectVariableAsBoolean"
+                          },
+                          "parameters": [
+                            "Dino",
+                            "isMagnetOn",
+                            "True"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "Create"
+                          },
+                          "parameters": [
+                            "",
+                            "BonusParticle",
+                            "Dino.CenterX()",
+                            "Dino.CenterY()",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ParticleSystem::EmitterAngle"
+                          },
+                          "parameters": [
+                            "BonusParticle",
+                            "=",
+                            "-90"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "Delete"
+                          },
+                          "parameters": [
+                            "BonusObject3",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "PlaySound"
+                          },
+                          "parameters": [
+                            "",
+                            "Bonus.mp3",
+                            "",
+                            "100",
+                            "0.5"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetCenter"
+                          },
+                          "parameters": [
+                            "BonusParticle",
+                            "=",
+                            "Dino.CenterX()",
+                            "=",
+                            "Dino.CenterY()"
                           ]
                         }
                       ]
@@ -5258,6 +5293,16 @@
                             "PlatformNumber",
                             "=",
                             "2"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetCenterY"
+                          },
+                          "parameters": [
+                            "Dino",
+                            "=",
+                            "Platform2.BoundingBoxTop() - 100 "
                           ]
                         },
                         {
@@ -5469,7 +5514,6 @@
                   "colorG": 176,
                   "colorR": 74,
                   "creationTime": 0,
-                  "folded": true,
                   "name": "Coin Pickup",
                   "source": "",
                   "type": "BuiltinCommonInstructions::Group",
@@ -5668,7 +5712,6 @@
                   "colorG": 176,
                   "colorR": 74,
                   "creationTime": 0,
-                  "folded": true,
                   "name": "Obstacle spawn",
                   "source": "",
                   "type": "BuiltinCommonInstructions::Group",
@@ -7027,7 +7070,6 @@
                   "colorG": 176,
                   "colorR": 74,
                   "creationTime": 0,
-                  "folded": true,
                   "name": "Game Over",
                   "source": "",
                   "type": "BuiltinCommonInstructions::Group",
@@ -7127,6 +7169,24 @@
                                   },
                                   "parameters": [
                                     "",
+                                    "\"coin_spawn\""
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "PauseTimer"
+                                  },
+                                  "parameters": [
+                                    "",
+                                    "\"powerUp_timer\""
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "PauseTimer"
+                                  },
+                                  "parameters": [
+                                    "",
                                     "\"obstacle_spawn\""
                                   ]
                                 },
@@ -7145,6 +7205,38 @@
                                   },
                                   "parameters": [
                                     "MovingObjects"
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "Arreter"
+                                  },
+                                  "parameters": [
+                                    "Coin"
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "Arreter"
+                                  },
+                                  "parameters": [
+                                    "BonusObject"
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "Arreter"
+                                  },
+                                  "parameters": [
+                                    "BonusObject2"
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "Arreter"
+                                  },
+                                  "parameters": [
+                                    "BonusObject3"
                                   ]
                                 }
                               ],

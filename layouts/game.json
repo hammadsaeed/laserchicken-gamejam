@@ -1349,7 +1349,14 @@
       "tags": "",
       "type": "Sprite",
       "updateIfNotVisible": false,
-      "variables": [],
+      "variables": [
+        {
+          "folded": true,
+          "name": "isInvincible",
+          "type": "boolean",
+          "value": false
+        }
+      ],
       "effects": [],
       "behaviors": [
         {
@@ -3853,6 +3860,7 @@
                   "colorG": 176,
                   "colorR": 74,
                   "creationTime": 0,
+                  "folded": true,
                   "name": "Dino z-index",
                   "source": "",
                   "type": "BuiltinCommonInstructions::Group",
@@ -4600,6 +4608,16 @@
                             "Score",
                             "+",
                             "500"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetObjectVariableAsBoolean"
+                          },
+                          "parameters": [
+                            "Dino",
+                            "isInvincible",
+                            "True"
                           ]
                         },
                         {
@@ -5425,6 +5443,16 @@
                         },
                         {
                           "type": {
+                            "value": "SetObjectVariableAsBoolean"
+                          },
+                          "parameters": [
+                            "Dino",
+                            "isInvincible",
+                            "False"
+                          ]
+                        },
+                        {
+                          "type": {
                             "value": "ResetTimer"
                           },
                           "parameters": [
@@ -6027,7 +6055,7 @@
                         "textG": 0,
                         "textR": 0
                       },
-                      "comment": "Player loses when either of these conditions is checked :\n- Dino collided with a Cactus\n- Dino collided with an Island and is under it (= the played did not duck)"
+                      "comment": "Player loses when either of these conditions is checked :\n- Dino collided with a Cactus\n- Dino collided with an Island and is under it (= the played did not duck)\n\nAND\n- Dino IS NOT invincible"
                     },
                     {
                       "type": "BuiltinCommonInstructions::Standard",
@@ -6083,50 +6111,60 @@
                           ]
                         }
                       ],
-                      "actions": [
-                        {
-                          "type": {
-                            "value": "PlatformBehavior::PlatformerObjectBehavior::AbortJump"
-                          },
-                          "parameters": [
-                            "Dino",
-                            "PlatformerObject"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "SetAnimationName"
-                          },
-                          "parameters": [
-                            "Dino",
-                            "\"Dead\""
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "ModVarSceneTxt"
-                          },
-                          "parameters": [
-                            "GameStatus",
-                            "=",
-                            "\"Dead\""
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "PauseTimer"
-                          },
-                          "parameters": [
-                            "",
-                            "\"obstacle_spawn\""
-                          ]
-                        }
-                      ],
+                      "actions": [],
                       "events": [
                         {
                           "type": "BuiltinCommonInstructions::Standard",
-                          "conditions": [],
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "ObjectVariableAsBoolean"
+                              },
+                              "parameters": [
+                                "Dino",
+                                "isInvincible",
+                                "False"
+                              ]
+                            }
+                          ],
                           "actions": [
+                            {
+                              "type": {
+                                "value": "PlatformBehavior::PlatformerObjectBehavior::AbortJump"
+                              },
+                              "parameters": [
+                                "Dino",
+                                "PlatformerObject"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "SetAnimationName"
+                              },
+                              "parameters": [
+                                "Dino",
+                                "\"Dead\""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "ModVarSceneTxt"
+                              },
+                              "parameters": [
+                                "GameStatus",
+                                "=",
+                                "\"Dead\""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "PauseTimer"
+                              },
+                              "parameters": [
+                                "",
+                                "\"obstacle_spawn\""
+                              ]
+                            },
                             {
                               "type": {
                                 "value": "AjoutObjConcern"

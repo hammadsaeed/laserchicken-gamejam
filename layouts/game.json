@@ -4956,7 +4956,7 @@
                               "parameters": [
                                 "BonusObject",
                                 "=",
-                                "Dino.ZOrder() - 1"
+                                "1500000"
                               ]
                             }
                           ]
@@ -5000,16 +5000,6 @@
                             },
                             {
                               "type": {
-                                "value": "ChangePlan"
-                              },
-                              "parameters": [
-                                "BonusObject",
-                                "=",
-                                "Dino.ZOrder() - 1"
-                              ]
-                            },
-                            {
-                              "type": {
                                 "value": "AddForceAL"
                               },
                               "parameters": [
@@ -5017,6 +5007,16 @@
                                 "180",
                                 "Variable(ObstacleSpeed)",
                                 "1"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "ChangePlan"
+                              },
+                              "parameters": [
+                                "BonusObject",
+                                "=",
+                                "1500000"
                               ]
                             }
                           ]
@@ -5076,7 +5076,7 @@
                               "parameters": [
                                 "BonusObject",
                                 "=",
-                                "Dino.ZOrder() - 1"
+                                "1500000"
                               ]
                             }
                           ]
@@ -5116,16 +5116,6 @@
                                 "RandomInRange(75, 125) + SceneWindowWidth()",
                                 "Platform1.BoundingBoxTop() + 10",
                                 ""
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "ChangePlan"
-                              },
-                              "parameters": [
-                                "BonusObject2",
-                                "=",
-                                "Dino.ZOrder() - 1"
                               ]
                             },
                             {
@@ -5237,6 +5227,16 @@
                                 "180",
                                 "Variable(ObstacleSpeed)",
                                 "1"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "ChangePlan"
+                              },
+                              "parameters": [
+                                "BonusObject2",
+                                "=",
+                                "1500000"
                               ]
                             }
                           ]
@@ -5514,16 +5514,6 @@
             "=",
             "1500000"
           ]
-        },
-        {
-          "type": {
-            "value": "DebuggerTools::ConsoleLog"
-          },
-          "parameters": [
-            "ToString(Dino.ZOrder())",
-            "",
-            ""
-          ]
         }
       ]
     },
@@ -5552,16 +5542,6 @@
             "=",
             "1500001"
           ]
-        },
-        {
-          "type": {
-            "value": "DebuggerTools::ConsoleLog"
-          },
-          "parameters": [
-            "ToString(Dino.ZOrder())",
-            "",
-            ""
-          ]
         }
       ]
     },
@@ -5589,16 +5569,6 @@
             "Dino",
             "=",
             "1500002"
-          ]
-        },
-        {
-          "type": {
-            "value": "DebuggerTools::ConsoleLog"
-          },
-          "parameters": [
-            "ToString(Dino.ZOrder())",
-            "",
-            ""
           ]
         }
       ]

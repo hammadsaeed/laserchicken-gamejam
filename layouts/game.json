@@ -1521,11 +1521,11 @@
           "directions": [
             {
               "looping": true,
-              "timeBetweenFrames": 0.1,
+              "timeBetweenFrames": 0.08,
               "sprites": [
                 {
                   "hasCustomCollisionMask": true,
-                  "image": "assets\\DANIEL_Drive_Run_1.png",
+                  "image": "assets\\DANIEL_Drive_Ani_00.png",
                   "points": [],
                   "originPoint": {
                     "name": "origine",
@@ -1569,7 +1569,7 @@
                 },
                 {
                   "hasCustomCollisionMask": true,
-                  "image": "assets\\DANIEL_Drive_Run_2.png",
+                  "image": "assets\\DANIEL_Drive_Ani_02.png",
                   "points": [],
                   "originPoint": {
                     "name": "origine",
@@ -1613,7 +1613,7 @@
                 },
                 {
                   "hasCustomCollisionMask": true,
-                  "image": "assets\\DANIEL_Drive_Run_3.png",
+                  "image": "assets\\DANIEL_Drive_Ani_03.png",
                   "points": [],
                   "originPoint": {
                     "name": "origine",
@@ -1657,7 +1657,7 @@
                 },
                 {
                   "hasCustomCollisionMask": true,
-                  "image": "assets\\DANIEL_Drive_Run_4.png",
+                  "image": "assets\\DANIEL_Drive_Ani_04.png",
                   "points": [],
                   "originPoint": {
                     "name": "origine",
@@ -1701,7 +1701,51 @@
                 },
                 {
                   "hasCustomCollisionMask": true,
-                  "image": "assets\\DANIEL_Drive_Run_5.png",
+                  "image": "assets\\DANIEL_Drive_Ani_05.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 68.5,
+                        "y": 94.5
+                      },
+                      {
+                        "x": 80,
+                        "y": 92.5
+                      },
+                      {
+                        "x": 150.5,
+                        "y": 91.5
+                      },
+                      {
+                        "x": 151,
+                        "y": 109
+                      },
+                      {
+                        "x": 52.5,
+                        "y": 106.5
+                      },
+                      {
+                        "x": 55.5,
+                        "y": 94.5
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets\\DANIEL_Drive_Ani_06.png",
                   "points": [],
                   "originPoint": {
                     "name": "origine",

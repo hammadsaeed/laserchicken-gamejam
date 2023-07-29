@@ -1776,6 +1776,132 @@
         "name": "assets\\DANIEL_Drive_Run_1.png",
         "smoothed": true,
         "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/DANIEL_Drive_Ani_Test_00.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\DANIEL_Drive_Ani_Test_00.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/DANIEL_Drive_Ani_Test_01.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\DANIEL_Drive_Ani_Test_01.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/DANIEL_Drive_Ani_Test_02.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\DANIEL_Drive_Ani_Test_02.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/DANIEL_Drive_Ani_Test_03.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\DANIEL_Drive_Ani_Test_03.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/DANIEL_Drive_Ani_Test_04.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\DANIEL_Drive_Ani_Test_04.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/DANIEL_Drive_Ani_Test_05.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\DANIEL_Drive_Ani_Test_05.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/DANIEL_Drive_Ani_Test_06.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\DANIEL_Drive_Ani_Test_06.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/DANIEL_Drive_Ani_00.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\DANIEL_Drive_Ani_00.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/DANIEL_Drive_Ani_01.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\DANIEL_Drive_Ani_01.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/DANIEL_Drive_Ani_02.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\DANIEL_Drive_Ani_02.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/DANIEL_Drive_Ani_03.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\DANIEL_Drive_Ani_03.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/DANIEL_Drive_Ani_04.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\DANIEL_Drive_Ani_04.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/DANIEL_Drive_Ani_05.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\DANIEL_Drive_Ani_05.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/DANIEL_Drive_Ani_06.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\DANIEL_Drive_Ani_06.png",
+        "smoothed": true,
+        "userAdded": false
       }
     ],
     "resourceFolders": []

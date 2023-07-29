@@ -109,6 +109,12 @@
       "name": "CoinCollected",
       "type": "number",
       "value": 0
+    },
+    {
+      "folded": true,
+      "name": "ChangingCountry",
+      "type": "boolean",
+      "value": false
     }
   ],
   "instances": [
@@ -371,11 +377,59 @@
           "directions": [
             {
               "looping": true,
-              "timeBetweenFrames": 0.02500000037252903,
+              "timeBetweenFrames": 0.025,
               "sprites": [
                 {
                   "hasCustomCollisionMask": true,
                   "image": "assets/Cactus3-1.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 43,
+                    "y": 96
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 89
+                      },
+                      {
+                        "x": 86,
+                        "y": 88.5
+                      },
+                      {
+                        "x": 86,
+                        "y": 96
+                      },
+                      {
+                        "x": 0,
+                        "y": 96
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "PalmTree",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": true,
+              "timeBetweenFrames": 0.025,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets\\Palm_tree.png",
                   "points": [],
                   "originPoint": {
                     "name": "origine",
@@ -4050,6 +4104,46 @@
                           "parameters": [
                             "Score",
                             ">",
+                            "4920"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::Once"
+                      },
+                      "parameters": []
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetSceneVariableAsBoolean"
+                      },
+                      "parameters": [
+                        "ChangingCountry",
+                        "True"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::Or"
+                      },
+                      "parameters": [],
+                      "subInstructions": [
+                        {
+                          "type": {
+                            "value": "VarGlobal"
+                          },
+                          "parameters": [
+                            "Score",
+                            ">",
                             "5000"
                           ]
                         }
@@ -4115,7 +4209,7 @@
                       "parameters": [
                         "TrialTunnel",
                         "=",
-                        "17"
+                        "1510000"
                       ]
                     },
                     {
@@ -4126,6 +4220,63 @@
                         "Background",
                         "=",
                         "15"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetAnimationName"
+                      },
+                      "parameters": [
+                        "CactusObstacle",
+                        "\"PalmTree\""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::Or"
+                      },
+                      "parameters": [],
+                      "subInstructions": [
+                        {
+                          "type": {
+                            "value": "VarScene"
+                          },
+                          "parameters": [
+                            "CurrentCountry",
+                            "=",
+                            "1"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::Once"
+                      },
+                      "parameters": []
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Wait"
+                      },
+                      "parameters": [
+                        "1"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetSceneVariableAsBoolean"
+                      },
+                      "parameters": [
+                        "ChangingCountry",
+                        "False"
                       ]
                     }
                   ]
@@ -5990,7 +6141,6 @@
                   "colorG": 176,
                   "colorR": 74,
                   "creationTime": 0,
-                  "folded": true,
                   "name": "Obstacle spawn",
                   "source": "",
                   "type": "BuiltinCommonInstructions::Group",
@@ -6074,7 +6224,6 @@
                       "comment": "Randomly chose the obstacle type (0: single cactus, 1: island, 2: Cactus field) when spawn delay is reached. Once the obstacle is created, we reset the spawn timer.\nWe want to avoid scaling the force applied to one obstacle when it is already on screen, so we apply a permanent force. Change 0,0 to number of obstacles"
                     },
                     {
-                      "folded": true,
                       "type": "BuiltinCommonInstructions::Standard",
                       "conditions": [
                         {
@@ -6086,6 +6235,15 @@
                             "\"obstacle_spawn\"",
                             ">=",
                             "Variable(ObstacleSpawnDelay)"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SceneVariableAsBoolean"
+                          },
+                          "parameters": [
+                            "ChangingCountry",
+                            "False"
                           ]
                         }
                       ],
@@ -7399,6 +7557,15 @@
                                   "parameters": [
                                     "Dino",
                                     "isInvincible",
+                                    "False"
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "SceneVariableAsBoolean"
+                                  },
+                                  "parameters": [
+                                    "ChangingCountry",
                                     "False"
                                   ]
                                 }

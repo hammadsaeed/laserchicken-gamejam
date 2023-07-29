@@ -1722,6 +1722,13 @@
         "name": "assets\\DANIEL_TurnDOWN_Test_01.png",
         "smoothed": true,
         "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/Palm_tree.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\Palm_tree.png"
       }
     ],
     "resourceFolders": []

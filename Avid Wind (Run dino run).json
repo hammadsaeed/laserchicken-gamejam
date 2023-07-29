@@ -1291,7 +1291,27 @@
     {
       "assetStoreId": "",
       "height": 32,
-      "name": "Platform",
+      "name": "Platform3",
+      "tags": "",
+      "texture": "9patch_Desert Tile_north.png",
+      "type": "TiledSpriteObject::TiledSprite",
+      "width": 32,
+      "variables": [],
+      "effects": [],
+      "behaviors": [
+        {
+          "canBeGrabbed": false,
+          "name": "Platform",
+          "platformType": "Jumpthru",
+          "type": "PlatformBehavior::PlatformBehavior",
+          "yGrabOffset": 0
+        }
+      ]
+    },
+    {
+      "assetStoreId": "",
+      "height": 32,
+      "name": "Platform1",
       "tags": "",
       "texture": "9patch_Desert Tile_north.png",
       "type": "TiledSpriteObject::TiledSprite",
@@ -1303,7 +1323,27 @@
           "name": "Platform",
           "type": "PlatformBehavior::PlatformBehavior",
           "canBeGrabbed": false,
-          "platformType": "NormalPlatform",
+          "platformType": "Jumpthru",
+          "yGrabOffset": 0
+        }
+      ]
+    },
+    {
+      "assetStoreId": "",
+      "height": 32,
+      "name": "Platform2",
+      "tags": "",
+      "texture": "9patch_Desert Tile_north.png",
+      "type": "TiledSpriteObject::TiledSprite",
+      "width": 32,
+      "variables": [],
+      "effects": [],
+      "behaviors": [
+        {
+          "name": "Platform",
+          "type": "PlatformBehavior::PlatformBehavior",
+          "canBeGrabbed": false,
+          "platformType": "Jumpthru",
           "yGrabOffset": 0
         }
       ]

@@ -109,29 +109,14 @@
     {
       "angle": 0,
       "customSize": true,
-      "height": 64,
-      "layer": "",
-      "name": "Platform",
-      "persistentUuid": "59a6a8b0-78a3-4661-85c0-62f4cc9ef72e",
-      "width": 960,
-      "x": 0,
-      "y": 1152,
-      "zOrder": 4,
-      "numberProperties": [],
-      "stringProperties": [],
-      "initialVariables": []
-    },
-    {
-      "angle": 0,
-      "customSize": true,
       "depth": 0,
       "height": 44,
       "layer": "",
       "name": "ScoreText",
       "persistentUuid": "b4cdf63a-8d7e-4bd0-83ee-8dfd60fd49dd",
       "width": 541,
-      "x": 21,
-      "y": 480,
+      "x": 32,
+      "y": 192,
       "zOrder": 14,
       "numberProperties": [],
       "stringProperties": [],
@@ -147,7 +132,7 @@
       "persistentUuid": "48c699d8-eec9-4115-ae30-822d8389a521",
       "width": 992,
       "x": 0,
-      "y": 192,
+      "y": 128,
       "zOrder": 17,
       "numberProperties": [],
       "stringProperties": [],
@@ -163,7 +148,7 @@
       "persistentUuid": "20ccb8d2-a0f4-4d6b-a908-74bb4a0149fe",
       "width": 520,
       "x": 56,
-      "y": 553,
+      "y": 608,
       "zOrder": 27,
       "numberProperties": [],
       "stringProperties": [],
@@ -208,7 +193,7 @@
       "persistentUuid": "f007fe19-0b98-419e-a9d4-3911b45fbbcb",
       "width": 0,
       "x": 576,
-      "y": 704,
+      "y": 640,
       "zOrder": 31,
       "numberProperties": [],
       "stringProperties": [],
@@ -223,7 +208,7 @@
       "persistentUuid": "b5dec053-e367-4c4c-a9c9-4b98ee19087a",
       "width": 0,
       "x": 576,
-      "y": 916,
+      "y": 820,
       "zOrder": 32,
       "numberProperties": [],
       "stringProperties": [],
@@ -238,7 +223,7 @@
       "persistentUuid": "ba58fff4-f170-43ac-b897-f9885c348dcd",
       "width": 960,
       "x": 0,
-      "y": 960,
+      "y": 896,
       "zOrder": 33,
       "numberProperties": [],
       "stringProperties": [],
@@ -253,9 +238,73 @@
       "name": "Dino",
       "persistentUuid": "4355f663-4fd5-41b2-83c2-2c5f313938d9",
       "width": 221,
-      "x": 70,
-      "y": 993,
+      "x": 32,
+      "y": 951,
       "zOrder": 34,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 0,
+      "height": 32,
+      "layer": "",
+      "name": "Limit",
+      "persistentUuid": "d5e0f947-dfad-4caa-b9f8-b81627eda6a9",
+      "width": 1024,
+      "x": -1408,
+      "y": 704,
+      "zOrder": 35,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 0,
+      "height": 64,
+      "layer": "",
+      "name": "Platform1",
+      "persistentUuid": "24ebd02b-b61f-441f-9806-dad4439191ff",
+      "width": 960,
+      "x": 0,
+      "y": 1056,
+      "zOrder": 4,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 0,
+      "height": 64,
+      "layer": "",
+      "name": "Platform2",
+      "persistentUuid": "64ec5144-66b8-4f65-b3f7-067a182e7f9a",
+      "width": 960,
+      "x": 0,
+      "y": 1120,
+      "zOrder": 4,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 0,
+      "height": 64,
+      "layer": "",
+      "name": "Platform3",
+      "persistentUuid": "ae5b3937-aed2-4b49-8975-7360edaa2781",
+      "width": 960,
+      "x": 0,
+      "y": 1184,
+      "zOrder": 36,
       "numberProperties": [],
       "stringProperties": [],
       "initialVariables": []
@@ -425,6 +474,28 @@
       "bold": false,
       "italic": false,
       "name": "ScoreText",
+      "smoothed": true,
+      "tags": "",
+      "type": "TextObject::Text",
+      "underlined": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "string": "Press any key to start running.",
+      "font": "Nathaniel-19.otf",
+      "textAlignment": "",
+      "characterSize": 30,
+      "color": {
+        "b": 42,
+        "g": 87,
+        "r": 139
+      }
+    },
+    {
+      "assetStoreId": "",
+      "bold": false,
+      "italic": false,
+      "name": "Platform",
       "smoothed": true,
       "tags": "",
       "type": "TextObject::Text",
@@ -2994,6 +3065,16 @@
                         "",
                         "\"obstacle_spawn\""
                       ]
+                    },
+                    {
+                      "type": {
+                        "value": "ModVarGlobal"
+                      },
+                      "parameters": [
+                        "PlatformNumber",
+                        "=",
+                        "2"
+                      ]
                     }
                   ],
                   "events": [
@@ -3113,7 +3194,27 @@
                         "value": "TiledSpriteObject::XOffset"
                       },
                       "parameters": [
-                        "Platform",
+                        "Platform3",
+                        "+",
+                        "Variable(ObstacleSpeed)*TimeDelta()"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "TiledSpriteObject::XOffset"
+                      },
+                      "parameters": [
+                        "Platform1",
+                        "+",
+                        "Variable(ObstacleSpeed)*TimeDelta()"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "TiledSpriteObject::XOffset"
+                      },
+                      "parameters": [
+                        "Platform2",
                         "+",
                         "Variable(ObstacleSpeed)*TimeDelta()"
                       ]
@@ -3186,6 +3287,7 @@
                   "type": "BuiltinCommonInstructions::Group",
                   "events": [
                     {
+                      "folded": true,
                       "type": "BuiltinCommonInstructions::Standard",
                       "conditions": [
                         {
@@ -3401,6 +3503,7 @@
                       "type": "BuiltinCommonInstructions::Group",
                       "events": [
                         {
+                          "disabled": true,
                           "type": "BuiltinCommonInstructions::Standard",
                           "conditions": [
                             {
@@ -3426,6 +3529,7 @@
                           ]
                         },
                         {
+                          "disabled": true,
                           "type": "BuiltinCommonInstructions::Standard",
                           "conditions": [
                             {
@@ -3488,6 +3592,7 @@
                           "comment": "Handle touchscreen."
                         },
                         {
+                          "folded": true,
                           "type": "BuiltinCommonInstructions::Standard",
                           "conditions": [
                             {
@@ -3570,6 +3675,112 @@
                                     "Dino.BoundingBoxRight()"
                                   ]
                                 }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "inverted": true,
+                                "value": "VarGlobal"
+                              },
+                              "parameters": [
+                                "PlatformNumber",
+                                "=",
+                                "1"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "KeyPressed"
+                              },
+                              "parameters": [
+                                "",
+                                "Up"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "BuiltinCommonInstructions::Once"
+                              },
+                              "parameters": []
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "ModVarGlobal"
+                              },
+                              "parameters": [
+                                "PlatformNumber",
+                                "-",
+                                "1"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "MettreY"
+                              },
+                              "parameters": [
+                                "Dino",
+                                "-",
+                                "65"
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "inverted": true,
+                                "value": "VarGlobal"
+                              },
+                              "parameters": [
+                                "PlatformNumber",
+                                "=",
+                                "3"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "KeyPressed"
+                              },
+                              "parameters": [
+                                "",
+                                "Down"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "BuiltinCommonInstructions::Once"
+                              },
+                              "parameters": []
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "ModVarGlobal"
+                              },
+                              "parameters": [
+                                "PlatformNumber",
+                                "+",
+                                "1"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "MettreY"
+                              },
+                              "parameters": [
+                                "Dino",
+                                "+",
+                                "60"
                               ]
                             }
                           ]
@@ -3786,6 +3997,7 @@
                       "comment": "Randomly chose the obstacle type (0: single cactus, 1: island, 2: Cactus field) when spawn delay is reached. Once the obstacle is created, we reset the spawn timer.\nWe want to avoid scaling the force applied to one obstacle when it is already on screen, so we apply a permanent force."
                     },
                     {
+                      "folded": true,
                       "type": "BuiltinCommonInstructions::Standard",
                       "conditions": [
                         {
@@ -3845,7 +4057,7 @@
                                 "",
                                 "CactusObstacle",
                                 "RandomInRange(75, 125) + SceneWindowWidth()",
-                                "Platform.BoundingBoxTop()",
+                                "Platform3.BoundingBoxTop()",
                                 ""
                               ]
                             },
@@ -3897,7 +4109,7 @@
                                 "",
                                 "IslandObstacle",
                                 "RandomInRange(75, 125) + SceneWindowWidth()",
-                                "Platform.BoundingBoxTop() - 64",
+                                "Platform3.BoundingBoxTop() - 64",
                                 ""
                               ]
                             },
@@ -4073,7 +4285,7 @@
                                     "",
                                     "CactusObstacle",
                                     "100 + SceneWindowWidth()+Variable(SpawnedCactusInField)*70",
-                                    "Platform.BoundingBoxTop()",
+                                    "Platform3.BoundingBoxTop()",
                                     ""
                                   ]
                                 },

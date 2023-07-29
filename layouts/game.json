@@ -18,7 +18,7 @@
     "gridColor": 10401023,
     "gridAlpha": 0.8,
     "snap": true,
-    "zoomFactor": 0.47697506683566965,
+    "zoomFactor": 0.4318038445840615,
     "windowMask": false
   },
   "objectsGroups": [
@@ -122,7 +122,7 @@
       "persistentUuid": "b4cdf63a-8d7e-4bd0-83ee-8dfd60fd49dd",
       "width": 541,
       "x": 32,
-      "y": 192,
+      "y": 32,
       "zOrder": 14,
       "numberProperties": [],
       "stringProperties": [],
@@ -323,8 +323,8 @@
       "name": "CoinText",
       "persistentUuid": "0363729e-8f0b-41af-b5c1-47bcd7f734dc",
       "width": 0,
-      "x": 32,
-      "y": 256,
+      "x": 31,
+      "y": 71,
       "zOrder": 1500001,
       "numberProperties": [],
       "stringProperties": [],
@@ -4346,50 +4346,105 @@
                           "comment": "Handle touchscreen."
                         },
                         {
-                          "folded": true,
                           "type": "BuiltinCommonInstructions::Standard",
                           "conditions": [
                             {
                               "type": {
-                                "value": "MouseButtonPressed"
+                                "value": "VarScene"
                               },
                               "parameters": [
-                                "Dino",
-                                "Left"
+                                "isFlying",
+                                "=",
+                                "0"
                               ]
-                            },
-                            {
-                              "type": {
-                                "value": "BuiltinCommonInstructions::Once"
-                              },
-                              "parameters": []
                             }
                           ],
                           "actions": [],
                           "events": [
                             {
+                              "folded": true,
                               "type": "BuiltinCommonInstructions::Standard",
                               "conditions": [
                                 {
                                   "type": {
-                                    "value": "SourisSurObjet"
-                                  },
-                                  "parameters": [
-                                    "JumpButton",
-                                    "",
-                                    "",
-                                    ""
-                                  ]
-                                }
-                              ],
-                              "actions": [
-                                {
-                                  "type": {
-                                    "value": "PlatformBehavior::SimulateJumpKey"
+                                    "value": "MouseButtonPressed"
                                   },
                                   "parameters": [
                                     "Dino",
-                                    "PlatformerObject"
+                                    "Left"
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "BuiltinCommonInstructions::Once"
+                                  },
+                                  "parameters": []
+                                }
+                              ],
+                              "actions": [],
+                              "events": [
+                                {
+                                  "type": "BuiltinCommonInstructions::Standard",
+                                  "conditions": [
+                                    {
+                                      "type": {
+                                        "value": "SourisSurObjet"
+                                      },
+                                      "parameters": [
+                                        "JumpButton",
+                                        "",
+                                        "",
+                                        ""
+                                      ]
+                                    }
+                                  ],
+                                  "actions": [
+                                    {
+                                      "type": {
+                                        "value": "PlatformBehavior::SimulateJumpKey"
+                                      },
+                                      "parameters": [
+                                        "Dino",
+                                        "PlatformerObject"
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "BuiltinCommonInstructions::Standard",
+                                  "conditions": [
+                                    {
+                                      "type": {
+                                        "value": "SourisSurObjet"
+                                      },
+                                      "parameters": [
+                                        "DuckButton",
+                                        "",
+                                        "",
+                                        ""
+                                      ]
+                                    }
+                                  ],
+                                  "actions": [
+                                    {
+                                      "type": {
+                                        "value": "SetAnimationName"
+                                      },
+                                      "parameters": [
+                                        "Dino",
+                                        "\"Duck\""
+                                      ]
+                                    },
+                                    {
+                                      "type": {
+                                        "value": "MettreX"
+                                      },
+                                      "parameters": [
+                                        "DustParticles",
+                                        "=",
+                                        "Dino.BoundingBoxRight()"
+                                      ]
+                                    }
                                   ]
                                 }
                               ]
@@ -4399,254 +4454,217 @@
                               "conditions": [
                                 {
                                   "type": {
-                                    "value": "SourisSurObjet"
+                                    "inverted": true,
+                                    "value": "VarGlobal"
                                   },
                                   "parameters": [
-                                    "DuckButton",
-                                    "",
-                                    "",
-                                    ""
-                                  ]
-                                }
-                              ],
-                              "actions": [
-                                {
-                                  "type": {
-                                    "value": "SetAnimationName"
-                                  },
-                                  "parameters": [
-                                    "Dino",
-                                    "\"Duck\""
-                                  ]
-                                },
-                                {
-                                  "type": {
-                                    "value": "MettreX"
-                                  },
-                                  "parameters": [
-                                    "DustParticles",
+                                    "PlatformNumber",
                                     "=",
-                                    "Dino.BoundingBoxRight()"
-                                  ]
-                                }
-                              ]
-                            }
-                          ]
-                        },
-                        {
-                          "type": "BuiltinCommonInstructions::Standard",
-                          "conditions": [
-                            {
-                              "type": {
-                                "inverted": true,
-                                "value": "VarGlobal"
-                              },
-                              "parameters": [
-                                "PlatformNumber",
-                                "=",
-                                "1"
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "BuiltinCommonInstructions::Or"
-                              },
-                              "parameters": [],
-                              "subInstructions": [
-                                {
-                                  "type": {
-                                    "value": "KeyPressed"
-                                  },
-                                  "parameters": [
-                                    "",
-                                    "Up"
+                                    "1"
                                   ]
                                 },
                                 {
                                   "type": {
-                                    "value": "BuiltinCommonInstructions::And"
+                                    "value": "BuiltinCommonInstructions::Or"
                                   },
                                   "parameters": [],
                                   "subInstructions": [
                                     {
                                       "type": {
-                                        "value": "SwipeGesture::SwipeDirection_4way"
+                                        "value": "KeyPressed"
                                       },
                                       "parameters": [
                                         "",
-                                        "\"Up\"",
-                                        ""
+                                        "Up"
                                       ]
                                     },
                                     {
                                       "type": {
-                                        "value": "SwipeGesture::Distance"
+                                        "value": "BuiltinCommonInstructions::And"
                                       },
-                                      "parameters": [
-                                        "",
-                                        ">",
-                                        "70",
-                                        ""
-                                      ]
-                                    },
-                                    {
-                                      "type": {
-                                        "value": "SwipeGesture::HasSwipeJustEnded"
-                                      },
-                                      "parameters": [
-                                        "",
-                                        ""
+                                      "parameters": [],
+                                      "subInstructions": [
+                                        {
+                                          "type": {
+                                            "value": "SwipeGesture::SwipeDirection_4way"
+                                          },
+                                          "parameters": [
+                                            "",
+                                            "\"Up\"",
+                                            ""
+                                          ]
+                                        },
+                                        {
+                                          "type": {
+                                            "value": "SwipeGesture::Distance"
+                                          },
+                                          "parameters": [
+                                            "",
+                                            ">",
+                                            "70",
+                                            ""
+                                          ]
+                                        },
+                                        {
+                                          "type": {
+                                            "value": "SwipeGesture::HasSwipeJustEnded"
+                                          },
+                                          "parameters": [
+                                            "",
+                                            ""
+                                          ]
+                                        }
                                       ]
                                     }
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "BuiltinCommonInstructions::Once"
+                                  },
+                                  "parameters": []
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "ModVarGlobal"
+                                  },
+                                  "parameters": [
+                                    "PlatformNumber",
+                                    "-",
+                                    "1"
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "MettreY"
+                                  },
+                                  "parameters": [
+                                    "Dino",
+                                    "-",
+                                    "200"
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "DebuggerTools::ConsoleLog"
+                                  },
+                                  "parameters": [
+                                    "\"SWIPE\"",
+                                    "",
+                                    ""
                                   ]
                                 }
                               ]
                             },
                             {
-                              "type": {
-                                "value": "BuiltinCommonInstructions::Once"
-                              },
-                              "parameters": []
-                            }
-                          ],
-                          "actions": [
-                            {
-                              "type": {
-                                "value": "ModVarGlobal"
-                              },
-                              "parameters": [
-                                "PlatformNumber",
-                                "-",
-                                "1"
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "MettreY"
-                              },
-                              "parameters": [
-                                "Dino",
-                                "-",
-                                "200"
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "DebuggerTools::ConsoleLog"
-                              },
-                              "parameters": [
-                                "\"SWIPE\"",
-                                "",
-                                ""
-                              ]
-                            }
-                          ]
-                        },
-                        {
-                          "type": "BuiltinCommonInstructions::Standard",
-                          "conditions": [
-                            {
-                              "type": {
-                                "inverted": true,
-                                "value": "VarGlobal"
-                              },
-                              "parameters": [
-                                "PlatformNumber",
-                                "=",
-                                "3"
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "BuiltinCommonInstructions::Or"
-                              },
-                              "parameters": [],
-                              "subInstructions": [
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
                                 {
                                   "type": {
-                                    "value": "KeyPressed"
+                                    "inverted": true,
+                                    "value": "VarGlobal"
                                   },
                                   "parameters": [
-                                    "",
-                                    "Down"
+                                    "PlatformNumber",
+                                    "=",
+                                    "3"
                                   ]
                                 },
                                 {
                                   "type": {
-                                    "value": "BuiltinCommonInstructions::And"
+                                    "value": "BuiltinCommonInstructions::Or"
                                   },
                                   "parameters": [],
                                   "subInstructions": [
                                     {
                                       "type": {
-                                        "value": "SwipeGesture::SwipeDirection_4way"
+                                        "value": "KeyPressed"
                                       },
                                       "parameters": [
                                         "",
-                                        "\"Down\"",
-                                        ""
+                                        "Down"
                                       ]
                                     },
                                     {
                                       "type": {
-                                        "value": "SwipeGesture::Distance"
+                                        "value": "BuiltinCommonInstructions::And"
                                       },
-                                      "parameters": [
-                                        "",
-                                        ">",
-                                        "70",
-                                        ""
-                                      ]
-                                    },
-                                    {
-                                      "type": {
-                                        "value": "SwipeGesture::HasSwipeJustEnded"
-                                      },
-                                      "parameters": [
-                                        "",
-                                        ""
+                                      "parameters": [],
+                                      "subInstructions": [
+                                        {
+                                          "type": {
+                                            "value": "SwipeGesture::SwipeDirection_4way"
+                                          },
+                                          "parameters": [
+                                            "",
+                                            "\"Down\"",
+                                            ""
+                                          ]
+                                        },
+                                        {
+                                          "type": {
+                                            "value": "SwipeGesture::Distance"
+                                          },
+                                          "parameters": [
+                                            "",
+                                            ">",
+                                            "70",
+                                            ""
+                                          ]
+                                        },
+                                        {
+                                          "type": {
+                                            "value": "SwipeGesture::HasSwipeJustEnded"
+                                          },
+                                          "parameters": [
+                                            "",
+                                            ""
+                                          ]
+                                        }
                                       ]
                                     }
                                   ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "BuiltinCommonInstructions::Once"
+                                  },
+                                  "parameters": []
                                 }
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "BuiltinCommonInstructions::Once"
-                              },
-                              "parameters": []
-                            }
-                          ],
-                          "actions": [
-                            {
-                              "type": {
-                                "value": "ModVarGlobal"
-                              },
-                              "parameters": [
-                                "PlatformNumber",
-                                "+",
-                                "1"
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "MettreY"
-                              },
-                              "parameters": [
-                                "Dino",
-                                "+",
-                                "180"
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "DebuggerTools::ConsoleLog"
-                              },
-                              "parameters": [
-                                "\"SWIPE\"",
-                                "",
-                                ""
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "ModVarGlobal"
+                                  },
+                                  "parameters": [
+                                    "PlatformNumber",
+                                    "+",
+                                    "1"
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "MettreY"
+                                  },
+                                  "parameters": [
+                                    "Dino",
+                                    "+",
+                                    "180"
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "DebuggerTools::ConsoleLog"
+                                  },
+                                  "parameters": [
+                                    "\"SWIPE\"",
+                                    "",
+                                    ""
+                                  ]
+                                }
                               ]
                             }
                           ]
@@ -4887,7 +4905,7 @@
                           "parameters": [
                             "Dino",
                             "Dino.BoundingBoxCenterX() + 100",
-                            "500",
+                            "200",
                             "200",
                             "1"
                           ]
@@ -4899,6 +4917,15 @@
                           "parameters": [
                             "",
                             "\"isFlying_timer\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetAnimationName"
+                          },
+                          "parameters": [
+                            "Dino",
+                            "\"Idle\""
                           ]
                         },
                         {
@@ -4923,7 +4950,7 @@
                           "parameters": [
                             "Dino",
                             "<",
-                            "500"
+                            "200"
                           ]
                         },
                         {
@@ -5076,10 +5103,133 @@
                         },
                         {
                           "type": {
+                            "value": "SetAnimationName"
+                          },
+                          "parameters": [
+                            "Dino",
+                            "\"Run\""
+                          ]
+                        },
+                        {
+                          "type": {
                             "value": "Arreter"
                           },
                           "parameters": [
                             "Dino"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ParticleSystem::EmitterForceMin"
+                          },
+                          "parameters": [
+                            "DustParticles",
+                            "=",
+                            "Variable(ObstacleSpeed)/2"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ParticleSystem::EmitterForceMax"
+                          },
+                          "parameters": [
+                            "DustParticles",
+                            "=",
+                            "Variable(ObstacleSpeed)/2+45"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ParticleSystem::SetFlow"
+                          },
+                          "parameters": [
+                            "DustParticles",
+                            "=",
+                            "(100/1000)*Variable(ObstacleSpeed)"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ParticleSystem::EmitterAngleB"
+                          },
+                          "parameters": [
+                            "DustParticles",
+                            "=",
+                            "(90/1000)*Variable(ObstacleSpeed)"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ModVarScene"
+                          },
+                          "parameters": [
+                            "isFlying",
+                            "=",
+                            "0"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "disabled": true,
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::And"
+                          },
+                          "parameters": [],
+                          "subInstructions": [
+                            {
+                              "type": {
+                                "value": "VarScene"
+                              },
+                              "parameters": [
+                                "isFlying",
+                                ">=",
+                                "2"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "PosY"
+                              },
+                              "parameters": [
+                                "Dino",
+                                ">",
+                                "Platform1.BoundingBoxTop() "
+                              ]
+                            }
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "Arreter"
+                          },
+                          "parameters": [
+                            "Dino"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ActivateBehavior"
+                          },
+                          "parameters": [
+                            "Dino",
+                            "PlatformerObject",
+                            "yes"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ModVarGlobal"
+                          },
+                          "parameters": [
+                            "PlatformNumber",
+                            "=",
+                            "2"
                           ]
                         },
                         {
@@ -5089,7 +5239,15 @@
                           "parameters": [
                             "Dino",
                             "=",
-                            "Platform1.BoundingBoxTop() "
+                            "Platform2.BoundingBoxTop() "
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "Arreter"
+                          },
+                          "parameters": [
+                            "Dino"
                           ]
                         },
                         {

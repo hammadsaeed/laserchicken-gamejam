@@ -1695,6 +1695,15 @@
           "identifier": "https://asset-resources.gdevelop.io/public-resources/Kenney Sokoban/Wall/a490118d306d8a2db9ddddcc8bbfc28a5c2a0f0f07c6bf76958db479f9c1d907_Wall Grey Flat.png",
           "name": "gdevelop-asset-store"
         }
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/Daniel_Run_1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\Daniel_Run_1.png",
+        "smoothed": true,
+        "userAdded": true
       }
     ],
     "resourceFolders": []

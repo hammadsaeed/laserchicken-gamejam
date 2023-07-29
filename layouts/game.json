@@ -1097,6 +1097,68 @@
       ]
     },
     {
+      "adaptCollisionMaskAutomatically": false,
+      "assetStoreId": "",
+      "name": "BonusObject3",
+      "tags": "",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [],
+      "effects": [
+        {
+          "effectType": "Glow",
+          "name": "Effect",
+          "doubleParameters": {
+            "distance": 15,
+            "innerStrength": 1,
+            "outerStrength": 2
+          },
+          "stringParameters": {
+            "color": "51;220;255"
+          },
+          "booleanParameters": {}
+        }
+      ],
+      "behaviors": [
+        {
+          "name": "DestroyOutside",
+          "type": "DestroyOutsideBehavior::DestroyOutside",
+          "extraBorder": 1000
+        }
+      ],
+      "animations": [
+        {
+          "name": "Bonus",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": true,
+              "timeBetweenFrames": 0.02500000037252903,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "assets\\Circle glass_Perfect.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 30,
+                    "y": 30
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
       "additive": false,
       "assetStoreId": "",
       "destroyWhenNoParticles": true,
@@ -1401,6 +1463,12 @@
         {
           "folded": true,
           "name": "isInvincible",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "folded": true,
+          "name": "isMagnetOn",
           "type": "boolean",
           "value": false
         }
@@ -4766,6 +4834,88 @@
                     },
                     {
                       "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "CollisionNP"
+                          },
+                          "parameters": [
+                            "Dino",
+                            "BonusObject3",
+                            "",
+                            "",
+                            ""
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "ModVarGlobal"
+                          },
+                          "parameters": [
+                            "Score",
+                            "+",
+                            "500"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetObjectVariableAsBoolean"
+                          },
+                          "parameters": [
+                            "Dino",
+                            "isMagnetOn",
+                            "True"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "Create"
+                          },
+                          "parameters": [
+                            "",
+                            "BonusParticle",
+                            "Dino.CenterX()",
+                            "Dino.CenterY()",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ParticleSystem::EmitterAngle"
+                          },
+                          "parameters": [
+                            "BonusParticle",
+                            "=",
+                            "-90"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "Delete"
+                          },
+                          "parameters": [
+                            "BonusObject3",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "PlaySound"
+                          },
+                          "parameters": [
+                            "",
+                            "Bonus.mp3",
+                            "",
+                            "100",
+                            "0.5"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
                       "conditions": [],
                       "actions": [
                         {
@@ -5152,7 +5302,6 @@
                   "colorG": 176,
                   "colorR": 74,
                   "creationTime": 0,
-                  "folded": true,
                   "name": "Coin Pickup",
                   "source": "",
                   "type": "BuiltinCommonInstructions::Group",
@@ -5162,57 +5311,171 @@
                       "conditions": [
                         {
                           "type": {
-                            "value": "CollisionNP"
+                            "value": "ObjectVariableAsBoolean"
                           },
                           "parameters": [
                             "Dino",
-                            "Coin",
-                            "",
-                            "",
-                            ""
+                            "isMagnetOn",
+                            "False"
                           ]
                         }
                       ],
-                      "actions": [
+                      "actions": [],
+                      "events": [
                         {
-                          "type": {
-                            "value": "ModVarScene"
-                          },
-                          "parameters": [
-                            "CoinCollected",
-                            "+",
-                            "1"
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "CollisionNP"
+                              },
+                              "parameters": [
+                                "Dino",
+                                "Coin",
+                                "",
+                                "",
+                                ""
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "ModVarScene"
+                              },
+                              "parameters": [
+                                "CoinCollected",
+                                "+",
+                                "1"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "TextObject::String"
+                              },
+                              "parameters": [
+                                "CoinText",
+                                "=",
+                                "\"Coins: \" + VariableString(CoinCollected)"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "Delete"
+                              },
+                              "parameters": [
+                                "Coin",
+                                ""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "PlaySound"
+                              },
+                              "parameters": [
+                                "",
+                                "0f42d487214284edfa1223ac335c7631292e87aea6189b24901784b4c71b44cc_Coins 9.aac",
+                                "",
+                                "",
+                                ""
+                              ]
+                            }
                           ]
-                        },
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
                         {
                           "type": {
-                            "value": "TextObject::String"
+                            "value": "ObjectVariableAsBoolean"
                           },
                           "parameters": [
-                            "CoinText",
-                            "=",
-                            "\"Coins: \" + VariableString(CoinCollected)"
+                            "Dino",
+                            "isMagnetOn",
+                            "True"
                           ]
-                        },
+                        }
+                      ],
+                      "actions": [],
+                      "events": [
                         {
-                          "type": {
-                            "value": "Delete"
-                          },
-                          "parameters": [
-                            "Coin",
-                            ""
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "PlaySound"
-                          },
-                          "parameters": [
-                            "",
-                            "0f42d487214284edfa1223ac335c7631292e87aea6189b24901784b4c71b44cc_Coins 9.aac",
-                            "",
-                            "",
-                            ""
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "Distance"
+                              },
+                              "parameters": [
+                                "Dino",
+                                "Coin",
+                                "500",
+                                ""
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "AddForceVers"
+                              },
+                              "parameters": [
+                                "Coin",
+                                "Dino",
+                                "1000",
+                                "0"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "Wait"
+                              },
+                              "parameters": [
+                                "0.25"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "ModVarScene"
+                              },
+                              "parameters": [
+                                "CoinCollected",
+                                "+",
+                                "1"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "TextObject::String"
+                              },
+                              "parameters": [
+                                "CoinText",
+                                "=",
+                                "\"Coins: \" + VariableString(CoinCollected)"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "Delete"
+                              },
+                              "parameters": [
+                                "Coin",
+                                ""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "PlaySound"
+                              },
+                              "parameters": [
+                                "",
+                                "0f42d487214284edfa1223ac335c7631292e87aea6189b24901784b4c71b44cc_Coins 9.aac",
+                                "",
+                                "",
+                                ""
+                              ]
+                            }
                           ]
                         }
                       ]
@@ -5799,7 +6062,7 @@
                           "parameters": [
                             "PowerUpType",
                             "=",
-                            "RandomInRange(0,1)"
+                            "RandomInRange(0,2)"
                           ]
                         },
                         {
@@ -5819,6 +6082,16 @@
                           "parameters": [
                             "Dino",
                             "isInvincible",
+                            "False"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetObjectVariableAsBoolean"
+                          },
+                          "parameters": [
+                            "Dino",
+                            "isMagnetOn",
                             "False"
                           ]
                         },
@@ -6166,6 +6439,166 @@
                               },
                               "parameters": [
                                 "BonusObject2",
+                                "180",
+                                "Variable(ObstacleSpeed)",
+                                "1"
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "VarScene"
+                              },
+                              "parameters": [
+                                "PowerUpType",
+                                "=",
+                                "2"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "VarScene"
+                              },
+                              "parameters": [
+                                "PlatformTypePowerUP",
+                                "=",
+                                "1"
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "Create"
+                              },
+                              "parameters": [
+                                "",
+                                "BonusObject3",
+                                "RandomInRange(75, 125) + SceneWindowWidth()",
+                                "Platform1.BoundingBoxTop() + 10",
+                                ""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "ChangePlan"
+                              },
+                              "parameters": [
+                                "BonusObject3",
+                                "=",
+                                "Dino.ZOrder() - 1"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "AddForceAL"
+                              },
+                              "parameters": [
+                                "BonusObject3",
+                                "180",
+                                "Variable(ObstacleSpeed)",
+                                "1"
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "VarScene"
+                              },
+                              "parameters": [
+                                "PowerUpType",
+                                "=",
+                                "2"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "VarScene"
+                              },
+                              "parameters": [
+                                "PlatformTypePowerUP",
+                                "=",
+                                "2"
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "Create"
+                              },
+                              "parameters": [
+                                "",
+                                "BonusObject3",
+                                "RandomInRange(75, 125) + SceneWindowWidth()",
+                                "Platform2.BoundingBoxTop()",
+                                ""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "AddForceAL"
+                              },
+                              "parameters": [
+                                "BonusObject3",
+                                "180",
+                                "Variable(ObstacleSpeed)",
+                                "1"
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "VarScene"
+                              },
+                              "parameters": [
+                                "PowerUpType",
+                                "=",
+                                "2"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "VarScene"
+                              },
+                              "parameters": [
+                                "PlatformTypePowerUP",
+                                "=",
+                                "3"
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "Create"
+                              },
+                              "parameters": [
+                                "",
+                                "BonusObject3",
+                                "RandomInRange(75, 125) + SceneWindowWidth()",
+                                "Platform3.BoundingBoxTop()",
+                                ""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "AddForceAL"
+                              },
+                              "parameters": [
+                                "BonusObject3",
                                 "180",
                                 "Variable(ObstacleSpeed)",
                                 "1"

@@ -1534,6 +1534,15 @@
         "name": "assets\\tileTop.png",
         "smoothed": true,
         "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/Circle glass_Perfect.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\Circle glass_Perfect.png",
+        "smoothed": true,
+        "userAdded": true
       }
     ],
     "resourceFolders": []

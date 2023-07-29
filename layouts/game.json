@@ -18,7 +18,7 @@
     "gridColor": 10401023,
     "gridAlpha": 0.8,
     "snap": true,
-    "zoomFactor": 0.7588195016806983,
+    "zoomFactor": 0.47697506683566965,
     "windowMask": false
   },
   "objectsGroups": [
@@ -1397,7 +1397,14 @@
       "tags": "",
       "type": "Sprite",
       "updateIfNotVisible": false,
-      "variables": [],
+      "variables": [
+        {
+          "folded": true,
+          "name": "isInvincible",
+          "type": "boolean",
+          "value": false
+        }
+      ],
       "effects": [],
       "behaviors": [
         {
@@ -3534,6 +3541,16 @@
             "PlatformerObject",
             ""
           ]
+        },
+        {
+          "type": {
+            "value": "SwipeGesture::EnableSwipeDetection"
+          },
+          "parameters": [
+            "",
+            "True",
+            ""
+          ]
         }
       ],
       "events": [
@@ -3748,7 +3765,7 @@
                             "",
                             "DesertMusic.mp3",
                             "yes",
-                            "50",
+                            "10",
                             ""
                           ]
                         }
@@ -3878,22 +3895,12 @@
                   "actions": [
                     {
                       "type": {
-                        "value": "ParticleSystem::EmitterForceMin"
+                        "value": "ParticleSystem::EmitterAngleB"
                       },
                       "parameters": [
                         "DustParticles",
                         "=",
-                        "Variable(ObstacleSpeed)/2"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "ParticleSystem::EmitterForceMax"
-                      },
-                      "parameters": [
-                        "DustParticles",
-                        "=",
-                        "Variable(ObstacleSpeed)/2+45"
+                        "(90/1000)*Variable(ObstacleSpeed)"
                       ]
                     },
                     {
@@ -3908,15 +3915,121 @@
                     },
                     {
                       "type": {
-                        "value": "ParticleSystem::EmitterAngleB"
+                        "value": "ParticleSystem::EmitterForceMax"
                       },
                       "parameters": [
                         "DustParticles",
                         "=",
-                        "(90/1000)*Variable(ObstacleSpeed)"
+                        "Variable(ObstacleSpeed)/2+45"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ParticleSystem::EmitterForceMin"
+                      },
+                      "parameters": [
+                        "DustParticles",
+                        "=",
+                        "Variable(ObstacleSpeed)/2"
                       ]
                     }
                   ]
+                },
+                {
+                  "colorB": 228,
+                  "colorG": 176,
+                  "colorR": 74,
+                  "creationTime": 0,
+                  "name": "Dino z-index",
+                  "source": "",
+                  "type": "BuiltinCommonInstructions::Group",
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "PlatformBehavior::IsObjectOnGivenFloor"
+                          },
+                          "parameters": [
+                            "Dino",
+                            "PlatformerObject",
+                            "Platform1",
+                            ""
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "ChangePlan"
+                          },
+                          "parameters": [
+                            "Dino",
+                            "=",
+                            "1500000"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "PlatformBehavior::IsObjectOnGivenFloor"
+                          },
+                          "parameters": [
+                            "Dino",
+                            "PlatformerObject",
+                            "Platform2",
+                            ""
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "ChangePlan"
+                          },
+                          "parameters": [
+                            "Dino",
+                            "=",
+                            "1500001"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "PlatformBehavior::IsObjectOnGivenFloor"
+                          },
+                          "parameters": [
+                            "Dino",
+                            "PlatformerObject",
+                            "Platform3",
+                            ""
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "ChangePlan"
+                          },
+                          "parameters": [
+                            "Dino",
+                            "=",
+                            "1500002"
+                          ]
+                        }
+                      ]
+                    }
+                  ],
+                  "parameters": []
                 },
                 {
                   "colorB": 228,
@@ -4416,6 +4529,16 @@
                                 "-",
                                 "200"
                               ]
+                            },
+                            {
+                              "type": {
+                                "value": "DebuggerTools::ConsoleLog"
+                              },
+                              "parameters": [
+                                "\"SWIPE\"",
+                                "",
+                                ""
+                              ]
                             }
                           ]
                         },
@@ -4515,6 +4638,16 @@
                                 "+",
                                 "180"
                               ]
+                            },
+                            {
+                              "type": {
+                                "value": "DebuggerTools::ConsoleLog"
+                              },
+                              "parameters": [
+                                "\"SWIPE\"",
+                                "",
+                                ""
+                              ]
                             }
                           ]
                         }
@@ -4578,6 +4711,16 @@
                         },
                         {
                           "type": {
+                            "value": "SetObjectVariableAsBoolean"
+                          },
+                          "parameters": [
+                            "Dino",
+                            "isInvincible",
+                            "True"
+                          ]
+                        },
+                        {
+                          "type": {
                             "value": "Create"
                           },
                           "parameters": [
@@ -4617,6 +4760,24 @@
                             "",
                             "100",
                             "0.5"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetCenter"
+                          },
+                          "parameters": [
+                            "BonusParticle",
+                            "=",
+                            "Dino.CenterX()",
+                            "=",
+                            "Dino.CenterY()"
                           ]
                         }
                       ]
@@ -4690,23 +4851,295 @@
                             "100",
                             "0.5"
                           ]
+                        },
+                        {
+                          "type": {
+                            "value": "ActivateBehavior"
+                          },
+                          "parameters": [
+                            "Dino",
+                            "PlatformerObject",
+                            "no"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetAnimationName"
+                          },
+                          "parameters": [
+                            "Dino",
+                            "\"Jump\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "UnPauseTimer"
+                          },
+                          "parameters": [
+                            "",
+                            "\"isFlying_timer\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "AddForceVersPos"
+                          },
+                          "parameters": [
+                            "Dino",
+                            "Dino.BoundingBoxCenterX() + 100",
+                            "500",
+                            "200",
+                            "1"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ResetTimer"
+                          },
+                          "parameters": [
+                            "",
+                            "\"isFlying_timer\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ModVarScene"
+                          },
+                          "parameters": [
+                            "isFlying",
+                            "=",
+                            "1"
+                          ]
                         }
                       ]
                     },
                     {
                       "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [],
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "PosY"
+                          },
+                          "parameters": [
+                            "Dino",
+                            "<",
+                            "500"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::Once"
+                          },
+                          "parameters": []
+                        }
+                      ],
                       "actions": [
                         {
                           "type": {
-                            "value": "SetCenter"
+                            "value": "Arreter"
                           },
                           "parameters": [
-                            "BonusParticle",
+                            "Dino"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ModVarScene"
+                          },
+                          "parameters": [
+                            "isFlying",
                             "=",
-                            "Dino.CenterX()",
+                            "2"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "CompareTimer"
+                          },
+                          "parameters": [
+                            "",
+                            "\"isFlying_timer\"",
+                            ">=",
+                            "5"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "VarScene"
+                          },
+                          "parameters": [
+                            "isFlying",
+                            ">=",
+                            "1"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "AddForceVersPos"
+                          },
+                          "parameters": [
+                            "Dino",
+                            "Dino.X() + 100",
+                            "Platform1.BoundingBoxCenterY()",
+                            "150",
+                            "1"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "PauseTimer"
+                          },
+                          "parameters": [
+                            "",
+                            "\"isFlying_timer\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ModVarScene"
+                          },
+                          "parameters": [
+                            "isFlying",
                             "=",
-                            "Dino.CenterY()"
+                            "3"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::And"
+                          },
+                          "parameters": [],
+                          "subInstructions": [
+                            {
+                              "type": {
+                                "value": "VarScene"
+                              },
+                              "parameters": [
+                                "isFlying",
+                                ">=",
+                                "2"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "PosY"
+                              },
+                              "parameters": [
+                                "Dino",
+                                ">",
+                                "Platform1.BoundingBoxTop() "
+                              ]
+                            }
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "Arreter"
+                          },
+                          "parameters": [
+                            "Dino"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ActivateBehavior"
+                          },
+                          "parameters": [
+                            "Dino",
+                            "PlatformerObject",
+                            "yes"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ModVarGlobal"
+                          },
+                          "parameters": [
+                            "PlatformNumber",
+                            "=",
+                            "2"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "Arreter"
+                          },
+                          "parameters": [
+                            "Dino"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetCenterY"
+                          },
+                          "parameters": [
+                            "Dino",
+                            "=",
+                            "Platform1.BoundingBoxTop() "
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ParticleSystem::EmitterForceMin"
+                          },
+                          "parameters": [
+                            "DustParticles",
+                            "=",
+                            "Variable(ObstacleSpeed)/2"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ParticleSystem::EmitterForceMax"
+                          },
+                          "parameters": [
+                            "DustParticles",
+                            "=",
+                            "Variable(ObstacleSpeed)/2+45"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ParticleSystem::SetFlow"
+                          },
+                          "parameters": [
+                            "DustParticles",
+                            "=",
+                            "(100/1000)*Variable(ObstacleSpeed)"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ParticleSystem::EmitterAngleB"
+                          },
+                          "parameters": [
+                            "DustParticles",
+                            "=",
+                            "(90/1000)*Variable(ObstacleSpeed)"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ModVarScene"
+                          },
+                          "parameters": [
+                            "isFlying",
+                            "=",
+                            "0"
                           ]
                         }
                       ]
@@ -4719,6 +5152,7 @@
                   "colorG": 176,
                   "colorR": 74,
                   "creationTime": 0,
+                  "folded": true,
                   "name": "Coin Pickup",
                   "source": "",
                   "type": "BuiltinCommonInstructions::Group",
@@ -4874,6 +5308,7 @@
                       "comment": "Randomly chose the obstacle type (0: single cactus, 1: island, 2: Cactus field) when spawn delay is reached. Once the obstacle is created, we reset the spawn timer.\nWe want to avoid scaling the force applied to one obstacle when it is already on screen, so we apply a permanent force. Change 0,0 to number of obstacles"
                     },
                     {
+                      "folded": true,
                       "type": "BuiltinCommonInstructions::Standard",
                       "conditions": [
                         {
@@ -5379,6 +5814,16 @@
                         },
                         {
                           "type": {
+                            "value": "SetObjectVariableAsBoolean"
+                          },
+                          "parameters": [
+                            "Dino",
+                            "isInvincible",
+                            "False"
+                          ]
+                        },
+                        {
+                          "type": {
                             "value": "ResetTimer"
                           },
                           "parameters": [
@@ -5731,6 +6176,7 @@
                       ]
                     },
                     {
+                      "folded": true,
                       "type": "BuiltinCommonInstructions::Standard",
                       "conditions": [
                         {
@@ -5981,147 +6427,139 @@
                         "textG": 0,
                         "textR": 0
                       },
-                      "comment": "Player loses when either of these conditions is checked :\n- Dino collided with a Cactus\n- Dino collided with an Island and is under it (= the played did not duck)"
+                      "comment": "Player loses when either of these conditions is checked :\n- Dino collided with a Cactus\n- Dino collided with an Island and is under it (= the played did not duck)\n\nAND\n- Dino IS NOT invincible"
                     },
                     {
                       "type": "BuiltinCommonInstructions::Standard",
                       "conditions": [
                         {
                           "type": {
-                            "value": "BuiltinCommonInstructions::Or"
+                            "value": "CollisionNP"
                           },
-                          "parameters": [],
-                          "subInstructions": [
+                          "parameters": [
+                            "Dino",
+                            "CactusObstacle",
+                            "",
+                            "",
+                            ""
+                          ]
+                        }
+                      ],
+                      "actions": [],
+                      "events": [
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
                             {
                               "type": {
-                                "value": "CollisionNP"
+                                "value": "VarScene"
                               },
                               "parameters": [
-                                "Dino",
-                                "CactusObstacle",
-                                "",
-                                "",
-                                ""
+                                "isFlying",
+                                "=",
+                                "0"
                               ]
-                            },
+                            }
+                          ],
+                          "actions": [],
+                          "events": [
                             {
-                              "type": {
-                                "value": "BuiltinCommonInstructions::And"
-                              },
-                              "parameters": [],
-                              "subInstructions": [
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
                                 {
                                   "type": {
-                                    "value": "CollisionNP"
+                                    "value": "ObjectVariableAsBoolean"
                                   },
                                   "parameters": [
                                     "Dino",
-                                    "IslandObstacle",
-                                    "",
-                                    "",
-                                    "yes"
+                                    "isInvincible",
+                                    "False"
+                                  ]
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "PlatformBehavior::PlatformerObjectBehavior::AbortJump"
+                                  },
+                                  "parameters": [
+                                    "Dino",
+                                    "PlatformerObject"
                                   ]
                                 },
                                 {
                                   "type": {
-                                    "value": "BoundingBoxBottom"
+                                    "value": "SetAnimationName"
                                   },
                                   "parameters": [
                                     "Dino",
-                                    ">",
-                                    "IslandObstacle.BoundingBoxCenterY()"
+                                    "\"Dead\""
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "ModVarSceneTxt"
+                                  },
+                                  "parameters": [
+                                    "GameStatus",
+                                    "=",
+                                    "\"Dead\""
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "PauseTimer"
+                                  },
+                                  "parameters": [
+                                    "",
+                                    "\"obstacle_spawn\""
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "AjoutObjConcern"
+                                  },
+                                  "parameters": [
+                                    "",
+                                    "MovingObjects"
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "Arreter"
+                                  },
+                                  "parameters": [
+                                    "MovingObjects"
                                   ]
                                 }
-                              ]
-                            }
-                          ]
-                        }
-                      ],
-                      "actions": [
-                        {
-                          "type": {
-                            "value": "PlatformBehavior::PlatformerObjectBehavior::AbortJump"
-                          },
-                          "parameters": [
-                            "Dino",
-                            "PlatformerObject"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "SetAnimationName"
-                          },
-                          "parameters": [
-                            "Dino",
-                            "\"Dead\""
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "ModVarSceneTxt"
-                          },
-                          "parameters": [
-                            "GameStatus",
-                            "=",
-                            "\"Dead\""
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "PauseTimer"
-                          },
-                          "parameters": [
-                            "",
-                            "\"obstacle_spawn\""
-                          ]
-                        }
-                      ],
-                      "events": [
-                        {
-                          "type": "BuiltinCommonInstructions::Standard",
-                          "conditions": [],
-                          "actions": [
-                            {
-                              "type": {
-                                "value": "AjoutObjConcern"
-                              },
-                              "parameters": [
-                                "",
-                                "MovingObjects"
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "Arreter"
-                              },
-                              "parameters": [
-                                "MovingObjects"
-                              ]
-                            }
-                          ]
-                        },
-                        {
-                          "type": "BuiltinCommonInstructions::Standard",
-                          "conditions": [],
-                          "actions": [
-                            {
-                              "type": {
-                                "value": "PlaySound"
-                              },
-                              "parameters": [
-                                "",
-                                "Death.mp3",
-                                "",
-                                "30",
-                                "0.5"
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "ParticleSystem::StopEmission"
-                              },
-                              "parameters": [
-                                "DustParticles"
+                              ],
+                              "events": [
+                                {
+                                  "type": "BuiltinCommonInstructions::Standard",
+                                  "conditions": [],
+                                  "actions": [
+                                    {
+                                      "type": {
+                                        "value": "PlaySound"
+                                      },
+                                      "parameters": [
+                                        "",
+                                        "Death.mp3",
+                                        "",
+                                        "30",
+                                        "0.5"
+                                      ]
+                                    },
+                                    {
+                                      "type": {
+                                        "value": "ParticleSystem::StopEmission"
+                                      },
+                                      "parameters": [
+                                        "DustParticles"
+                                      ]
+                                    }
+                                  ]
+                                }
                               ]
                             }
                           ]

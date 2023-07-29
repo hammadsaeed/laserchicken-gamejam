@@ -18,7 +18,7 @@
     "gridColor": 10401023,
     "gridAlpha": 0.8,
     "snap": true,
-    "zoomFactor": 0.5096849298077984,
+    "zoomFactor": 0.47697506683566965,
     "windowMask": false
   },
   "objectsGroups": [
@@ -244,8 +244,8 @@
       "name": "Dino",
       "persistentUuid": "4355f663-4fd5-41b2-83c2-2c5f313938d9",
       "width": 221,
-      "x": 128,
-      "y": 951,
+      "x": 35,
+      "y": 960,
       "zOrder": 1500000,
       "numberProperties": [],
       "stringProperties": [],
@@ -3447,9 +3447,7 @@
           "type": {
             "value": "DepartScene"
           },
-          "parameters": [
-            ""
-          ]
+          "parameters": [""]
         }
       ],
       "actions": [
@@ -3457,40 +3455,25 @@
           "type": {
             "value": "SetAnimationName"
           },
-          "parameters": [
-            "Dino",
-            "\"Idle\""
-          ]
+          "parameters": ["Dino", "\"Idle\""]
         },
         {
           "type": {
             "value": "ModVarGlobal"
           },
-          "parameters": [
-            "Score",
-            "=",
-            "0"
-          ]
+          "parameters": ["Score", "=", "0"]
         },
         {
           "type": {
             "value": "ActivateBehavior"
           },
-          "parameters": [
-            "Dino",
-            "PlatformerObject",
-            ""
-          ]
+          "parameters": ["Dino", "PlatformerObject", ""]
         },
         {
           "type": {
             "value": "SwipeGesture::EnableSwipeDetection"
           },
-          "parameters": [
-            "",
-            "True",
-            ""
-          ]
+          "parameters": ["", "True", ""]
         }
       ],
       "events": [
@@ -3501,9 +3484,7 @@
               "type": {
                 "value": "SystemInfo::HasTouchScreen"
               },
-              "parameters": [
-                ""
-              ]
+              "parameters": [""]
             }
           ],
           "actions": [
@@ -3511,19 +3492,13 @@
               "type": {
                 "value": "TextObject::String"
               },
-              "parameters": [
-                "ScoreText",
-                "=",
-                "\"Touch to start running.\""
-              ]
+              "parameters": ["ScoreText", "=", "\"Touch to start running.\""]
             },
             {
               "type": {
                 "value": "Cache"
               },
-              "parameters": [
-                "TutorialSprite"
-              ]
+              "parameters": ["TutorialSprite"]
             }
           ]
         },
@@ -3535,9 +3510,7 @@
                 "inverted": true,
                 "value": "SystemInfo::HasTouchScreen"
               },
-              "parameters": [
-                ""
-              ]
+              "parameters": [""]
             }
           ],
           "actions": [
@@ -3545,9 +3518,7 @@
               "type": {
                 "value": "Cache"
               },
-              "parameters": [
-                "TouchScreenTutorial"
-              ]
+              "parameters": ["TouchScreenTutorial"]
             }
           ]
         }
@@ -3578,11 +3549,7 @@
                   "type": {
                     "value": "VarSceneTxt"
                   },
-                  "parameters": [
-                    "GameStatus",
-                    "=",
-                    "\"Preparing\""
-                  ]
+                  "parameters": ["GameStatus", "=", "\"Preparing\""]
                 }
               ],
               "actions": [],
@@ -3600,18 +3567,13 @@
                           "type": {
                             "value": "AnyKeyReleased"
                           },
-                          "parameters": [
-                            ""
-                          ]
+                          "parameters": [""]
                         },
                         {
                           "type": {
                             "value": "MouseButtonPressed"
                           },
-                          "parameters": [
-                            "Dino",
-                            "Left"
-                          ]
+                          "parameters": ["Dino", "Left"]
                         }
                       ]
                     }
@@ -3621,48 +3583,31 @@
                       "type": {
                         "value": "ModVarSceneTxt"
                       },
-                      "parameters": [
-                        "GameStatus",
-                        "=",
-                        "\"Playing\""
-                      ]
+                      "parameters": ["GameStatus", "=", "\"Playing\""]
                     },
                     {
                       "type": {
                         "value": "ResetTimer"
                       },
-                      "parameters": [
-                        "",
-                        "\"obstacle_spawn\""
-                      ]
+                      "parameters": ["", "\"obstacle_spawn\""]
                     },
                     {
                       "type": {
                         "value": "ResetTimer"
                       },
-                      "parameters": [
-                        "",
-                        "\"powerUp_timer\""
-                      ]
+                      "parameters": ["", "\"powerUp_timer\""]
                     },
                     {
                       "type": {
                         "value": "ResetTimer"
                       },
-                      "parameters": [
-                        "",
-                        "\"coin_spawn\""
-                      ]
+                      "parameters": ["", "\"coin_spawn\""]
                     },
                     {
                       "type": {
                         "value": "ModVarGlobal"
                       },
-                      "parameters": [
-                        "PlatformNumber",
-                        "=",
-                        "2"
-                      ]
+                      "parameters": ["PlatformNumber", "=", "2"]
                     }
                   ],
                   "events": [
@@ -3674,40 +3619,25 @@
                           "type": {
                             "value": "Cache"
                           },
-                          "parameters": [
-                            "TutorialObjects"
-                          ]
+                          "parameters": ["TutorialObjects"]
                         },
                         {
                           "type": {
                             "value": "SetAnimationName"
                           },
-                          "parameters": [
-                            "Dino",
-                            "\"Run\""
-                          ]
+                          "parameters": ["Dino", "\"Run\""]
                         },
                         {
                           "type": {
                             "value": "ActivateBehavior"
                           },
-                          "parameters": [
-                            "Dino",
-                            "PlatformerObject",
-                            "yes"
-                          ]
+                          "parameters": ["Dino", "PlatformerObject", "yes"]
                         },
                         {
                           "type": {
                             "value": "PlayMusic"
                           },
-                          "parameters": [
-                            "",
-                            "DesertMusic.mp3",
-                            "yes",
-                            "50",
-                            ""
-                          ]
+                          "parameters": ["", "DesertMusic.mp3", "yes", "10", ""]
                         }
                       ]
                     },
@@ -3741,11 +3671,7 @@
                   "type": {
                     "value": "VarSceneTxt"
                   },
-                  "parameters": [
-                    "GameStatus",
-                    "=",
-                    "\"Playing\""
-                  ]
+                  "parameters": ["GameStatus", "=", "\"Playing\""]
                 }
               ],
               "actions": [
@@ -3825,22 +3751,12 @@
                   "actions": [
                     {
                       "type": {
-                        "value": "ParticleSystem::EmitterForceMin"
+                        "value": "ParticleSystem::EmitterAngleB"
                       },
                       "parameters": [
                         "DustParticles",
                         "=",
-                        "Variable(ObstacleSpeed)/2"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "ParticleSystem::EmitterForceMax"
-                      },
-                      "parameters": [
-                        "DustParticles",
-                        "=",
-                        "Variable(ObstacleSpeed)/2+45"
+                        "(90/1000)*Variable(ObstacleSpeed)"
                       ]
                     },
                     {
@@ -3855,12 +3771,22 @@
                     },
                     {
                       "type": {
-                        "value": "ParticleSystem::EmitterAngleB"
+                        "value": "ParticleSystem::EmitterForceMax"
                       },
                       "parameters": [
                         "DustParticles",
                         "=",
-                        "(90/1000)*Variable(ObstacleSpeed)"
+                        "Variable(ObstacleSpeed)/2+45"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ParticleSystem::EmitterForceMin"
+                      },
+                      "parameters": [
+                        "DustParticles",
+                        "=",
+                        "Variable(ObstacleSpeed)/2"
                       ]
                     }
                   ]
@@ -3895,11 +3821,7 @@
                           "type": {
                             "value": "ChangePlan"
                           },
-                          "parameters": [
-                            "Dino",
-                            "=",
-                            "1500000"
-                          ]
+                          "parameters": ["Dino", "=", "1500000"]
                         }
                       ]
                     },
@@ -3923,11 +3845,7 @@
                           "type": {
                             "value": "ChangePlan"
                           },
-                          "parameters": [
-                            "Dino",
-                            "=",
-                            "1500001"
-                          ]
+                          "parameters": ["Dino", "=", "1500001"]
                         }
                       ]
                     },
@@ -3951,11 +3869,7 @@
                           "type": {
                             "value": "ChangePlan"
                           },
-                          "parameters": [
-                            "Dino",
-                            "=",
-                            "1500002"
-                          ]
+                          "parameters": ["Dino", "=", "1500002"]
                         }
                       ]
                     }
@@ -3979,10 +3893,7 @@
                           "type": {
                             "value": "PlatformBehavior::IsOnFloor"
                           },
-                          "parameters": [
-                            "Dino",
-                            "PlatformerObject"
-                          ]
+                          "parameters": ["Dino", "PlatformerObject"]
                         }
                       ],
                       "actions": [],
@@ -3994,9 +3905,7 @@
                               "type": {
                                 "value": "AnimationEnded"
                               },
-                              "parameters": [
-                                "Dino"
-                              ]
+                              "parameters": ["Dino"]
                             }
                           ],
                           "actions": [
@@ -4004,10 +3913,7 @@
                               "type": {
                                 "value": "SetAnimationName"
                               },
-                              "parameters": [
-                                "Dino",
-                                "\"Run\""
-                              ]
+                              "parameters": ["Dino", "\"Run\""]
                             }
                           ]
                         },
@@ -4050,9 +3956,7 @@
                               "type": {
                                 "value": "ParticleSystem::StartEmission"
                               },
-                              "parameters": [
-                                "DustParticles"
-                              ]
+                              "parameters": ["DustParticles"]
                             }
                           ]
                         }
@@ -4066,10 +3970,7 @@
                             "inverted": true,
                             "value": "PlatformBehavior::IsOnFloor"
                           },
-                          "parameters": [
-                            "Dino",
-                            "PlatformerObject"
-                          ]
+                          "parameters": ["Dino", "PlatformerObject"]
                         },
                         {
                           "type": {
@@ -4083,9 +3984,7 @@
                           "type": {
                             "value": "ParticleSystem::StopEmission"
                           },
-                          "parameters": [
-                            "DustParticles"
-                          ]
+                          "parameters": ["DustParticles"]
                         }
                       ]
                     },
@@ -4105,10 +4004,7 @@
                               "type": {
                                 "value": "PlatformBehavior::IsJumping"
                               },
-                              "parameters": [
-                                "Dino",
-                                "PlatformerObject"
-                              ]
+                              "parameters": ["Dino", "PlatformerObject"]
                             },
                             {
                               "type": {
@@ -4122,22 +4018,13 @@
                               "type": {
                                 "value": "PlaySound"
                               },
-                              "parameters": [
-                                "",
-                                "Jump.mp3",
-                                "",
-                                "100",
-                                "1"
-                              ]
+                              "parameters": ["", "Jump.mp3", "", "100", "1"]
                             },
                             {
                               "type": {
                                 "value": "SetAnimationName"
                               },
-                              "parameters": [
-                                "Dino",
-                                "\"Jump\""
-                              ]
+                              "parameters": ["Dino", "\"Jump\""]
                             }
                           ]
                         },
@@ -4148,10 +4035,7 @@
                               "type": {
                                 "value": "AnimationName"
                               },
-                              "parameters": [
-                                "Dino",
-                                "\"Duck\""
-                              ]
+                              "parameters": ["Dino", "\"Duck\""]
                             },
                             {
                               "type": {
@@ -4165,13 +4049,7 @@
                               "type": {
                                 "value": "PlaySound"
                               },
-                              "parameters": [
-                                "",
-                                "Skid.mp3",
-                                "",
-                                "30",
-                                "1"
-                              ]
+                              "parameters": ["", "Skid.mp3", "", "30", "1"]
                             }
                           ]
                         }
@@ -4183,6 +4061,7 @@
                       "colorG": 176,
                       "colorR": 74,
                       "creationTime": 0,
+                      "folded": true,
                       "name": "Controls",
                       "source": "",
                       "type": "BuiltinCommonInstructions::Group",
@@ -4195,10 +4074,7 @@
                               "type": {
                                 "value": "KeyPressed"
                               },
-                              "parameters": [
-                                "Dino",
-                                "Up"
-                              ]
+                              "parameters": ["Dino", "Up"]
                             }
                           ],
                           "actions": [
@@ -4206,10 +4082,7 @@
                               "type": {
                                 "value": "PlatformBehavior::SimulateJumpKey"
                               },
-                              "parameters": [
-                                "Dino",
-                                "PlatformerObject"
-                              ]
+                              "parameters": ["Dino", "PlatformerObject"]
                             }
                           ]
                         },
@@ -4221,19 +4094,13 @@
                               "type": {
                                 "value": "KeyPressed"
                               },
-                              "parameters": [
-                                "Dino",
-                                "Down"
-                              ]
+                              "parameters": ["Dino", "Down"]
                             },
                             {
                               "type": {
                                 "value": "PlatformBehavior::IsOnFloor"
                               },
-                              "parameters": [
-                                "Dino",
-                                "PlatformerObject"
-                              ]
+                              "parameters": ["Dino", "PlatformerObject"]
                             },
                             {
                               "type": {
@@ -4247,10 +4114,7 @@
                               "type": {
                                 "value": "SetAnimationName"
                               },
-                              "parameters": [
-                                "Dino",
-                                "\"Duck\""
-                              ]
+                              "parameters": ["Dino", "\"Duck\""]
                             },
                             {
                               "type": {
@@ -4284,10 +4148,7 @@
                               "type": {
                                 "value": "MouseButtonPressed"
                               },
-                              "parameters": [
-                                "Dino",
-                                "Left"
-                              ]
+                              "parameters": ["Dino", "Left"]
                             },
                             {
                               "type": {
@@ -4305,12 +4166,7 @@
                                   "type": {
                                     "value": "SourisSurObjet"
                                   },
-                                  "parameters": [
-                                    "JumpButton",
-                                    "",
-                                    "",
-                                    ""
-                                  ]
+                                  "parameters": ["JumpButton", "", "", ""]
                                 }
                               ],
                               "actions": [
@@ -4318,10 +4174,7 @@
                                   "type": {
                                     "value": "PlatformBehavior::SimulateJumpKey"
                                   },
-                                  "parameters": [
-                                    "Dino",
-                                    "PlatformerObject"
-                                  ]
+                                  "parameters": ["Dino", "PlatformerObject"]
                                 }
                               ]
                             },
@@ -4332,12 +4185,7 @@
                                   "type": {
                                     "value": "SourisSurObjet"
                                   },
-                                  "parameters": [
-                                    "DuckButton",
-                                    "",
-                                    "",
-                                    ""
-                                  ]
+                                  "parameters": ["DuckButton", "", "", ""]
                                 }
                               ],
                               "actions": [
@@ -4345,10 +4193,7 @@
                                   "type": {
                                     "value": "SetAnimationName"
                                   },
-                                  "parameters": [
-                                    "Dino",
-                                    "\"Duck\""
-                                  ]
+                                  "parameters": ["Dino", "\"Duck\""]
                                 },
                                 {
                                   "type": {
@@ -4372,11 +4217,7 @@
                                 "inverted": true,
                                 "value": "VarGlobal"
                               },
-                              "parameters": [
-                                "PlatformNumber",
-                                "=",
-                                "1"
-                              ]
+                              "parameters": ["PlatformNumber", "=", "1"]
                             },
                             {
                               "type": {
@@ -4388,10 +4229,7 @@
                                   "type": {
                                     "value": "KeyPressed"
                                   },
-                                  "parameters": [
-                                    "",
-                                    "Up"
-                                  ]
+                                  "parameters": ["", "Up"]
                                 },
                                 {
                                   "type": {
@@ -4403,31 +4241,19 @@
                                       "type": {
                                         "value": "SwipeGesture::SwipeDirection_4way"
                                       },
-                                      "parameters": [
-                                        "",
-                                        "\"Up\"",
-                                        ""
-                                      ]
+                                      "parameters": ["", "\"Up\"", ""]
                                     },
                                     {
                                       "type": {
                                         "value": "SwipeGesture::Distance"
                                       },
-                                      "parameters": [
-                                        "",
-                                        ">",
-                                        "70",
-                                        ""
-                                      ]
+                                      "parameters": ["", ">", "70", ""]
                                     },
                                     {
                                       "type": {
                                         "value": "SwipeGesture::HasSwipeJustEnded"
                                       },
-                                      "parameters": [
-                                        "",
-                                        ""
-                                      ]
+                                      "parameters": ["", ""]
                                     }
                                   ]
                                 }
@@ -4445,31 +4271,19 @@
                               "type": {
                                 "value": "ModVarGlobal"
                               },
-                              "parameters": [
-                                "PlatformNumber",
-                                "-",
-                                "1"
-                              ]
+                              "parameters": ["PlatformNumber", "-", "1"]
                             },
                             {
                               "type": {
                                 "value": "MettreY"
                               },
-                              "parameters": [
-                                "Dino",
-                                "-",
-                                "65"
-                              ]
+                              "parameters": ["Dino", "-", "65"]
                             },
                             {
                               "type": {
                                 "value": "DebuggerTools::ConsoleLog"
                               },
-                              "parameters": [
-                                "\"SWIPE\"",
-                                "",
-                                ""
-                              ]
+                              "parameters": ["\"SWIPE\"", "", ""]
                             }
                           ]
                         },
@@ -4481,11 +4295,7 @@
                                 "inverted": true,
                                 "value": "VarGlobal"
                               },
-                              "parameters": [
-                                "PlatformNumber",
-                                "=",
-                                "3"
-                              ]
+                              "parameters": ["PlatformNumber", "=", "3"]
                             },
                             {
                               "type": {
@@ -4497,10 +4307,7 @@
                                   "type": {
                                     "value": "KeyPressed"
                                   },
-                                  "parameters": [
-                                    "",
-                                    "Down"
-                                  ]
+                                  "parameters": ["", "Down"]
                                 },
                                 {
                                   "type": {
@@ -4512,31 +4319,19 @@
                                       "type": {
                                         "value": "SwipeGesture::SwipeDirection_4way"
                                       },
-                                      "parameters": [
-                                        "",
-                                        "\"Down\"",
-                                        ""
-                                      ]
+                                      "parameters": ["", "\"Down\"", ""]
                                     },
                                     {
                                       "type": {
                                         "value": "SwipeGesture::Distance"
                                       },
-                                      "parameters": [
-                                        "",
-                                        ">",
-                                        "70",
-                                        ""
-                                      ]
+                                      "parameters": ["", ">", "70", ""]
                                     },
                                     {
                                       "type": {
                                         "value": "SwipeGesture::HasSwipeJustEnded"
                                       },
-                                      "parameters": [
-                                        "",
-                                        ""
-                                      ]
+                                      "parameters": ["", ""]
                                     }
                                   ]
                                 }
@@ -4554,31 +4349,19 @@
                               "type": {
                                 "value": "ModVarGlobal"
                               },
-                              "parameters": [
-                                "PlatformNumber",
-                                "+",
-                                "1"
-                              ]
+                              "parameters": ["PlatformNumber", "+", "1"]
                             },
                             {
                               "type": {
                                 "value": "MettreY"
                               },
-                              "parameters": [
-                                "Dino",
-                                "+",
-                                "60"
-                              ]
+                              "parameters": ["Dino", "+", "60"]
                             },
                             {
                               "type": {
                                 "value": "DebuggerTools::ConsoleLog"
                               },
-                              "parameters": [
-                                "\"SWIPE\"",
-                                "",
-                                ""
-                              ]
+                              "parameters": ["\"SWIPE\"", "", ""]
                             }
                           ]
                         }
@@ -4605,11 +4388,7 @@
                           "type": {
                             "value": "ModVarGlobal"
                           },
-                          "parameters": [
-                            "Score",
-                            "+",
-                            "round(TimeDelta()*100)"
-                          ]
+                          "parameters": ["Score", "+", "round(TimeDelta()*100)"]
                         }
                       ]
                     },
@@ -4620,13 +4399,7 @@
                           "type": {
                             "value": "CollisionNP"
                           },
-                          "parameters": [
-                            "Dino",
-                            "BonusObject",
-                            "",
-                            "",
-                            ""
-                          ]
+                          "parameters": ["Dino", "BonusObject", "", "", ""]
                         }
                       ],
                       "actions": [
@@ -4634,21 +4407,13 @@
                           "type": {
                             "value": "ModVarGlobal"
                           },
-                          "parameters": [
-                            "Score",
-                            "+",
-                            "500"
-                          ]
+                          "parameters": ["Score", "+", "500"]
                         },
                         {
                           "type": {
                             "value": "SetObjectVariableAsBoolean"
                           },
-                          "parameters": [
-                            "Dino",
-                            "isInvincible",
-                            "True"
-                          ]
+                          "parameters": ["Dino", "isInvincible", "True"]
                         },
                         {
                           "type": {
@@ -4666,104 +4431,19 @@
                           "type": {
                             "value": "ParticleSystem::EmitterAngle"
                           },
-                          "parameters": [
-                            "BonusParticle",
-                            "=",
-                            "-90"
-                          ]
+                          "parameters": ["BonusParticle", "=", "-90"]
                         },
                         {
                           "type": {
                             "value": "Delete"
                           },
-                          "parameters": [
-                            "BonusObject",
-                            ""
-                          ]
+                          "parameters": ["BonusObject", ""]
                         },
                         {
                           "type": {
                             "value": "PlaySound"
                           },
-                          "parameters": [
-                            "",
-                            "Bonus.mp3",
-                            "",
-                            "100",
-                            "0.5"
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [
-                        {
-                          "type": {
-                            "value": "CollisionNP"
-                          },
-                          "parameters": [
-                            "Dino",
-                            "BonusObject2",
-                            "",
-                            "",
-                            ""
-                          ]
-                        }
-                      ],
-                      "actions": [
-                        {
-                          "type": {
-                            "value": "ModVarGlobal"
-                          },
-                          "parameters": [
-                            "Score",
-                            "+",
-                            "500"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "Create"
-                          },
-                          "parameters": [
-                            "",
-                            "BonusParticle",
-                            "Dino.CenterX()",
-                            "Dino.CenterY()",
-                            ""
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "ParticleSystem::EmitterAngle"
-                          },
-                          "parameters": [
-                            "BonusParticle",
-                            "=",
-                            "-90"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "Delete"
-                          },
-                          "parameters": [
-                            "BonusObject2",
-                            ""
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "PlaySound"
-                          },
-                          "parameters": [
-                            "",
-                            "Bonus.mp3",
-                            "",
-                            "100",
-                            "0.5"
-                          ]
+                          "parameters": ["", "Bonus.mp3", "", "100", "0.5"]
                         }
                       ]
                     },
@@ -4784,6 +4464,282 @@
                           ]
                         }
                       ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "CollisionNP"
+                          },
+                          "parameters": ["Dino", "BonusObject2", "", "", ""]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "ModVarGlobal"
+                          },
+                          "parameters": ["Score", "+", "500"]
+                        },
+                        {
+                          "type": {
+                            "value": "Create"
+                          },
+                          "parameters": [
+                            "",
+                            "BonusParticle",
+                            "Dino.CenterX()",
+                            "Dino.CenterY()",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ParticleSystem::EmitterAngle"
+                          },
+                          "parameters": ["BonusParticle", "=", "-90"]
+                        },
+                        {
+                          "type": {
+                            "value": "Delete"
+                          },
+                          "parameters": ["BonusObject2", ""]
+                        },
+                        {
+                          "type": {
+                            "value": "PlaySound"
+                          },
+                          "parameters": ["", "Bonus.mp3", "", "100", "0.5"]
+                        },
+                        {
+                          "type": {
+                            "value": "ActivateBehavior"
+                          },
+                          "parameters": ["Dino", "PlatformerObject", "no"]
+                        },
+                        {
+                          "type": {
+                            "value": "SetAnimationName"
+                          },
+                          "parameters": ["Dino", "\"Jump\""]
+                        },
+                        {
+                          "type": {
+                            "value": "UnPauseTimer"
+                          },
+                          "parameters": ["", "\"isFlying_timer\""]
+                        },
+                        {
+                          "type": {
+                            "value": "AddForceVersPos"
+                          },
+                          "parameters": [
+                            "Dino",
+                            "Dino.BoundingBoxCenterX() + 100",
+                            "500",
+                            "200",
+                            "1"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ResetTimer"
+                          },
+                          "parameters": ["", "\"isFlying_timer\""]
+                        },
+                        {
+                          "type": {
+                            "value": "ModVarScene"
+                          },
+                          "parameters": ["isFlying", "=", "1"]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "PosY"
+                          },
+                          "parameters": ["Dino", "<", "500"]
+                        },
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::Once"
+                          },
+                          "parameters": []
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "Arreter"
+                          },
+                          "parameters": ["Dino"]
+                        },
+                        {
+                          "type": {
+                            "value": "ModVarScene"
+                          },
+                          "parameters": ["isFlying", "=", "2"]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "CompareTimer"
+                          },
+                          "parameters": ["", "\"isFlying_timer\"", ">=", "5"]
+                        },
+                        {
+                          "type": {
+                            "value": "VarScene"
+                          },
+                          "parameters": ["isFlying", ">=", "1"]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "AddForceVersPos"
+                          },
+                          "parameters": [
+                            "Dino",
+                            "Dino.X() + 100",
+                            "Platform1.BoundingBoxCenterY()",
+                            "150",
+                            "1"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "PauseTimer"
+                          },
+                          "parameters": ["", "\"isFlying_timer\""]
+                        },
+                        {
+                          "type": {
+                            "value": "ModVarScene"
+                          },
+                          "parameters": ["isFlying", "=", "3"]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::And"
+                          },
+                          "parameters": [],
+                          "subInstructions": [
+                            {
+                              "type": {
+                                "value": "VarScene"
+                              },
+                              "parameters": ["isFlying", ">=", "2"]
+                            },
+                            {
+                              "type": {
+                                "value": "PosY"
+                              },
+                              "parameters": [
+                                "Dino",
+                                ">",
+                                "Platform1.BoundingBoxTop() "
+                              ]
+                            }
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "Arreter"
+                          },
+                          "parameters": ["Dino"]
+                        },
+                        {
+                          "type": {
+                            "value": "ActivateBehavior"
+                          },
+                          "parameters": ["Dino", "PlatformerObject", "yes"]
+                        },
+                        {
+                          "type": {
+                            "value": "ModVarGlobal"
+                          },
+                          "parameters": ["PlatformNumber", "=", "2"]
+                        },
+                        {
+                          "type": {
+                            "value": "Arreter"
+                          },
+                          "parameters": ["Dino"]
+                        },
+                        {
+                          "type": {
+                            "value": "SetCenterY"
+                          },
+                          "parameters": [
+                            "Dino",
+                            "=",
+                            "Platform1.BoundingBoxTop() "
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ParticleSystem::EmitterForceMin"
+                          },
+                          "parameters": [
+                            "DustParticles",
+                            "=",
+                            "Variable(ObstacleSpeed)/2"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ParticleSystem::EmitterForceMax"
+                          },
+                          "parameters": [
+                            "DustParticles",
+                            "=",
+                            "Variable(ObstacleSpeed)/2+45"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ParticleSystem::SetFlow"
+                          },
+                          "parameters": [
+                            "DustParticles",
+                            "=",
+                            "(100/1000)*Variable(ObstacleSpeed)"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ParticleSystem::EmitterAngleB"
+                          },
+                          "parameters": [
+                            "DustParticles",
+                            "=",
+                            "(90/1000)*Variable(ObstacleSpeed)"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ModVarScene"
+                          },
+                          "parameters": ["isFlying", "=", "0"]
+                        }
+                      ]
                     }
                   ],
                   "parameters": []
@@ -4793,6 +4749,7 @@
                   "colorG": 176,
                   "colorR": 74,
                   "creationTime": 0,
+                  "folded": true,
                   "name": "Coin Pickup",
                   "source": "",
                   "type": "BuiltinCommonInstructions::Group",
@@ -4804,13 +4761,7 @@
                           "type": {
                             "value": "CollisionNP"
                           },
-                          "parameters": [
-                            "Dino",
-                            "Coin",
-                            "",
-                            "",
-                            ""
-                          ]
+                          "parameters": ["Dino", "Coin", "", "", ""]
                         }
                       ],
                       "actions": [
@@ -4818,11 +4769,7 @@
                           "type": {
                             "value": "ModVarScene"
                           },
-                          "parameters": [
-                            "CoinCollected",
-                            "+",
-                            "1"
-                          ]
+                          "parameters": ["CoinCollected", "+", "1"]
                         },
                         {
                           "type": {
@@ -4838,10 +4785,7 @@
                           "type": {
                             "value": "Delete"
                           },
-                          "parameters": [
-                            "Coin",
-                            ""
-                          ]
+                          "parameters": ["Coin", ""]
                         },
                         {
                           "type": {
@@ -4865,6 +4809,7 @@
                   "colorG": 176,
                   "colorR": 74,
                   "creationTime": 0,
+                  "folded": true,
                   "name": "Obstacle spawn",
                   "source": "",
                   "type": "BuiltinCommonInstructions::Group",
@@ -4888,11 +4833,7 @@
                           "type": {
                             "value": "VarScene"
                           },
-                          "parameters": [
-                            "ObstacleSpeed",
-                            "<",
-                            "2000"
-                          ]
+                          "parameters": ["ObstacleSpeed", "<", "2000"]
                         }
                       ],
                       "actions": [
@@ -4900,11 +4841,7 @@
                           "type": {
                             "value": "ModVarScene"
                           },
-                          "parameters": [
-                            "ObstacleSpeed",
-                            "+",
-                            "TimeDelta()*8"
-                          ]
+                          "parameters": ["ObstacleSpeed", "+", "TimeDelta()*8"]
                         }
                       ]
                     },
@@ -4915,11 +4852,7 @@
                           "type": {
                             "value": "VarScene"
                           },
-                          "parameters": [
-                            "ObstacleSpawnDelay",
-                            ">",
-                            "0.7"
-                          ]
+                          "parameters": ["ObstacleSpawnDelay", ">", "0.7"]
                         }
                       ],
                       "actions": [
@@ -4948,6 +4881,7 @@
                       "comment": "Randomly chose the obstacle type (0: single cactus, 1: island, 2: Cactus field) when spawn delay is reached. Once the obstacle is created, we reset the spawn timer.\nWe want to avoid scaling the force applied to one obstacle when it is already on screen, so we apply a permanent force. Change 0,0 to number of obstacles"
                     },
                     {
+                      "folded": true,
                       "type": "BuiltinCommonInstructions::Standard",
                       "conditions": [
                         {
@@ -4987,10 +4921,7 @@
                           "type": {
                             "value": "ResetTimer"
                           },
-                          "parameters": [
-                            "",
-                            "\"obstacle_spawn\""
-                          ]
+                          "parameters": ["", "\"obstacle_spawn\""]
                         }
                       ],
                       "events": [
@@ -5001,21 +4932,13 @@
                               "type": {
                                 "value": "VarScene"
                               },
-                              "parameters": [
-                                "ObstacleType",
-                                "=",
-                                "0"
-                              ]
+                              "parameters": ["ObstacleType", "=", "0"]
                             },
                             {
                               "type": {
                                 "value": "VarScene"
                               },
-                              "parameters": [
-                                "PlatformType",
-                                "=",
-                                "1"
-                              ]
+                              "parameters": ["PlatformType", "=", "1"]
                             }
                           ],
                           "actions": [
@@ -5046,11 +4969,7 @@
                               "type": {
                                 "value": "ChangePlan"
                               },
-                              "parameters": [
-                                "CactusObstacle",
-                                "=",
-                                "1500000"
-                              ]
+                              "parameters": ["CactusObstacle", "=", "1500000"]
                             }
                           ]
                         },
@@ -5061,21 +4980,13 @@
                               "type": {
                                 "value": "VarScene"
                               },
-                              "parameters": [
-                                "ObstacleType",
-                                "=",
-                                "0"
-                              ]
+                              "parameters": ["ObstacleType", "=", "0"]
                             },
                             {
                               "type": {
                                 "value": "VarScene"
                               },
-                              "parameters": [
-                                "PlatformType",
-                                "=",
-                                "2"
-                              ]
+                              "parameters": ["PlatformType", "=", "2"]
                             }
                           ],
                           "actions": [
@@ -5106,11 +5017,7 @@
                               "type": {
                                 "value": "ChangePlan"
                               },
-                              "parameters": [
-                                "CactusObstacle",
-                                "=",
-                                "1500001"
-                              ]
+                              "parameters": ["CactusObstacle", "=", "1500001"]
                             }
                           ]
                         },
@@ -5121,21 +5028,13 @@
                               "type": {
                                 "value": "VarScene"
                               },
-                              "parameters": [
-                                "ObstacleType",
-                                "=",
-                                "0"
-                              ]
+                              "parameters": ["ObstacleType", "=", "0"]
                             },
                             {
                               "type": {
                                 "value": "VarScene"
                               },
-                              "parameters": [
-                                "PlatformType",
-                                "=",
-                                "3"
-                              ]
+                              "parameters": ["PlatformType", "=", "3"]
                             }
                           ],
                           "actions": [
@@ -5166,11 +5065,7 @@
                               "type": {
                                 "value": "ChangePlan"
                               },
-                              "parameters": [
-                                "CactusObstacle",
-                                "=",
-                                "1500002"
-                              ]
+                              "parameters": ["CactusObstacle", "=", "1500002"]
                             }
                           ]
                         },
@@ -5194,11 +5089,7 @@
                               "type": {
                                 "value": "VarScene"
                               },
-                              "parameters": [
-                                "ObstacleType",
-                                "=",
-                                "1"
-                              ]
+                              "parameters": ["ObstacleType", "=", "1"]
                             }
                           ],
                           "actions": [
@@ -5342,11 +5233,7 @@
                               "type": {
                                 "value": "VarScene"
                               },
-                              "parameters": [
-                                "ObstacleType",
-                                "=",
-                                "2"
-                              ]
+                              "parameters": ["ObstacleType", "=", "2"]
                             }
                           ],
                           "actions": [
@@ -5442,12 +5329,7 @@
                           "type": {
                             "value": "CompareTimer"
                           },
-                          "parameters": [
-                            "",
-                            "\"powerUp_timer\"",
-                            ">=",
-                            "5"
-                          ]
+                          "parameters": ["", "\"powerUp_timer\"", ">=", "5"]
                         }
                       ],
                       "actions": [
@@ -5458,7 +5340,7 @@
                           "parameters": [
                             "PowerUpType",
                             "=",
-                            "RandomInRange(0,1)"
+                            "RandomInRange(1,1)"
                           ]
                         },
                         {
@@ -5475,20 +5357,13 @@
                           "type": {
                             "value": "SetObjectVariableAsBoolean"
                           },
-                          "parameters": [
-                            "Dino",
-                            "isInvincible",
-                            "False"
-                          ]
+                          "parameters": ["Dino", "isInvincible", "False"]
                         },
                         {
                           "type": {
                             "value": "ResetTimer"
                           },
-                          "parameters": [
-                            "",
-                            "\"powerUp_timer\""
-                          ]
+                          "parameters": ["", "\"powerUp_timer\""]
                         }
                       ],
                       "events": [
@@ -5499,21 +5374,13 @@
                               "type": {
                                 "value": "VarScene"
                               },
-                              "parameters": [
-                                "PowerUpType",
-                                "=",
-                                "0"
-                              ]
+                              "parameters": ["PowerUpType", "=", "0"]
                             },
                             {
                               "type": {
                                 "value": "VarScene"
                               },
-                              "parameters": [
-                                "PlatformTypePowerUP",
-                                "=",
-                                "1"
-                              ]
+                              "parameters": ["PlatformTypePowerUP", "=", "1"]
                             }
                           ],
                           "actions": [
@@ -5544,11 +5411,7 @@
                               "type": {
                                 "value": "ChangePlan"
                               },
-                              "parameters": [
-                                "BonusObject",
-                                "=",
-                                "1500000"
-                              ]
+                              "parameters": ["BonusObject", "=", "1500000"]
                             }
                           ]
                         },
@@ -5559,21 +5422,13 @@
                               "type": {
                                 "value": "VarScene"
                               },
-                              "parameters": [
-                                "PowerUpType",
-                                "=",
-                                "0"
-                              ]
+                              "parameters": ["PowerUpType", "=", "0"]
                             },
                             {
                               "type": {
                                 "value": "VarScene"
                               },
-                              "parameters": [
-                                "PlatformTypePowerUP",
-                                "=",
-                                "2"
-                              ]
+                              "parameters": ["PlatformTypePowerUP", "=", "2"]
                             }
                           ],
                           "actions": [
@@ -5604,11 +5459,7 @@
                               "type": {
                                 "value": "ChangePlan"
                               },
-                              "parameters": [
-                                "BonusObject",
-                                "=",
-                                "1500000"
-                              ]
+                              "parameters": ["BonusObject", "=", "1500000"]
                             }
                           ]
                         },
@@ -5619,21 +5470,13 @@
                               "type": {
                                 "value": "VarScene"
                               },
-                              "parameters": [
-                                "PowerUpType",
-                                "=",
-                                "0"
-                              ]
+                              "parameters": ["PowerUpType", "=", "0"]
                             },
                             {
                               "type": {
                                 "value": "VarScene"
                               },
-                              "parameters": [
-                                "PlatformTypePowerUP",
-                                "=",
-                                "3"
-                              ]
+                              "parameters": ["PlatformTypePowerUP", "=", "3"]
                             }
                           ],
                           "actions": [
@@ -5664,11 +5507,7 @@
                               "type": {
                                 "value": "ChangePlan"
                               },
-                              "parameters": [
-                                "BonusObject",
-                                "=",
-                                "1500000"
-                              ]
+                              "parameters": ["BonusObject", "=", "1500000"]
                             }
                           ]
                         },
@@ -5679,21 +5518,13 @@
                               "type": {
                                 "value": "VarScene"
                               },
-                              "parameters": [
-                                "PowerUpType",
-                                "=",
-                                "1"
-                              ]
+                              "parameters": ["PowerUpType", "=", "1"]
                             },
                             {
                               "type": {
                                 "value": "VarScene"
                               },
-                              "parameters": [
-                                "PlatformTypePowerUP",
-                                "=",
-                                "1"
-                              ]
+                              "parameters": ["PlatformTypePowerUP", "=", "1"]
                             }
                           ],
                           "actions": [
@@ -5729,21 +5560,13 @@
                               "type": {
                                 "value": "VarScene"
                               },
-                              "parameters": [
-                                "PowerUpType",
-                                "=",
-                                "1"
-                              ]
+                              "parameters": ["PowerUpType", "=", "1"]
                             },
                             {
                               "type": {
                                 "value": "VarScene"
                               },
-                              "parameters": [
-                                "PlatformTypePowerUP",
-                                "=",
-                                "2"
-                              ]
+                              "parameters": ["PlatformTypePowerUP", "=", "2"]
                             }
                           ],
                           "actions": [
@@ -5779,21 +5602,13 @@
                               "type": {
                                 "value": "VarScene"
                               },
-                              "parameters": [
-                                "PowerUpType",
-                                "=",
-                                "1"
-                              ]
+                              "parameters": ["PowerUpType", "=", "1"]
                             },
                             {
                               "type": {
                                 "value": "VarScene"
                               },
-                              "parameters": [
-                                "PlatformTypePowerUP",
-                                "=",
-                                "3"
-                              ]
+                              "parameters": ["PlatformTypePowerUP", "=", "3"]
                             }
                           ],
                           "actions": [
@@ -5824,17 +5639,14 @@
                               "type": {
                                 "value": "ChangePlan"
                               },
-                              "parameters": [
-                                "BonusObject2",
-                                "=",
-                                "1500000"
-                              ]
+                              "parameters": ["BonusObject2", "=", "1500000"]
                             }
                           ]
                         }
                       ]
                     },
                     {
+                      "folded": true,
                       "type": "BuiltinCommonInstructions::Standard",
                       "conditions": [
                         {
@@ -5854,11 +5666,7 @@
                           "type": {
                             "value": "ModVarScene"
                           },
-                          "parameters": [
-                            "CoinType",
-                            "=",
-                            "RandomInRange(0,0)"
-                          ]
+                          "parameters": ["CoinType", "=", "RandomInRange(0,0)"]
                         },
                         {
                           "type": {
@@ -5874,10 +5682,7 @@
                           "type": {
                             "value": "ResetTimer"
                           },
-                          "parameters": [
-                            "",
-                            "\"coin_spawn\""
-                          ]
+                          "parameters": ["", "\"coin_spawn\""]
                         }
                       ],
                       "events": [
@@ -5888,21 +5693,13 @@
                               "type": {
                                 "value": "VarScene"
                               },
-                              "parameters": [
-                                "CoinType",
-                                "=",
-                                "0"
-                              ]
+                              "parameters": ["CoinType", "=", "0"]
                             },
                             {
                               "type": {
                                 "value": "VarScene"
                               },
-                              "parameters": [
-                                "PlatformType",
-                                "=",
-                                "1"
-                              ]
+                              "parameters": ["PlatformType", "=", "1"]
                             }
                           ],
                           "actions": [
@@ -5933,11 +5730,7 @@
                               "type": {
                                 "value": "ChangePlan"
                               },
-                              "parameters": [
-                                "Coin",
-                                "=",
-                                "Dino.ZOrder() - 1"
-                              ]
+                              "parameters": ["Coin", "=", "Dino.ZOrder() - 1"]
                             }
                           ]
                         },
@@ -5948,21 +5741,13 @@
                               "type": {
                                 "value": "VarScene"
                               },
-                              "parameters": [
-                                "CoinType",
-                                "=",
-                                "0"
-                              ]
+                              "parameters": ["CoinType", "=", "0"]
                             },
                             {
                               "type": {
                                 "value": "VarScene"
                               },
-                              "parameters": [
-                                "PlatformType",
-                                "=",
-                                "2"
-                              ]
+                              "parameters": ["PlatformType", "=", "2"]
                             }
                           ],
                           "actions": [
@@ -5982,11 +5767,7 @@
                               "type": {
                                 "value": "ChangePlan"
                               },
-                              "parameters": [
-                                "Coin",
-                                "=",
-                                "Dino.ZOrder() - 1"
-                              ]
+                              "parameters": ["Coin", "=", "Dino.ZOrder() - 1"]
                             },
                             {
                               "type": {
@@ -6008,21 +5789,13 @@
                               "type": {
                                 "value": "VarScene"
                               },
-                              "parameters": [
-                                "CoinType",
-                                "=",
-                                "0"
-                              ]
+                              "parameters": ["CoinType", "=", "0"]
                             },
                             {
                               "type": {
                                 "value": "VarScene"
                               },
-                              "parameters": [
-                                "PlatformType",
-                                "=",
-                                "3"
-                              ]
+                              "parameters": ["PlatformType", "=", "3"]
                             }
                           ],
                           "actions": [
@@ -6053,11 +5826,7 @@
                               "type": {
                                 "value": "ChangePlan"
                               },
-                              "parameters": [
-                                "Coin",
-                                "=",
-                                "Dino.ZOrder() - 1"
-                              ]
+                              "parameters": ["Coin", "=", "Dino.ZOrder() - 1"]
                             }
                           ]
                         }
@@ -6071,6 +5840,7 @@
                   "colorG": 176,
                   "colorR": 74,
                   "creationTime": 0,
+                  "folded": true,
                   "name": "Game Over",
                   "source": "",
                   "type": "BuiltinCommonInstructions::Group",
@@ -6092,25 +5862,19 @@
                       "conditions": [
                         {
                           "type": {
-                            "value": "BuiltinCommonInstructions::Or"
+                            "value": "VarScene"
                           },
-                          "parameters": [],
-                          "subInstructions": [
+                          "parameters": ["isFlying", "=", "0"]
+                        }
+                      ],
+                      "actions": [],
+                      "events": [
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
                             {
                               "type": {
-                                "value": "CollisionNP"
-                              },
-                              "parameters": [
-                                "Dino",
-                                "CactusObstacle",
-                                "",
-                                "",
-                                ""
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "BuiltinCommonInstructions::And"
+                                "value": "BuiltinCommonInstructions::Or"
                               },
                               "parameters": [],
                               "subInstructions": [
@@ -6120,20 +5884,40 @@
                                   },
                                   "parameters": [
                                     "Dino",
-                                    "IslandObstacle",
+                                    "CactusObstacle",
                                     "",
                                     "",
-                                    "yes"
+                                    ""
                                   ]
                                 },
                                 {
                                   "type": {
-                                    "value": "BoundingBoxBottom"
+                                    "value": "BuiltinCommonInstructions::And"
                                   },
-                                  "parameters": [
-                                    "Dino",
-                                    ">",
-                                    "IslandObstacle.BoundingBoxCenterY()"
+                                  "parameters": [],
+                                  "subInstructions": [
+                                    {
+                                      "type": {
+                                        "value": "CollisionNP"
+                                      },
+                                      "parameters": [
+                                        "Dino",
+                                        "IslandObstacle",
+                                        "",
+                                        "",
+                                        "yes"
+                                      ]
+                                    },
+                                    {
+                                      "type": {
+                                        "value": "BoundingBoxBottom"
+                                      },
+                                      "parameters": [
+                                        "Dino",
+                                        ">",
+                                        "IslandObstacle.BoundingBoxCenterY()"
+                                      ]
+                                    }
                                   ]
                                 }
                               ]
@@ -6150,11 +5934,7 @@
                               "type": {
                                 "value": "ObjectVariableAsBoolean"
                               },
-                              "parameters": [
-                                "Dino",
-                                "isInvincible",
-                                "False"
-                              ]
+                              "parameters": ["Dino", "isInvincible", "False"]
                             }
                           ],
                           "actions": [
@@ -6162,80 +5942,92 @@
                               "type": {
                                 "value": "PlatformBehavior::PlatformerObjectBehavior::AbortJump"
                               },
-                              "parameters": [
-                                "Dino",
-                                "PlatformerObject"
-                              ]
+                              "parameters": ["Dino", "PlatformerObject"]
                             },
                             {
                               "type": {
                                 "value": "SetAnimationName"
                               },
-                              "parameters": [
-                                "Dino",
-                                "\"Dead\""
-                              ]
+                              "parameters": ["Dino", "\"Dead\""]
                             },
                             {
                               "type": {
                                 "value": "ModVarSceneTxt"
                               },
-                              "parameters": [
-                                "GameStatus",
-                                "=",
-                                "\"Dead\""
-                              ]
+                              "parameters": ["GameStatus", "=", "\"Dead\""]
                             },
                             {
                               "type": {
                                 "value": "PauseTimer"
                               },
-                              "parameters": [
-                                "",
-                                "\"obstacle_spawn\""
-                              ]
+                              "parameters": ["", "\"obstacle_spawn\""]
                             },
                             {
                               "type": {
                                 "value": "AjoutObjConcern"
                               },
-                              "parameters": [
-                                "",
-                                "MovingObjects"
-                              ]
+                              "parameters": ["Dino", "PlatformerObject"]
                             },
                             {
                               "type": {
-                                "value": "Arreter"
+                                "value": "SetAnimationName"
                               },
-                              "parameters": [
-                                "MovingObjects"
-                              ]
+                              "parameters": ["Dino", "\"Dead\""]
+                            },
+                            {
+                              "type": {
+                                "value": "ModVarSceneTxt"
+                              },
+                              "parameters": ["GameStatus", "=", "\"Dead\""]
+                            },
+                            {
+                              "type": {
+                                "value": "PauseTimer"
+                              },
+                              "parameters": ["", "\"obstacle_spawn\""]
                             }
-                          ]
-                        },
-                        {
-                          "type": "BuiltinCommonInstructions::Standard",
-                          "conditions": [],
-                          "actions": [
+                          ],
+                          "events": [
                             {
-                              "type": {
-                                "value": "PlaySound"
-                              },
-                              "parameters": [
-                                "",
-                                "Death.mp3",
-                                "",
-                                "30",
-                                "0.5"
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "AjoutObjConcern"
+                                  },
+                                  "parameters": ["", "MovingObjects"]
+                                },
+                                {
+                                  "type": {
+                                    "value": "Arreter"
+                                  },
+                                  "parameters": ["MovingObjects"]
+                                }
                               ]
                             },
                             {
-                              "type": {
-                                "value": "ParticleSystem::StopEmission"
-                              },
-                              "parameters": [
-                                "DustParticles"
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "PlaySound"
+                                  },
+                                  "parameters": [
+                                    "",
+                                    "Death.mp3",
+                                    "",
+                                    "30",
+                                    "0.5"
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "ParticleSystem::StopEmission"
+                                  },
+                                  "parameters": ["DustParticles"]
+                                }
                               ]
                             }
                           ]
@@ -6267,11 +6059,7 @@
                   "type": {
                     "value": "VarSceneTxt"
                   },
-                  "parameters": [
-                    "GameStatus",
-                    "=",
-                    "\"Dead\""
-                  ]
+                  "parameters": ["GameStatus", "=", "\"Dead\""]
                 }
               ],
               "actions": [],
@@ -6283,18 +6071,13 @@
                       "type": {
                         "value": "AnimationName"
                       },
-                      "parameters": [
-                        "Dino",
-                        "\"Dead\""
-                      ]
+                      "parameters": ["Dino", "\"Dead\""]
                     },
                     {
                       "type": {
                         "value": "AnimationEnded"
                       },
-                      "parameters": [
-                        "Dino"
-                      ]
+                      "parameters": ["Dino"]
                     }
                   ],
                   "actions": [
@@ -6302,11 +6085,7 @@
                       "type": {
                         "value": "Scene"
                       },
-                      "parameters": [
-                        "",
-                        "\"GameOver\"",
-                        "yes"
-                      ]
+                      "parameters": ["", "\"GameOver\"", "yes"]
                     }
                   ]
                 }

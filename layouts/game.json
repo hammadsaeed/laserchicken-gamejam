@@ -18,7 +18,7 @@
     "gridColor": 10401023,
     "gridAlpha": 0.8,
     "snap": true,
-    "zoomFactor": 0.39091049650571125,
+    "zoomFactor": 0.3658231768160934,
     "windowMask": false
   },
   "objectsGroups": [
@@ -297,6 +297,22 @@
       "x": 0,
       "y": 704,
       "zOrder": 3,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 0,
+      "height": 960,
+      "layer": "Background",
+      "name": "Background2",
+      "persistentUuid": "36ad0959-98ba-4669-8e3b-7ce63080eee2",
+      "width": 992,
+      "x": 0,
+      "y": -192,
+      "zOrder": 15,
       "numberProperties": [],
       "stringProperties": [],
       "initialVariables": []
@@ -3488,6 +3504,18 @@
       "variables": [],
       "effects": [],
       "behaviors": []
+    },
+    {
+      "assetStoreId": "",
+      "height": 32,
+      "name": "Background2",
+      "tags": "",
+      "texture": "9c836518da4f93f1a442e4beaa4023bdde907296b1a03f5562a73693fac0f778_tiled_Forest Background.png",
+      "type": "TiledSpriteObject::TiledSprite",
+      "width": 32,
+      "variables": [],
+      "effects": [],
+      "behaviors": []
     }
   ],
   "events": [
@@ -3877,6 +3905,61 @@
                         "+",
                         "(Variable(ObstacleSpeed)/500)*60*TimeDelta()"
                       ]
+                    },
+                    {
+                      "type": {
+                        "value": "TiledSpriteObject::XOffset"
+                      },
+                      "parameters": [
+                        "Background2",
+                        "+",
+                        "(Variable(ObstacleSpeed)/500)*60*TimeDelta()"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::Or"
+                      },
+                      "parameters": [],
+                      "subInstructions": [
+                        {
+                          "type": {
+                            "value": "VarGlobal"
+                          },
+                          "parameters": [
+                            "Score",
+                            ">",
+                            "5000"
+                          ]
+                        }
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "ChangePlan"
+                      },
+                      "parameters": [
+                        "Background2",
+                        "=",
+                        "17"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ChangePlan"
+                      },
+                      "parameters": [
+                        "Background",
+                        "=",
+                        "15"
+                      ]
                     }
                   ]
                 },
@@ -4027,6 +4110,7 @@
                   "colorG": 176,
                   "colorR": 74,
                   "creationTime": 0,
+                  "folded": true,
                   "name": "Dino movements",
                   "source": "",
                   "type": "BuiltinCommonInstructions::Group",
@@ -4672,6 +4756,7 @@
                   "colorG": 176,
                   "colorR": 74,
                   "creationTime": 0,
+                  "folded": true,
                   "name": "Score",
                   "source": "",
                   "type": "BuiltinCommonInstructions::Group",
@@ -5384,6 +5469,7 @@
                   "colorG": 176,
                   "colorR": 74,
                   "creationTime": 0,
+                  "folded": true,
                   "name": "Coin Pickup",
                   "source": "",
                   "type": "BuiltinCommonInstructions::Group",
@@ -5582,6 +5668,7 @@
                   "colorG": 176,
                   "colorR": 74,
                   "creationTime": 0,
+                  "folded": true,
                   "name": "Obstacle spawn",
                   "source": "",
                   "type": "BuiltinCommonInstructions::Group",
@@ -6940,6 +7027,7 @@
                   "colorG": 176,
                   "colorR": 74,
                   "creationTime": 0,
+                  "folded": true,
                   "name": "Game Over",
                   "source": "",
                   "type": "BuiltinCommonInstructions::Group",

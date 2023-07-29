@@ -1543,6 +1543,19 @@
         "name": "assets\\Circle glass_Perfect.png",
         "smoothed": true,
         "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/tiled_Forest Background.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "9c836518da4f93f1a442e4beaa4023bdde907296b1a03f5562a73693fac0f778_tiled_Forest Background.png",
+        "smoothed": true,
+        "userAdded": true,
+        "origin": {
+          "identifier": "https://asset-resources.gdevelop.io/public-resources/Generic Backgrounds/9c836518da4f93f1a442e4beaa4023bdde907296b1a03f5562a73693fac0f778_tiled_Forest Background.png",
+          "name": "gdevelop-asset-store"
+        }
       }
     ],
     "resourceFolders": []

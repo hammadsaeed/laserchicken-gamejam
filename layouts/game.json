@@ -334,7 +334,7 @@
       "width": 704,
       "x": 928,
       "y": -192,
-      "zOrder": 1500010,
+      "zOrder": 1510010,
       "numberProperties": [],
       "stringProperties": [],
       "initialVariables": []
@@ -1521,18 +1521,12 @@
           "directions": [
             {
               "looping": true,
-              "timeBetweenFrames": 0.08,
+              "timeBetweenFrames": 0.1,
               "sprites": [
                 {
                   "hasCustomCollisionMask": true,
-                  "image": "assets\\Daniel_Run_1.png",
-                  "points": [
-                    {
-                      "name": "DustProjection",
-                      "x": 25,
-                      "y": 103
-                    }
-                  ],
+                  "image": "assets\\DANIEL_Drive_Run_1.png",
+                  "points": [],
                   "originPoint": {
                     "name": "origine",
                     "x": 0,
@@ -1547,38 +1541,36 @@
                   "customCollisionMask": [
                     [
                       {
-                        "x": 56,
-                        "y": 83.5
+                        "x": 68.5,
+                        "y": 94.5
                       },
                       {
-                        "x": 148,
-                        "y": 87
+                        "x": 80,
+                        "y": 92.5
                       },
                       {
-                        "x": 147.5,
-                        "y": 105
+                        "x": 150.5,
+                        "y": 91.5
                       },
                       {
-                        "x": 32,
-                        "y": 104
+                        "x": 151,
+                        "y": 109
                       },
                       {
-                        "x": 32.5,
-                        "y": 83.5
+                        "x": 52.5,
+                        "y": 106.5
+                      },
+                      {
+                        "x": 55.5,
+                        "y": 94.5
                       }
                     ]
                   ]
                 },
                 {
                   "hasCustomCollisionMask": true,
-                  "image": "assets\\Daniel_Run_1.png",
-                  "points": [
-                    {
-                      "name": "DustProjection",
-                      "x": 25,
-                      "y": 103
-                    }
-                  ],
+                  "image": "assets\\DANIEL_Drive_Run_2.png",
+                  "points": [],
                   "originPoint": {
                     "name": "origine",
                     "x": 0,
@@ -1593,38 +1585,36 @@
                   "customCollisionMask": [
                     [
                       {
-                        "x": 56,
-                        "y": 83.5
+                        "x": 68.5,
+                        "y": 94.5
                       },
                       {
-                        "x": 148,
-                        "y": 87
+                        "x": 80,
+                        "y": 92.5
                       },
                       {
-                        "x": 147.5,
-                        "y": 105
+                        "x": 150.5,
+                        "y": 91.5
                       },
                       {
-                        "x": 32,
-                        "y": 104
+                        "x": 151,
+                        "y": 109
                       },
                       {
-                        "x": 32.5,
-                        "y": 83.5
+                        "x": 52.5,
+                        "y": 106.5
+                      },
+                      {
+                        "x": 55.5,
+                        "y": 94.5
                       }
                     ]
                   ]
                 },
                 {
                   "hasCustomCollisionMask": true,
-                  "image": "assets\\Daniel_Run_1.png",
-                  "points": [
-                    {
-                      "name": "DustProjection",
-                      "x": 25,
-                      "y": 103
-                    }
-                  ],
+                  "image": "assets\\DANIEL_Drive_Run_3.png",
+                  "points": [],
                   "originPoint": {
                     "name": "origine",
                     "x": 0,
@@ -1639,38 +1629,36 @@
                   "customCollisionMask": [
                     [
                       {
-                        "x": 56,
-                        "y": 83.5
+                        "x": 68.5,
+                        "y": 94.5
                       },
                       {
-                        "x": 148,
-                        "y": 87
+                        "x": 80,
+                        "y": 92.5
                       },
                       {
-                        "x": 147.5,
-                        "y": 105
+                        "x": 150.5,
+                        "y": 91.5
                       },
                       {
-                        "x": 32,
-                        "y": 104
+                        "x": 151,
+                        "y": 109
                       },
                       {
-                        "x": 32.5,
-                        "y": 83.5
+                        "x": 52.5,
+                        "y": 106.5
+                      },
+                      {
+                        "x": 55.5,
+                        "y": 94.5
                       }
                     ]
                   ]
                 },
                 {
                   "hasCustomCollisionMask": true,
-                  "image": "assets\\Daniel_Run_1.png",
-                  "points": [
-                    {
-                      "name": "DustProjection",
-                      "x": 25,
-                      "y": 103
-                    }
-                  ],
+                  "image": "assets\\DANIEL_Drive_Run_4.png",
+                  "points": [],
                   "originPoint": {
                     "name": "origine",
                     "x": 0,
@@ -1685,38 +1673,36 @@
                   "customCollisionMask": [
                     [
                       {
-                        "x": 56,
-                        "y": 83.5
+                        "x": 68.5,
+                        "y": 94.5
                       },
                       {
-                        "x": 148,
-                        "y": 87
+                        "x": 80,
+                        "y": 92.5
                       },
                       {
-                        "x": 147.5,
-                        "y": 105
+                        "x": 150.5,
+                        "y": 91.5
                       },
                       {
-                        "x": 32,
-                        "y": 104
+                        "x": 151,
+                        "y": 109
                       },
                       {
-                        "x": 32.5,
-                        "y": 83.5
+                        "x": 52.5,
+                        "y": 106.5
+                      },
+                      {
+                        "x": 55.5,
+                        "y": 94.5
                       }
                     ]
                   ]
                 },
                 {
                   "hasCustomCollisionMask": true,
-                  "image": "assets\\Daniel_Run_1.png",
-                  "points": [
-                    {
-                      "name": "DustProjection",
-                      "x": 25,
-                      "y": 103
-                    }
-                  ],
+                  "image": "assets\\DANIEL_Drive_Run_5.png",
+                  "points": [],
                   "originPoint": {
                     "name": "origine",
                     "x": 0,
@@ -1731,162 +1717,28 @@
                   "customCollisionMask": [
                     [
                       {
-                        "x": 56,
-                        "y": 83.5
+                        "x": 68.5,
+                        "y": 94.5
                       },
                       {
-                        "x": 148,
-                        "y": 87
+                        "x": 80,
+                        "y": 92.5
                       },
                       {
-                        "x": 147.5,
-                        "y": 105
+                        "x": 150.5,
+                        "y": 91.5
                       },
                       {
-                        "x": 32,
-                        "y": 104
+                        "x": 151,
+                        "y": 109
                       },
                       {
-                        "x": 32.5,
-                        "y": 83.5
-                      }
-                    ]
-                  ]
-                },
-                {
-                  "hasCustomCollisionMask": true,
-                  "image": "assets\\Daniel_Run_1.png",
-                  "points": [
-                    {
-                      "name": "DustProjection",
-                      "x": 25,
-                      "y": 103
-                    }
-                  ],
-                  "originPoint": {
-                    "name": "origine",
-                    "x": 0,
-                    "y": 0
-                  },
-                  "centerPoint": {
-                    "automatic": true,
-                    "name": "centre",
-                    "x": 0,
-                    "y": 0
-                  },
-                  "customCollisionMask": [
-                    [
-                      {
-                        "x": 56,
-                        "y": 83.5
+                        "x": 52.5,
+                        "y": 106.5
                       },
                       {
-                        "x": 148,
-                        "y": 87
-                      },
-                      {
-                        "x": 147.5,
-                        "y": 105
-                      },
-                      {
-                        "x": 32,
-                        "y": 104
-                      },
-                      {
-                        "x": 32.5,
-                        "y": 83.5
-                      }
-                    ]
-                  ]
-                },
-                {
-                  "hasCustomCollisionMask": true,
-                  "image": "assets\\Daniel_Run_1.png",
-                  "points": [
-                    {
-                      "name": "DustProjection",
-                      "x": 25,
-                      "y": 103
-                    }
-                  ],
-                  "originPoint": {
-                    "name": "origine",
-                    "x": 0,
-                    "y": 0
-                  },
-                  "centerPoint": {
-                    "automatic": true,
-                    "name": "centre",
-                    "x": 0,
-                    "y": 0
-                  },
-                  "customCollisionMask": [
-                    [
-                      {
-                        "x": 56,
-                        "y": 83.5
-                      },
-                      {
-                        "x": 148,
-                        "y": 87
-                      },
-                      {
-                        "x": 147.5,
-                        "y": 105
-                      },
-                      {
-                        "x": 32,
-                        "y": 104
-                      },
-                      {
-                        "x": 32.5,
-                        "y": 83.5
-                      }
-                    ]
-                  ]
-                },
-                {
-                  "hasCustomCollisionMask": true,
-                  "image": "assets\\Daniel_Run_1.png",
-                  "points": [
-                    {
-                      "name": "DustProjection",
-                      "x": 25,
-                      "y": 103
-                    }
-                  ],
-                  "originPoint": {
-                    "name": "origine",
-                    "x": 0,
-                    "y": 0
-                  },
-                  "centerPoint": {
-                    "automatic": true,
-                    "name": "centre",
-                    "x": 0,
-                    "y": 0
-                  },
-                  "customCollisionMask": [
-                    [
-                      {
-                        "x": 56,
-                        "y": 83.5
-                      },
-                      {
-                        "x": 148,
-                        "y": 87
-                      },
-                      {
-                        "x": 147.5,
-                        "y": 105
-                      },
-                      {
-                        "x": 32,
-                        "y": 104
-                      },
-                      {
-                        "x": 32.5,
-                        "y": 83.5
+                        "x": 55.5,
+                        "y": 94.5
                       }
                     ]
                   ]
@@ -1905,7 +1757,7 @@
               "sprites": [
                 {
                   "hasCustomCollisionMask": true,
-                  "image": "assets\\Daniel_Run_1.png",
+                  "image": "assets\\DANIEL_Drive_Run_1.png",
                   "points": [
                     {
                       "name": "DustProjection",
@@ -4060,7 +3912,7 @@
                           "parameters": [
                             "Score",
                             ">",
-                            "4920"
+                            "4860"
                           ]
                         }
                       ]
@@ -4209,7 +4061,7 @@
                       "parameters": [
                         "TrialTunnel",
                         "=",
-                        "1510000"
+                        "15"
                       ]
                     },
                     {
@@ -4332,7 +4184,6 @@
                   "colorG": 176,
                   "colorR": 74,
                   "creationTime": 0,
-                  "folded": true,
                   "name": "Dino z-index",
                   "source": "",
                   "type": "BuiltinCommonInstructions::Group",
@@ -6700,7 +6551,6 @@
                       ]
                     },
                     {
-                      "folded": true,
                       "type": "BuiltinCommonInstructions::Standard",
                       "conditions": [
                         {
@@ -7260,7 +7110,6 @@
                       ]
                     },
                     {
-                      "folded": true,
                       "type": "BuiltinCommonInstructions::Standard",
                       "conditions": [
                         {

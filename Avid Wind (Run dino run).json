@@ -1728,7 +1728,54 @@
         "file": "assets/Palm_tree.png",
         "kind": "image",
         "metadata": "",
-        "name": "assets\\Palm_tree.png"
+        "name": "assets\\Palm_tree.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/DANIEL_Drive_Run_2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\DANIEL_Drive_Run_2.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/DANIEL_Drive_Run_3.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\DANIEL_Drive_Run_3.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/DANIEL_Drive_Run_4.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\DANIEL_Drive_Run_4.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/DANIEL_Drive_Run_5.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\DANIEL_Drive_Run_5.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/DANIEL_Drive_Run_1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\DANIEL_Drive_Run_1.png",
+        "smoothed": true,
+        "userAdded": true
       }
     ],
     "resourceFolders": []

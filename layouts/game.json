@@ -18,7 +18,7 @@
     "gridColor": 10401023,
     "gridAlpha": 0.8,
     "snap": true,
-    "zoomFactor": 0.5096849298077983,
+    "zoomFactor": 0.5096849298077984,
     "windowMask": false
   },
   "objectsGroups": [
@@ -147,8 +147,8 @@
       "name": "TutorialSprite",
       "persistentUuid": "20ccb8d2-a0f4-4d6b-a908-74bb4a0149fe",
       "width": 520,
-      "x": -616,
-      "y": 224,
+      "x": -672,
+      "y": 256,
       "zOrder": 27,
       "numberProperties": [],
       "stringProperties": [],
@@ -610,6 +610,68 @@
                 {
                   "hasCustomCollisionMask": false,
                   "image": "assets/CarGirlWheel-1.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 30,
+                    "y": 30
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "adaptCollisionMaskAutomatically": false,
+      "assetStoreId": "",
+      "name": "BonusObject2",
+      "tags": "",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [],
+      "effects": [
+        {
+          "effectType": "Glow",
+          "name": "Effect",
+          "doubleParameters": {
+            "distance": 15,
+            "innerStrength": 1,
+            "outerStrength": 2
+          },
+          "stringParameters": {
+            "color": "51;220;255"
+          },
+          "booleanParameters": {}
+        }
+      ],
+      "behaviors": [
+        {
+          "name": "DestroyOutside",
+          "type": "DestroyOutsideBehavior::DestroyOutside",
+          "extraBorder": 1000
+        }
+      ],
+      "animations": [
+        {
+          "name": "Bonus",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": true,
+              "timeBetweenFrames": 0.02500000037252903,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "df16bf56d4791e9dca5c36fbc15cbac31d8aea0664e5d254b3f9a27693d02bd4_Gold bolt.png",
                   "points": [],
                   "originPoint": {
                     "name": "origine",
@@ -3203,6 +3265,15 @@
                     },
                     {
                       "type": {
+                        "value": "ResetTimer"
+                      },
+                      "parameters": [
+                        "",
+                        "\"powerUp_timer\""
+                      ]
+                    },
+                    {
+                      "type": {
                         "value": "ModVarGlobal"
                       },
                       "parameters": [
@@ -3830,11 +3901,57 @@
                             },
                             {
                               "type": {
-                                "value": "KeyPressed"
+                                "value": "BuiltinCommonInstructions::Or"
                               },
-                              "parameters": [
-                                "",
-                                "Up"
+                              "parameters": [],
+                              "subInstructions": [
+                                {
+                                  "type": {
+                                    "value": "KeyPressed"
+                                  },
+                                  "parameters": [
+                                    "",
+                                    "Up"
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "BuiltinCommonInstructions::And"
+                                  },
+                                  "parameters": [],
+                                  "subInstructions": [
+                                    {
+                                      "type": {
+                                        "value": "SwipeGesture::SwipeDirection_4way"
+                                      },
+                                      "parameters": [
+                                        "",
+                                        "\"Up\"",
+                                        ""
+                                      ]
+                                    },
+                                    {
+                                      "type": {
+                                        "value": "SwipeGesture::Distance"
+                                      },
+                                      "parameters": [
+                                        "",
+                                        ">",
+                                        "70",
+                                        ""
+                                      ]
+                                    },
+                                    {
+                                      "type": {
+                                        "value": "SwipeGesture::HasSwipeJustEnded"
+                                      },
+                                      "parameters": [
+                                        "",
+                                        ""
+                                      ]
+                                    }
+                                  ]
+                                }
                               ]
                             },
                             {
@@ -3883,11 +4000,57 @@
                             },
                             {
                               "type": {
-                                "value": "KeyPressed"
+                                "value": "BuiltinCommonInstructions::Or"
                               },
-                              "parameters": [
-                                "",
-                                "Down"
+                              "parameters": [],
+                              "subInstructions": [
+                                {
+                                  "type": {
+                                    "value": "KeyPressed"
+                                  },
+                                  "parameters": [
+                                    "",
+                                    "Down"
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "BuiltinCommonInstructions::And"
+                                  },
+                                  "parameters": [],
+                                  "subInstructions": [
+                                    {
+                                      "type": {
+                                        "value": "SwipeGesture::SwipeDirection_4way"
+                                      },
+                                      "parameters": [
+                                        "",
+                                        "\"Down\"",
+                                        ""
+                                      ]
+                                    },
+                                    {
+                                      "type": {
+                                        "value": "SwipeGesture::Distance"
+                                      },
+                                      "parameters": [
+                                        "",
+                                        ">",
+                                        "70",
+                                        ""
+                                      ]
+                                    },
+                                    {
+                                      "type": {
+                                        "value": "SwipeGesture::HasSwipeJustEnded"
+                                      },
+                                      "parameters": [
+                                        "",
+                                        ""
+                                      ]
+                                    }
+                                  ]
+                                }
                               ]
                             },
                             {
@@ -3931,7 +4094,6 @@
                   "colorG": 176,
                   "colorR": 74,
                   "creationTime": 0,
-                  "folded": true,
                   "name": "Score",
                   "source": "",
                   "type": "BuiltinCommonInstructions::Group",
@@ -4007,6 +4169,78 @@
                           },
                           "parameters": [
                             "BonusObject",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "PlaySound"
+                          },
+                          "parameters": [
+                            "",
+                            "Bonus.mp3",
+                            "",
+                            "100",
+                            "0.5"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "CollisionNP"
+                          },
+                          "parameters": [
+                            "Dino",
+                            "BonusObject2",
+                            "",
+                            "",
+                            ""
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "ModVarGlobal"
+                          },
+                          "parameters": [
+                            "Score",
+                            "+",
+                            "500"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "Create"
+                          },
+                          "parameters": [
+                            "",
+                            "BonusParticle",
+                            "Dino.CenterX()",
+                            "Dino.CenterY()",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ParticleSystem::EmitterAngle"
+                          },
+                          "parameters": [
+                            "BonusParticle",
+                            "=",
+                            "-90"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "Delete"
+                          },
+                          "parameters": [
+                            "BonusObject2",
                             ""
                           ]
                         },
@@ -4133,6 +4367,7 @@
                       "comment": "Randomly chose the obstacle type (0: single cactus, 1: island, 2: Cactus field) when spawn delay is reached. Once the obstacle is created, we reset the spawn timer.\nWe want to avoid scaling the force applied to one obstacle when it is already on screen, so we apply a permanent force. Change 0,0 to number of obstacles"
                     },
                     {
+                      "folded": true,
                       "type": "BuiltinCommonInstructions::Standard",
                       "conditions": [
                         {
@@ -4618,6 +4853,395 @@
                           ]
                         }
                       ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "CompareTimer"
+                          },
+                          "parameters": [
+                            "",
+                            "\"powerUp_timer\"",
+                            ">=",
+                            "5"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "ModVarScene"
+                          },
+                          "parameters": [
+                            "PowerUpType",
+                            "=",
+                            "RandomInRange(0,1)"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ModVarScene"
+                          },
+                          "parameters": [
+                            "PlatformTypePowerUP",
+                            "=",
+                            "RandomInRange(1,3)"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ResetTimer"
+                          },
+                          "parameters": [
+                            "",
+                            "\"powerUp_timer\""
+                          ]
+                        }
+                      ],
+                      "events": [
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "VarScene"
+                              },
+                              "parameters": [
+                                "PowerUpType",
+                                "=",
+                                "0"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "VarScene"
+                              },
+                              "parameters": [
+                                "PlatformTypePowerUP",
+                                "=",
+                                "1"
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "Create"
+                              },
+                              "parameters": [
+                                "",
+                                "BonusObject",
+                                "RandomInRange(75, 125) + SceneWindowWidth()",
+                                "Platform1.BoundingBoxTop() + 10",
+                                ""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "AddForceAL"
+                              },
+                              "parameters": [
+                                "BonusObject",
+                                "180",
+                                "Variable(ObstacleSpeed)",
+                                "1"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "ChangePlan"
+                              },
+                              "parameters": [
+                                "BonusObject",
+                                "=",
+                                "Dino.ZOrder() - 1"
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "VarScene"
+                              },
+                              "parameters": [
+                                "PowerUpType",
+                                "=",
+                                "0"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "VarScene"
+                              },
+                              "parameters": [
+                                "PlatformTypePowerUP",
+                                "=",
+                                "2"
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "Create"
+                              },
+                              "parameters": [
+                                "",
+                                "BonusObject",
+                                "RandomInRange(75, 125) + SceneWindowWidth()",
+                                "Platform2.BoundingBoxTop() + 10",
+                                ""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "ChangePlan"
+                              },
+                              "parameters": [
+                                "BonusObject",
+                                "=",
+                                "Dino.ZOrder() - 1"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "AddForceAL"
+                              },
+                              "parameters": [
+                                "BonusObject",
+                                "180",
+                                "Variable(ObstacleSpeed)",
+                                "1"
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "VarScene"
+                              },
+                              "parameters": [
+                                "PowerUpType",
+                                "=",
+                                "0"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "VarScene"
+                              },
+                              "parameters": [
+                                "PlatformTypePowerUP",
+                                "=",
+                                "3"
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "Create"
+                              },
+                              "parameters": [
+                                "",
+                                "BonusObject",
+                                "RandomInRange(75, 125) + SceneWindowWidth()",
+                                "Platform3.BoundingBoxTop() + 10",
+                                ""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "AddForceAL"
+                              },
+                              "parameters": [
+                                "BonusObject",
+                                "180",
+                                "Variable(ObstacleSpeed)",
+                                "1"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "ChangePlan"
+                              },
+                              "parameters": [
+                                "BonusObject",
+                                "=",
+                                "Dino.ZOrder() - 1"
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "VarScene"
+                              },
+                              "parameters": [
+                                "PowerUpType",
+                                "=",
+                                "1"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "VarScene"
+                              },
+                              "parameters": [
+                                "PlatformTypePowerUP",
+                                "=",
+                                "1"
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "Create"
+                              },
+                              "parameters": [
+                                "",
+                                "BonusObject2",
+                                "RandomInRange(75, 125) + SceneWindowWidth()",
+                                "Platform1.BoundingBoxTop() + 10",
+                                ""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "ChangePlan"
+                              },
+                              "parameters": [
+                                "BonusObject2",
+                                "=",
+                                "Dino.ZOrder() - 1"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "AddForceAL"
+                              },
+                              "parameters": [
+                                "BonusObject2",
+                                "180",
+                                "Variable(ObstacleSpeed)",
+                                "1"
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "VarScene"
+                              },
+                              "parameters": [
+                                "PowerUpType",
+                                "=",
+                                "1"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "VarScene"
+                              },
+                              "parameters": [
+                                "PlatformTypePowerUP",
+                                "=",
+                                "2"
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "Create"
+                              },
+                              "parameters": [
+                                "",
+                                "BonusObject2",
+                                "RandomInRange(75, 125) + SceneWindowWidth()",
+                                "Platform2.BoundingBoxTop()",
+                                ""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "AddForceAL"
+                              },
+                              "parameters": [
+                                "BonusObject2",
+                                "180",
+                                "Variable(ObstacleSpeed)",
+                                "1"
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "VarScene"
+                              },
+                              "parameters": [
+                                "PowerUpType",
+                                "=",
+                                "1"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "VarScene"
+                              },
+                              "parameters": [
+                                "PlatformTypePowerUP",
+                                "=",
+                                "3"
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "Create"
+                              },
+                              "parameters": [
+                                "",
+                                "BonusObject2",
+                                "RandomInRange(75, 125) + SceneWindowWidth()",
+                                "Platform3.BoundingBoxTop()",
+                                ""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "AddForceAL"
+                              },
+                              "parameters": [
+                                "BonusObject2",
+                                "180",
+                                "Variable(ObstacleSpeed)",
+                                "1"
+                              ]
+                            }
+                          ]
+                        }
+                      ]
                     }
                   ],
                   "parameters": []
@@ -4627,6 +5251,7 @@
                   "colorG": 176,
                   "colorR": 74,
                   "creationTime": 0,
+                  "folded": true,
                   "name": "Game Over",
                   "source": "",
                   "type": "BuiltinCommonInstructions::Group",
@@ -4801,6 +5426,7 @@
           "colorG": 147,
           "colorR": 74,
           "creationTime": 0,
+          "folded": true,
           "name": "Game lost",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",

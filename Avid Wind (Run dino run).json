@@ -1322,6 +1322,19 @@
           "identifier": "https://asset-resources.gdevelop.io/public-resources/Xelu Free Controller and Key Prompts/Console Inputs/Switch/46fe8de0daf2841fea88f72889f15f1554bbd10187205d582c241c7e5f8b5b56_Down.png",
           "name": "Down.png"
         }
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/Gold bolt.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "df16bf56d4791e9dca5c36fbc15cbac31d8aea0664e5d254b3f9a27693d02bd4_Gold bolt.png",
+        "smoothed": true,
+        "userAdded": false,
+        "origin": {
+          "identifier": "https://asset-resources.gdevelop.io/public-resources/Space Shooter/PNG/Power-ups/df16bf56d4791e9dca5c36fbc15cbac31d8aea0664e5d254b3f9a27693d02bd4_Gold bolt.png",
+          "name": "gdevelop-asset-store"
+        }
       }
     ],
     "resourceFolders": []

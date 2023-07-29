@@ -18,7 +18,7 @@
     "gridColor": 10401023,
     "gridAlpha": 0.8,
     "snap": true,
-    "zoomFactor": 0.3781588550893338,
+    "zoomFactor": 0.34234587684923823,
     "windowMask": false
   },
   "objectsGroups": [
@@ -2579,11 +2579,11 @@
           "directions": [
             {
               "looping": false,
-              "timeBetweenFrames": 0.10000000149011612,
+              "timeBetweenFrames": 0.06,
               "sprites": [
                 {
                   "hasCustomCollisionMask": true,
-                  "image": "assets/Dino/Dead-1.png",
+                  "image": "assets\\DANIEL_Crash_Ani_01.png",
                   "points": [
                     {
                       "name": "DustProjection",
@@ -2625,7 +2625,7 @@
                 },
                 {
                   "hasCustomCollisionMask": true,
-                  "image": "assets/Dino/Dead-2.png",
+                  "image": "assets\\DANIEL_Crash_Ani_02.png",
                   "points": [
                     {
                       "name": "DustProjection",
@@ -2667,7 +2667,7 @@
                 },
                 {
                   "hasCustomCollisionMask": true,
-                  "image": "assets/Dino/Dead-3.png",
+                  "image": "assets\\DANIEL_Crash_Ani_03.png",
                   "points": [
                     {
                       "name": "DustProjection",
@@ -2709,7 +2709,7 @@
                 },
                 {
                   "hasCustomCollisionMask": true,
-                  "image": "assets/Dino/Dead-4.png",
+                  "image": "assets\\DANIEL_Crash_Ani_04.png",
                   "points": [
                     {
                       "name": "DustProjection",
@@ -2751,7 +2751,7 @@
                 },
                 {
                   "hasCustomCollisionMask": true,
-                  "image": "assets/Dino/Dead-5.png",
+                  "image": "assets\\DANIEL_Crash_Ani_04.png",
                   "points": [
                     {
                       "name": "DustProjection",
@@ -2793,91 +2793,7 @@
                 },
                 {
                   "hasCustomCollisionMask": true,
-                  "image": "assets/Dino/Dead-6.png",
-                  "points": [
-                    {
-                      "name": "DustProjection",
-                      "x": 25,
-                      "y": 103
-                    }
-                  ],
-                  "originPoint": {
-                    "name": "origine",
-                    "x": 0,
-                    "y": 0
-                  },
-                  "centerPoint": {
-                    "automatic": true,
-                    "name": "centre",
-                    "x": 0,
-                    "y": 0
-                  },
-                  "customCollisionMask": [
-                    [
-                      {
-                        "x": 114,
-                        "y": 78
-                      },
-                      {
-                        "x": 114,
-                        "y": 104
-                      },
-                      {
-                        "x": 32,
-                        "y": 104
-                      },
-                      {
-                        "x": 32,
-                        "y": 78
-                      }
-                    ]
-                  ]
-                },
-                {
-                  "hasCustomCollisionMask": true,
-                  "image": "assets/Dino/Dead-7.png",
-                  "points": [
-                    {
-                      "name": "DustProjection",
-                      "x": 25,
-                      "y": 103
-                    }
-                  ],
-                  "originPoint": {
-                    "name": "origine",
-                    "x": 0,
-                    "y": 0
-                  },
-                  "centerPoint": {
-                    "automatic": true,
-                    "name": "centre",
-                    "x": 0,
-                    "y": 0
-                  },
-                  "customCollisionMask": [
-                    [
-                      {
-                        "x": 114,
-                        "y": 78
-                      },
-                      {
-                        "x": 114,
-                        "y": 104
-                      },
-                      {
-                        "x": 32,
-                        "y": 104
-                      },
-                      {
-                        "x": 32,
-                        "y": 78
-                      }
-                    ]
-                  ]
-                },
-                {
-                  "hasCustomCollisionMask": true,
-                  "image": "assets/Dino/Dead-8.png",
+                  "image": "assets\\DANIEL_Crash_Ani_05.png",
                   "points": [
                     {
                       "name": "DustProjection",
@@ -2927,7 +2843,7 @@
           "directions": [
             {
               "looping": true,
-              "timeBetweenFrames": 1.8,
+              "timeBetweenFrames": 1,
               "sprites": [
                 {
                   "hasCustomCollisionMask": true,
@@ -6036,6 +5952,7 @@
                   "colorG": 176,
                   "colorR": 74,
                   "creationTime": 0,
+                  "folded": true,
                   "name": "Obstacle spawn",
                   "source": "",
                   "type": "BuiltinCommonInstructions::Group",

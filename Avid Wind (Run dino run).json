@@ -1283,6 +1283,19 @@
         "name": "assets\\Buttons\\RestartButton.png",
         "smoothed": true,
         "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/Circle glass_Perfect.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "96e708c2812471edfa6d218a31879d3c510af6bf1573e0aa8b681634ff523789_Circle glass_Perfect.png",
+        "smoothed": true,
+        "userAdded": true,
+        "origin": {
+          "identifier": "https://asset-resources.gdevelop.io/public-resources/Breakable Physics/Obstacle/Glass/96e708c2812471edfa6d218a31879d3c510af6bf1573e0aa8b681634ff523789_Circle glass_Perfect.png",
+          "name": "gdevelop-asset-store"
+        }
       }
     ],
     "resourceFolders": []

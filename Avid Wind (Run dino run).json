@@ -1335,6 +1335,124 @@
           "identifier": "https://asset-resources.gdevelop.io/public-resources/Space Shooter/PNG/Power-ups/df16bf56d4791e9dca5c36fbc15cbac31d8aea0664e5d254b3f9a27693d02bd4_Gold bolt.png",
           "name": "gdevelop-asset-store"
         }
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/Gold_1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "dcf6f490ff770e39a1d15b39da1b2240d95afdca372270168b5d387ffe5dace5_Gold_1.png",
+        "smoothed": true,
+        "userAdded": true,
+        "origin": {
+          "identifier": "https://asset-resources.gdevelop.io/public-resources/Casino Craze/Coin/dcf6f490ff770e39a1d15b39da1b2240d95afdca372270168b5d387ffe5dace5_Gold_1.png",
+          "name": "gdevelop-asset-store"
+        }
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/Gold_2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "68e2d0eb4cc0323d0926bca6c1439a8b85b52f5ec6d4df27179d90022a19c69e_Gold_2.png",
+        "smoothed": true,
+        "userAdded": true,
+        "origin": {
+          "identifier": "https://asset-resources.gdevelop.io/public-resources/Casino Craze/Coin/68e2d0eb4cc0323d0926bca6c1439a8b85b52f5ec6d4df27179d90022a19c69e_Gold_2.png",
+          "name": "gdevelop-asset-store"
+        }
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/Gold_3.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "bb87758f26d7b5cc1016dc04189b769c6bef88dff794a36830163fbbf0c9459e_Gold_3.png",
+        "smoothed": true,
+        "userAdded": true,
+        "origin": {
+          "identifier": "https://asset-resources.gdevelop.io/public-resources/Casino Craze/Coin/bb87758f26d7b5cc1016dc04189b769c6bef88dff794a36830163fbbf0c9459e_Gold_3.png",
+          "name": "gdevelop-asset-store"
+        }
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/Gold_4.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "f7f030259af216a3b309635d6cbad3fad8000dbb3473ac4b71e992888b9b1afd_Gold_4.png",
+        "smoothed": true,
+        "userAdded": true,
+        "origin": {
+          "identifier": "https://asset-resources.gdevelop.io/public-resources/Casino Craze/Coin/f7f030259af216a3b309635d6cbad3fad8000dbb3473ac4b71e992888b9b1afd_Gold_4.png",
+          "name": "gdevelop-asset-store"
+        }
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/Gold_5.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "0edf682abe5f5c5394a37ab0d326d8d551154d614e0a1dcfb50d92db61344674_Gold_5.png",
+        "smoothed": true,
+        "userAdded": true,
+        "origin": {
+          "identifier": "https://asset-resources.gdevelop.io/public-resources/Casino Craze/Coin/0edf682abe5f5c5394a37ab0d326d8d551154d614e0a1dcfb50d92db61344674_Gold_5.png",
+          "name": "gdevelop-asset-store"
+        }
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/Gold_6.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "63a5811081fa623c1ab0c5e0262de5f2904ff59f523467721220dbf1c8d160e2_Gold_6.png",
+        "smoothed": true,
+        "userAdded": true,
+        "origin": {
+          "identifier": "https://asset-resources.gdevelop.io/public-resources/Casino Craze/Coin/63a5811081fa623c1ab0c5e0262de5f2904ff59f523467721220dbf1c8d160e2_Gold_6.png",
+          "name": "gdevelop-asset-store"
+        }
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/Gold_7.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "8397a2e13e02a4048f53711d0bde33222ca51cec01ac57cdc40c9399f06f26e3_Gold_7.png",
+        "smoothed": true,
+        "userAdded": true,
+        "origin": {
+          "identifier": "https://asset-resources.gdevelop.io/public-resources/Casino Craze/Coin/8397a2e13e02a4048f53711d0bde33222ca51cec01ac57cdc40c9399f06f26e3_Gold_7.png",
+          "name": "gdevelop-asset-store"
+        }
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/Gold_8.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "c95bb0e7f115b0b355bcaebf463d5f4919a6a8cf5475952a49753d79a6d72a76_Gold_8.png",
+        "smoothed": true,
+        "userAdded": true,
+        "origin": {
+          "identifier": "https://asset-resources.gdevelop.io/public-resources/Casino Craze/Coin/c95bb0e7f115b0b355bcaebf463d5f4919a6a8cf5475952a49753d79a6d72a76_Gold_8.png",
+          "name": "gdevelop-asset-store"
+        }
+      },
+      {
+        "file": "assets/Coins 9.aac",
+        "kind": "audio",
+        "metadata": "",
+        "name": "0f42d487214284edfa1223ac335c7631292e87aea6189b24901784b4c71b44cc_Coins 9.aac",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": true,
+        "origin": {
+          "identifier": "https://asset-resources.gdevelop.io/public-resources/Arcade/Sound effects/Coins/0f42d487214284edfa1223ac335c7631292e87aea6189b24901784b4c71b44cc_Coins 9.aac",
+          "name": "gdevelop-asset-store"
+        }
       }
     ],
     "resourceFolders": []

@@ -18,7 +18,7 @@
     "gridColor": 10401023,
     "gridAlpha": 0.8,
     "snap": true,
-    "zoomFactor": 0.3658231768160934,
+    "zoomFactor": 0.3781588550893338,
     "windowMask": false
   },
   "objectsGroups": [
@@ -313,6 +313,22 @@
       "x": 0,
       "y": -192,
       "zOrder": 15,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 0,
+      "height": 1472,
+      "layer": "",
+      "name": "TrialTunnel",
+      "persistentUuid": "7f2530e5-a49f-4763-b9a9-1b05568fa3de",
+      "width": 704,
+      "x": 928,
+      "y": -192,
+      "zOrder": 1500010,
       "numberProperties": [],
       "stringProperties": [],
       "initialVariables": []
@@ -3596,6 +3612,18 @@
       "variables": [],
       "effects": [],
       "behaviors": []
+    },
+    {
+      "assetStoreId": "",
+      "height": 500,
+      "name": "TrialTunnel",
+      "tags": "",
+      "texture": "a490118d306d8a2db9ddddcc8bbfc28a5c2a0f0f07c6bf76958db479f9c1d907_Wall Grey Flat.png",
+      "type": "TiledSpriteObject::TiledSprite",
+      "width": 500,
+      "variables": [],
+      "effects": [],
+      "behaviors": []
     }
   ],
   "events": [
@@ -3726,6 +3754,7 @@
           "colorG": 196,
           "colorR": 74,
           "creationTime": 0,
+          "folded": true,
           "name": "Preparing to start",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -4009,6 +4038,113 @@
                   ]
                 },
                 {
+                  "disabled": true,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::Or"
+                      },
+                      "parameters": [],
+                      "subInstructions": [
+                        {
+                          "type": {
+                            "value": "VarGlobal"
+                          },
+                          "parameters": [
+                            "Score",
+                            ">",
+                            "400"
+                          ]
+                        }
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "MettreX"
+                      },
+                      "parameters": [
+                        "TrialTunnel",
+                        "-",
+                        "(Variable(ObstacleSpeed)/50)*60*TimeDelta()"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "disabled": true,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::Or"
+                      },
+                      "parameters": [],
+                      "subInstructions": [
+                        {
+                          "type": {
+                            "value": "VarGlobal"
+                          },
+                          "parameters": [
+                            "Score",
+                            ">",
+                            "1500"
+                          ]
+                        }
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "MettreX"
+                      },
+                      "parameters": [
+                        "TrialTunnel",
+                        "=",
+                        "928"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::Or"
+                      },
+                      "parameters": [],
+                      "subInstructions": [
+                        {
+                          "type": {
+                            "value": "VarGlobal"
+                          },
+                          "parameters": [
+                            "Score",
+                            ">",
+                            "4920"
+                          ]
+                        }
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "MettreX"
+                      },
+                      "parameters": [
+                        "TrialTunnel",
+                        "-",
+                        "(Variable(ObstacleSpeed)/50)*60*TimeDelta()"
+                      ]
+                    }
+                  ]
+                },
+                {
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [
                     {
@@ -4078,6 +4214,16 @@
                       },
                       "parameters": [
                         "Background2",
+                        "=",
+                        "17"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ChangePlan"
+                      },
+                      "parameters": [
+                        "TrialTunnel",
                         "=",
                         "17"
                       ]

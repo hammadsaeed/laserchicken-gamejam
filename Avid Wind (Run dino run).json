@@ -1565,6 +1565,136 @@
         "name": "assets\\lightning.png",
         "smoothed": true,
         "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/Large White Hole_Unlocked.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "f3e1913387d669d343600e107c1870b68633282fe3ceb0735a65b7c920e191d6_Large White Hole_Unlocked.png",
+        "smoothed": true,
+        "userAdded": true,
+        "origin": {
+          "identifier": "https://asset-resources.gdevelop.io/public-resources/Rolling Ball Pack/Hole/f3e1913387d669d343600e107c1870b68633282fe3ceb0735a65b7c920e191d6_Large White Hole_Unlocked.png",
+          "name": "gdevelop-asset-store"
+        }
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/Large Blue Hole_Unlocked.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "6f5d764133b9831feabd89a3525034a4ca5368269ddd58bf237040d68faf6f2c_Large Blue Hole_Unlocked.png",
+        "smoothed": true,
+        "userAdded": true,
+        "origin": {
+          "identifier": "https://asset-resources.gdevelop.io/public-resources/Rolling Ball Pack/Hole/6f5d764133b9831feabd89a3525034a4ca5368269ddd58bf237040d68faf6f2c_Large Blue Hole_Unlocked.png",
+          "name": "gdevelop-asset-store"
+        }
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/ Large Blue Hole_Locked.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "9e80a1e1065b67c586561d79d1e83cdacc8dded8b757c3cade97b622e7a6cb3a_ Large Blue Hole_Locked.png",
+        "smoothed": true,
+        "userAdded": true,
+        "origin": {
+          "identifier": "https://asset-resources.gdevelop.io/public-resources/Rolling Ball Pack/Hole/9e80a1e1065b67c586561d79d1e83cdacc8dded8b757c3cade97b622e7a6cb3a_ Large Blue Hole_Locked.png",
+          "name": "gdevelop-asset-store"
+        }
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/Cave Background Hole.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "e892f2a9d2fca2c95c8f124cfd88d5dbd4f8357a0747e6a53f995f2f5d0ed47f_Cave Background Hole.png",
+        "smoothed": true,
+        "userAdded": true,
+        "origin": {
+          "identifier": "https://asset-resources.gdevelop.io/public-resources/Pixel Platformer Pack/Misc/e892f2a9d2fca2c95c8f124cfd88d5dbd4f8357a0747e6a53f995f2f5d0ed47f_Cave Background Hole.png",
+          "name": "gdevelop-asset-store"
+        }
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/Black Hole.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "3616fdb9dd0f758d3e9aa4921c95f1666021016946330dc51a65e29b2477f9a1_Black Hole.png",
+        "smoothed": true,
+        "userAdded": true,
+        "origin": {
+          "identifier": "https://asset-resources.gdevelop.io/public-resources/Space Shooter by Pixel boy/Background/3616fdb9dd0f758d3e9aa4921c95f1666021016946330dc51a65e29b2477f9a1_Black Hole.png",
+          "name": "gdevelop-asset-store"
+        }
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/Starry Background Black Hole.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "923cbc3e88b1a083bb7dae193ffdd86f11c19d8eb3e16b2a4bc3b9cc2cd5c09f_Starry Background Black Hole.png",
+        "smoothed": true,
+        "userAdded": true,
+        "origin": {
+          "identifier": "https://asset-resources.gdevelop.io/public-resources/FoozleCC/Void Collection/Environment Pack/Backgrounds/923cbc3e88b1a083bb7dae193ffdd86f11c19d8eb3e16b2a4bc3b9cc2cd5c09f_Starry Background Black Hole.png",
+          "name": "gdevelop-asset-store"
+        }
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/tiled_Castle Wall.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "e1fa83fdd115228928c6cc28548f61ed13500295bd23ef51635a1455e0dd6f1c_tiled_Castle Wall.png",
+        "smoothed": true,
+        "userAdded": true,
+        "origin": {
+          "identifier": "https://asset-resources.gdevelop.io/public-resources/Generic Backgrounds/Background Objects/Retina/e1fa83fdd115228928c6cc28548f61ed13500295bd23ef51635a1455e0dd6f1c_tiled_Castle Wall.png",
+          "name": "gdevelop-asset-store"
+        }
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/pyramid.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "87db2489bda8307c235ac733f31c1b87e5e565c06bbe14f3f6f0880ddfdbb23b_pyramid.png",
+        "smoothed": true,
+        "userAdded": true,
+        "origin": {
+          "identifier": "https://asset-resources.gdevelop.io/public-resources/Generic Backgrounds/Background Objects/Retina/87db2489bda8307c235ac733f31c1b87e5e565c06bbe14f3f6f0880ddfdbb23b_pyramid.png",
+          "name": "gdevelop-asset-store"
+        }
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/Isometric Platformer Snow_Texture.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "4e6663d1829edbb26f222b1ff91469ec752afd73211469f8258116a2944ffae3_Isometric Platformer Snow_Texture.png",
+        "smoothed": true,
+        "userAdded": true,
+        "origin": {
+          "identifier": "https://asset-resources.gdevelop.io/public-resources/Isometric Pack/Platformer tiles/Snow/4e6663d1829edbb26f222b1ff91469ec752afd73211469f8258116a2944ffae3_Isometric Platformer Snow_Texture.png",
+          "name": "gdevelop-asset-store"
+        }
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/Wall Grey Flat.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "a490118d306d8a2db9ddddcc8bbfc28a5c2a0f0f07c6bf76958db479f9c1d907_Wall Grey Flat.png",
+        "smoothed": true,
+        "userAdded": true,
+        "origin": {
+          "identifier": "https://asset-resources.gdevelop.io/public-resources/Kenney Sokoban/Wall/a490118d306d8a2db9ddddcc8bbfc28a5c2a0f0f07c6bf76958db479f9c1d907_Wall Grey Flat.png",
+          "name": "gdevelop-asset-store"
+        }
       }
     ],
     "resourceFolders": []

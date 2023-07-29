@@ -18,7 +18,7 @@
     "gridColor": 10401023,
     "gridAlpha": 0.8,
     "snap": true,
-    "zoomFactor": 0.4318038445840615,
+    "zoomFactor": 0.39091049650571125,
     "windowMask": false
   },
   "objectsGroups": [
@@ -146,22 +146,6 @@
     },
     {
       "angle": 0,
-      "customSize": true,
-      "depth": 0,
-      "height": 429,
-      "layer": "",
-      "name": "TutorialSprite",
-      "persistentUuid": "20ccb8d2-a0f4-4d6b-a908-74bb4a0149fe",
-      "width": 520,
-      "x": -672,
-      "y": 256,
-      "zOrder": 27,
-      "numberProperties": [],
-      "stringProperties": [],
-      "initialVariables": []
-    },
-    {
-      "angle": 0,
       "customSize": false,
       "height": 0,
       "layer": "TouchButtons",
@@ -192,51 +176,6 @@
     },
     {
       "angle": 0,
-      "customSize": false,
-      "height": 0,
-      "layer": "",
-      "name": "TutorialTouchscreenJump",
-      "persistentUuid": "f007fe19-0b98-419e-a9d4-3911b45fbbcb",
-      "width": 0,
-      "x": 1152,
-      "y": 608,
-      "zOrder": 31,
-      "numberProperties": [],
-      "stringProperties": [],
-      "initialVariables": []
-    },
-    {
-      "angle": 0,
-      "customSize": false,
-      "height": 0,
-      "layer": "",
-      "name": "TutorialTouchscreenDuck",
-      "persistentUuid": "b5dec053-e367-4c4c-a9c9-4b98ee19087a",
-      "width": 0,
-      "x": 1136,
-      "y": 884,
-      "zOrder": 32,
-      "numberProperties": [],
-      "stringProperties": [],
-      "initialVariables": []
-    },
-    {
-      "angle": 0,
-      "customSize": true,
-      "height": 32,
-      "layer": "",
-      "name": "Limit",
-      "persistentUuid": "ba58fff4-f170-43ac-b897-f9885c348dcd",
-      "width": 960,
-      "x": 1088,
-      "y": 384,
-      "zOrder": 33,
-      "numberProperties": [],
-      "stringProperties": [],
-      "initialVariables": []
-    },
-    {
-      "angle": 0,
       "customSize": true,
       "depth": 0,
       "height": 169,
@@ -247,22 +186,6 @@
       "x": 32,
       "y": 823,
       "zOrder": 1500005,
-      "numberProperties": [],
-      "stringProperties": [],
-      "initialVariables": []
-    },
-    {
-      "angle": 0,
-      "customSize": true,
-      "depth": 0,
-      "height": 32,
-      "layer": "",
-      "name": "Limit",
-      "persistentUuid": "d5e0f947-dfad-4caa-b9f8-b81627eda6a9",
-      "width": 1024,
-      "x": -1408,
-      "y": 704,
-      "zOrder": 35,
       "numberProperties": [],
       "stringProperties": [],
       "initialVariables": []
@@ -4430,6 +4353,7 @@
                           "actions": [],
                           "events": [
                             {
+                              "disabled": true,
                               "folded": true,
                               "type": "BuiltinCommonInstructions::Standard",
                               "conditions": [
@@ -5191,7 +5115,6 @@
                       ]
                     },
                     {
-                      "disabled": true,
                       "type": "BuiltinCommonInstructions::Standard",
                       "conditions": [
                         {
@@ -5217,7 +5140,7 @@
                               "parameters": [
                                 "Dino",
                                 ">",
-                                "Platform1.BoundingBoxCenterY()"
+                                "Platform1.BoundingBoxTop() "
                               ]
                             }
                           ]
@@ -5244,21 +5167,21 @@
                         },
                         {
                           "type": {
+                            "value": "ModVarGlobal"
+                          },
+                          "parameters": [
+                            "PlatformNumber",
+                            "=",
+                            "2"
+                          ]
+                        },
+                        {
+                          "type": {
                             "value": "SetAnimationName"
                           },
                           "parameters": [
                             "Dino",
                             "\"Run\""
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "SetCenterY"
-                          },
-                          "parameters": [
-                            "Dino",
-                            "=",
-                            "Platform2.BoundingBoxTop() "
                           ]
                         },
                         {
@@ -5322,6 +5245,7 @@
                       ]
                     },
                     {
+                      "disabled": true,
                       "type": "BuiltinCommonInstructions::Standard",
                       "conditions": [
                         {
@@ -5356,16 +5280,6 @@
                       "actions": [
                         {
                           "type": {
-                            "value": "ModVarGlobal"
-                          },
-                          "parameters": [
-                            "PlatformNumber",
-                            "=",
-                            "2"
-                          ]
-                        },
-                        {
-                          "type": {
                             "value": "Arreter"
                           },
                           "parameters": [
@@ -5384,22 +5298,22 @@
                         },
                         {
                           "type": {
+                            "value": "ModVarGlobal"
+                          },
+                          "parameters": [
+                            "PlatformNumber",
+                            "=",
+                            "2"
+                          ]
+                        },
+                        {
+                          "type": {
                             "value": "SetCenterY"
                           },
                           "parameters": [
                             "Dino",
                             "=",
                             "Platform2.BoundingBoxTop() "
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "ModVarGlobal"
-                          },
-                          "parameters": [
-                            "PlatformNumber",
-                            "=",
-                            "3"
                           ]
                         },
                         {

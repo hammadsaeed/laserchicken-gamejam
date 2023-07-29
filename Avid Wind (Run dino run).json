@@ -1453,6 +1453,87 @@
           "identifier": "https://asset-resources.gdevelop.io/public-resources/Arcade/Sound effects/Coins/0f42d487214284edfa1223ac335c7631292e87aea6189b24901784b4c71b44cc_Coins 9.aac",
           "name": "gdevelop-asset-store"
         }
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "streettile.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "streettile.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "street.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "street.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "streettile2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "streettile2.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "tile.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "tile.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "tileBottom.png",
+        "kind": "image",
+        "metadata": "{\"localFilePath\":\"tileBottom.png\",\"extension\":\".png\",\"pskl\":{}}",
+        "name": "tileBottom.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "tileTop.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "tileTop.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/tileTop.png2.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\",\"pskl\":{}}",
+        "name": "tileTop.png2",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/tileBottom.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\tileBottom.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/tileTop.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\tileTop.png",
+        "smoothed": true,
+        "userAdded": true
       }
     ],
     "resourceFolders": []
@@ -1463,27 +1544,7 @@
       "height": 32,
       "name": "Platform3",
       "tags": "",
-      "texture": "9patch_Desert Tile_north.png",
-      "type": "TiledSpriteObject::TiledSprite",
-      "width": 32,
-      "variables": [],
-      "effects": [],
-      "behaviors": [
-        {
-          "name": "Platform",
-          "type": "PlatformBehavior::PlatformBehavior",
-          "canBeGrabbed": false,
-          "platformType": "Jumpthru",
-          "yGrabOffset": 0
-        }
-      ]
-    },
-    {
-      "assetStoreId": "",
-      "height": 32,
-      "name": "Platform1",
-      "tags": "",
-      "texture": "9patch_Desert Tile_north.png",
+      "texture": "assets\\tileBottom.png",
       "type": "TiledSpriteObject::TiledSprite",
       "width": 32,
       "variables": [],
@@ -1503,9 +1564,29 @@
       "height": 32,
       "name": "Platform2",
       "tags": "",
-      "texture": "9patch_Desert Tile_north.png",
+      "texture": "assets\\tileBottom.png",
       "type": "TiledSpriteObject::TiledSprite",
       "width": 32,
+      "variables": [],
+      "effects": [],
+      "behaviors": [
+        {
+          "name": "Platform",
+          "type": "PlatformBehavior::PlatformBehavior",
+          "canBeGrabbed": false,
+          "platformType": "Jumpthru",
+          "yGrabOffset": 0
+        }
+      ]
+    },
+    {
+      "assetStoreId": "",
+      "height": 90,
+      "name": "Platform1",
+      "tags": "",
+      "texture": "assets\\tileBottom.png",
+      "type": "TiledSpriteObject::TiledSprite",
+      "width": 90,
       "variables": [],
       "effects": [],
       "behaviors": [

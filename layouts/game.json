@@ -3175,16 +3175,6 @@
               "parameters": [
                 "TouchScreenTutorial"
               ]
-            },
-            {
-              "type": {
-                "value": "TextObject::String"
-              },
-              "parameters": [
-                "ScoreText",
-                "=",
-                "\"Score   \" + GlobalVariableString(Score)"
-              ]
             }
           ]
         }
@@ -3222,7 +3212,18 @@
                   ]
                 }
               ],
-              "actions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "TextObject::String"
+                  },
+                  "parameters": [
+                    "ScoreText",
+                    "=",
+                    "\"Score   \" + GlobalVariableString(Score)"
+                  ]
+                }
+              ],
               "events": [
                 {
                   "type": "BuiltinCommonInstructions::Standard",

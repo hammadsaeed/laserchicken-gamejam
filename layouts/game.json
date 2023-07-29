@@ -3494,6 +3494,86 @@
       ]
     },
     {
+      "adaptCollisionMaskAutomatically": false,
+      "assetStoreId": "",
+      "name": "MagnetLightning",
+      "tags": "",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [],
+      "effects": [
+        {
+          "effectType": "Outline",
+          "name": "Effect",
+          "doubleParameters": {
+            "padding": 0,
+            "thickness": 2
+          },
+          "stringParameters": {
+            "color": "255;255;255"
+          },
+          "booleanParameters": {}
+        }
+      ],
+      "behaviors": [
+        {
+          "name": "DestroyOutside",
+          "type": "DestroyOutsideBehavior::DestroyOutside",
+          "extraBorder": 1000
+        }
+      ],
+      "animations": [
+        {
+          "name": "Cactus3",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": true,
+              "timeBetweenFrames": 0.02500000037252903,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets\\lightning.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 43,
+                    "y": 96
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 89
+                      },
+                      {
+                        "x": 86,
+                        "y": 88.5
+                      },
+                      {
+                        "x": 86,
+                        "y": 96
+                      },
+                      {
+                        "x": 0,
+                        "y": 96
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
       "assetStoreId": "",
       "height": 32,
       "name": "RoadTop",
@@ -5095,6 +5175,18 @@
                         },
                         {
                           "type": {
+                            "value": "Create"
+                          },
+                          "parameters": [
+                            "",
+                            "MagnetLightning",
+                            "Dino.CenterX() + 50",
+                            "Dino.CenterY() - 50",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
                             "value": "Delete"
                           },
                           "parameters": [
@@ -5536,6 +5628,21 @@
                       "events": [
                         {
                           "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "Delete"
+                              },
+                              "parameters": [
+                                "MagnetLightning",
+                                ""
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
                           "conditions": [
                             {
                               "type": {
@@ -5612,6 +5719,24 @@
                       ],
                       "actions": [],
                       "events": [
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "MettreXY"
+                              },
+                              "parameters": [
+                                "MagnetLightning",
+                                "=",
+                                "Dino.CenterX() + 50",
+                                "=",
+                                "Dino.CenterY() - 50"
+                              ]
+                            }
+                          ]
+                        },
                         {
                           "type": "BuiltinCommonInstructions::Standard",
                           "conditions": [

@@ -4234,7 +4234,7 @@
                               "parameters": [
                                 "CactusObstacle",
                                 "=",
-                                "Dino.ZOrder() - 1"
+                                "1500000"
                               ]
                             }
                           ]
@@ -4286,6 +4286,16 @@
                                 "Variable(ObstacleSpeed)",
                                 "1"
                               ]
+                            },
+                            {
+                              "type": {
+                                "value": "ChangePlan"
+                              },
+                              "parameters": [
+                                "CactusObstacle",
+                                "=",
+                                "1500001"
+                              ]
                             }
                           ]
                         },
@@ -4335,6 +4345,16 @@
                                 "180",
                                 "Variable(ObstacleSpeed)",
                                 "1"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "ChangePlan"
+                              },
+                              "parameters": [
+                                "CactusObstacle",
+                                "=",
+                                "1500002"
                               ]
                             }
                           ]
@@ -4842,6 +4862,120 @@
         }
       ],
       "parameters": []
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "value": "PlatformBehavior::IsObjectOnGivenFloor"
+          },
+          "parameters": [
+            "Dino",
+            "PlatformerObject",
+            "Platform1",
+            ""
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "ChangePlan"
+          },
+          "parameters": [
+            "Dino",
+            "=",
+            "1500000"
+          ]
+        },
+        {
+          "type": {
+            "value": "DebuggerTools::ConsoleLog"
+          },
+          "parameters": [
+            "ToString(Dino.ZOrder())",
+            "",
+            ""
+          ]
+        }
+      ]
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "value": "PlatformBehavior::IsObjectOnGivenFloor"
+          },
+          "parameters": [
+            "Dino",
+            "PlatformerObject",
+            "Platform2",
+            ""
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "ChangePlan"
+          },
+          "parameters": [
+            "Dino",
+            "=",
+            "1500001"
+          ]
+        },
+        {
+          "type": {
+            "value": "DebuggerTools::ConsoleLog"
+          },
+          "parameters": [
+            "ToString(Dino.ZOrder())",
+            "",
+            ""
+          ]
+        }
+      ]
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "value": "PlatformBehavior::IsObjectOnGivenFloor"
+          },
+          "parameters": [
+            "Dino",
+            "PlatformerObject",
+            "Platform3",
+            ""
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "ChangePlan"
+          },
+          "parameters": [
+            "Dino",
+            "=",
+            "1500002"
+          ]
+        },
+        {
+          "type": {
+            "value": "DebuggerTools::ConsoleLog"
+          },
+          "parameters": [
+            "ToString(Dino.ZOrder())",
+            "",
+            ""
+          ]
+        }
+      ]
     }
   ],
   "layers": [

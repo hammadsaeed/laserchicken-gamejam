@@ -308,36 +308,6 @@
       "numberProperties": [],
       "stringProperties": [],
       "initialVariables": []
-    },
-    {
-      "angle": 0,
-      "customSize": false,
-      "height": 0,
-      "layer": "",
-      "name": "Up",
-      "persistentUuid": "5a3c180c-bab2-47ad-99de-3a3d6cf760e9",
-      "width": 0,
-      "x": 0,
-      "y": 832,
-      "zOrder": 1500001,
-      "numberProperties": [],
-      "stringProperties": [],
-      "initialVariables": []
-    },
-    {
-      "angle": 0,
-      "customSize": false,
-      "height": 0,
-      "layer": "",
-      "name": "Down",
-      "persistentUuid": "118d0bff-eb39-4205-9dee-9dd31bd4756d",
-      "width": 0,
-      "x": 0,
-      "y": 928,
-      "zOrder": 1500002,
-      "numberProperties": [],
-      "stringProperties": [],
-      "initialVariables": []
     }
   ],
   "objects": [
@@ -3930,11 +3900,57 @@
                             },
                             {
                               "type": {
-                                "value": "KeyPressed"
+                                "value": "BuiltinCommonInstructions::Or"
                               },
-                              "parameters": [
-                                "",
-                                "Up"
+                              "parameters": [],
+                              "subInstructions": [
+                                {
+                                  "type": {
+                                    "value": "KeyPressed"
+                                  },
+                                  "parameters": [
+                                    "",
+                                    "Up"
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "BuiltinCommonInstructions::And"
+                                  },
+                                  "parameters": [],
+                                  "subInstructions": [
+                                    {
+                                      "type": {
+                                        "value": "SwipeGesture::SwipeDirection_4way"
+                                      },
+                                      "parameters": [
+                                        "",
+                                        "\"Up\"",
+                                        ""
+                                      ]
+                                    },
+                                    {
+                                      "type": {
+                                        "value": "SwipeGesture::Distance"
+                                      },
+                                      "parameters": [
+                                        "",
+                                        ">",
+                                        "70",
+                                        ""
+                                      ]
+                                    },
+                                    {
+                                      "type": {
+                                        "value": "SwipeGesture::HasSwipeJustEnded"
+                                      },
+                                      "parameters": [
+                                        "",
+                                        ""
+                                      ]
+                                    }
+                                  ]
+                                }
                               ]
                             },
                             {
@@ -3983,11 +3999,57 @@
                             },
                             {
                               "type": {
-                                "value": "KeyPressed"
+                                "value": "BuiltinCommonInstructions::Or"
                               },
-                              "parameters": [
-                                "",
-                                "Down"
+                              "parameters": [],
+                              "subInstructions": [
+                                {
+                                  "type": {
+                                    "value": "KeyPressed"
+                                  },
+                                  "parameters": [
+                                    "",
+                                    "Down"
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "BuiltinCommonInstructions::And"
+                                  },
+                                  "parameters": [],
+                                  "subInstructions": [
+                                    {
+                                      "type": {
+                                        "value": "SwipeGesture::SwipeDirection_4way"
+                                      },
+                                      "parameters": [
+                                        "",
+                                        "\"Down\"",
+                                        ""
+                                      ]
+                                    },
+                                    {
+                                      "type": {
+                                        "value": "SwipeGesture::Distance"
+                                      },
+                                      "parameters": [
+                                        "",
+                                        ">",
+                                        "70",
+                                        ""
+                                      ]
+                                    },
+                                    {
+                                      "type": {
+                                        "value": "SwipeGesture::HasSwipeJustEnded"
+                                      },
+                                      "parameters": [
+                                        "",
+                                        ""
+                                      ]
+                                    }
+                                  ]
+                                }
                               ]
                             },
                             {

@@ -4278,6 +4278,16 @@
                                 "Variable(ObstacleSpeed)",
                                 "1"
                               ]
+                            },
+                            {
+                              "type": {
+                                "value": "ChangePlan"
+                              },
+                              "parameters": [
+                                "CactusObstacle",
+                                "=",
+                                "Dino.ZOrder() - 1"
+                              ]
                             }
                           ]
                         },

@@ -3869,17 +3869,6 @@
                             },
                             {
                               "type": {
-                                "value": "SourisSurObjet"
-                              },
-                              "parameters": [
-                                "Up",
-                                "",
-                                "",
-                                ""
-                              ]
-                            },
-                            {
-                              "type": {
                                 "value": "BuiltinCommonInstructions::Once"
                               },
                               "parameters": []
@@ -3929,17 +3918,6 @@
                               "parameters": [
                                 "",
                                 "Down"
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "SourisSurObjet"
-                              },
-                              "parameters": [
-                                "Down",
-                                "",
-                                "",
-                                ""
                               ]
                             },
                             {

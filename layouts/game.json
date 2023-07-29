@@ -3481,6 +3481,16 @@
             "PlatformerObject",
             ""
           ]
+        },
+        {
+          "type": {
+            "value": "SwipeGesture::EnableSwipeDetection"
+          },
+          "parameters": [
+            "",
+            "True",
+            ""
+          ]
         }
       ],
       "events": [
@@ -4450,6 +4460,16 @@
                                 "-",
                                 "65"
                               ]
+                            },
+                            {
+                              "type": {
+                                "value": "DebuggerTools::ConsoleLog"
+                              },
+                              "parameters": [
+                                "\"SWIPE\"",
+                                "",
+                                ""
+                              ]
                             }
                           ]
                         },
@@ -4548,6 +4568,16 @@
                                 "Dino",
                                 "+",
                                 "60"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "DebuggerTools::ConsoleLog"
+                              },
+                              "parameters": [
+                                "\"SWIPE\"",
+                                "",
+                                ""
                               ]
                             }
                           ]

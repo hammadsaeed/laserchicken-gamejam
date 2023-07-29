@@ -5041,6 +5041,7 @@
                       ]
                     },
                     {
+                      "disabled": true,
                       "type": "BuiltinCommonInstructions::Standard",
                       "conditions": [
                         {
@@ -5066,7 +5067,7 @@
                               "parameters": [
                                 "Dino",
                                 ">",
-                                "Platform1.BoundingBoxTop() "
+                                "Platform1.BoundingBoxCenterY()"
                               ]
                             }
                           ]
@@ -5093,21 +5094,21 @@
                         },
                         {
                           "type": {
-                            "value": "ModVarGlobal"
-                          },
-                          "parameters": [
-                            "PlatformNumber",
-                            "=",
-                            "2"
-                          ]
-                        },
-                        {
-                          "type": {
                             "value": "SetAnimationName"
                           },
                           "parameters": [
                             "Dino",
                             "\"Run\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetCenterY"
+                          },
+                          "parameters": [
+                            "Dino",
+                            "=",
+                            "Platform2.BoundingBoxTop() "
                           ]
                         },
                         {
@@ -5171,7 +5172,6 @@
                       ]
                     },
                     {
-                      "disabled": true,
                       "type": "BuiltinCommonInstructions::Standard",
                       "conditions": [
                         {
@@ -5206,6 +5206,16 @@
                       "actions": [
                         {
                           "type": {
+                            "value": "ModVarGlobal"
+                          },
+                          "parameters": [
+                            "PlatformNumber",
+                            "=",
+                            "2"
+                          ]
+                        },
+                        {
+                          "type": {
                             "value": "Arreter"
                           },
                           "parameters": [
@@ -5224,22 +5234,22 @@
                         },
                         {
                           "type": {
-                            "value": "ModVarGlobal"
-                          },
-                          "parameters": [
-                            "PlatformNumber",
-                            "=",
-                            "2"
-                          ]
-                        },
-                        {
-                          "type": {
                             "value": "SetCenterY"
                           },
                           "parameters": [
                             "Dino",
                             "=",
                             "Platform2.BoundingBoxTop() "
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ModVarGlobal"
+                          },
+                          "parameters": [
+                            "PlatformNumber",
+                            "=",
+                            "3"
                           ]
                         },
                         {

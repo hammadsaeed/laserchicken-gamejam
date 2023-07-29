@@ -5205,6 +5205,61 @@
                             "100",
                             "0.5"
                           ]
+                        },
+                        {
+                          "type": {
+                            "value": "UnPauseTimer"
+                          },
+                          "parameters": [
+                            "",
+                            "\"isMagnet_timer\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ResetTimer"
+                          },
+                          "parameters": [
+                            "",
+                            "\"isMagnet_timer\""
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "CompareTimer"
+                          },
+                          "parameters": [
+                            "",
+                            "\"isMagnet_timer\"",
+                            ">=",
+                            "10"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "PauseTimer"
+                          },
+                          "parameters": [
+                            "",
+                            "\"isMagnet_timer\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetObjectVariableAsBoolean"
+                          },
+                          "parameters": [
+                            "Dino",
+                            "isMagnetOn",
+                            "False"
+                          ]
                         }
                       ]
                     },
@@ -6431,16 +6486,6 @@
                           "parameters": [
                             "Dino",
                             "isInvincible",
-                            "False"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "SetObjectVariableAsBoolean"
-                          },
-                          "parameters": [
-                            "Dino",
-                            "isMagnetOn",
                             "False"
                           ]
                         },

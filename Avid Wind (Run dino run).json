@@ -1296,6 +1296,32 @@
           "identifier": "https://asset-resources.gdevelop.io/public-resources/Breakable Physics/Obstacle/Glass/96e708c2812471edfa6d218a31879d3c510af6bf1573e0aa8b681634ff523789_Circle glass_Perfect.png",
           "name": "gdevelop-asset-store"
         }
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/Up.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Up.png",
+        "smoothed": true,
+        "userAdded": false,
+        "origin": {
+          "identifier": "https://asset-resources.gdevelop.io/public-resources/Xelu Free Controller and Key Prompts/Console Inputs/Switch/c1c0dae62bc3df5f4cda1a304c7de67353dfc8ebbc8fd2bf900a8b9391c06ccb_Up.png",
+          "name": "Up.png"
+        }
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/Down.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Down.png",
+        "smoothed": true,
+        "userAdded": false,
+        "origin": {
+          "identifier": "https://asset-resources.gdevelop.io/public-resources/Xelu Free Controller and Key Prompts/Console Inputs/Switch/46fe8de0daf2841fea88f72889f15f1554bbd10187205d582c241c7e5f8b5b56_Down.png",
+          "name": "Down.png"
+        }
       }
     ],
     "resourceFolders": []
@@ -1313,10 +1339,10 @@
       "effects": [],
       "behaviors": [
         {
-          "canBeGrabbed": false,
           "name": "Platform",
-          "platformType": "Jumpthru",
           "type": "PlatformBehavior::PlatformBehavior",
+          "canBeGrabbed": false,
+          "platformType": "Jumpthru",
           "yGrabOffset": 0
         }
       ]

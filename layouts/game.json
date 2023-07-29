@@ -18,7 +18,7 @@
     "gridColor": 10401023,
     "gridAlpha": 0.8,
     "snap": true,
-    "zoomFactor": 0.39091049650571097,
+    "zoomFactor": 0.5096849298077983,
     "windowMask": false
   },
   "objectsGroups": [
@@ -147,8 +147,8 @@
       "name": "TutorialSprite",
       "persistentUuid": "20ccb8d2-a0f4-4d6b-a908-74bb4a0149fe",
       "width": 520,
-      "x": 56,
-      "y": 608,
+      "x": -616,
+      "y": 224,
       "zOrder": 27,
       "numberProperties": [],
       "stringProperties": [],
@@ -192,8 +192,8 @@
       "name": "TutorialTouchscreenJump",
       "persistentUuid": "f007fe19-0b98-419e-a9d4-3911b45fbbcb",
       "width": 0,
-      "x": 576,
-      "y": 640,
+      "x": 1152,
+      "y": 608,
       "zOrder": 31,
       "numberProperties": [],
       "stringProperties": [],
@@ -207,8 +207,8 @@
       "name": "TutorialTouchscreenDuck",
       "persistentUuid": "b5dec053-e367-4c4c-a9c9-4b98ee19087a",
       "width": 0,
-      "x": 576,
-      "y": 820,
+      "x": 1136,
+      "y": 884,
       "zOrder": 32,
       "numberProperties": [],
       "stringProperties": [],
@@ -222,8 +222,8 @@
       "name": "Limit",
       "persistentUuid": "ba58fff4-f170-43ac-b897-f9885c348dcd",
       "width": 960,
-      "x": 0,
-      "y": 896,
+      "x": 1088,
+      "y": 384,
       "zOrder": 33,
       "numberProperties": [],
       "stringProperties": [],
@@ -238,7 +238,7 @@
       "name": "Dino",
       "persistentUuid": "4355f663-4fd5-41b2-83c2-2c5f313938d9",
       "width": 221,
-      "x": 32,
+      "x": 128,
       "y": 951,
       "zOrder": 1500000,
       "numberProperties": [],
@@ -308,6 +308,36 @@
       "numberProperties": [],
       "stringProperties": [],
       "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "name": "Up",
+      "persistentUuid": "5a3c180c-bab2-47ad-99de-3a3d6cf760e9",
+      "width": 0,
+      "x": 0,
+      "y": 832,
+      "zOrder": 1500001,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "name": "Down",
+      "persistentUuid": "118d0bff-eb39-4205-9dee-9dd31bd4756d",
+      "width": 0,
+      "x": 0,
+      "y": 928,
+      "zOrder": 1500002,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
     }
   ],
   "objects": [
@@ -335,9 +365,9 @@
       ],
       "behaviors": [
         {
-          "extraBorder": 1000,
           "name": "DestroyOutside",
-          "type": "DestroyOutsideBehavior::DestroyOutside"
+          "type": "DestroyOutsideBehavior::DestroyOutside",
+          "extraBorder": 1000
         }
       ],
       "animations": [
@@ -2890,6 +2920,128 @@
           ]
         }
       ]
+    },
+    {
+      "adaptCollisionMaskAutomatically": true,
+      "assetStoreId": "daffaf8f8bbb90cc896868e3641cc223ddd46906e664dfd9f02cb82b182265b8",
+      "name": "Up",
+      "tags": "",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "animations": [
+        {
+          "name": "",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": true,
+              "timeBetweenFrames": 0.025,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "Up.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 9,
+                        "y": 9
+                      },
+                      {
+                        "x": 91,
+                        "y": 9
+                      },
+                      {
+                        "x": 91,
+                        "y": 91
+                      },
+                      {
+                        "x": 9,
+                        "y": 91
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "adaptCollisionMaskAutomatically": true,
+      "assetStoreId": "f95084e30f4f7adda9fa243cade1b756dcf3e5bc4fb17db616f42f29fb0de33d",
+      "name": "Down",
+      "tags": "",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "animations": [
+        {
+          "name": "",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": true,
+              "timeBetweenFrames": 0.025,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "Down.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 9,
+                        "y": 9
+                      },
+                      {
+                        "x": 91,
+                        "y": 9
+                      },
+                      {
+                        "x": 91,
+                        "y": 91
+                      },
+                      {
+                        "x": 9,
+                        "y": 91
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
   ],
   "events": [
@@ -3717,6 +3869,17 @@
                             },
                             {
                               "type": {
+                                "value": "SourisSurObjet"
+                              },
+                              "parameters": [
+                                "Up",
+                                "",
+                                "",
+                                ""
+                              ]
+                            },
+                            {
+                              "type": {
                                 "value": "BuiltinCommonInstructions::Once"
                               },
                               "parameters": []
@@ -3766,6 +3929,17 @@
                               "parameters": [
                                 "",
                                 "Down"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "SourisSurObjet"
+                              },
+                              "parameters": [
+                                "Down",
+                                "",
+                                "",
+                                ""
                               ]
                             },
                             {

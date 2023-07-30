@@ -4172,7 +4172,87 @@
               "sprites": [
                 {
                   "hasCustomCollisionMask": true,
-                  "image": "assets\\lightning.png",
+                  "image": "assets\\PW_Magnet_01.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 43,
+                    "y": 96
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 89
+                      },
+                      {
+                        "x": 86,
+                        "y": 88.5
+                      },
+                      {
+                        "x": 86,
+                        "y": 96
+                      },
+                      {
+                        "x": 0,
+                        "y": 96
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "adaptCollisionMaskAutomatically": false,
+      "assetStoreId": "",
+      "name": "InvincibleEffect",
+      "tags": "",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [],
+      "effects": [
+        {
+          "effectType": "Outline",
+          "name": "Effect",
+          "doubleParameters": {
+            "padding": 0,
+            "thickness": 2
+          },
+          "stringParameters": {
+            "color": "255;255;255"
+          },
+          "booleanParameters": {}
+        }
+      ],
+      "behaviors": [
+        {
+          "name": "DestroyOutside",
+          "type": "DestroyOutsideBehavior::DestroyOutside",
+          "extraBorder": 1000
+        }
+      ],
+      "animations": [
+        {
+          "name": "Cactus3",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": true,
+              "timeBetweenFrames": 0.02500000037252903,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets\\PW_Shield_01.png",
                   "points": [],
                   "originPoint": {
                     "name": "origine",
@@ -6472,6 +6552,18 @@
                         },
                         {
                           "type": {
+                            "value": "Create"
+                          },
+                          "parameters": [
+                            "",
+                            "InvincibleEffect",
+                            "Dino.CenterX() + 50",
+                            "Dino.CenterY() + 50",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
                             "value": "Delete"
                           },
                           "parameters": [
@@ -6489,6 +6581,35 @@
                             "",
                             "100",
                             "0.5"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "ObjectVariableAsBoolean"
+                          },
+                          "parameters": [
+                            "Dino",
+                            "isInvincible",
+                            "True"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "MettreXY"
+                          },
+                          "parameters": [
+                            "InvincibleEffect",
+                            "=",
+                            "Dino.CenterX() + 50",
+                            "=",
+                            "Dino.CenterY() + 50"
                           ]
                         }
                       ]
@@ -6703,8 +6824,8 @@
                           "parameters": [
                             "",
                             "MagnetLightning",
-                            "Dino.CenterX() + 50",
-                            "Dino.CenterY() - 50",
+                            "Dino.CenterX() - 25",
+                            "Dino.CenterY()",
                             ""
                           ]
                         },
@@ -7308,9 +7429,9 @@
                               "parameters": [
                                 "MagnetLightning",
                                 "=",
-                                "Dino.CenterX() + 50",
+                                "Dino.CenterX() - 25",
                                 "=",
-                                "Dino.CenterY() - 50"
+                                "Dino.CenterY()"
                               ]
                             }
                           ]
@@ -7934,6 +8055,15 @@
                             "Dino",
                             "isInvincible",
                             "False"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "Delete"
+                          },
+                          "parameters": [
+                            "InvincibleEffect",
+                            ""
                           ]
                         },
                         {

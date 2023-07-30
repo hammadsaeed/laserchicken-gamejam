@@ -2015,7 +2015,9 @@
         "file": "assets/Bush.png",
         "kind": "image",
         "metadata": "",
-        "name": "assets\\Bush.png"
+        "name": "assets\\Bush.png",
+        "smoothed": false,
+        "userAdded": false
       }
     ],
     "resourceFolders": []

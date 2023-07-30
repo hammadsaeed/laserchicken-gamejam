@@ -158,7 +158,7 @@
       "depth": 0,
       "height": 169,
       "layer": "",
-      "name": "Daniel",
+      "name": "Dino",
       "persistentUuid": "4355f663-4fd5-41b2-83c2-2c5f313938d9",
       "width": 221,
       "x": 32,
@@ -475,7 +475,7 @@
             "thickness": 2
           },
           "stringParameters": {
-            "color": "255;255;255"
+            "color": "155;155;155"
           },
           "booleanParameters": {}
         }
@@ -498,7 +498,7 @@
               "sprites": [
                 {
                   "hasCustomCollisionMask": true,
-                  "image": "assets/Cactus3-1.png",
+                  "image": "assets\\MY_Pothole_02.png",
                   "points": [],
                   "originPoint": {
                     "name": "origine",
@@ -514,20 +514,20 @@
                   "customCollisionMask": [
                     [
                       {
-                        "x": 0,
-                        "y": 89
+                        "x": 5.5,
+                        "y": 30.5
+                      },
+                      {
+                        "x": 83,
+                        "y": 10
                       },
                       {
                         "x": 86,
-                        "y": 0
+                        "y": 84
                       },
                       {
-                        "x": 86,
-                        "y": 96
-                      },
-                      {
-                        "x": 0,
-                        "y": 96
+                        "x": 11,
+                        "y": 83.5
                       }
                     ]
                   ]
@@ -546,7 +546,7 @@
               "sprites": [
                 {
                   "hasCustomCollisionMask": true,
-                  "image": "assets\\Palm_tree.png",
+                  "image": "assets\\JP_Cone_01.png",
                   "points": [],
                   "originPoint": {
                     "name": "origine",
@@ -562,20 +562,20 @@
                   "customCollisionMask": [
                     [
                       {
-                        "x": 0,
-                        "y": 89
+                        "x": 22,
+                        "y": 5.5
                       },
                       {
                         "x": 86,
-                        "y": 88.5
+                        "y": 6.5
                       },
                       {
                         "x": 86,
                         "y": 96
                       },
                       {
-                        "x": 0,
-                        "y": 96
+                        "x": 13,
+                        "y": 91.5
                       }
                     ]
                   ]
@@ -594,7 +594,7 @@
               "sprites": [
                 {
                   "hasCustomCollisionMask": true,
-                  "image": "assets\\Bush.png",
+                  "image": "assets\\AU_Cact_01.png",
                   "points": [],
                   "originPoint": {
                     "name": "origine",
@@ -610,20 +610,20 @@
                   "customCollisionMask": [
                     [
                       {
-                        "x": 0,
-                        "y": 89
+                        "x": 11,
+                        "y": 6
                       },
                       {
-                        "x": 93.5,
-                        "y": 89
+                        "x": 84.5,
+                        "y": 3.5
                       },
                       {
-                        "x": 93.5,
-                        "y": 96
+                        "x": 82,
+                        "y": 97.5
                       },
                       {
-                        "x": 0,
-                        "y": 96
+                        "x": 10,
+                        "y": 97
                       }
                     ]
                   ]
@@ -1382,7 +1382,7 @@
     {
       "adaptCollisionMaskAutomatically": false,
       "assetStoreId": "",
-      "name": "Daniel",
+      "name": "Dino",
       "tags": "",
       "type": "Sprite",
       "updateIfNotVisible": false,
@@ -3812,7 +3812,7 @@
             "value": "SetAnimationName"
           },
           "parameters": [
-            "Daniel",
+            "Dino",
             "\"Idle\""
           ]
         },
@@ -3831,7 +3831,7 @@
             "value": "ActivateBehavior"
           },
           "parameters": [
-            "Daniel",
+            "Dino",
             "PlatformerObject",
             ""
           ]
@@ -4040,7 +4040,7 @@
                             "value": "SetAnimationName"
                           },
                           "parameters": [
-                            "Daniel",
+                            "Dino",
                             "\"Run\""
                           ]
                         },
@@ -4049,7 +4049,7 @@
                             "value": "ActivateBehavior"
                           },
                           "parameters": [
-                            "Daniel",
+                            "Dino",
                             "PlatformerObject",
                             "yes"
                           ]
@@ -4956,7 +4956,7 @@
                             "value": "PlatformBehavior::IsObjectOnGivenFloor"
                           },
                           "parameters": [
-                            "Daniel",
+                            "Dino",
                             "PlatformerObject",
                             "Platform1",
                             ""
@@ -4969,7 +4969,7 @@
                             "value": "ChangePlan"
                           },
                           "parameters": [
-                            "Daniel",
+                            "Dino",
                             "=",
                             "1500000"
                           ]
@@ -4984,7 +4984,7 @@
                             "value": "PlatformBehavior::IsObjectOnGivenFloor"
                           },
                           "parameters": [
-                            "Daniel",
+                            "Dino",
                             "PlatformerObject",
                             "Platform2",
                             ""
@@ -4997,7 +4997,7 @@
                             "value": "ChangePlan"
                           },
                           "parameters": [
-                            "Daniel",
+                            "Dino",
                             "=",
                             "1500001"
                           ]
@@ -5012,7 +5012,7 @@
                             "value": "PlatformBehavior::IsObjectOnGivenFloor"
                           },
                           "parameters": [
-                            "Daniel",
+                            "Dino",
                             "PlatformerObject",
                             "Platform3",
                             ""
@@ -5025,7 +5025,7 @@
                             "value": "ChangePlan"
                           },
                           "parameters": [
-                            "Daniel",
+                            "Dino",
                             "=",
                             "1500002"
                           ]
@@ -5052,7 +5052,7 @@
                             "value": "PlatformBehavior::IsOnFloor"
                           },
                           "parameters": [
-                            "Daniel",
+                            "Dino",
                             "PlatformerObject"
                           ]
                         }
@@ -5067,7 +5067,7 @@
                                 "value": "AnimationEnded"
                               },
                               "parameters": [
-                                "Daniel"
+                                "Dino"
                               ]
                             }
                           ],
@@ -5077,7 +5077,7 @@
                                 "value": "SetAnimationName"
                               },
                               "parameters": [
-                                "Daniel",
+                                "Dino",
                                 "\"Run\""
                               ]
                             }
@@ -5114,9 +5114,9 @@
                               "parameters": [
                                 "DustParticles",
                                 "=",
-                                "Daniel.PointX(\"DustProjection\")",
+                                "Dino.PointX(\"DustProjection\")",
                                 "=",
-                                "Daniel.PointY(\"DustProjection\")"
+                                "Dino.PointY(\"DustProjection\")"
                               ]
                             },
                             {
@@ -5141,7 +5141,7 @@
                             "value": "PlatformBehavior::IsOnFloor"
                           },
                           "parameters": [
-                            "Daniel",
+                            "Dino",
                             "PlatformerObject"
                           ]
                         },
@@ -5181,7 +5181,7 @@
                                 "value": "PlatformBehavior::IsJumping"
                               },
                               "parameters": [
-                                "Daniel",
+                                "Dino",
                                 "PlatformerObject"
                               ]
                             },
@@ -5210,7 +5210,7 @@
                                 "value": "SetAnimationName"
                               },
                               "parameters": [
-                                "Daniel",
+                                "Dino",
                                 "\"Jump\""
                               ]
                             }
@@ -5224,7 +5224,7 @@
                                 "value": "AnimationName"
                               },
                               "parameters": [
-                                "Daniel",
+                                "Dino",
                                 "\"Duck\""
                               ]
                             },
@@ -5294,7 +5294,7 @@
                                 "value": "Tween::IsPlaying"
                               },
                               "parameters": [
-                                "Daniel",
+                                "Dino",
                                 "Tween",
                                 "\"Move\""
                               ]
@@ -5306,7 +5306,7 @@
                                 "value": "SetAnimationName"
                               },
                               "parameters": [
-                                "Daniel",
+                                "Dino",
                                 "\"Run\""
                               ]
                             }
@@ -5422,10 +5422,10 @@
                                     "value": "Tween::AddObjectPositionYTween"
                                   },
                                   "parameters": [
-                                    "Daniel",
+                                    "Dino",
                                     "Tween",
                                     "\"Move\"",
-                                    "Daniel.Y() - 200",
+                                    "Dino.Y() - 200",
                                     "\"easeInOutQuad\"",
                                     "150",
                                     ""
@@ -5436,7 +5436,7 @@
                                     "value": "SetAnimationName"
                                   },
                                   "parameters": [
-                                    "Daniel",
+                                    "Dino",
                                     "\"TurnUp\""
                                   ]
                                 },
@@ -5569,10 +5569,10 @@
                                     "value": "Tween::AddObjectPositionYTween"
                                   },
                                   "parameters": [
-                                    "Daniel",
+                                    "Dino",
                                     "Tween",
                                     "\"Move\"",
-                                    "Daniel.Y() + 180",
+                                    "Dino.Y() + 180",
                                     "\"easeInOutQuad\"",
                                     "150",
                                     ""
@@ -5583,7 +5583,7 @@
                                     "value": "SetAnimationName"
                                   },
                                   "parameters": [
-                                    "Daniel",
+                                    "Dino",
                                     "\"TurnDown\""
                                   ]
                                 },
@@ -5659,7 +5659,7 @@
                             "value": "CollisionNP"
                           },
                           "parameters": [
-                            "Daniel",
+                            "Dino",
                             "BonusObject",
                             "",
                             "",
@@ -5673,7 +5673,7 @@
                             "value": "SetObjectVariableAsBoolean"
                           },
                           "parameters": [
-                            "Daniel",
+                            "Dino",
                             "isInvincible",
                             "True"
                           ]
@@ -5685,8 +5685,8 @@
                           "parameters": [
                             "",
                             "BonusParticle",
-                            "Daniel.CenterX()",
-                            "Daniel.CenterY()",
+                            "Dino.CenterX()",
+                            "Dino.CenterY()",
                             ""
                           ]
                         },
@@ -5743,7 +5743,7 @@
                             "value": "CollisionNP"
                           },
                           "parameters": [
-                            "Daniel",
+                            "Dino",
                             "BonusObject2",
                             "",
                             "",
@@ -5759,8 +5759,8 @@
                           "parameters": [
                             "",
                             "BonusParticle",
-                            "Daniel.CenterX()",
-                            "Daniel.CenterY()",
+                            "Dino.CenterX()",
+                            "Dino.CenterY()",
                             ""
                           ]
                         },
@@ -5800,7 +5800,7 @@
                             "value": "ActivateBehavior"
                           },
                           "parameters": [
-                            "Daniel",
+                            "Dino",
                             "PlatformerObject",
                             "no"
                           ]
@@ -5810,7 +5810,7 @@
                             "value": "SetAnimationName"
                           },
                           "parameters": [
-                            "Daniel",
+                            "Dino",
                             "\"Jump\""
                           ]
                         },
@@ -5828,8 +5828,8 @@
                             "value": "AddForceVersPos"
                           },
                           "parameters": [
-                            "Daniel",
-                            "Daniel.BoundingBoxCenterX() + 100",
+                            "Dino",
+                            "Dino.BoundingBoxCenterX() + 100",
                             "200",
                             "200",
                             "1"
@@ -5849,7 +5849,7 @@
                             "value": "SetAnimationName"
                           },
                           "parameters": [
-                            "Daniel",
+                            "Dino",
                             "\"Idle\""
                           ]
                         },
@@ -5885,7 +5885,7 @@
                             "value": "CollisionNP"
                           },
                           "parameters": [
-                            "Daniel",
+                            "Dino",
                             "BonusObject3",
                             "",
                             "",
@@ -5899,7 +5899,7 @@
                             "value": "SetObjectVariableAsBoolean"
                           },
                           "parameters": [
-                            "Daniel",
+                            "Dino",
                             "isMagnetOn",
                             "True"
                           ]
@@ -5911,8 +5911,8 @@
                           "parameters": [
                             "",
                             "BonusParticle",
-                            "Daniel.CenterX()",
-                            "Daniel.CenterY()",
+                            "Dino.CenterX()",
+                            "Dino.CenterY()",
                             ""
                           ]
                         },
@@ -5933,8 +5933,8 @@
                           "parameters": [
                             "",
                             "MagnetLightning",
-                            "Daniel.CenterX() + 50",
-                            "Daniel.CenterY() - 50",
+                            "Dino.CenterX() + 50",
+                            "Dino.CenterY() - 50",
                             ""
                           ]
                         },
@@ -6009,7 +6009,7 @@
                             "value": "SetObjectVariableAsBoolean"
                           },
                           "parameters": [
-                            "Daniel",
+                            "Dino",
                             "isMagnetOn",
                             "False"
                           ]
@@ -6027,9 +6027,9 @@
                           "parameters": [
                             "BonusParticle",
                             "=",
-                            "Daniel.CenterX()",
+                            "Dino.CenterX()",
                             "=",
-                            "Daniel.CenterY()"
+                            "Dino.CenterY()"
                           ]
                         }
                       ]
@@ -6042,7 +6042,7 @@
                             "value": "PosY"
                           },
                           "parameters": [
-                            "Daniel",
+                            "Dino",
                             "<",
                             "200"
                           ]
@@ -6060,7 +6060,7 @@
                             "value": "Arreter"
                           },
                           "parameters": [
-                            "Daniel"
+                            "Dino"
                           ]
                         },
                         {
@@ -6106,8 +6106,8 @@
                             "value": "AddForceVersPos"
                           },
                           "parameters": [
-                            "Daniel",
-                            "Daniel.X() + 100",
+                            "Dino",
+                            "Dino.X() + 100",
                             "Platform1.BoundingBoxCenterY()",
                             "150",
                             "1"
@@ -6158,7 +6158,7 @@
                                 "value": "PosY"
                               },
                               "parameters": [
-                                "Daniel",
+                                "Dino",
                                 ">",
                                 "Platform1.BoundingBoxTop() "
                               ]
@@ -6172,7 +6172,7 @@
                             "value": "Arreter"
                           },
                           "parameters": [
-                            "Daniel"
+                            "Dino"
                           ]
                         },
                         {
@@ -6180,7 +6180,7 @@
                             "value": "ActivateBehavior"
                           },
                           "parameters": [
-                            "Daniel",
+                            "Dino",
                             "PlatformerObject",
                             "yes"
                           ]
@@ -6200,7 +6200,7 @@
                             "value": "SetCenterY"
                           },
                           "parameters": [
-                            "Daniel",
+                            "Dino",
                             "=",
                             "Platform2.BoundingBoxTop() - 100 "
                           ]
@@ -6210,7 +6210,7 @@
                             "value": "SetAnimationName"
                           },
                           "parameters": [
-                            "Daniel",
+                            "Dino",
                             "\"Run\""
                           ]
                         },
@@ -6219,7 +6219,7 @@
                             "value": "Arreter"
                           },
                           "parameters": [
-                            "Daniel"
+                            "Dino"
                           ]
                         },
                         {
@@ -6299,7 +6299,7 @@
                                 "value": "PosY"
                               },
                               "parameters": [
-                                "Daniel",
+                                "Dino",
                                 ">",
                                 "Platform1.BoundingBoxTop() "
                               ]
@@ -6313,7 +6313,7 @@
                             "value": "Arreter"
                           },
                           "parameters": [
-                            "Daniel"
+                            "Dino"
                           ]
                         },
                         {
@@ -6321,7 +6321,7 @@
                             "value": "ActivateBehavior"
                           },
                           "parameters": [
-                            "Daniel",
+                            "Dino",
                             "PlatformerObject",
                             "yes"
                           ]
@@ -6341,7 +6341,7 @@
                             "value": "SetCenterY"
                           },
                           "parameters": [
-                            "Daniel",
+                            "Dino",
                             "=",
                             "Platform2.BoundingBoxTop() "
                           ]
@@ -6351,7 +6351,7 @@
                             "value": "Arreter"
                           },
                           "parameters": [
-                            "Daniel"
+                            "Dino"
                           ]
                         },
                         {
@@ -6426,7 +6426,7 @@
                             "value": "ObjectVariableAsBoolean"
                           },
                           "parameters": [
-                            "Daniel",
+                            "Dino",
                             "isMagnetOn",
                             "False"
                           ]
@@ -6457,7 +6457,7 @@
                                 "value": "CollisionNP"
                               },
                               "parameters": [
-                                "Daniel",
+                                "Dino",
                                 "Coin",
                                 "",
                                 "",
@@ -6519,7 +6519,7 @@
                             "value": "ObjectVariableAsBoolean"
                           },
                           "parameters": [
-                            "Daniel",
+                            "Dino",
                             "isMagnetOn",
                             "True"
                           ]
@@ -6538,9 +6538,9 @@
                               "parameters": [
                                 "MagnetLightning",
                                 "=",
-                                "Daniel.CenterX() + 50",
+                                "Dino.CenterX() + 50",
                                 "=",
-                                "Daniel.CenterY() - 50"
+                                "Dino.CenterY() - 50"
                               ]
                             }
                           ]
@@ -6553,7 +6553,7 @@
                                 "value": "Distance"
                               },
                               "parameters": [
-                                "Daniel",
+                                "Dino",
                                 "Coin",
                                 "500",
                                 ""
@@ -6567,7 +6567,7 @@
                               },
                               "parameters": [
                                 "Coin",
-                                "Daniel",
+                                "Dino",
                                 "1000",
                                 "0"
                               ]
@@ -6582,7 +6582,7 @@
                                     "value": "Distance"
                                   },
                                   "parameters": [
-                                    "Daniel",
+                                    "Dino",
                                     "Coin",
                                     "50",
                                     ""
@@ -6816,7 +6816,7 @@
                                 "",
                                 "CactusObstacle",
                                 "RandomInRange(75, 125) + SceneWindowWidth()",
-                                "Platform1.BoundingBoxTop()",
+                                "Platform1.BoundingBoxCenterY()",
                                 ""
                               ]
                             },
@@ -6838,7 +6838,7 @@
                               "parameters": [
                                 "CactusObstacle",
                                 "=",
-                                "Daniel.ZOrder() - 1"
+                                "Dino.ZOrder() - 1"
                               ]
                             }
                           ]
@@ -6876,7 +6876,7 @@
                                 "",
                                 "CactusObstacle",
                                 "RandomInRange(75, 125) + SceneWindowWidth()",
-                                "Platform2.BoundingBoxTop()",
+                                "Platform2.BoundingBoxCenterY()",
                                 ""
                               ]
                             },
@@ -6926,7 +6926,7 @@
                                 "",
                                 "CactusObstacle",
                                 "RandomInRange(75, 125) + SceneWindowWidth()",
-                                "Platform3.BoundingBoxTop()",
+                                "Platform3.BoundingBoxCenterY()",
                                 ""
                               ]
                             },
@@ -7161,7 +7161,7 @@
                             "value": "SetObjectVariableAsBoolean"
                           },
                           "parameters": [
-                            "Daniel",
+                            "Dino",
                             "isInvincible",
                             "False"
                           ]
@@ -7232,7 +7232,7 @@
                               "parameters": [
                                 "BonusObject",
                                 "=",
-                                "Daniel.ZOrder() - 1"
+                                "Dino.ZOrder() - 1"
                               ]
                             }
                           ]
@@ -7281,7 +7281,7 @@
                               "parameters": [
                                 "BonusObject",
                                 "=",
-                                "Daniel.ZOrder() - 1"
+                                "Dino.ZOrder() - 1"
                               ]
                             },
                             {
@@ -7352,7 +7352,7 @@
                               "parameters": [
                                 "BonusObject",
                                 "=",
-                                "Daniel.ZOrder() - 1"
+                                "Dino.ZOrder() - 1"
                               ]
                             }
                           ]
@@ -7401,7 +7401,7 @@
                               "parameters": [
                                 "BonusObject2",
                                 "=",
-                                "Daniel.ZOrder() - 1"
+                                "Dino.ZOrder() - 1"
                               ]
                             },
                             {
@@ -7561,7 +7561,7 @@
                               "parameters": [
                                 "BonusObject3",
                                 "=",
-                                "Daniel.ZOrder() - 1"
+                                "Dino.ZOrder() - 1"
                               ]
                             },
                             {
@@ -7781,7 +7781,7 @@
                               "parameters": [
                                 "Coin",
                                 "=",
-                                "Daniel.ZOrder() - 1"
+                                "Dino.ZOrder() - 1"
                               ]
                             }
                           ]
@@ -7830,7 +7830,7 @@
                               "parameters": [
                                 "Coin",
                                 "=",
-                                "Daniel.ZOrder() - 1"
+                                "Dino.ZOrder() - 1"
                               ]
                             },
                             {
@@ -7901,7 +7901,7 @@
                               "parameters": [
                                 "Coin",
                                 "=",
-                                "Daniel.ZOrder() - 1"
+                                "Dino.ZOrder() - 1"
                               ]
                             }
                           ]
@@ -7940,7 +7940,7 @@
                             "value": "CollisionNP"
                           },
                           "parameters": [
-                            "Daniel",
+                            "Dino",
                             "CactusObstacle",
                             "",
                             "",
@@ -7974,7 +7974,7 @@
                                     "value": "ObjectVariableAsBoolean"
                                   },
                                   "parameters": [
-                                    "Daniel",
+                                    "Dino",
                                     "isInvincible",
                                     "False"
                                   ]
@@ -7995,7 +7995,7 @@
                                     "value": "PlatformBehavior::PlatformerObjectBehavior::AbortJump"
                                   },
                                   "parameters": [
-                                    "Daniel",
+                                    "Dino",
                                     "PlatformerObject"
                                   ]
                                 },
@@ -8004,7 +8004,7 @@
                                     "value": "SetAnimationName"
                                   },
                                   "parameters": [
-                                    "Daniel",
+                                    "Dino",
                                     "\"Dead\""
                                   ]
                                 },
@@ -8050,7 +8050,7 @@
                                     "value": "ChangePlan"
                                   },
                                   "parameters": [
-                                    "Daniel",
+                                    "Dino",
                                     "=",
                                     "999999999999"
                                   ]
@@ -8180,7 +8180,7 @@
                         "value": "AnimationName"
                       },
                       "parameters": [
-                        "Daniel",
+                        "Dino",
                         "\"Dead\""
                       ]
                     },
@@ -8189,7 +8189,7 @@
                         "value": "AnimationEnded"
                       },
                       "parameters": [
-                        "Daniel"
+                        "Dino"
                       ]
                     }
                   ],

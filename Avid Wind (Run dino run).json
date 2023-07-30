@@ -2354,6 +2354,42 @@
         "preloadAsSound": false,
         "preloadInCache": false,
         "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/MY_Pothole_01.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\MY_Pothole_01.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/JP_Cone_01.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\JP_Cone_01.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/MY_Pothole_02.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\MY_Pothole_02.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/AU_Cact_01.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\AU_Cact_01.png",
+        "smoothed": true,
+        "userAdded": true
       }
     ],
     "resourceFolders": []

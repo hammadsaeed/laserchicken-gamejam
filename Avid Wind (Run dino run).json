@@ -20,7 +20,7 @@
     "templateSlug": "run-dino-run",
     "useExternalSourceFiles": false,
     "version": "1.0.0",
-    "name": "DanielDash",
+    "name": "Avid Wind (Run dino run)",
     "description": "The revamped version of Chrome's offline Dino runner.\n\nControls :\n   Computer : Up and Down arrow keys\n   Touch screens : Swipe up or down\n",
     "author": "",
     "windowWidth": 720,
@@ -61,7 +61,7 @@
     "loadingScreen": {
       "backgroundColor": 0,
       "backgroundFadeInDuration": 0.2,
-      "backgroundImageResourceName": "Screenshot 2023-07-30175402.png",
+      "backgroundImageResourceName": "",
       "gdevelopLogoStyle": "light",
       "logoAndProgressFadeInDuration": 0.2,
       "logoAndProgressLogoFadeInDelay": 0.2,
@@ -71,12 +71,12 @@
       "progressBarMaxWidth": 200,
       "progressBarMinWidth": 40,
       "progressBarWidthPercent": 30,
-      "showGDevelopSplash": false,
+      "showGDevelopSplash": true,
       "showProgressBar": true
     },
     "watermark": {
       "placement": "bottom-left",
-      "showWatermark": false
+      "showWatermark": true
     },
     "authorIds": [],
     "authorUsernames": [],
@@ -2421,21 +2421,20 @@
         "userAdded": true
       },
       {
-        "file": "assets/DesertMusic.mp3",
-        "kind": "audio",
+        "alwaysLoaded": false,
+        "file": "assets/PW_Shield_01.png",
+        "kind": "image",
         "metadata": "",
-        "name": "assets\\DesertMusic.mp3",
-        "preloadAsMusic": false,
-        "preloadAsSound": false,
-        "preloadInCache": false,
-        "userAdded": false
+        "name": "assets\\PW_Shield_01.png",
+        "smoothed": true,
+        "userAdded": true
       },
       {
         "alwaysLoaded": false,
-        "file": "Screenshot 2023-07-30175402.png",
+        "file": "assets/PW_Flight_01.png",
         "kind": "image",
         "metadata": "",
-        "name": "Screenshot 2023-07-30175402.png",
+        "name": "assets\\PW_Flight_01.png",
         "smoothed": true,
         "userAdded": true
       }

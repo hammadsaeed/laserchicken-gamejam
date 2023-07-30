@@ -333,8 +333,40 @@
       "persistentUuid": "7f2530e5-a49f-4763-b9a9-1b05568fa3de",
       "width": 704,
       "x": 928,
-      "y": -192,
+      "y": -9,
       "zOrder": 1510010,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 0,
+      "height": 1472,
+      "layer": "",
+      "name": "TrialTunnel2",
+      "persistentUuid": "266f31bd-51fd-4919-8b26-07ba6d16be56",
+      "width": 704,
+      "x": 928,
+      "y": -9,
+      "zOrder": 1510011,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 0,
+      "height": 960,
+      "layer": "Background",
+      "name": "Background3",
+      "persistentUuid": "c0b417a1-d483-4a59-af11-2714d01357c7",
+      "width": 992,
+      "x": 0,
+      "y": -192,
+      "zOrder": 15,
       "numberProperties": [],
       "stringProperties": [],
       "initialVariables": []
@@ -3372,6 +3404,30 @@
       "variables": [],
       "effects": [],
       "behaviors": []
+    },
+    {
+      "assetStoreId": "",
+      "height": 32,
+      "name": "Background3",
+      "tags": "",
+      "texture": "Winter Background.png",
+      "type": "TiledSpriteObject::TiledSprite",
+      "width": 32,
+      "variables": [],
+      "effects": [],
+      "behaviors": []
+    },
+    {
+      "assetStoreId": "",
+      "height": 32,
+      "name": "TrialTunnel2",
+      "tags": "",
+      "texture": "assets\\Top Left Corner Wood Background Cutout.png",
+      "type": "TiledSpriteObject::TiledSprite",
+      "width": 32,
+      "variables": [],
+      "effects": [],
+      "behaviors": []
     }
   ],
   "events": [
@@ -3778,6 +3834,16 @@
                       },
                       "parameters": [
                         "Background2",
+                        "+",
+                        "(Variable(ObstacleSpeed)/500)*60*TimeDelta()"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "TiledSpriteObject::XOffset"
+                      },
+                      "parameters": [
+                        "Background3",
                         "+",
                         "(Variable(ObstacleSpeed)/500)*60*TimeDelta()"
                       ]

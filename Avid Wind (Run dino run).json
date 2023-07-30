@@ -1947,6 +1947,41 @@
         "name": "assets\\DANIEL_Crash_Ani_05.png",
         "smoothed": true,
         "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/Winter Background.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Winter Background.png",
+        "smoothed": true,
+        "userAdded": false,
+        "origin": {
+          "identifier": "https://asset-resources.gdevelop.io/public-resources/pzUH Pack/Worlds/Winter/7f5947651f3460ece61f069c3bbde41e393a3cd509e1651d585f879a251488b2_Winter Background.png",
+          "name": "Winter Background.png"
+        }
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/Top Left Corner Wood Background Cutout.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Top Left Corner Wood Background Cutout.png",
+        "smoothed": false,
+        "userAdded": false,
+        "origin": {
+          "identifier": "https://asset-resources.gdevelop.io/public-resources/Pirate Bomb Pack/Tile Sets/Wood Background/Cutout/08e51f4f3d07baf382acadb8a7d5b50f366ae85a7cd42c3634fd945073edf644_Top Left Corner Wood Background Cutout.png",
+          "name": "Top Left Corner Wood Background Cutout.png"
+        }
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/Top Left Corner Wood Background Cutout.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\Top Left Corner Wood Background Cutout.png",
+        "smoothed": true,
+        "userAdded": true
       }
     ],
     "resourceFolders": []

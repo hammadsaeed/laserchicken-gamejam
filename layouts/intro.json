@@ -18,7 +18,7 @@
     "gridColor": 10401023,
     "gridAlpha": 0.8,
     "snap": true,
-    "zoomFactor": 0.41123531923116596,
+    "zoomFactor": 0.4542548574675508,
     "windowMask": false
   },
   "objectsGroups": [
@@ -61,13 +61,13 @@
       "angle": 0,
       "customSize": true,
       "depth": 0,
-      "height": 1280,
+      "height": 1344,
       "layer": "",
       "name": "Background",
       "persistentUuid": "b1116977-4d20-4e3e-8e6d-14021318fc63",
       "width": 1792,
       "x": 0,
-      "y": 64,
+      "y": 0,
       "zOrder": -1,
       "numberProperties": [],
       "stringProperties": [],
@@ -236,7 +236,7 @@
       "angle": 0,
       "customSize": true,
       "depth": 0,
-      "height": 64,
+      "height": 128,
       "layer": "",
       "name": "Platform3",
       "persistentUuid": "977f3ef9-eb28-4d4f-ab00-bc95e19390f8",
@@ -271,8 +271,8 @@
       "name": "Tree",
       "persistentUuid": "a66762e9-59d6-4016-a212-6c099ad43682",
       "width": 288,
-      "x": 0,
-      "y": 800,
+      "x": -448,
+      "y": 544,
       "zOrder": 20,
       "numberProperties": [],
       "stringProperties": [],
@@ -389,13 +389,13 @@
       "angle": 0,
       "customSize": true,
       "depth": 0,
-      "height": 64,
+      "height": 128,
       "layer": "",
       "name": "Platform3",
       "persistentUuid": "5c141262-4ddb-4723-b302-7870cb56005a",
       "width": 1792,
       "x": 0,
-      "y": 1024,
+      "y": 960,
       "zOrder": 21,
       "numberProperties": [],
       "stringProperties": [],
@@ -1037,214 +1037,7 @@
               "sprites": [
                 {
                   "hasCustomCollisionMask": false,
-                  "image": "assets/Dino/Dino_Idle_1.png",
-                  "points": [
-                    {
-                      "name": "DustProjection",
-                      "x": 25,
-                      "y": 105
-                    }
-                  ],
-                  "originPoint": {
-                    "name": "origine",
-                    "x": 0,
-                    "y": 0
-                  },
-                  "centerPoint": {
-                    "automatic": true,
-                    "name": "centre",
-                    "x": 0,
-                    "y": 0
-                  },
-                  "customCollisionMask": []
-                },
-                {
-                  "hasCustomCollisionMask": false,
-                  "image": "assets/Dino/Dino_Idle_2.png",
-                  "points": [
-                    {
-                      "name": "DustProjection",
-                      "x": 25,
-                      "y": 105
-                    }
-                  ],
-                  "originPoint": {
-                    "name": "origine",
-                    "x": 0,
-                    "y": 0
-                  },
-                  "centerPoint": {
-                    "automatic": true,
-                    "name": "centre",
-                    "x": 0,
-                    "y": 0
-                  },
-                  "customCollisionMask": []
-                },
-                {
-                  "hasCustomCollisionMask": false,
-                  "image": "assets/Dino/Dino_Idle_3.png",
-                  "points": [
-                    {
-                      "name": "DustProjection",
-                      "x": 25,
-                      "y": 105
-                    }
-                  ],
-                  "originPoint": {
-                    "name": "origine",
-                    "x": 0,
-                    "y": 0
-                  },
-                  "centerPoint": {
-                    "automatic": true,
-                    "name": "centre",
-                    "x": 0,
-                    "y": 0
-                  },
-                  "customCollisionMask": []
-                },
-                {
-                  "hasCustomCollisionMask": false,
-                  "image": "assets/Dino/Dino_Idle_4.png",
-                  "points": [
-                    {
-                      "name": "DustProjection",
-                      "x": 25,
-                      "y": 105
-                    }
-                  ],
-                  "originPoint": {
-                    "name": "origine",
-                    "x": 0,
-                    "y": 0
-                  },
-                  "centerPoint": {
-                    "automatic": true,
-                    "name": "centre",
-                    "x": 0,
-                    "y": 0
-                  },
-                  "customCollisionMask": []
-                },
-                {
-                  "hasCustomCollisionMask": false,
-                  "image": "assets/Dino/Dino_Idle_5.png",
-                  "points": [
-                    {
-                      "name": "DustProjection",
-                      "x": 25,
-                      "y": 105
-                    }
-                  ],
-                  "originPoint": {
-                    "name": "origine",
-                    "x": 0,
-                    "y": 0
-                  },
-                  "centerPoint": {
-                    "automatic": true,
-                    "name": "centre",
-                    "x": 0,
-                    "y": 0
-                  },
-                  "customCollisionMask": []
-                },
-                {
-                  "hasCustomCollisionMask": false,
-                  "image": "assets/Dino/Dino_Idle_6.png",
-                  "points": [
-                    {
-                      "name": "DustProjection",
-                      "x": 25,
-                      "y": 105
-                    }
-                  ],
-                  "originPoint": {
-                    "name": "origine",
-                    "x": 0,
-                    "y": 0
-                  },
-                  "centerPoint": {
-                    "automatic": true,
-                    "name": "centre",
-                    "x": 0,
-                    "y": 0
-                  },
-                  "customCollisionMask": []
-                },
-                {
-                  "hasCustomCollisionMask": false,
-                  "image": "assets/Dino/Dino_Idle_7.png",
-                  "points": [
-                    {
-                      "name": "DustProjection",
-                      "x": 25,
-                      "y": 105
-                    }
-                  ],
-                  "originPoint": {
-                    "name": "origine",
-                    "x": 0,
-                    "y": 0
-                  },
-                  "centerPoint": {
-                    "automatic": true,
-                    "name": "centre",
-                    "x": 0,
-                    "y": 0
-                  },
-                  "customCollisionMask": []
-                },
-                {
-                  "hasCustomCollisionMask": false,
-                  "image": "assets/Dino/Dino_Idle_8.png",
-                  "points": [
-                    {
-                      "name": "DustProjection",
-                      "x": 25,
-                      "y": 105
-                    }
-                  ],
-                  "originPoint": {
-                    "name": "origine",
-                    "x": 0,
-                    "y": 0
-                  },
-                  "centerPoint": {
-                    "automatic": true,
-                    "name": "centre",
-                    "x": 0,
-                    "y": 0
-                  },
-                  "customCollisionMask": []
-                },
-                {
-                  "hasCustomCollisionMask": false,
-                  "image": "assets/Dino/Dino_Idle_9.png",
-                  "points": [
-                    {
-                      "name": "DustProjection",
-                      "x": 25,
-                      "y": 105
-                    }
-                  ],
-                  "originPoint": {
-                    "name": "origine",
-                    "x": 0,
-                    "y": 0
-                  },
-                  "centerPoint": {
-                    "automatic": true,
-                    "name": "centre",
-                    "x": 0,
-                    "y": 0
-                  },
-                  "customCollisionMask": []
-                },
-                {
-                  "hasCustomCollisionMask": false,
-                  "image": "assets/Dino/Dino_Idle_10.png",
+                  "image": "assets\\DANIEL_Drive_Ani_00.png",
                   "points": [
                     {
                       "name": "DustProjection",
@@ -1279,7 +1072,7 @@
               "sprites": [
                 {
                   "hasCustomCollisionMask": false,
-                  "image": "assets/Dino/Dino_Run_1.png",
+                  "image": "assets\\DANIEL_Drive_Ani_00.png",
                   "points": [
                     {
                       "name": "DustProjection",
@@ -1302,7 +1095,7 @@
                 },
                 {
                   "hasCustomCollisionMask": false,
-                  "image": "assets/Dino/Dino_Run_2.png",
+                  "image": "assets\\DANIEL_Drive_Ani_02.png",
                   "points": [
                     {
                       "name": "DustProjection",
@@ -1325,7 +1118,7 @@
                 },
                 {
                   "hasCustomCollisionMask": false,
-                  "image": "assets/Dino/Dino_Run_3.png",
+                  "image": "assets\\DANIEL_Drive_Ani_03.png",
                   "points": [
                     {
                       "name": "DustProjection",
@@ -1348,7 +1141,7 @@
                 },
                 {
                   "hasCustomCollisionMask": false,
-                  "image": "assets/Dino/Dino_Run_4.png",
+                  "image": "assets\\DANIEL_Drive_Ani_04.png",
                   "points": [
                     {
                       "name": "DustProjection",
@@ -1371,7 +1164,7 @@
                 },
                 {
                   "hasCustomCollisionMask": false,
-                  "image": "assets/Dino/Dino_Run_5.png",
+                  "image": "assets\\DANIEL_Drive_Ani_05.png",
                   "points": [
                     {
                       "name": "DustProjection",
@@ -1394,53 +1187,7 @@
                 },
                 {
                   "hasCustomCollisionMask": false,
-                  "image": "assets/Dino/Dino_Run_6.png",
-                  "points": [
-                    {
-                      "name": "DustProjection",
-                      "x": 25,
-                      "y": 105
-                    }
-                  ],
-                  "originPoint": {
-                    "name": "origine",
-                    "x": 0,
-                    "y": 0
-                  },
-                  "centerPoint": {
-                    "automatic": true,
-                    "name": "centre",
-                    "x": 0,
-                    "y": 0
-                  },
-                  "customCollisionMask": []
-                },
-                {
-                  "hasCustomCollisionMask": false,
-                  "image": "assets/Dino/Dino_Run_7.png",
-                  "points": [
-                    {
-                      "name": "DustProjection",
-                      "x": 25,
-                      "y": 105
-                    }
-                  ],
-                  "originPoint": {
-                    "name": "origine",
-                    "x": 0,
-                    "y": 0
-                  },
-                  "centerPoint": {
-                    "automatic": true,
-                    "name": "centre",
-                    "x": 0,
-                    "y": 0
-                  },
-                  "customCollisionMask": []
-                },
-                {
-                  "hasCustomCollisionMask": false,
-                  "image": "assets/Dino/Dino_Run_8.png",
+                  "image": "assets\\DANIEL_Drive_Ani_06.png",
                   "points": [
                     {
                       "name": "DustProjection",

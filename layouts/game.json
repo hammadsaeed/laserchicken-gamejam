@@ -1069,7 +1069,7 @@
             "outerStrength": 2
           },
           "stringParameters": {
-            "color": "51;220;255"
+            "color": "180;180;180"
           },
           "booleanParameters": {}
         }
@@ -1092,7 +1092,7 @@
               "sprites": [
                 {
                   "hasCustomCollisionMask": false,
-                  "image": "assets/CarGirlWheel-1.png",
+                  "image": "assets\\PW_Shield_01.png",
                   "points": [],
                   "originPoint": {
                     "name": "origine",
@@ -1131,7 +1131,7 @@
             "outerStrength": 2
           },
           "stringParameters": {
-            "color": "51;220;255"
+            "color": "248;231;28"
           },
           "booleanParameters": {}
         }
@@ -1154,7 +1154,7 @@
               "sprites": [
                 {
                   "hasCustomCollisionMask": false,
-                  "image": "df16bf56d4791e9dca5c36fbc15cbac31d8aea0664e5d254b3f9a27693d02bd4_Gold bolt.png",
+                  "image": "assets\\PW_Flight_01.png",
                   "points": [],
                   "originPoint": {
                     "name": "origine",
@@ -5717,7 +5717,7 @@
                           },
                           "parameters": [
                             "",
-                            "Bonus.mp3",
+                            "1ad4cbaab9c5cde9bdad5eefb1740bbb9ecf325e194199d8ad67af8f5889cde1_1up 5.aac",
                             "",
                             "100",
                             "0.5"

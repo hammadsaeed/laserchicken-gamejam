@@ -35,6 +35,15 @@
       "objects": [
         {
           "name": "Limit"
+        },
+        {
+          "name": "TutorialBonusObject"
+        },
+        {
+          "name": "TutorialBonusObject2"
+        },
+        {
+          "name": "TutorialBonusObject3"
         }
       ]
     },
@@ -474,6 +483,21 @@
     },
     {
       "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "name": "DesktopTutorialText",
+      "persistentUuid": "23b8bcbe-2889-41e1-a441-6cbb611afa28",
+      "width": 0,
+      "x": 27,
+      "y": 131,
+      "zOrder": 1510013,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
       "customSize": true,
       "depth": 0,
       "height": 960,
@@ -490,6 +514,21 @@
     },
     {
       "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "name": "TutorialBonusObject",
+      "persistentUuid": "96101383-02b3-4b30-a3a2-bf22b55f3298",
+      "width": 0,
+      "x": 236,
+      "y": 236,
+      "zOrder": 1510014,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
       "customSize": true,
       "depth": 0,
       "height": 960,
@@ -500,6 +539,51 @@
       "x": 0,
       "y": -250,
       "zOrder": 15,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "name": "TutorialBonusObject2",
+      "persistentUuid": "120d1bb5-b4fe-4f1a-b9d9-0d2ad520f5ba",
+      "width": 0,
+      "x": 334,
+      "y": 235,
+      "zOrder": 1510015,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "name": "TutorialBonusObject3",
+      "persistentUuid": "427dcb94-48dd-47e0-85d8-a27815876a4e",
+      "width": 0,
+      "x": 438,
+      "y": 236,
+      "zOrder": 1510016,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "name": "MobileTutorialText",
+      "persistentUuid": "d3570837-1b75-4b1e-87e0-cc1b9758a5c0",
+      "width": 0,
+      "x": 28,
+      "y": 130,
+      "zOrder": 1510017,
       "numberProperties": [],
       "stringProperties": [],
       "initialVariables": []
@@ -717,6 +801,88 @@
       "font": "",
       "textAlignment": "",
       "characterSize": 40,
+      "color": {
+        "b": 255,
+        "g": 255,
+        "r": 255
+      }
+    },
+    {
+      "assetStoreId": "",
+      "bold": true,
+      "italic": false,
+      "name": "DesktopTutorialText",
+      "smoothed": true,
+      "tags": "",
+      "type": "TextObject::Text",
+      "underlined": false,
+      "variables": [],
+      "effects": [
+        {
+          "effectType": "DropShadow",
+          "name": "Effect",
+          "doubleParameters": {
+            "alpha": 1,
+            "blur": 2,
+            "distance": 1,
+            "padding": 0,
+            "quality": 3,
+            "rotation": 0
+          },
+          "stringParameters": {
+            "color": "52;73;94"
+          },
+          "booleanParameters": {
+            "shadowOnly": false
+          }
+        }
+      ],
+      "behaviors": [],
+      "string": "1. Press \"UP\" or \"DOWN\" arrow key to change lanes.\n2. Try to grab these random power-ups for a suprise.",
+      "font": "",
+      "textAlignment": "",
+      "characterSize": 25,
+      "color": {
+        "b": 255,
+        "g": 255,
+        "r": 255
+      }
+    },
+    {
+      "assetStoreId": "",
+      "bold": true,
+      "italic": false,
+      "name": "MobileTutorialText",
+      "smoothed": true,
+      "tags": "",
+      "type": "TextObject::Text",
+      "underlined": false,
+      "variables": [],
+      "effects": [
+        {
+          "effectType": "DropShadow",
+          "name": "Effect",
+          "doubleParameters": {
+            "alpha": 1,
+            "blur": 2,
+            "distance": 1,
+            "padding": 0,
+            "quality": 3,
+            "rotation": 0
+          },
+          "stringParameters": {
+            "color": "52;73;94"
+          },
+          "booleanParameters": {
+            "shadowOnly": false
+          }
+        }
+      ],
+      "behaviors": [],
+      "string": "1. Swipe up or down on the screen to change lanes.\n2. Try to grab these random power-ups for a suprise.",
+      "font": "",
+      "textAlignment": "",
+      "characterSize": 25,
       "color": {
         "b": 255,
         "g": 255,
@@ -1164,6 +1330,68 @@
     {
       "adaptCollisionMaskAutomatically": false,
       "assetStoreId": "",
+      "name": "TutorialBonusObject",
+      "tags": "",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [],
+      "effects": [
+        {
+          "effectType": "Glow",
+          "name": "Effect",
+          "doubleParameters": {
+            "distance": 15,
+            "innerStrength": 1,
+            "outerStrength": 2
+          },
+          "stringParameters": {
+            "color": "180;180;180"
+          },
+          "booleanParameters": {}
+        }
+      ],
+      "behaviors": [
+        {
+          "name": "DestroyOutside",
+          "type": "DestroyOutsideBehavior::DestroyOutside",
+          "extraBorder": 1000
+        }
+      ],
+      "animations": [
+        {
+          "name": "Bonus",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": true,
+              "timeBetweenFrames": 0.02500000037252903,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "assets\\PW_Shield_01.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 30,
+                    "y": 30
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "adaptCollisionMaskAutomatically": false,
+      "assetStoreId": "",
       "name": "BonusObject2",
       "tags": "",
       "type": "Sprite",
@@ -1226,7 +1454,131 @@
     {
       "adaptCollisionMaskAutomatically": false,
       "assetStoreId": "",
+      "name": "TutorialBonusObject2",
+      "tags": "",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [],
+      "effects": [
+        {
+          "effectType": "Glow",
+          "name": "Effect",
+          "doubleParameters": {
+            "distance": 15,
+            "innerStrength": 1,
+            "outerStrength": 2
+          },
+          "stringParameters": {
+            "color": "248;231;28"
+          },
+          "booleanParameters": {}
+        }
+      ],
+      "behaviors": [
+        {
+          "name": "DestroyOutside",
+          "type": "DestroyOutsideBehavior::DestroyOutside",
+          "extraBorder": 1000
+        }
+      ],
+      "animations": [
+        {
+          "name": "Bonus",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": true,
+              "timeBetweenFrames": 0.02500000037252903,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "assets\\PW_Flight_01.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 30,
+                    "y": 30
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "adaptCollisionMaskAutomatically": false,
+      "assetStoreId": "",
       "name": "BonusObject3",
+      "tags": "",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [],
+      "effects": [
+        {
+          "effectType": "Glow",
+          "name": "Effect",
+          "doubleParameters": {
+            "distance": 15,
+            "innerStrength": 1,
+            "outerStrength": 2
+          },
+          "stringParameters": {
+            "color": "51;220;255"
+          },
+          "booleanParameters": {}
+        }
+      ],
+      "behaviors": [
+        {
+          "name": "DestroyOutside",
+          "type": "DestroyOutsideBehavior::DestroyOutside",
+          "extraBorder": 1000
+        }
+      ],
+      "animations": [
+        {
+          "name": "Bonus",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": true,
+              "timeBetweenFrames": 0.02500000037252903,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "assets\\PW_Magnet_01.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 30,
+                    "y": 30
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "adaptCollisionMaskAutomatically": false,
+      "assetStoreId": "",
+      "name": "TutorialBonusObject3",
       "tags": "",
       "type": "Sprite",
       "updateIfNotVisible": false,
@@ -3992,7 +4344,6 @@
   ],
   "events": [
     {
-      "folded": true,
       "type": "BuiltinCommonInstructions::Standard",
       "conditions": [
         {
@@ -4068,6 +4419,14 @@
                 "=",
                 "\"Touch to start running.\""
               ]
+            },
+            {
+              "type": {
+                "value": "Cache"
+              },
+              "parameters": [
+                "DesktopTutorialText"
+              ]
             }
           ]
         },
@@ -4091,6 +4450,14 @@
               },
               "parameters": [
                 "TouchScreenTutorial"
+              ]
+            },
+            {
+              "type": {
+                "value": "Cache"
+              },
+              "parameters": [
+                "MobileTutorialText"
               ]
             }
           ]
@@ -4230,6 +4597,22 @@
                           },
                           "parameters": [
                             "TutorialObjects"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "Cache"
+                          },
+                          "parameters": [
+                            "DesktopTutorialText"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "Cache"
+                          },
+                          "parameters": [
+                            "MobileTutorialText"
                           ]
                         },
                         {

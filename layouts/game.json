@@ -4457,6 +4457,7 @@
                       "colorG": 176,
                       "colorR": 74,
                       "creationTime": 0,
+                      "folded": true,
                       "name": "Controls",
                       "source": "",
                       "type": "BuiltinCommonInstructions::Group",
@@ -7438,6 +7439,16 @@
                                 },
                                 {
                                   "type": {
+                                    "value": "ChangePlan"
+                                  },
+                                  "parameters": [
+                                    "Dino",
+                                    "=",
+                                    "999999999999"
+                                  ]
+                                },
+                                {
+                                  "type": {
                                     "value": "AjoutObjConcern"
                                   },
                                   "parameters": [
@@ -7532,7 +7543,6 @@
           "colorG": 147,
           "colorR": 74,
           "creationTime": 0,
-          "folded": true,
           "name": "Game lost",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -7575,6 +7585,14 @@
                     }
                   ],
                   "actions": [
+                    {
+                      "type": {
+                        "value": "Wait"
+                      },
+                      "parameters": [
+                        "2"
+                      ]
+                    },
                     {
                       "type": {
                         "value": "Scene"

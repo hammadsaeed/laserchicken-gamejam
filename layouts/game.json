@@ -27,12 +27,6 @@
       "objects": [
         {
           "name": "Limit"
-        },
-        {
-          "name": "TutorialTouchscreenJump"
-        },
-        {
-          "name": "TutorialTouchscreenDuck"
         }
       ]
     },
@@ -40,16 +34,7 @@
       "name": "TutorialObjects",
       "objects": [
         {
-          "name": "TutorialTouchscreenJump"
-        },
-        {
-          "name": "TutorialTouchscreenDuck"
-        },
-        {
           "name": "Limit"
-        },
-        {
-          "name": "TutorialSprite"
         }
       ]
     },
@@ -58,9 +43,6 @@
       "objects": [
         {
           "name": "CactusObstacle"
-        },
-        {
-          "name": "IslandObstacle"
         },
         {
           "name": "BonusObject"
@@ -132,26 +114,10 @@
       "layer": "",
       "name": "ScoreText",
       "persistentUuid": "b4cdf63a-8d7e-4bd0-83ee-8dfd60fd49dd",
-      "width": 541,
+      "width": 576,
       "x": 32,
-      "y": 32,
+      "y": 51,
       "zOrder": 14,
-      "numberProperties": [],
-      "stringProperties": [],
-      "initialVariables": []
-    },
-    {
-      "angle": 0,
-      "customSize": true,
-      "depth": 0,
-      "height": 960,
-      "layer": "Background",
-      "name": "Background",
-      "persistentUuid": "48c699d8-eec9-4115-ae30-822d8389a521",
-      "width": 992,
-      "x": -1408,
-      "y": -576,
-      "zOrder": 17,
       "numberProperties": [],
       "stringProperties": [],
       "initialVariables": []
@@ -192,7 +158,7 @@
       "depth": 0,
       "height": 169,
       "layer": "",
-      "name": "Dino",
+      "name": "Daniel",
       "persistentUuid": "4355f663-4fd5-41b2-83c2-2c5f313938d9",
       "width": 221,
       "x": 32,
@@ -252,14 +218,15 @@
     },
     {
       "angle": 0,
-      "customSize": false,
-      "height": 0,
+      "customSize": true,
+      "depth": 0,
+      "height": 46,
       "layer": "",
       "name": "CoinText",
       "persistentUuid": "0363729e-8f0b-41af-b5c1-47bcd7f734dc",
-      "width": 0,
-      "x": 31,
-      "y": 71,
+      "width": 64,
+      "x": 619,
+      "y": 50,
       "zOrder": 1500001,
       "numberProperties": [],
       "stringProperties": [],
@@ -421,6 +388,22 @@
       "x": 0,
       "y": -256,
       "zOrder": 17,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 0,
+      "height": 44,
+      "layer": "",
+      "name": "Coin",
+      "persistentUuid": "a52d867c-ae91-4536-9a7d-b59b0c3a4d2b",
+      "width": 46,
+      "x": 562,
+      "y": 51,
+      "zOrder": 1510012,
       "numberProperties": [],
       "stringProperties": [],
       "initialVariables": []
@@ -652,99 +635,8 @@
       ]
     },
     {
-      "adaptCollisionMaskAutomatically": false,
       "assetStoreId": "",
-      "name": "IslandObstacle",
-      "tags": "",
-      "type": "Sprite",
-      "updateIfNotVisible": false,
-      "variables": [
-        {
-          "name": "Reward",
-          "type": "number",
-          "value": 0
-        }
-      ],
-      "effects": [],
-      "behaviors": [
-        {
-          "name": "DestroyOutside",
-          "type": "DestroyOutsideBehavior::DestroyOutside",
-          "extraBorder": 1000
-        },
-        {
-          "name": "Platform",
-          "type": "PlatformBehavior::PlatformBehavior",
-          "platformType": "NormalPlatform",
-          "canBeGrabbed": false,
-          "yGrabOffset": 0
-        }
-      ],
-      "animations": [
-        {
-          "name": "",
-          "useMultipleDirections": false,
-          "directions": [
-            {
-              "looping": false,
-              "timeBetweenFrames": 0.08,
-              "sprites": [
-                {
-                  "hasCustomCollisionMask": true,
-                  "image": "assets/Duck_Island.png",
-                  "points": [
-                    {
-                      "name": "RewardUp",
-                      "x": 62,
-                      "y": -32
-                    },
-                    {
-                      "name": "RewardDown",
-                      "x": 62,
-                      "y": 104
-                    }
-                  ],
-                  "originPoint": {
-                    "name": "origine",
-                    "x": 62,
-                    "y": 66
-                  },
-                  "centerPoint": {
-                    "automatic": true,
-                    "name": "centre",
-                    "x": 0,
-                    "y": 0
-                  },
-                  "customCollisionMask": [
-                    [
-                      {
-                        "x": 0,
-                        "y": 0
-                      },
-                      {
-                        "x": 128,
-                        "y": 0
-                      },
-                      {
-                        "x": 128,
-                        "y": 66
-                      },
-                      {
-                        "x": 0,
-                        "y": 66
-                      }
-                    ]
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "assetStoreId": "",
-      "bold": false,
+      "bold": true,
       "italic": false,
       "name": "ScoreText",
       "smoothed": true,
@@ -752,16 +644,35 @@
       "type": "TextObject::Text",
       "underlined": false,
       "variables": [],
-      "effects": [],
+      "effects": [
+        {
+          "effectType": "DropShadow",
+          "name": "Effect",
+          "doubleParameters": {
+            "alpha": 1,
+            "blur": 2,
+            "distance": 1,
+            "padding": 0,
+            "quality": 3,
+            "rotation": 0
+          },
+          "stringParameters": {
+            "color": "52;73;94"
+          },
+          "booleanParameters": {
+            "shadowOnly": false
+          }
+        }
+      ],
       "behaviors": [],
-      "string": "Press any key to start running.",
-      "font": "Nathaniel-19.otf",
+      "string": "Press any key to start",
+      "font": "",
       "textAlignment": "",
-      "characterSize": 30,
+      "characterSize": 40,
       "color": {
-        "b": 42,
-        "g": 87,
-        "r": 139
+        "b": 255,
+        "g": 255,
+        "r": 255
       }
     },
     {
@@ -788,7 +699,7 @@
     },
     {
       "assetStoreId": "",
-      "bold": false,
+      "bold": true,
       "italic": false,
       "name": "CoinText",
       "smoothed": true,
@@ -796,59 +707,36 @@
       "type": "TextObject::Text",
       "underlined": false,
       "variables": [],
-      "effects": [],
-      "behaviors": [],
-      "string": "Coins: 0",
-      "font": "Nathaniel-19.otf",
-      "textAlignment": "left",
-      "characterSize": 30,
-      "color": {
-        "b": 42,
-        "g": 87,
-        "r": 139
-      }
-    },
-    {
-      "adaptCollisionMaskAutomatically": false,
-      "assetStoreId": "",
-      "name": "TutorialSprite",
-      "tags": "",
-      "type": "Sprite",
-      "updateIfNotVisible": false,
-      "variables": [],
-      "effects": [],
-      "behaviors": [],
-      "animations": [
+      "effects": [
         {
-          "name": "Desktop",
-          "useMultipleDirections": false,
-          "directions": [
-            {
-              "looping": false,
-              "timeBetweenFrames": 0.08,
-              "sprites": [
-                {
-                  "hasCustomCollisionMask": false,
-                  "image": "assets/tutorial.png",
-                  "points": [],
-                  "originPoint": {
-                    "name": "origine",
-                    "x": 0,
-                    "y": 0
-                  },
-                  "centerPoint": {
-                    "automatic": true,
-                    "name": "centre",
-                    "x": 0,
-                    "y": 0
-                  },
-                  "customCollisionMask": []
-                }
-              ]
-            }
-          ]
+          "effectType": "DropShadow",
+          "name": "Effect",
+          "doubleParameters": {
+            "alpha": 1,
+            "blur": 2,
+            "distance": 1,
+            "padding": 0,
+            "quality": 3,
+            "rotation": 0
+          },
+          "stringParameters": {
+            "color": "52;73;94"
+          },
+          "booleanParameters": {
+            "shadowOnly": false
+          }
         }
-      ]
+      ],
+      "behaviors": [],
+      "string": "0",
+      "font": "",
+      "textAlignment": "right",
+      "characterSize": 40,
+      "color": {
+        "b": 255,
+        "g": 255,
+        "r": 255
+      }
     },
     {
       "adaptCollisionMaskAutomatically": true,
@@ -1398,158 +1286,6 @@
     {
       "adaptCollisionMaskAutomatically": false,
       "assetStoreId": "",
-      "name": "TutorialTouchscreenJump",
-      "tags": "",
-      "type": "Sprite",
-      "updateIfNotVisible": false,
-      "variables": [],
-      "effects": [],
-      "behaviors": [],
-      "animations": [
-        {
-          "name": "",
-          "useMultipleDirections": false,
-          "directions": [
-            {
-              "looping": true,
-              "timeBetweenFrames": 0.5,
-              "sprites": [
-                {
-                  "hasCustomCollisionMask": false,
-                  "image": "assets/tutorialTouchScreen_1.png",
-                  "points": [],
-                  "originPoint": {
-                    "name": "origine",
-                    "x": 0,
-                    "y": 0
-                  },
-                  "centerPoint": {
-                    "automatic": true,
-                    "name": "centre",
-                    "x": 0,
-                    "y": 0
-                  },
-                  "customCollisionMask": []
-                },
-                {
-                  "hasCustomCollisionMask": false,
-                  "image": "assets/tutorialTouchScreen_2.png",
-                  "points": [],
-                  "originPoint": {
-                    "name": "origine",
-                    "x": 0,
-                    "y": 0
-                  },
-                  "centerPoint": {
-                    "automatic": true,
-                    "name": "centre",
-                    "x": 0,
-                    "y": 0
-                  },
-                  "customCollisionMask": []
-                },
-                {
-                  "hasCustomCollisionMask": false,
-                  "image": "assets/tutorialTouchScreen_3.png",
-                  "points": [],
-                  "originPoint": {
-                    "name": "origine",
-                    "x": 0,
-                    "y": 0
-                  },
-                  "centerPoint": {
-                    "automatic": true,
-                    "name": "centre",
-                    "x": 0,
-                    "y": 0
-                  },
-                  "customCollisionMask": []
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "adaptCollisionMaskAutomatically": false,
-      "assetStoreId": "",
-      "name": "TutorialTouchscreenDuck",
-      "tags": "",
-      "type": "Sprite",
-      "updateIfNotVisible": false,
-      "variables": [],
-      "effects": [],
-      "behaviors": [],
-      "animations": [
-        {
-          "name": "",
-          "useMultipleDirections": false,
-          "directions": [
-            {
-              "looping": true,
-              "timeBetweenFrames": 0.5,
-              "sprites": [
-                {
-                  "hasCustomCollisionMask": false,
-                  "image": "assets/tutorialTouchScreen_duck_1.png",
-                  "points": [],
-                  "originPoint": {
-                    "name": "origine",
-                    "x": 0,
-                    "y": 0
-                  },
-                  "centerPoint": {
-                    "automatic": true,
-                    "name": "centre",
-                    "x": 0,
-                    "y": 0
-                  },
-                  "customCollisionMask": []
-                },
-                {
-                  "hasCustomCollisionMask": false,
-                  "image": "assets/tutorialTouchScreen_duck_2.png",
-                  "points": [],
-                  "originPoint": {
-                    "name": "origine",
-                    "x": 0,
-                    "y": 0
-                  },
-                  "centerPoint": {
-                    "automatic": true,
-                    "name": "centre",
-                    "x": 0,
-                    "y": 0
-                  },
-                  "customCollisionMask": []
-                },
-                {
-                  "hasCustomCollisionMask": false,
-                  "image": "assets/tutorialTouchScreen_duck_3.png",
-                  "points": [],
-                  "originPoint": {
-                    "name": "origine",
-                    "x": 0,
-                    "y": 0
-                  },
-                  "centerPoint": {
-                    "automatic": true,
-                    "name": "centre",
-                    "x": 0,
-                    "y": 0
-                  },
-                  "customCollisionMask": []
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "adaptCollisionMaskAutomatically": false,
-      "assetStoreId": "",
       "name": "JumpButton",
       "tags": "",
       "type": "Sprite",
@@ -1646,7 +1382,7 @@
     {
       "adaptCollisionMaskAutomatically": false,
       "assetStoreId": "",
-      "name": "Dino",
+      "name": "Daniel",
       "tags": "",
       "type": "Sprite",
       "updateIfNotVisible": false,
@@ -3868,128 +3604,6 @@
       ]
     },
     {
-      "adaptCollisionMaskAutomatically": true,
-      "assetStoreId": "daffaf8f8bbb90cc896868e3641cc223ddd46906e664dfd9f02cb82b182265b8",
-      "name": "Up",
-      "tags": "",
-      "type": "Sprite",
-      "updateIfNotVisible": false,
-      "variables": [],
-      "effects": [],
-      "behaviors": [],
-      "animations": [
-        {
-          "name": "",
-          "useMultipleDirections": false,
-          "directions": [
-            {
-              "looping": true,
-              "timeBetweenFrames": 0.025,
-              "sprites": [
-                {
-                  "hasCustomCollisionMask": true,
-                  "image": "Up.png",
-                  "points": [],
-                  "originPoint": {
-                    "name": "origine",
-                    "x": 0,
-                    "y": 0
-                  },
-                  "centerPoint": {
-                    "automatic": true,
-                    "name": "centre",
-                    "x": 0,
-                    "y": 0
-                  },
-                  "customCollisionMask": [
-                    [
-                      {
-                        "x": 9,
-                        "y": 9
-                      },
-                      {
-                        "x": 91,
-                        "y": 9
-                      },
-                      {
-                        "x": 91,
-                        "y": 91
-                      },
-                      {
-                        "x": 9,
-                        "y": 91
-                      }
-                    ]
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "adaptCollisionMaskAutomatically": true,
-      "assetStoreId": "f95084e30f4f7adda9fa243cade1b756dcf3e5bc4fb17db616f42f29fb0de33d",
-      "name": "Down",
-      "tags": "",
-      "type": "Sprite",
-      "updateIfNotVisible": false,
-      "variables": [],
-      "effects": [],
-      "behaviors": [],
-      "animations": [
-        {
-          "name": "",
-          "useMultipleDirections": false,
-          "directions": [
-            {
-              "looping": true,
-              "timeBetweenFrames": 0.025,
-              "sprites": [
-                {
-                  "hasCustomCollisionMask": true,
-                  "image": "Down.png",
-                  "points": [],
-                  "originPoint": {
-                    "name": "origine",
-                    "x": 0,
-                    "y": 0
-                  },
-                  "centerPoint": {
-                    "automatic": true,
-                    "name": "centre",
-                    "x": 0,
-                    "y": 0
-                  },
-                  "customCollisionMask": [
-                    [
-                      {
-                        "x": 9,
-                        "y": 9
-                      },
-                      {
-                        "x": 91,
-                        "y": 9
-                      },
-                      {
-                        "x": 91,
-                        "y": 91
-                      },
-                      {
-                        "x": 9,
-                        "y": 91
-                      }
-                    ]
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
       "adaptCollisionMaskAutomatically": false,
       "assetStoreId": "",
       "name": "MagnetLightning",
@@ -4068,30 +3682,6 @@
           ]
         }
       ]
-    },
-    {
-      "assetStoreId": "",
-      "height": 32,
-      "name": "RoadTop",
-      "tags": "",
-      "texture": "assets\\tileTop.png",
-      "type": "TiledSpriteObject::TiledSprite",
-      "width": 32,
-      "variables": [],
-      "effects": [],
-      "behaviors": []
-    },
-    {
-      "assetStoreId": "",
-      "height": 32,
-      "name": "Background2",
-      "tags": "",
-      "texture": "9c836518da4f93f1a442e4beaa4023bdde907296b1a03f5562a73693fac0f778_tiled_Forest Background.png",
-      "type": "TiledSpriteObject::TiledSprite",
-      "width": 32,
-      "variables": [],
-      "effects": [],
-      "behaviors": []
     },
     {
       "assetStoreId": "",
@@ -4222,7 +3812,7 @@
             "value": "SetAnimationName"
           },
           "parameters": [
-            "Dino",
+            "Daniel",
             "\"Idle\""
           ]
         },
@@ -4241,7 +3831,7 @@
             "value": "ActivateBehavior"
           },
           "parameters": [
-            "Dino",
+            "Daniel",
             "PlatformerObject",
             ""
           ]
@@ -4279,14 +3869,6 @@
                 "ScoreText",
                 "=",
                 "\"Touch to start running.\""
-              ]
-            },
-            {
-              "type": {
-                "value": "Cache"
-              },
-              "parameters": [
-                "TutorialSprite"
               ]
             }
           ]
@@ -4458,7 +4040,7 @@
                             "value": "SetAnimationName"
                           },
                           "parameters": [
-                            "Dino",
+                            "Daniel",
                             "\"Run\""
                           ]
                         },
@@ -4467,7 +4049,7 @@
                             "value": "ActivateBehavior"
                           },
                           "parameters": [
-                            "Dino",
+                            "Daniel",
                             "PlatformerObject",
                             "yes"
                           ]
@@ -5079,8 +4661,19 @@
                       ]
                     },
                     {
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [
+                      "type": ""
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::Or"
+                      },
+                      "parameters": [],
+                      "subInstructions": [
                         {
                           "type": {
                             "value": "BuiltinCommonInstructions::CompareNumbers"
@@ -5091,28 +4684,10 @@
                             "0.99"
                           ]
                         }
-                      ],
-                      "actions": [
-                        {
-                          "type": {
-                            "value": "Wait"
-                          },
-                          "parameters": [
-                            "1"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "SetSceneVariableAsBoolean"
-                          },
-                          "parameters": [
-                            "ChangingCountry",
-                            "False"
-                          ]
-                        }
                       ]
                     }
-                  ]
+                  ],
+                  "actions": []
                 },
                 {
                   "type": "BuiltinCommonInstructions::Standard",
@@ -5361,7 +4936,7 @@
                             "value": "PlatformBehavior::IsObjectOnGivenFloor"
                           },
                           "parameters": [
-                            "Dino",
+                            "Daniel",
                             "PlatformerObject",
                             "Platform1",
                             ""
@@ -5374,7 +4949,7 @@
                             "value": "ChangePlan"
                           },
                           "parameters": [
-                            "Dino",
+                            "Daniel",
                             "=",
                             "1500000"
                           ]
@@ -5389,7 +4964,7 @@
                             "value": "PlatformBehavior::IsObjectOnGivenFloor"
                           },
                           "parameters": [
-                            "Dino",
+                            "Daniel",
                             "PlatformerObject",
                             "Platform2",
                             ""
@@ -5402,7 +4977,7 @@
                             "value": "ChangePlan"
                           },
                           "parameters": [
-                            "Dino",
+                            "Daniel",
                             "=",
                             "1500001"
                           ]
@@ -5417,7 +4992,7 @@
                             "value": "PlatformBehavior::IsObjectOnGivenFloor"
                           },
                           "parameters": [
-                            "Dino",
+                            "Daniel",
                             "PlatformerObject",
                             "Platform3",
                             ""
@@ -5430,7 +5005,7 @@
                             "value": "ChangePlan"
                           },
                           "parameters": [
-                            "Dino",
+                            "Daniel",
                             "=",
                             "1500002"
                           ]
@@ -5457,7 +5032,7 @@
                             "value": "PlatformBehavior::IsOnFloor"
                           },
                           "parameters": [
-                            "Dino",
+                            "Daniel",
                             "PlatformerObject"
                           ]
                         }
@@ -5472,7 +5047,7 @@
                                 "value": "AnimationEnded"
                               },
                               "parameters": [
-                                "Dino"
+                                "Daniel"
                               ]
                             }
                           ],
@@ -5482,7 +5057,7 @@
                                 "value": "SetAnimationName"
                               },
                               "parameters": [
-                                "Dino",
+                                "Daniel",
                                 "\"Run\""
                               ]
                             }
@@ -5519,9 +5094,9 @@
                               "parameters": [
                                 "DustParticles",
                                 "=",
-                                "Dino.PointX(\"DustProjection\")",
+                                "Daniel.PointX(\"DustProjection\")",
                                 "=",
-                                "Dino.PointY(\"DustProjection\")"
+                                "Daniel.PointY(\"DustProjection\")"
                               ]
                             },
                             {
@@ -5546,7 +5121,7 @@
                             "value": "PlatformBehavior::IsOnFloor"
                           },
                           "parameters": [
-                            "Dino",
+                            "Daniel",
                             "PlatformerObject"
                           ]
                         },
@@ -5586,7 +5161,7 @@
                                 "value": "PlatformBehavior::IsJumping"
                               },
                               "parameters": [
-                                "Dino",
+                                "Daniel",
                                 "PlatformerObject"
                               ]
                             },
@@ -5615,7 +5190,7 @@
                                 "value": "SetAnimationName"
                               },
                               "parameters": [
-                                "Dino",
+                                "Daniel",
                                 "\"Jump\""
                               ]
                             }
@@ -5629,7 +5204,7 @@
                                 "value": "AnimationName"
                               },
                               "parameters": [
-                                "Dino",
+                                "Daniel",
                                 "\"Duck\""
                               ]
                             },
@@ -5699,7 +5274,7 @@
                                 "value": "Tween::IsPlaying"
                               },
                               "parameters": [
-                                "Dino",
+                                "Daniel",
                                 "Tween",
                                 "\"Move\""
                               ]
@@ -5711,7 +5286,7 @@
                                 "value": "SetAnimationName"
                               },
                               "parameters": [
-                                "Dino",
+                                "Daniel",
                                 "\"Run\""
                               ]
                             }
@@ -5827,10 +5402,10 @@
                                     "value": "Tween::AddObjectPositionYTween"
                                   },
                                   "parameters": [
-                                    "Dino",
+                                    "Daniel",
                                     "Tween",
                                     "\"Move\"",
-                                    "Dino.Y() - 200",
+                                    "Daniel.Y() - 200",
                                     "\"easeInOutQuad\"",
                                     "150",
                                     ""
@@ -5841,7 +5416,7 @@
                                     "value": "SetAnimationName"
                                   },
                                   "parameters": [
-                                    "Dino",
+                                    "Daniel",
                                     "\"TurnUp\""
                                   ]
                                 },
@@ -5974,10 +5549,10 @@
                                     "value": "Tween::AddObjectPositionYTween"
                                   },
                                   "parameters": [
-                                    "Dino",
+                                    "Daniel",
                                     "Tween",
                                     "\"Move\"",
-                                    "Dino.Y() + 180",
+                                    "Daniel.Y() + 180",
                                     "\"easeInOutQuad\"",
                                     "150",
                                     ""
@@ -5988,7 +5563,7 @@
                                     "value": "SetAnimationName"
                                   },
                                   "parameters": [
-                                    "Dino",
+                                    "Daniel",
                                     "\"TurnDown\""
                                   ]
                                 },
@@ -6064,7 +5639,7 @@
                             "value": "CollisionNP"
                           },
                           "parameters": [
-                            "Dino",
+                            "Daniel",
                             "BonusObject",
                             "",
                             "",
@@ -6078,7 +5653,7 @@
                             "value": "SetObjectVariableAsBoolean"
                           },
                           "parameters": [
-                            "Dino",
+                            "Daniel",
                             "isInvincible",
                             "True"
                           ]
@@ -6090,8 +5665,8 @@
                           "parameters": [
                             "",
                             "BonusParticle",
-                            "Dino.CenterX()",
-                            "Dino.CenterY()",
+                            "Daniel.CenterX()",
+                            "Daniel.CenterY()",
                             ""
                           ]
                         },
@@ -6148,7 +5723,7 @@
                             "value": "CollisionNP"
                           },
                           "parameters": [
-                            "Dino",
+                            "Daniel",
                             "BonusObject2",
                             "",
                             "",
@@ -6164,8 +5739,8 @@
                           "parameters": [
                             "",
                             "BonusParticle",
-                            "Dino.CenterX()",
-                            "Dino.CenterY()",
+                            "Daniel.CenterX()",
+                            "Daniel.CenterY()",
                             ""
                           ]
                         },
@@ -6205,7 +5780,7 @@
                             "value": "ActivateBehavior"
                           },
                           "parameters": [
-                            "Dino",
+                            "Daniel",
                             "PlatformerObject",
                             "no"
                           ]
@@ -6215,7 +5790,7 @@
                             "value": "SetAnimationName"
                           },
                           "parameters": [
-                            "Dino",
+                            "Daniel",
                             "\"Jump\""
                           ]
                         },
@@ -6233,8 +5808,8 @@
                             "value": "AddForceVersPos"
                           },
                           "parameters": [
-                            "Dino",
-                            "Dino.BoundingBoxCenterX() + 100",
+                            "Daniel",
+                            "Daniel.BoundingBoxCenterX() + 100",
                             "200",
                             "200",
                             "1"
@@ -6254,7 +5829,7 @@
                             "value": "SetAnimationName"
                           },
                           "parameters": [
-                            "Dino",
+                            "Daniel",
                             "\"Idle\""
                           ]
                         },
@@ -6290,7 +5865,7 @@
                             "value": "CollisionNP"
                           },
                           "parameters": [
-                            "Dino",
+                            "Daniel",
                             "BonusObject3",
                             "",
                             "",
@@ -6304,7 +5879,7 @@
                             "value": "SetObjectVariableAsBoolean"
                           },
                           "parameters": [
-                            "Dino",
+                            "Daniel",
                             "isMagnetOn",
                             "True"
                           ]
@@ -6316,8 +5891,8 @@
                           "parameters": [
                             "",
                             "BonusParticle",
-                            "Dino.CenterX()",
-                            "Dino.CenterY()",
+                            "Daniel.CenterX()",
+                            "Daniel.CenterY()",
                             ""
                           ]
                         },
@@ -6338,8 +5913,8 @@
                           "parameters": [
                             "",
                             "MagnetLightning",
-                            "Dino.CenterX() + 50",
-                            "Dino.CenterY() - 50",
+                            "Daniel.CenterX() + 50",
+                            "Daniel.CenterY() - 50",
                             ""
                           ]
                         },
@@ -6414,7 +5989,7 @@
                             "value": "SetObjectVariableAsBoolean"
                           },
                           "parameters": [
-                            "Dino",
+                            "Daniel",
                             "isMagnetOn",
                             "False"
                           ]
@@ -6432,9 +6007,9 @@
                           "parameters": [
                             "BonusParticle",
                             "=",
-                            "Dino.CenterX()",
+                            "Daniel.CenterX()",
                             "=",
-                            "Dino.CenterY()"
+                            "Daniel.CenterY()"
                           ]
                         }
                       ]
@@ -6447,7 +6022,7 @@
                             "value": "PosY"
                           },
                           "parameters": [
-                            "Dino",
+                            "Daniel",
                             "<",
                             "200"
                           ]
@@ -6465,7 +6040,7 @@
                             "value": "Arreter"
                           },
                           "parameters": [
-                            "Dino"
+                            "Daniel"
                           ]
                         },
                         {
@@ -6511,8 +6086,8 @@
                             "value": "AddForceVersPos"
                           },
                           "parameters": [
-                            "Dino",
-                            "Dino.X() + 100",
+                            "Daniel",
+                            "Daniel.X() + 100",
                             "Platform1.BoundingBoxCenterY()",
                             "150",
                             "1"
@@ -6563,7 +6138,7 @@
                                 "value": "PosY"
                               },
                               "parameters": [
-                                "Dino",
+                                "Daniel",
                                 ">",
                                 "Platform1.BoundingBoxTop() "
                               ]
@@ -6577,7 +6152,7 @@
                             "value": "Arreter"
                           },
                           "parameters": [
-                            "Dino"
+                            "Daniel"
                           ]
                         },
                         {
@@ -6585,7 +6160,7 @@
                             "value": "ActivateBehavior"
                           },
                           "parameters": [
-                            "Dino",
+                            "Daniel",
                             "PlatformerObject",
                             "yes"
                           ]
@@ -6605,7 +6180,7 @@
                             "value": "SetCenterY"
                           },
                           "parameters": [
-                            "Dino",
+                            "Daniel",
                             "=",
                             "Platform2.BoundingBoxTop() - 100 "
                           ]
@@ -6615,7 +6190,7 @@
                             "value": "SetAnimationName"
                           },
                           "parameters": [
-                            "Dino",
+                            "Daniel",
                             "\"Run\""
                           ]
                         },
@@ -6624,7 +6199,7 @@
                             "value": "Arreter"
                           },
                           "parameters": [
-                            "Dino"
+                            "Daniel"
                           ]
                         },
                         {
@@ -6704,7 +6279,7 @@
                                 "value": "PosY"
                               },
                               "parameters": [
-                                "Dino",
+                                "Daniel",
                                 ">",
                                 "Platform1.BoundingBoxTop() "
                               ]
@@ -6718,7 +6293,7 @@
                             "value": "Arreter"
                           },
                           "parameters": [
-                            "Dino"
+                            "Daniel"
                           ]
                         },
                         {
@@ -6726,7 +6301,7 @@
                             "value": "ActivateBehavior"
                           },
                           "parameters": [
-                            "Dino",
+                            "Daniel",
                             "PlatformerObject",
                             "yes"
                           ]
@@ -6746,7 +6321,7 @@
                             "value": "SetCenterY"
                           },
                           "parameters": [
-                            "Dino",
+                            "Daniel",
                             "=",
                             "Platform2.BoundingBoxTop() "
                           ]
@@ -6756,7 +6331,7 @@
                             "value": "Arreter"
                           },
                           "parameters": [
-                            "Dino"
+                            "Daniel"
                           ]
                         },
                         {
@@ -6819,7 +6394,6 @@
                   "colorG": 176,
                   "colorR": 74,
                   "creationTime": 0,
-                  "folded": true,
                   "name": "Coin Pickup",
                   "source": "",
                   "type": "BuiltinCommonInstructions::Group",
@@ -6832,7 +6406,7 @@
                             "value": "ObjectVariableAsBoolean"
                           },
                           "parameters": [
-                            "Dino",
+                            "Daniel",
                             "isMagnetOn",
                             "False"
                           ]
@@ -6863,7 +6437,7 @@
                                 "value": "CollisionNP"
                               },
                               "parameters": [
-                                "Dino",
+                                "Daniel",
                                 "Coin",
                                 "",
                                 "",
@@ -6889,7 +6463,7 @@
                               "parameters": [
                                 "CoinText",
                                 "=",
-                                "\"Coins: \" + VariableString(CoinCollected)"
+                                "VariableString(CoinCollected)"
                               ]
                             },
                             {
@@ -6925,7 +6499,7 @@
                             "value": "ObjectVariableAsBoolean"
                           },
                           "parameters": [
-                            "Dino",
+                            "Daniel",
                             "isMagnetOn",
                             "True"
                           ]
@@ -6944,9 +6518,9 @@
                               "parameters": [
                                 "MagnetLightning",
                                 "=",
-                                "Dino.CenterX() + 50",
+                                "Daniel.CenterX() + 50",
                                 "=",
-                                "Dino.CenterY() - 50"
+                                "Daniel.CenterY() - 50"
                               ]
                             }
                           ]
@@ -6959,7 +6533,7 @@
                                 "value": "Distance"
                               },
                               "parameters": [
-                                "Dino",
+                                "Daniel",
                                 "Coin",
                                 "500",
                                 ""
@@ -6973,7 +6547,7 @@
                               },
                               "parameters": [
                                 "Coin",
-                                "Dino",
+                                "Daniel",
                                 "1000",
                                 "0"
                               ]
@@ -6988,7 +6562,7 @@
                                     "value": "Distance"
                                   },
                                   "parameters": [
-                                    "Dino",
+                                    "Daniel",
                                     "Coin",
                                     "50",
                                     ""
@@ -7013,7 +6587,7 @@
                                   "parameters": [
                                     "CoinText",
                                     "=",
-                                    "\"Coins: \" + VariableString(CoinCollected)"
+                                    "VariableString(CoinCollected)"
                                   ]
                                 },
                                 {
@@ -7244,7 +6818,7 @@
                               "parameters": [
                                 "CactusObstacle",
                                 "=",
-                                "Dino.ZOrder() - 1"
+                                "Daniel.ZOrder() - 1"
                               ]
                             }
                           ]
@@ -7376,71 +6950,12 @@
                               ]
                             }
                           ],
-                          "actions": [
-                            {
-                              "type": {
-                                "value": "Create"
-                              },
-                              "parameters": [
-                                "",
-                                "IslandObstacle",
-                                "RandomInRange(75, 125) + SceneWindowWidth()",
-                                "Platform3.BoundingBoxTop() - 64",
-                                ""
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "ModVarObjet"
-                              },
-                              "parameters": [
-                                "IslandObstacle",
-                                "Reward",
-                                "=",
-                                "RandomInRange(0, 2)"
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "AddForceAL"
-                              },
-                              "parameters": [
-                                "IslandObstacle",
-                                "180",
-                                "Variable(ObstacleSpeed)",
-                                "1"
-                              ]
-                            }
-                          ],
+                          "actions": [],
                           "events": [
                             {
                               "type": "BuiltinCommonInstructions::Standard",
-                              "conditions": [
-                                {
-                                  "type": {
-                                    "value": "VarObjet"
-                                  },
-                                  "parameters": [
-                                    "IslandObstacle",
-                                    "Reward",
-                                    "=",
-                                    "0"
-                                  ]
-                                }
-                              ],
+                              "conditions": [],
                               "actions": [
-                                {
-                                  "type": {
-                                    "value": "Create"
-                                  },
-                                  "parameters": [
-                                    "",
-                                    "BonusObject",
-                                    "IslandObstacle.PointX(\"RewardUp\")",
-                                    "IslandObstacle.PointY(\"RewardUp\")",
-                                    ""
-                                  ]
-                                },
                                 {
                                   "type": {
                                     "value": "AddForceAL"
@@ -7456,32 +6971,8 @@
                             },
                             {
                               "type": "BuiltinCommonInstructions::Standard",
-                              "conditions": [
-                                {
-                                  "type": {
-                                    "value": "VarObjet"
-                                  },
-                                  "parameters": [
-                                    "IslandObstacle",
-                                    "Reward",
-                                    "=",
-                                    "1"
-                                  ]
-                                }
-                              ],
+                              "conditions": [],
                               "actions": [
-                                {
-                                  "type": {
-                                    "value": "Create"
-                                  },
-                                  "parameters": [
-                                    "",
-                                    "BonusObject",
-                                    "IslandObstacle.PointX(\"RewardDown\")",
-                                    "IslandObstacle.PointY(\"RewardDown\")",
-                                    ""
-                                  ]
-                                },
                                 {
                                   "type": {
                                     "value": "AddForceAL"
@@ -7650,7 +7141,7 @@
                             "value": "SetObjectVariableAsBoolean"
                           },
                           "parameters": [
-                            "Dino",
+                            "Daniel",
                             "isInvincible",
                             "False"
                           ]
@@ -7721,7 +7212,7 @@
                               "parameters": [
                                 "BonusObject",
                                 "=",
-                                "Dino.ZOrder() - 1"
+                                "Daniel.ZOrder() - 1"
                               ]
                             }
                           ]
@@ -7770,7 +7261,7 @@
                               "parameters": [
                                 "BonusObject",
                                 "=",
-                                "Dino.ZOrder() - 1"
+                                "Daniel.ZOrder() - 1"
                               ]
                             },
                             {
@@ -7841,7 +7332,7 @@
                               "parameters": [
                                 "BonusObject",
                                 "=",
-                                "Dino.ZOrder() - 1"
+                                "Daniel.ZOrder() - 1"
                               ]
                             }
                           ]
@@ -7890,7 +7381,7 @@
                               "parameters": [
                                 "BonusObject2",
                                 "=",
-                                "Dino.ZOrder() - 1"
+                                "Daniel.ZOrder() - 1"
                               ]
                             },
                             {
@@ -8050,7 +7541,7 @@
                               "parameters": [
                                 "BonusObject3",
                                 "=",
-                                "Dino.ZOrder() - 1"
+                                "Daniel.ZOrder() - 1"
                               ]
                             },
                             {
@@ -8270,7 +7761,7 @@
                               "parameters": [
                                 "Coin",
                                 "=",
-                                "Dino.ZOrder() - 1"
+                                "Daniel.ZOrder() - 1"
                               ]
                             }
                           ]
@@ -8319,7 +7810,7 @@
                               "parameters": [
                                 "Coin",
                                 "=",
-                                "Dino.ZOrder() - 1"
+                                "Daniel.ZOrder() - 1"
                               ]
                             },
                             {
@@ -8390,7 +7881,7 @@
                               "parameters": [
                                 "Coin",
                                 "=",
-                                "Dino.ZOrder() - 1"
+                                "Daniel.ZOrder() - 1"
                               ]
                             }
                           ]
@@ -8429,7 +7920,7 @@
                             "value": "CollisionNP"
                           },
                           "parameters": [
-                            "Dino",
+                            "Daniel",
                             "CactusObstacle",
                             "",
                             "",
@@ -8463,7 +7954,7 @@
                                     "value": "ObjectVariableAsBoolean"
                                   },
                                   "parameters": [
-                                    "Dino",
+                                    "Daniel",
                                     "isInvincible",
                                     "False"
                                   ]
@@ -8484,7 +7975,7 @@
                                     "value": "PlatformBehavior::PlatformerObjectBehavior::AbortJump"
                                   },
                                   "parameters": [
-                                    "Dino",
+                                    "Daniel",
                                     "PlatformerObject"
                                   ]
                                 },
@@ -8493,7 +7984,7 @@
                                     "value": "SetAnimationName"
                                   },
                                   "parameters": [
-                                    "Dino",
+                                    "Daniel",
                                     "\"Dead\""
                                   ]
                                 },
@@ -8539,7 +8030,7 @@
                                     "value": "ChangePlan"
                                   },
                                   "parameters": [
-                                    "Dino",
+                                    "Daniel",
                                     "=",
                                     "999999999999"
                                   ]
@@ -8669,7 +8160,7 @@
                         "value": "AnimationName"
                       },
                       "parameters": [
-                        "Dino",
+                        "Daniel",
                         "\"Dead\""
                       ]
                     },
@@ -8678,7 +8169,7 @@
                         "value": "AnimationEnded"
                       },
                       "parameters": [
-                        "Dino"
+                        "Daniel"
                       ]
                     }
                   ],

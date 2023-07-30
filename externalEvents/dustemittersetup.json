@@ -21,8 +21,8 @@
           "parameters": [
             "",
             "DustParticles",
-            "Dino.PointX(\"DustProjection\")",
-            "Dino.PointY(\"DustProjection\")",
+            "Daniel.PointX(\"DustProjection\")",
+            "Daniel.PointY(\"DustProjection\")",
             "\"\""
           ]
         },

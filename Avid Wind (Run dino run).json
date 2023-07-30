@@ -2334,6 +2334,26 @@
         "name": "assets\\JP_FG_01.png",
         "smoothed": true,
         "userAdded": true
+      },
+      {
+        "file": "assets/Power_Up_1.aac",
+        "kind": "audio",
+        "metadata": "",
+        "name": "assets\\Power_Up_1.aac",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/Shield_up_effect.aac",
+        "kind": "audio",
+        "metadata": "",
+        "name": "assets\\Shield_up_effect.aac",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": true
       }
     ],
     "resourceFolders": []

@@ -5769,7 +5769,7 @@
                           },
                           "parameters": [
                             "",
-                            "Bonus.mp3",
+                            "assets\\Power_Up_1.aac",
                             "",
                             "100",
                             "0.5"
@@ -5933,7 +5933,7 @@
                           },
                           "parameters": [
                             "",
-                            "Bonus.mp3",
+                            "assets\\Shield_up_effect.aac",
                             "",
                             "100",
                             "0.5"

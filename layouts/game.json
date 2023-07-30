@@ -6485,7 +6485,7 @@
                           },
                           "parameters": [
                             "",
-                            "assets\\1up 5.aac",
+                            "assets\\Shield_up_effect.aac",
                             "",
                             "100",
                             "0.5"
@@ -6723,7 +6723,7 @@
                           },
                           "parameters": [
                             "",
-                            "assets\\Shield_up_effect.aac",
+                            "assets\\1up 5.aac",
                             "",
                             "100",
                             "0.5"
@@ -7040,6 +7040,18 @@
                             "isFlying",
                             "=",
                             "0"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "PlaySound"
+                          },
+                          "parameters": [
+                            "",
+                            "68cb434ce20496bbc9cef16d07b15cac4653e72fc3a8209fd17e2598526e6687_Hard_Jump_Land_01.wav",
+                            "",
+                            "",
+                            ""
                           ]
                         }
                       ]

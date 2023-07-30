@@ -888,6 +888,18 @@
                 "\"Game\"",
                 ""
               ]
+            },
+            {
+              "type": {
+                "value": "PlaySound"
+              },
+              "parameters": [
+                "",
+                "vgmenuselect.ogg",
+                "",
+                "",
+                ""
+              ]
             }
           ]
         },
@@ -922,6 +934,18 @@
                 "value": "PlayerAuthentication::HideAuthenticationBanner"
               },
               "parameters": [
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "PlaySound"
+              },
+              "parameters": [
+                "",
+                "vgmenuselect.ogg",
+                "",
+                "",
                 ""
               ]
             }
@@ -1042,6 +1066,18 @@
                 "",
                 "\"e23f5092-d41d-43ce-bfc7-5a3bd95c4158\"",
                 "yes"
+              ]
+            },
+            {
+              "type": {
+                "value": "PlaySound"
+              },
+              "parameters": [
+                "",
+                "vgmenuselect.ogg",
+                "",
+                "",
+                ""
               ]
             }
           ]

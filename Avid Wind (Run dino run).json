@@ -80,8 +80,13 @@
     },
     "authorIds": [],
     "authorUsernames": [],
-    "categories": ["leaderboard"],
-    "playableDevices": ["keyboard", "mobile"],
+    "categories": [
+      "leaderboard"
+    ],
+    "playableDevices": [
+      "keyboard",
+      "mobile"
+    ],
     "extensionProperties": [],
     "platforms": [
       {
@@ -2629,9 +2634,25 @@
         "kind": "image",
         "metadata": "",
         "name": "assets\\MalaysiaSong.mp3",
-        "preloadAsMusic": false,
-        "preloadAsSound": false,
-        "preloadInCache": false,
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/DANIEL_TurnDOWN_01.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\DANIEL_TurnDOWN_01.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/DANIEL_TurnUP_01.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\DANIEL_TurnUP_01.png",
+        "smoothed": true,
         "userAdded": true
       }
     ],

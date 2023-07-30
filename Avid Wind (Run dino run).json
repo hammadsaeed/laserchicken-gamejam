@@ -1982,6 +1982,33 @@
         "name": "assets\\Top Left Corner Wood Background Cutout.png",
         "smoothed": true,
         "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/BG_MY_BG_Test.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\BG_MY_BG_Test.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/BG_MY_MG_Test.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\BG_MY_MG_Test.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/BG_MY_FG_Test.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\BG_MY_FG_Test.png",
+        "smoothed": true,
+        "userAdded": true
       }
     ],
     "resourceFolders": []

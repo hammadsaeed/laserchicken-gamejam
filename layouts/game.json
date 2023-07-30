@@ -18,7 +18,7 @@
     "gridColor": 10401023,
     "gridAlpha": 0.8,
     "snap": true,
-    "zoomFactor": 0.6016128177909453,
+    "zoomFactor": 0.4318038445840622,
     "windowMask": false
   },
   "objectsGroups": [
@@ -143,8 +143,8 @@
       "name": "Background",
       "persistentUuid": "48c699d8-eec9-4115-ae30-822d8389a521",
       "width": 992,
-      "x": 0,
-      "y": -192,
+      "x": -1408,
+      "y": -576,
       "zOrder": 17,
       "numberProperties": [],
       "stringProperties": [],
@@ -367,6 +367,54 @@
       "x": 0,
       "y": -192,
       "zOrder": 15,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 0,
+      "height": 960,
+      "layer": "Background",
+      "name": "BackgroundMalaysiaB",
+      "persistentUuid": "fefba650-370f-4c22-af8f-b7c33fe6a908",
+      "width": 992,
+      "x": 0,
+      "y": -256,
+      "zOrder": 17,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 0,
+      "height": 960,
+      "layer": "Background",
+      "name": "BackgroundMalaysiaM",
+      "persistentUuid": "b517f339-ea18-437c-9fe1-03f5128ac57e",
+      "width": 992,
+      "x": 0,
+      "y": -256,
+      "zOrder": 17,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 0,
+      "height": 960,
+      "layer": "Background",
+      "name": "BackgroundMalaysiaF",
+      "persistentUuid": "9e721097-c03e-4e41-863c-ad455ff3a995",
+      "width": 992,
+      "x": 0,
+      "y": -256,
+      "zOrder": 17,
       "numberProperties": [],
       "stringProperties": [],
       "initialVariables": []
@@ -3978,6 +4026,42 @@
       "variables": [],
       "effects": [],
       "behaviors": []
+    },
+    {
+      "assetStoreId": "",
+      "height": 32,
+      "name": "BackgroundMalaysiaB",
+      "tags": "",
+      "texture": "assets\\BG_MY_BG_Test.png",
+      "type": "TiledSpriteObject::TiledSprite",
+      "width": 32,
+      "variables": [],
+      "effects": [],
+      "behaviors": []
+    },
+    {
+      "assetStoreId": "",
+      "height": 500,
+      "name": "BackgroundMalaysiaM",
+      "tags": "",
+      "texture": "assets\\BG_MY_MG_Test.png",
+      "type": "TiledSpriteObject::TiledSprite",
+      "width": 500,
+      "variables": [],
+      "effects": [],
+      "behaviors": []
+    },
+    {
+      "assetStoreId": "",
+      "height": 500,
+      "name": "BackgroundMalaysiaF",
+      "tags": "",
+      "texture": "assets\\BG_MY_FG_Test.png",
+      "type": "TiledSpriteObject::TiledSprite",
+      "width": 500,
+      "variables": [],
+      "effects": [],
+      "behaviors": []
     }
   ],
   "events": [
@@ -4375,9 +4459,29 @@
                         "value": "TiledSpriteObject::XOffset"
                       },
                       "parameters": [
-                        "Background",
+                        "BackgroundMalaysiaB",
                         "+",
-                        "(Variable(ObstacleSpeed)/500)*60*TimeDelta()"
+                        "(Variable(ObstacleSpeed)/500)*20*TimeDelta()"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "TiledSpriteObject::XOffset"
+                      },
+                      "parameters": [
+                        "BackgroundMalaysiaM",
+                        "+",
+                        "(Variable(ObstacleSpeed)/500)*40*TimeDelta()"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "TiledSpriteObject::XOffset"
+                      },
+                      "parameters": [
+                        "BackgroundMalaysiaF",
+                        "+",
+                        "(Variable(ObstacleSpeed)/200)*60*TimeDelta()"
                       ]
                     },
                     {
@@ -4637,7 +4741,27 @@
                         "value": "ChangePlan"
                       },
                       "parameters": [
-                        "Background",
+                        "BackgroundMalaysiaF",
+                        "=",
+                        "15"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ChangePlan"
+                      },
+                      "parameters": [
+                        "BackgroundMalaysiaM",
+                        "=",
+                        "15"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ChangePlan"
+                      },
+                      "parameters": [
+                        "BackgroundMalaysiaB",
                         "=",
                         "15"
                       ]

@@ -115,6 +115,12 @@
       "name": "ChangingCountry",
       "type": "boolean",
       "value": false
+    },
+    {
+      "folded": true,
+      "name": "IsKeyPress",
+      "type": "boolean",
+      "value": false
     }
   ],
   "instances": [
@@ -5579,6 +5585,15 @@
                               "conditions": [
                                 {
                                   "type": {
+                                    "value": "SceneVariableAsBoolean"
+                                  },
+                                  "parameters": [
+                                    "IsKeyPress",
+                                    "False"
+                                  ]
+                                },
+                                {
+                                  "type": {
                                     "inverted": true,
                                     "value": "VarGlobal"
                                   },
@@ -5653,6 +5668,15 @@
                               "actions": [
                                 {
                                   "type": {
+                                    "value": "SetSceneVariableAsBoolean"
+                                  },
+                                  "parameters": [
+                                    "IsKeyPress",
+                                    "True"
+                                  ]
+                                },
+                                {
+                                  "type": {
                                     "value": "ModVarGlobal"
                                   },
                                   "parameters": [
@@ -5683,12 +5707,38 @@
                                     "Dino",
                                     "\"TurnUp\""
                                   ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "Wait"
+                                  },
+                                  "parameters": [
+                                    "0.2"
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "SetSceneVariableAsBoolean"
+                                  },
+                                  "parameters": [
+                                    "IsKeyPress",
+                                    "False"
+                                  ]
                                 }
                               ]
                             },
                             {
                               "type": "BuiltinCommonInstructions::Standard",
                               "conditions": [
+                                {
+                                  "type": {
+                                    "value": "SceneVariableAsBoolean"
+                                  },
+                                  "parameters": [
+                                    "IsKeyPress",
+                                    "False"
+                                  ]
+                                },
                                 {
                                   "type": {
                                     "inverted": true,
@@ -5765,6 +5815,15 @@
                               "actions": [
                                 {
                                   "type": {
+                                    "value": "SetSceneVariableAsBoolean"
+                                  },
+                                  "parameters": [
+                                    "IsKeyPress",
+                                    "True"
+                                  ]
+                                },
+                                {
+                                  "type": {
                                     "value": "ModVarGlobal"
                                   },
                                   "parameters": [
@@ -5794,6 +5853,23 @@
                                   "parameters": [
                                     "Dino",
                                     "\"TurnDown\""
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "Wait"
+                                  },
+                                  "parameters": [
+                                    "0.2"
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "SetSceneVariableAsBoolean"
+                                  },
+                                  "parameters": [
+                                    "IsKeyPress",
+                                    "False"
                                   ]
                                 }
                               ]

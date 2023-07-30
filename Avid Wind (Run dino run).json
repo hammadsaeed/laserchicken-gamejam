@@ -2399,6 +2399,16 @@
         "name": "assets\\PW_Magnet_01.png",
         "smoothed": true,
         "userAdded": true
+      },
+      {
+        "file": "assets/Japanese-SciFI trap loop.mp3",
+        "kind": "audio",
+        "metadata": "",
+        "name": "assets\\Japanese-SciFI trap loop.mp3",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": false
       }
     ],
     "resourceFolders": []

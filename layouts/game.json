@@ -3913,7 +3913,6 @@
           "colorG": 196,
           "colorR": 74,
           "creationTime": 0,
-          "folded": true,
           "name": "Preparing to start",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -4060,7 +4059,7 @@
                           },
                           "parameters": [
                             "",
-                            "DesertMusic.mp3",
+                            "assets\\Japanese-SciFI trap loop.mp3",
                             "yes",
                             "10",
                             ""
@@ -4249,16 +4248,6 @@
                         "value": "TiledSpriteObject::XOffset"
                       },
                       "parameters": [
-                        "Background2",
-                        "+",
-                        "(Variable(ObstacleSpeed)/500)*60*TimeDelta()"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "TiledSpriteObject::XOffset"
-                      },
-                      "parameters": [
                         "Background3",
                         "+",
                         "(Variable(ObstacleSpeed)/500)*60*TimeDelta()"
@@ -4299,16 +4288,6 @@
                         "Background3",
                         "=",
                         "14"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "ChangePlan"
-                      },
-                      "parameters": [
-                        "Background2",
-                        "=",
-                        "15"
                       ]
                     },
                     {

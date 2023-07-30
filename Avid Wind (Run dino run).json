@@ -20,7 +20,7 @@
     "templateSlug": "run-dino-run",
     "useExternalSourceFiles": false,
     "version": "1.0.0",
-    "name": "Avid Wind (Run dino run)",
+    "name": "DanielDash",
     "description": "The revamped version of Chrome's offline Dino runner.\n\nControls :\n   Computer : Up and Down arrow keys\n   Touch screens : Swipe up or down\n",
     "author": "",
     "windowWidth": 720,
@@ -61,7 +61,7 @@
     "loadingScreen": {
       "backgroundColor": 0,
       "backgroundFadeInDuration": 0.2,
-      "backgroundImageResourceName": "",
+      "backgroundImageResourceName": "Screenshot 2023-07-30175402.png",
       "gdevelopLogoStyle": "light",
       "logoAndProgressFadeInDuration": 0.2,
       "logoAndProgressLogoFadeInDelay": 0.2,
@@ -71,12 +71,12 @@
       "progressBarMaxWidth": 200,
       "progressBarMinWidth": 40,
       "progressBarWidthPercent": 30,
-      "showGDevelopSplash": true,
+      "showGDevelopSplash": false,
       "showProgressBar": true
     },
     "watermark": {
       "placement": "bottom-left",
-      "showWatermark": true
+      "showWatermark": false
     },
     "authorIds": [],
     "authorUsernames": [],
@@ -2418,6 +2418,25 @@
         "preloadAsMusic": false,
         "preloadAsSound": false,
         "preloadInCache": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/DesertMusic.mp3",
+        "kind": "audio",
+        "metadata": "",
+        "name": "assets\\DesertMusic.mp3",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Screenshot 2023-07-30175402.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Screenshot 2023-07-30175402.png",
+        "smoothed": true,
         "userAdded": true
       }
     ],

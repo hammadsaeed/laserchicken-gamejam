@@ -4055,14 +4055,11 @@
                         },
                         {
                           "type": {
-                            "value": "PlayMusic"
+                            "value": "RePlayMusicCanal"
                           },
                           "parameters": [
                             "",
-                            "assets\\Japanese-SciFI trap loop.mp3",
-                            "yes",
-                            "10",
-                            ""
+                            "1"
                           ]
                         }
                       ]
@@ -4267,6 +4264,78 @@
                         "=",
                         "1"
                       ]
+                    },
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::Once"
+                      },
+                      "parameters": []
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "PlayMusicCanal"
+                      },
+                      "parameters": [
+                        "",
+                        "assets\\DesertMusic.mp3",
+                        "1",
+                        "yes",
+                        "30",
+                        ""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::CompareNumbers"
+                      },
+                      "parameters": [
+                        "floor(mod(((GlobalVariable(Score) - 1)/ Variable(changeBg)),3) + 1)",
+                        "=",
+                        "2"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::Once"
+                      },
+                      "parameters": []
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "PlayMusicCanal"
+                      },
+                      "parameters": [
+                        "",
+                        "assets\\Japanese-SciFI trap loop.mp3",
+                        "1",
+                        "yes",
+                        "30",
+                        ""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::CompareNumbers"
+                      },
+                      "parameters": [
+                        "floor(mod(((GlobalVariable(Score) - 1)/ Variable(changeBg)),3) + 1)",
+                        "=",
+                        "1"
+                      ]
                     }
                   ],
                   "actions": [
@@ -4409,7 +4478,7 @@
                           "parameters": [
                             "TrialTunnel",
                             "-",
-                            "(Variable(ObstacleSpeed)/50)*135*TimeDelta()"
+                            "(Variable(ObstacleSpeed)/50)*170*TimeDelta()"
                           ]
                         },
                         {
@@ -4625,7 +4694,7 @@
                           "parameters": [
                             "TrialTunnel2",
                             "-",
-                            "(Variable(ObstacleSpeed)/50)*135*TimeDelta()"
+                            "(Variable(ObstacleSpeed)/50)*170*TimeDelta()"
                           ]
                         },
                         {
@@ -4822,7 +4891,7 @@
                           "parameters": [
                             "TrialTunnel2",
                             "-",
-                            "(Variable(ObstacleSpeed)/50)*135*TimeDelta()"
+                            "(Variable(ObstacleSpeed)/50)*170*TimeDelta()"
                           ]
                         },
                         {

@@ -2108,6 +2108,15 @@
       },
       {
         "alwaysLoaded": false,
+        "file": "assets/MY_BG_01.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\MY_BG_01.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
         "file": "assets/Right-Arrow.png",
         "kind": "image",
         "metadata": "",
@@ -2138,6 +2147,15 @@
         "kind": "image",
         "metadata": "{\"extension\":\".png\"}",
         "name": "Arrow",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/MY_MG_01.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\MY_MG_01.png",
         "smoothed": true,
         "userAdded": true
       },
@@ -2218,6 +2236,24 @@
       },
       {
         "alwaysLoaded": false,
+        "file": "assets/MY_FG_01.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\MY_FG_01.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/JP_BG_01.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\JP_BG_01.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
         "file": "assets/SignBoardHover.png2.png",
         "kind": "image",
         "metadata": "{\"extension\":\".png\",\"pskl\":{}}",
@@ -2245,6 +2281,15 @@
         "kind": "image",
         "metadata": "{\"extension\":\".png\",\"pskl\":{}}",
         "name": "SignBoardLarge.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/JP_MG_01.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\JP_MG_01.png",
         "smoothed": true,
         "userAdded": true
       },
@@ -2280,6 +2325,15 @@
           "identifier": "https://asset-resources.gdevelop.io/public-resources/Menu buttons/e96b43b0ca3fd7775d75a702f44cd1b0dfd325e1db317f7cba84efdf572571fe_Roboto-Regular.ttf",
           "name": "gdevelop-asset-store"
         }
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/JP_FG_01.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\JP_FG_01.png",
+        "smoothed": true,
+        "userAdded": true
       }
     ],
     "resourceFolders": []

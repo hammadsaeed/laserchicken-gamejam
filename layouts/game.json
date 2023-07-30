@@ -18,7 +18,7 @@
     "gridColor": 10401023,
     "gridAlpha": 0.8,
     "snap": true,
-    "zoomFactor": 0.6645478440597098,
+    "zoomFactor": 0.2625673016196196,
     "windowMask": false
   },
   "objectsGroups": [
@@ -95,6 +95,12 @@
     {
       "folded": true,
       "name": "ChangingCountry",
+      "type": "boolean",
+      "value": false
+    },
+    {
+      "folded": true,
+      "name": "IsKeyPress",
       "type": "boolean",
       "value": false
     }
@@ -278,6 +284,22 @@
       "angle": 0,
       "customSize": true,
       "depth": 0,
+      "height": 960,
+      "layer": "Background",
+      "name": "Background2",
+      "persistentUuid": "36ad0959-98ba-4669-8e3b-7ce63080eee2",
+      "width": 992,
+      "x": -1376,
+      "y": -800,
+      "zOrder": 15,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 0,
       "height": 1472,
       "layer": "",
       "name": "TrialTunnel",
@@ -385,6 +407,54 @@
       "numberProperties": [],
       "stringProperties": [],
       "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 0,
+      "height": 960,
+      "layer": "Background",
+      "name": "BackgroundJapanB",
+      "persistentUuid": "a84064f5-92aa-40cf-a6f2-f2ba44dde097",
+      "width": 992,
+      "x": 0,
+      "y": -256,
+      "zOrder": 15,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 0,
+      "height": 960,
+      "layer": "Background",
+      "name": "BackgroundJapanM",
+      "persistentUuid": "95cddd6a-97ac-4f5a-9349-065f7f327598",
+      "width": 992,
+      "x": 0,
+      "y": -256,
+      "zOrder": 15,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 0,
+      "height": 960,
+      "layer": "Background",
+      "name": "BackgroundJapanF",
+      "persistentUuid": "13e35c2f-780d-49fe-899b-75ab14501cd7",
+      "width": 992,
+      "x": 0,
+      "y": -256,
+      "zOrder": 15,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
     }
   ],
   "objects": [
@@ -449,7 +519,7 @@
                       },
                       {
                         "x": 86,
-                        "y": 88.5
+                        "y": 0
                       },
                       {
                         "x": 86,
@@ -3648,6 +3718,78 @@
       "variables": [],
       "effects": [],
       "behaviors": []
+    },
+    {
+      "assetStoreId": "",
+      "height": 32,
+      "name": "BackgroundMalaysiaB",
+      "tags": "",
+      "texture": "assets\\MY_BG_01.png",
+      "type": "TiledSpriteObject::TiledSprite",
+      "width": 32,
+      "variables": [],
+      "effects": [],
+      "behaviors": []
+    },
+    {
+      "assetStoreId": "",
+      "height": 500,
+      "name": "BackgroundMalaysiaM",
+      "tags": "",
+      "texture": "assets\\MY_MG_01.png",
+      "type": "TiledSpriteObject::TiledSprite",
+      "width": 500,
+      "variables": [],
+      "effects": [],
+      "behaviors": []
+    },
+    {
+      "assetStoreId": "",
+      "height": 500,
+      "name": "BackgroundMalaysiaF",
+      "tags": "",
+      "texture": "assets\\MY_FG_01.png",
+      "type": "TiledSpriteObject::TiledSprite",
+      "width": 500,
+      "variables": [],
+      "effects": [],
+      "behaviors": []
+    },
+    {
+      "assetStoreId": "",
+      "height": 32,
+      "name": "BackgroundJapanB",
+      "tags": "",
+      "texture": "assets\\JP_BG_01.png",
+      "type": "TiledSpriteObject::TiledSprite",
+      "width": 32,
+      "variables": [],
+      "effects": [],
+      "behaviors": []
+    },
+    {
+      "assetStoreId": "",
+      "height": 500,
+      "name": "BackgroundJapanM",
+      "tags": "",
+      "texture": "assets\\JP_MG_01.png",
+      "type": "TiledSpriteObject::TiledSprite",
+      "width": 500,
+      "variables": [],
+      "effects": [],
+      "behaviors": []
+    },
+    {
+      "assetStoreId": "",
+      "height": 500,
+      "name": "BackgroundJapanF",
+      "tags": "",
+      "texture": "assets\\JP_FG_01.png",
+      "type": "TiledSpriteObject::TiledSprite",
+      "width": 500,
+      "variables": [],
+      "effects": [],
+      "behaviors": []
     }
   ],
   "events": [
@@ -3973,6 +4115,16 @@
                     "=",
                     "\"Score   \" + GlobalVariableString(Score)"
                   ]
+                },
+                {
+                  "type": {
+                    "value": "ModVarScene"
+                  },
+                  "parameters": [
+                    "changeBg",
+                    "=",
+                    "2950"
+                  ]
                 }
               ],
               "events": [
@@ -4067,6 +4219,46 @@
                         "value": "TiledSpriteObject::XOffset"
                       },
                       "parameters": [
+                        "BackgroundJapanB",
+                        "+",
+                        "0"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "TiledSpriteObject::XOffset"
+                      },
+                      "parameters": [
+                        "BackgroundJapanM",
+                        "+",
+                        "(Variable(ObstacleSpeed)/500)*40*TimeDelta()"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "TiledSpriteObject::XOffset"
+                      },
+                      "parameters": [
+                        "BackgroundJapanF",
+                        "+",
+                        "(Variable(ObstacleSpeed)/200)*60*TimeDelta()"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "TiledSpriteObject::XOffset"
+                      },
+                      "parameters": [
+                        "Background2",
+                        "+",
+                        "(Variable(ObstacleSpeed)/500)*60*TimeDelta()"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "TiledSpriteObject::XOffset"
+                      },
+                      "parameters": [
                         "Background3",
                         "+",
                         "(Variable(ObstacleSpeed)/500)*60*TimeDelta()"
@@ -4075,187 +4267,17 @@
                   ]
                 },
                 {
-                  "disabled": true,
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [
                     {
                       "type": {
-                        "value": "BuiltinCommonInstructions::Or"
-                      },
-                      "parameters": [],
-                      "subInstructions": [
-                        {
-                          "type": {
-                            "value": "VarGlobal"
-                          },
-                          "parameters": [
-                            "Score",
-                            ">",
-                            "400"
-                          ]
-                        }
-                      ]
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "MettreX"
+                        "value": "BuiltinCommonInstructions::CompareNumbers"
                       },
                       "parameters": [
-                        "TrialTunnel",
-                        "-",
-                        "(Variable(ObstacleSpeed)/50)*60*TimeDelta()"
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "disabled": true,
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "value": "BuiltinCommonInstructions::Or"
-                      },
-                      "parameters": [],
-                      "subInstructions": [
-                        {
-                          "type": {
-                            "value": "VarGlobal"
-                          },
-                          "parameters": [
-                            "Score",
-                            ">",
-                            "1500"
-                          ]
-                        }
-                      ]
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "MettreX"
-                      },
-                      "parameters": [
-                        "TrialTunnel",
+                        "floor(mod(((GlobalVariable(Score) - 1)/ Variable(changeBg)),3) + 1)",
                         "=",
-                        "928"
+                        "1"
                       ]
-                    }
-                  ]
-                },
-                {
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "value": "BuiltinCommonInstructions::Or"
-                      },
-                      "parameters": [],
-                      "subInstructions": [
-                        {
-                          "type": {
-                            "value": "VarGlobal"
-                          },
-                          "parameters": [
-                            "Score",
-                            ">",
-                            "4860"
-                          ]
-                        }
-                      ]
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "MettreX"
-                      },
-                      "parameters": [
-                        "TrialTunnel",
-                        "-",
-                        "(Variable(ObstacleSpeed)/50)*60*TimeDelta()"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "SetAnimationName"
-                      },
-                      "parameters": [
-                        "Daniel",
-                        "\"Run\""
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "value": "BuiltinCommonInstructions::Or"
-                      },
-                      "parameters": [],
-                      "subInstructions": [
-                        {
-                          "type": {
-                            "value": "VarGlobal"
-                          },
-                          "parameters": [
-                            "Score",
-                            ">",
-                            "4920"
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "BuiltinCommonInstructions::Once"
-                      },
-                      "parameters": []
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "SetSceneVariableAsBoolean"
-                      },
-                      "parameters": [
-                        "ChangingCountry",
-                        "True"
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "value": "BuiltinCommonInstructions::Or"
-                      },
-                      "parameters": [],
-                      "subInstructions": [
-                        {
-                          "type": {
-                            "value": "VarGlobal"
-                          },
-                          "parameters": [
-                            "Score",
-                            ">",
-                            "5000"
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "BuiltinCommonInstructions::Once"
-                      },
-                      "parameters": []
                     }
                   ],
                   "actions": [
@@ -4265,8 +4287,187 @@
                       },
                       "parameters": [
                         "CurrentCountry",
-                        "+",
+                        "=",
                         "1"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ChangePlan"
+                      },
+                      "parameters": [
+                        "Background3",
+                        "=",
+                        "14"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ChangePlan"
+                      },
+                      "parameters": [
+                        "Background2",
+                        "=",
+                        "15"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ChangePlan"
+                      },
+                      "parameters": [
+                        "BackgroundMalaysiaF",
+                        "=",
+                        "17"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ChangePlan"
+                      },
+                      "parameters": [
+                        "BackgroundMalaysiaM",
+                        "=",
+                        "17"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ChangePlan"
+                      },
+                      "parameters": [
+                        "BackgroundMalaysiaB",
+                        "=",
+                        "17"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetAnimationName"
+                      },
+                      "parameters": [
+                        "CactusObstacle",
+                        "\"Cactus3\""
+                      ]
+                    }
+                  ],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::And"
+                          },
+                          "parameters": [],
+                          "subInstructions": [
+                            {
+                              "type": {
+                                "value": "BuiltinCommonInstructions::CompareNumbers"
+                              },
+                              "parameters": [
+                                "mod((GlobalVariable(Score) / Variable(changeBg)),1) ",
+                                ">",
+                                "0"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "BuiltinCommonInstructions::CompareNumbers"
+                              },
+                              "parameters": [
+                                "mod((GlobalVariable(Score) / Variable(changeBg)),1) ",
+                                "<",
+                                "0.85"
+                              ]
+                            }
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "MettreXY"
+                          },
+                          "parameters": [
+                            "TrialTunnel",
+                            "=",
+                            "928",
+                            "=",
+                            "-9"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::CompareNumbers"
+                          },
+                          "parameters": [
+                            "mod((GlobalVariable(Score) / Variable(changeBg)),1) ",
+                            ">",
+                            "0.955"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetSceneVariableAsBoolean"
+                          },
+                          "parameters": [
+                            "ChangingCountry",
+                            "True"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "MettreX"
+                          },
+                          "parameters": [
+                            "TrialTunnel",
+                            "-",
+                            "(Variable(ObstacleSpeed)/50)*110*TimeDelta()"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetAnimationName"
+                          },
+                          "parameters": [
+                            "Dino",
+                            "\"Run\""
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::CompareNumbers"
+                          },
+                          "parameters": [
+                            "mod((GlobalVariable(Score) / Variable(changeBg)),1) ",
+                            ">",
+                            "0.99"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetSceneVariableAsBoolean"
+                          },
+                          "parameters": [
+                            "ChangingCountry",
+                            "False"
+                          ]
+                        }
                       ]
                     }
                   ]
@@ -4276,24 +4477,56 @@
                   "conditions": [
                     {
                       "type": {
-                        "value": "BuiltinCommonInstructions::Or"
+                        "value": "BuiltinCommonInstructions::CompareNumbers"
                       },
-                      "parameters": [],
-                      "subInstructions": [
-                        {
-                          "type": {
-                            "value": "VarScene"
-                          },
-                          "parameters": [
-                            "CurrentCountry",
-                            "=",
-                            "1"
-                          ]
-                        }
+                      "parameters": [
+                        "floor(mod(((GlobalVariable(Score) - 1)/ Variable(changeBg)),3) + 1)",
+                        "=",
+                        "2"
                       ]
                     }
                   ],
                   "actions": [
+                    {
+                      "type": {
+                        "value": "ChangePlan"
+                      },
+                      "parameters": [
+                        "BackgroundJapanF",
+                        "=",
+                        "17"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ChangePlan"
+                      },
+                      "parameters": [
+                        "BackgroundJapanM",
+                        "=",
+                        "17"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ChangePlan"
+                      },
+                      "parameters": [
+                        "BackgroundJapanB",
+                        "=",
+                        "17"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ModVarScene"
+                      },
+                      "parameters": [
+                        "CurrentCountry",
+                        "=",
+                        "2"
+                      ]
+                    },
                     {
                       "type": {
                         "value": "ChangePlan"
@@ -4333,53 +4566,102 @@
                         "\"PalmTree\""
                       ]
                     }
-                  ]
-                },
-                {
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
+                  ],
+                  "events": [
                     {
-                      "type": {
-                        "value": "BuiltinCommonInstructions::Or"
-                      },
-                      "parameters": [],
-                      "subInstructions": [
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
                         {
                           "type": {
-                            "value": "VarScene"
+                            "value": "BuiltinCommonInstructions::And"
+                          },
+                          "parameters": [],
+                          "subInstructions": [
+                            {
+                              "type": {
+                                "value": "BuiltinCommonInstructions::CompareNumbers"
+                              },
+                              "parameters": [
+                                "mod((GlobalVariable(Score) / Variable(changeBg)),1) ",
+                                ">",
+                                "0"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "BuiltinCommonInstructions::CompareNumbers"
+                              },
+                              "parameters": [
+                                "mod((GlobalVariable(Score) / Variable(changeBg)),1) ",
+                                "<",
+                                "0.85"
+                              ]
+                            }
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "MettreXY"
                           },
                           "parameters": [
-                            "CurrentCountry",
+                            "TrialTunnel2",
                             "=",
-                            "1"
+                            "928",
+                            "=",
+                            "-9"
                           ]
                         }
                       ]
                     },
                     {
-                      "type": {
-                        "value": "BuiltinCommonInstructions::Once"
-                      },
-                      "parameters": []
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "Wait"
-                      },
-                      "parameters": [
-                        "1"
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::CompareNumbers"
+                          },
+                          "parameters": [
+                            "mod((GlobalVariable(Score) / Variable(changeBg)),1) ",
+                            ">",
+                            "0.955"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetSceneVariableAsBoolean"
+                          },
+                          "parameters": [
+                            "ChangingCountry",
+                            "True"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "MettreX"
+                          },
+                          "parameters": [
+                            "TrialTunnel2",
+                            "-",
+                            "(Variable(ObstacleSpeed)/50)*110*TimeDelta()"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetAnimationName"
+                          },
+                          "parameters": [
+                            "Dino",
+                            "\"Run\""
+                          ]
+                        }
                       ]
                     },
                     {
-                      "type": {
-                        "value": "SetSceneVariableAsBoolean"
-                      },
-                      "parameters": [
-                        "ChangingCountry",
-                        "False"
-                      ]
+                      "type": ""
                     }
                   ]
                 },
@@ -4394,105 +4676,31 @@
                       "subInstructions": [
                         {
                           "type": {
-                            "value": "VarGlobal"
+                            "value": "BuiltinCommonInstructions::CompareNumbers"
                           },
                           "parameters": [
-                            "Score",
+                            "mod((GlobalVariable(Score) / Variable(changeBg)),1) ",
                             ">",
-                            "9860"
+                            "0.99"
                           ]
                         }
                       ]
                     }
                   ],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "MettreX"
-                      },
-                      "parameters": [
-                        "TrialTunnel2",
-                        "-",
-                        "(Variable(ObstacleSpeed)/50)*60*TimeDelta()"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "SetAnimationName"
-                      },
-                      "parameters": [
-                        "Daniel",
-                        "\"Run\""
-                      ]
-                    }
-                  ]
+                  "actions": []
                 },
                 {
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [
                     {
                       "type": {
-                        "value": "BuiltinCommonInstructions::Or"
-                      },
-                      "parameters": [],
-                      "subInstructions": [
-                        {
-                          "type": {
-                            "value": "VarGlobal"
-                          },
-                          "parameters": [
-                            "Score",
-                            ">",
-                            "9920"
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "BuiltinCommonInstructions::Once"
-                      },
-                      "parameters": []
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "SetSceneVariableAsBoolean"
+                        "value": "BuiltinCommonInstructions::CompareNumbers"
                       },
                       "parameters": [
-                        "ChangingCountry",
-                        "True"
+                        "floor(mod(((GlobalVariable(Score) - 1)/ Variable(changeBg)),3) + 1)",
+                        "=",
+                        "3"
                       ]
-                    }
-                  ]
-                },
-                {
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "value": "BuiltinCommonInstructions::Or"
-                      },
-                      "parameters": [],
-                      "subInstructions": [
-                        {
-                          "type": {
-                            "value": "VarGlobal"
-                          },
-                          "parameters": [
-                            "Score",
-                            ">",
-                            "10000"
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "BuiltinCommonInstructions::Once"
-                      },
-                      "parameters": []
                     }
                   ],
                   "actions": [
@@ -4502,35 +4710,20 @@
                       },
                       "parameters": [
                         "CurrentCountry",
-                        "+",
-                        "1"
+                        "=",
+                        "3"
                       ]
-                    }
-                  ]
-                },
-                {
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
+                    },
                     {
                       "type": {
-                        "value": "BuiltinCommonInstructions::Or"
+                        "value": "ChangePlan"
                       },
-                      "parameters": [],
-                      "subInstructions": [
-                        {
-                          "type": {
-                            "value": "VarScene"
-                          },
-                          "parameters": [
-                            "CurrentCountry",
-                            "=",
-                            "2"
-                          ]
-                        }
+                      "parameters": [
+                        "Background2",
+                        "=",
+                        "15"
                       ]
-                    }
-                  ],
-                  "actions": [
+                    },
                     {
                       "type": {
                         "value": "ChangePlan"
@@ -4543,16 +4736,6 @@
                     },
                     {
                       "type": {
-                        "value": "ChangePlan"
-                      },
-                      "parameters": [
-                        "TrialTunnel2",
-                        "=",
-                        "15"
-                      ]
-                    },
-                    {
-                      "type": {
                         "value": "SetAnimationName"
                       },
                       "parameters": [
@@ -4560,60 +4743,135 @@
                         "\"Bush\""
                       ]
                     }
-                  ]
-                },
-                {
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
+                  ],
+                  "events": [
                     {
-                      "type": {
-                        "value": "BuiltinCommonInstructions::Or"
-                      },
-                      "parameters": [],
-                      "subInstructions": [
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
                         {
                           "type": {
-                            "value": "VarScene"
+                            "value": "BuiltinCommonInstructions::And"
+                          },
+                          "parameters": [],
+                          "subInstructions": [
+                            {
+                              "type": {
+                                "value": "BuiltinCommonInstructions::CompareNumbers"
+                              },
+                              "parameters": [
+                                "mod((GlobalVariable(Score) / Variable(changeBg)),1) ",
+                                ">",
+                                "0"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "BuiltinCommonInstructions::CompareNumbers"
+                              },
+                              "parameters": [
+                                "mod((GlobalVariable(Score) / Variable(changeBg)),1) ",
+                                "<",
+                                "0.85"
+                              ]
+                            }
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "MettreXY"
                           },
                           "parameters": [
-                            "CurrentCountry",
+                            "TrialTunnel2",
                             "=",
-                            "2"
+                            "928",
+                            "=",
+                            "-9"
                           ]
                         }
                       ]
                     },
                     {
-                      "type": {
-                        "value": "BuiltinCommonInstructions::Once"
-                      },
-                      "parameters": []
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "Wait"
-                      },
-                      "parameters": [
-                        "0.5"
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::CompareNumbers"
+                          },
+                          "parameters": [
+                            "mod((GlobalVariable(Score) / Variable(changeBg)),1) ",
+                            ">",
+                            "0.955"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetSceneVariableAsBoolean"
+                          },
+                          "parameters": [
+                            "ChangingCountry",
+                            "True"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "MettreX"
+                          },
+                          "parameters": [
+                            "TrialTunnel2",
+                            "-",
+                            "(Variable(ObstacleSpeed)/50)*110*TimeDelta()"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetAnimationName"
+                          },
+                          "parameters": [
+                            "Dino",
+                            "\"Run\""
+                          ]
+                        }
                       ]
                     },
                     {
-                      "type": {
-                        "value": "SetSceneVariableAsBoolean"
-                      },
-                      "parameters": [
-                        "ChangingCountry",
-                        "False"
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::CompareNumbers"
+                          },
+                          "parameters": [
+                            "mod((GlobalVariable(Score) / Variable(changeBg)),1) ",
+                            ">",
+                            "0.99"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "Wait"
+                          },
+                          "parameters": [
+                            "1"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetSceneVariableAsBoolean"
+                          },
+                          "parameters": [
+                            "ChangingCountry",
+                            "False"
+                          ]
+                        }
                       ]
                     }
                   ]
-                },
-                {
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [],
-                  "actions": []
                 },
                 {
                   "type": "BuiltinCommonInstructions::Standard",
@@ -4818,6 +5076,7 @@
                           "comment": "Makes ParticleEmitter follow the Dino if he lands on an Island."
                         },
                         {
+                          "disabled": true,
                           "type": "BuiltinCommonInstructions::Standard",
                           "conditions": [
                             {
@@ -4853,6 +5112,7 @@
                       ]
                     },
                     {
+                      "disabled": true,
                       "type": "BuiltinCommonInstructions::Standard",
                       "conditions": [
                         {
@@ -4978,6 +5238,7 @@
                       "colorG": 176,
                       "colorR": 74,
                       "creationTime": 0,
+                      "folded": true,
                       "name": "Controls",
                       "source": "",
                       "type": "BuiltinCommonInstructions::Group",
@@ -5034,6 +5295,15 @@
                             {
                               "type": "BuiltinCommonInstructions::Standard",
                               "conditions": [
+                                {
+                                  "type": {
+                                    "value": "SceneVariableAsBoolean"
+                                  },
+                                  "parameters": [
+                                    "IsKeyPress",
+                                    "False"
+                                  ]
+                                },
                                 {
                                   "type": {
                                     "inverted": true,
@@ -5110,6 +5380,15 @@
                               "actions": [
                                 {
                                   "type": {
+                                    "value": "SetSceneVariableAsBoolean"
+                                  },
+                                  "parameters": [
+                                    "IsKeyPress",
+                                    "True"
+                                  ]
+                                },
+                                {
+                                  "type": {
                                     "value": "ModVarGlobal"
                                   },
                                   "parameters": [
@@ -5128,7 +5407,7 @@
                                     "\"Move\"",
                                     "Daniel.Y() - 200",
                                     "\"easeInOutQuad\"",
-                                    "200",
+                                    "150",
                                     ""
                                   ]
                                 },
@@ -5140,12 +5419,38 @@
                                     "Daniel",
                                     "\"TurnUp\""
                                   ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "Wait"
+                                  },
+                                  "parameters": [
+                                    "0.2"
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "SetSceneVariableAsBoolean"
+                                  },
+                                  "parameters": [
+                                    "IsKeyPress",
+                                    "False"
+                                  ]
                                 }
                               ]
                             },
                             {
                               "type": "BuiltinCommonInstructions::Standard",
                               "conditions": [
+                                {
+                                  "type": {
+                                    "value": "SceneVariableAsBoolean"
+                                  },
+                                  "parameters": [
+                                    "IsKeyPress",
+                                    "False"
+                                  ]
+                                },
                                 {
                                   "type": {
                                     "inverted": true,
@@ -5222,6 +5527,15 @@
                               "actions": [
                                 {
                                   "type": {
+                                    "value": "SetSceneVariableAsBoolean"
+                                  },
+                                  "parameters": [
+                                    "IsKeyPress",
+                                    "True"
+                                  ]
+                                },
+                                {
+                                  "type": {
                                     "value": "ModVarGlobal"
                                   },
                                   "parameters": [
@@ -5240,7 +5554,7 @@
                                     "\"Move\"",
                                     "Daniel.Y() + 180",
                                     "\"easeInOutQuad\"",
-                                    "200",
+                                    "150",
                                     ""
                                   ]
                                 },
@@ -5251,6 +5565,23 @@
                                   "parameters": [
                                     "Daniel",
                                     "\"TurnDown\""
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "Wait"
+                                  },
+                                  "parameters": [
+                                    "0.2"
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "SetSceneVariableAsBoolean"
+                                  },
+                                  "parameters": [
+                                    "IsKeyPress",
+                                    "False"
                                   ]
                                 }
                               ]
@@ -5268,7 +5599,6 @@
                   "colorG": 176,
                   "colorR": 74,
                   "creationTime": 0,
-                  "folded": true,
                   "name": "Power ups",
                   "source": "",
                   "type": "BuiltinCommonInstructions::Group",
@@ -5318,16 +5648,6 @@
                         }
                       ],
                       "actions": [
-                        {
-                          "type": {
-                            "value": "ModVarGlobal"
-                          },
-                          "parameters": [
-                            "Score",
-                            "+",
-                            "500"
-                          ]
-                        },
                         {
                           "type": {
                             "value": "SetObjectVariableAsBoolean"
@@ -5412,16 +5732,6 @@
                         }
                       ],
                       "actions": [
-                        {
-                          "type": {
-                            "value": "ModVarGlobal"
-                          },
-                          "parameters": [
-                            "Score",
-                            "+",
-                            "500"
-                          ]
-                        },
                         {
                           "type": {
                             "value": "Create"
@@ -5564,16 +5874,6 @@
                         }
                       ],
                       "actions": [
-                        {
-                          "type": {
-                            "value": "ModVarGlobal"
-                          },
-                          "parameters": [
-                            "Score",
-                            "+",
-                            "500"
-                          ]
-                        },
                         {
                           "type": {
                             "value": "SetObjectVariableAsBoolean"

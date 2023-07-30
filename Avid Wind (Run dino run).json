@@ -2045,6 +2045,33 @@
         "name": "assets\\MY_FG_01.png",
         "smoothed": true,
         "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/JP_BG_01.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\JP_BG_01.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/JP_MG_01.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\JP_MG_01.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/JP_FG_01.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\JP_FG_01.png",
+        "smoothed": true,
+        "userAdded": true
       }
     ],
     "resourceFolders": []

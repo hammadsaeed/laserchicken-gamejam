@@ -18,7 +18,7 @@
     "gridColor": 10401023,
     "gridAlpha": 0.8,
     "snap": true,
-    "zoomFactor": 0.2805735687268652,
+    "zoomFactor": 0.2625673016196196,
     "windowMask": false
   },
   "objectsGroups": [
@@ -322,8 +322,8 @@
       "name": "Background2",
       "persistentUuid": "36ad0959-98ba-4669-8e3b-7ce63080eee2",
       "width": 992,
-      "x": 0,
-      "y": -192,
+      "x": -1376,
+      "y": -800,
       "zOrder": 15,
       "numberProperties": [],
       "stringProperties": [],
@@ -421,6 +421,54 @@
       "x": 0,
       "y": -256,
       "zOrder": 17,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 0,
+      "height": 960,
+      "layer": "Background",
+      "name": "BackgroundJapanB",
+      "persistentUuid": "a84064f5-92aa-40cf-a6f2-f2ba44dde097",
+      "width": 992,
+      "x": 0,
+      "y": -256,
+      "zOrder": 15,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 0,
+      "height": 960,
+      "layer": "Background",
+      "name": "BackgroundJapanM",
+      "persistentUuid": "95cddd6a-97ac-4f5a-9349-065f7f327598",
+      "width": 992,
+      "x": 0,
+      "y": -256,
+      "zOrder": 15,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 0,
+      "height": 960,
+      "layer": "Background",
+      "name": "BackgroundJapanF",
+      "persistentUuid": "13e35c2f-780d-49fe-899b-75ab14501cd7",
+      "width": 992,
+      "x": 0,
+      "y": -256,
+      "zOrder": 15,
       "numberProperties": [],
       "stringProperties": [],
       "initialVariables": []
@@ -4116,6 +4164,42 @@
       "variables": [],
       "effects": [],
       "behaviors": []
+    },
+    {
+      "assetStoreId": "",
+      "height": 32,
+      "name": "BackgroundJapanB",
+      "tags": "",
+      "texture": "assets\\JP_BG_01.png",
+      "type": "TiledSpriteObject::TiledSprite",
+      "width": 32,
+      "variables": [],
+      "effects": [],
+      "behaviors": []
+    },
+    {
+      "assetStoreId": "",
+      "height": 500,
+      "name": "BackgroundJapanM",
+      "tags": "",
+      "texture": "assets\\JP_MG_01.png",
+      "type": "TiledSpriteObject::TiledSprite",
+      "width": 500,
+      "variables": [],
+      "effects": [],
+      "behaviors": []
+    },
+    {
+      "assetStoreId": "",
+      "height": 500,
+      "name": "BackgroundJapanF",
+      "tags": "",
+      "texture": "assets\\JP_FG_01.png",
+      "type": "TiledSpriteObject::TiledSprite",
+      "width": 500,
+      "variables": [],
+      "effects": [],
+      "behaviors": []
     }
   ],
   "events": [
@@ -4553,6 +4637,36 @@
                         "value": "TiledSpriteObject::XOffset"
                       },
                       "parameters": [
+                        "BackgroundJapanB",
+                        "+",
+                        "0"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "TiledSpriteObject::XOffset"
+                      },
+                      "parameters": [
+                        "BackgroundJapanM",
+                        "+",
+                        "(Variable(ObstacleSpeed)/500)*40*TimeDelta()"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "TiledSpriteObject::XOffset"
+                      },
+                      "parameters": [
+                        "BackgroundJapanF",
+                        "+",
+                        "(Variable(ObstacleSpeed)/200)*60*TimeDelta()"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "TiledSpriteObject::XOffset"
+                      },
+                      "parameters": [
                         "Background2",
                         "+",
                         "(Variable(ObstacleSpeed)/500)*60*TimeDelta()"
@@ -4796,7 +4910,27 @@
                         "value": "ChangePlan"
                       },
                       "parameters": [
-                        "Background2",
+                        "BackgroundJapanF",
+                        "=",
+                        "17"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ChangePlan"
+                      },
+                      "parameters": [
+                        "BackgroundJapanM",
+                        "=",
+                        "17"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ChangePlan"
+                      },
+                      "parameters": [
+                        "BackgroundJapanB",
                         "=",
                         "17"
                       ]

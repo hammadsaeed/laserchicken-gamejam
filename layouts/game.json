@@ -18,7 +18,7 @@
     "gridColor": 10401023,
     "gridAlpha": 0.8,
     "snap": true,
-    "zoomFactor": 0.32037527095937113,
+    "zoomFactor": 0.5630033324376336,
     "windowMask": false
   },
   "objectsGroups": [
@@ -587,21 +587,6 @@
       "numberProperties": [],
       "stringProperties": [],
       "initialVariables": []
-    },
-    {
-      "angle": 0,
-      "customSize": false,
-      "height": 0,
-      "layer": "",
-      "name": "NewTiledSprite",
-      "persistentUuid": "e16ff5f0-beae-459a-9209-5ae99d7b1145",
-      "width": 0,
-      "x": 1984,
-      "y": 704,
-      "zOrder": 1510018,
-      "numberProperties": [],
-      "stringProperties": [],
-      "initialVariables": []
     }
   ],
   "objects": [
@@ -645,7 +630,7 @@
               "sprites": [
                 {
                   "hasCustomCollisionMask": true,
-                  "image": "assets\\MY_Pothole_New.png",
+                  "image": "assets\\MY_Pothole_02.png",
                   "points": [],
                   "originPoint": {
                     "name": "origine",
@@ -665,12 +650,12 @@
                         "y": 30.5
                       },
                       {
-                        "x": 95.5,
-                        "y": 9.5
+                        "x": 83,
+                        "y": 10
                       },
                       {
-                        "x": 90,
-                        "y": 81.5
+                        "x": 86,
+                        "y": 84
                       },
                       {
                         "x": 11,
@@ -4021,7 +4006,7 @@
           "useMultipleDirections": false,
           "directions": [
             {
-              "looping": true,
+              "looping": false,
               "timeBetweenFrames": 0.08,
               "sprites": [
                 {
@@ -4297,7 +4282,7 @@
       "height": 500,
       "name": "TrialTunnel",
       "tags": "",
-      "texture": "assets\\TUNNEL_01.png",
+      "texture": "a490118d306d8a2db9ddddcc8bbfc28a5c2a0f0f07c6bf76958db479f9c1d907_Wall Grey Flat.png",
       "type": "TiledSpriteObject::TiledSprite",
       "width": 500,
       "variables": [],
@@ -4321,7 +4306,7 @@
       "height": 32,
       "name": "TrialTunnel2",
       "tags": "",
-      "texture": "assets\\TUNNEL_01.png",
+      "texture": "assets\\Top Left Corner Wood Background Cutout.png",
       "type": "TiledSpriteObject::TiledSprite",
       "width": 32,
       "variables": [],
@@ -4432,18 +4417,6 @@
       "texture": "assets\\AU_FG_01.png",
       "type": "TiledSpriteObject::TiledSprite",
       "width": 500,
-      "variables": [],
-      "effects": [],
-      "behaviors": []
-    },
-    {
-      "assetStoreId": "",
-      "height": 32,
-      "name": "NewTiledSprite",
-      "tags": "",
-      "texture": "assets\\TUNNEL_01.png",
-      "type": "TiledSpriteObject::TiledSprite",
-      "width": 32,
       "variables": [],
       "effects": [],
       "behaviors": []
@@ -4691,6 +4664,26 @@
                         "=",
                         "2"
                       ]
+                    },
+                    {
+                      "type": {
+                        "value": "ModVarScene"
+                      },
+                      "parameters": [
+                        "changeBg",
+                        "=",
+                        "2970"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ModVarScene"
+                      },
+                      "parameters": [
+                        "CurrentCountry",
+                        "=",
+                        "1"
+                      ]
                     }
                   ],
                   "events": [
@@ -4798,16 +4791,6 @@
                     "ScoreText",
                     "=",
                     "\"Score   \" + GlobalVariableString(Score)"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "ModVarScene"
-                  },
-                  "parameters": [
-                    "changeBg",
-                    "=",
-                    "2950"
                   ]
                 }
               ],
@@ -4965,69 +4948,123 @@
                   "conditions": [
                     {
                       "type": {
-                        "value": "BuiltinCommonInstructions::CompareNumbers"
+                        "value": "VarGlobal"
                       },
                       "parameters": [
-                        "floor(mod(((GlobalVariable(Score) - 1)/ Variable(changeBg)),3) + 1)",
-                        "=",
+                        "Score",
+                        ">",
                         "1"
                       ]
-                    },
-                    {
-                      "type": {
-                        "value": "BuiltinCommonInstructions::Once"
-                      },
-                      "parameters": []
                     }
                   ],
-                  "actions": [
+                  "actions": [],
+                  "events": [
                     {
-                      "type": {
-                        "value": "PlayMusicCanal"
-                      },
-                      "parameters": [
-                        "",
-                        "assets\\DesertMusic.mp3",
-                        "1",
-                        "yes",
-                        "30",
-                        ""
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "value": "BuiltinCommonInstructions::CompareNumbers"
-                      },
-                      "parameters": [
-                        "floor(mod(((GlobalVariable(Score) - 1)/ Variable(changeBg)),3) + 1)",
-                        "=",
-                        "2"
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::CompareNumbers"
+                          },
+                          "parameters": [
+                            "floor(mod(((GlobalVariable(Score) - 1)/ Variable(changeBg)),3) + 1)",
+                            "=",
+                            "1"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::Once"
+                          },
+                          "parameters": []
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "PlayMusicCanal"
+                          },
+                          "parameters": [
+                            "",
+                            "assets\\MalaysiaSong.mp3",
+                            "1",
+                            "yes",
+                            "30",
+                            ""
+                          ]
+                        }
                       ]
                     },
                     {
-                      "type": {
-                        "value": "BuiltinCommonInstructions::Once"
-                      },
-                      "parameters": []
-                    }
-                  ],
-                  "actions": [
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::CompareNumbers"
+                          },
+                          "parameters": [
+                            "floor(mod(((GlobalVariable(Score) - 1)/ Variable(changeBg)),3) + 1)",
+                            "=",
+                            "2"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::Once"
+                          },
+                          "parameters": []
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "PlayMusicCanal"
+                          },
+                          "parameters": [
+                            "",
+                            "assets\\Japanese-SciFI trap loop.mp3",
+                            "1",
+                            "yes",
+                            "30",
+                            ""
+                          ]
+                        }
+                      ]
+                    },
                     {
-                      "type": {
-                        "value": "PlayMusicCanal"
-                      },
-                      "parameters": [
-                        "",
-                        "assets\\Japanese-SciFI trap loop.mp3",
-                        "1",
-                        "yes",
-                        "30",
-                        ""
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::CompareNumbers"
+                          },
+                          "parameters": [
+                            "floor(mod(((GlobalVariable(Score) - 1)/ Variable(changeBg)),3) + 1)",
+                            "=",
+                            "3"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::Once"
+                          },
+                          "parameters": []
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "PlayMusicCanal"
+                          },
+                          "parameters": [
+                            "",
+                            "assets\\DesertMusic.mp3",
+                            "1",
+                            "yes",
+                            "30",
+                            ""
+                          ]
+                        }
                       ]
                     }
                   ]
@@ -5471,30 +5508,6 @@
                       ]
                     }
                   ]
-                },
-                {
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "value": "BuiltinCommonInstructions::Or"
-                      },
-                      "parameters": [],
-                      "subInstructions": [
-                        {
-                          "type": {
-                            "value": "BuiltinCommonInstructions::CompareNumbers"
-                          },
-                          "parameters": [
-                            "mod((GlobalVariable(Score) / Variable(changeBg)),1) ",
-                            ">",
-                            "0.99"
-                          ]
-                        }
-                      ]
-                    }
-                  ],
-                  "actions": []
                 },
                 {
                   "type": "BuiltinCommonInstructions::Standard",
@@ -6577,7 +6590,7 @@
                           },
                           "parameters": [
                             "",
-                            "assets\\1up 5.aac",
+                            "assets\\Shield_up_effect.aac",
                             "",
                             "100",
                             "0.5"
@@ -6844,7 +6857,7 @@
                           },
                           "parameters": [
                             "",
-                            "assets\\Shield_up_effect.aac",
+                            "assets\\1up 5.aac",
                             "",
                             "100",
                             "0.5"
@@ -7161,6 +7174,18 @@
                             "isFlying",
                             "=",
                             "0"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "PlaySound"
+                          },
+                          "parameters": [
+                            "",
+                            "68cb434ce20496bbc9cef16d07b15cac4653e72fc3a8209fd17e2598526e6687_Hard_Jump_Land_01.wav",
+                            "",
+                            "",
+                            ""
                           ]
                         }
                       ]

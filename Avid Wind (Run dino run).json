@@ -80,13 +80,8 @@
     },
     "authorIds": [],
     "authorUsernames": [],
-    "categories": [
-      "leaderboard"
-    ],
-    "playableDevices": [
-      "keyboard",
-      "mobile"
-    ],
+    "categories": ["leaderboard"],
+    "playableDevices": ["keyboard", "mobile"],
     "extensionProperties": [],
     "platforms": [
       {
@@ -2563,21 +2558,80 @@
         "userAdded": true
       },
       {
+        "file": "vgmenuselect.ogg",
+        "kind": "audio",
+        "metadata": "",
+        "name": "vgmenuselect.ogg",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/Complete_02.aac",
+        "kind": "audio",
+        "metadata": "",
+        "name": "751052bbd3de6938713ebbe8782cc3f6feba91f9e3caf27272335ac4e549c0cd_Complete_02.aac",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": true,
+        "origin": {
+          "identifier": "https://asset-resources.gdevelop.io/public-resources/Interface/Interface Bleeps/751052bbd3de6938713ebbe8782cc3f6feba91f9e3caf27272335ac4e549c0cd_Complete_02.aac",
+          "name": "gdevelop-asset-store"
+        }
+      },
+      {
+        "file": "assets/Confirm_06.aac",
+        "kind": "audio",
+        "metadata": "",
+        "name": "16a246c50b71169ec2e6755ee557ee40a70adf4e8de1370f602712c8e9db8132_Confirm_06.aac",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": true,
+        "origin": {
+          "identifier": "https://asset-resources.gdevelop.io/public-resources/Interface/Interface Bleeps/16a246c50b71169ec2e6755ee557ee40a70adf4e8de1370f602712c8e9db8132_Confirm_06.aac",
+          "name": "gdevelop-asset-store"
+        }
+      },
+      {
+        "file": "assets/Power Up 3.aac",
+        "kind": "audio",
+        "metadata": "",
+        "name": "84a7c1348513e1f578ed3a9439460c1fdecea0034fb447e63810ad450178cc9e_Power Up 3.aac",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": true,
+        "origin": {
+          "identifier": "https://asset-resources.gdevelop.io/public-resources/Space Shooter by Pixel boy/Sound/84a7c1348513e1f578ed3a9439460c1fdecea0034fb447e63810ad450178cc9e_Power Up 3.aac",
+          "name": "gdevelop-asset-store"
+        }
+      },
+      {
+        "file": "assets/Hard_Jump_Land_01.wav",
+        "kind": "audio",
+        "metadata": "",
+        "name": "68cb434ce20496bbc9cef16d07b15cac4653e72fc3a8209fd17e2598526e6687_Hard_Jump_Land_01.wav",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": true,
+        "origin": {
+          "identifier": "https://asset-resources.gdevelop.io/public-resources/SoundEffects/Footsteps/Snow/Jump/68cb434ce20496bbc9cef16d07b15cac4653e72fc3a8209fd17e2598526e6687_Hard_Jump_Land_01.wav",
+          "name": "gdevelop-asset-store"
+        }
+      },
+      {
         "alwaysLoaded": false,
         "file": "assets/MY_Pothole_New.png",
         "kind": "image",
         "metadata": "",
-        "name": "assets\\MY_Pothole_New.png",
-        "smoothed": true,
-        "userAdded": true
-      },
-      {
-        "alwaysLoaded": false,
-        "file": "assets/TUNNEL_01.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "assets\\TUNNEL_01.png",
-        "smoothed": true,
+        "name": "assets\\MalaysiaSong.mp3",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
         "userAdded": true
       }
     ],

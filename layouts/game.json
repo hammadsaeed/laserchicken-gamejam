@@ -4409,7 +4409,7 @@
                           "parameters": [
                             "mod((GlobalVariable(Score) / Variable(changeBg)),1) ",
                             ">",
-                            "0.955"
+                            "0.975"
                           ]
                         }
                       ],
@@ -4430,7 +4430,7 @@
                           "parameters": [
                             "TrialTunnel",
                             "-",
-                            "(Variable(ObstacleSpeed)/50)*110*TimeDelta()"
+                            "(Variable(ObstacleSpeed)/50)*135*TimeDelta()"
                           ]
                         },
                         {
@@ -4625,7 +4625,7 @@
                           "parameters": [
                             "mod((GlobalVariable(Score) / Variable(changeBg)),1) ",
                             ">",
-                            "0.955"
+                            "0.975"
                           ]
                         }
                       ],
@@ -4646,7 +4646,7 @@
                           "parameters": [
                             "TrialTunnel2",
                             "-",
-                            "(Variable(ObstacleSpeed)/50)*110*TimeDelta()"
+                            "(Variable(ObstacleSpeed)/50)*135*TimeDelta()"
                           ]
                         },
                         {
@@ -4719,7 +4719,27 @@
                         "value": "ChangePlan"
                       },
                       "parameters": [
-                        "Background2",
+                        "BackgroundJapanB",
+                        "=",
+                        "15"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ChangePlan"
+                      },
+                      "parameters": [
+                        "BackgroundJapanM",
+                        "=",
+                        "15"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ChangePlan"
+                      },
+                      "parameters": [
+                        "BackgroundJapanF",
                         "=",
                         "15"
                       ]
@@ -4802,7 +4822,7 @@
                           "parameters": [
                             "mod((GlobalVariable(Score) / Variable(changeBg)),1) ",
                             ">",
-                            "0.955"
+                            "0.975"
                           ]
                         }
                       ],
@@ -4823,7 +4843,7 @@
                           "parameters": [
                             "TrialTunnel2",
                             "-",
-                            "(Variable(ObstacleSpeed)/50)*110*TimeDelta()"
+                            "(Variable(ObstacleSpeed)/50)*135*TimeDelta()"
                           ]
                         },
                         {

@@ -2627,6 +2627,24 @@
           "identifier": "https://asset-resources.gdevelop.io/public-resources/SoundEffects/Footsteps/Snow/Jump/68cb434ce20496bbc9cef16d07b15cac4653e72fc3a8209fd17e2598526e6687_Hard_Jump_Land_01.wav",
           "name": "gdevelop-asset-store"
         }
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/MY_Pothole_New.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\MY_Pothole_New.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/TUNNEL_01.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\TUNNEL_01.png",
+        "smoothed": true,
+        "userAdded": true
       }
     ],
     "resourceFolders": []

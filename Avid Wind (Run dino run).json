@@ -2480,6 +2480,87 @@
         "preloadAsSound": false,
         "preloadInCache": false,
         "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/AU_BG_01.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\AU_BG_01.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/AU_MG_01.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\AU_MG_01.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/AU_FG_01.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\AU_FG_01.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/DANIEL_Fly_Ani_01.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\DANIEL_Fly_Ani_01.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/DANIEL_Fly_Ani_02.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\DANIEL_Fly_Ani_02.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/DANIEL_Fly_Ani_03.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\DANIEL_Fly_Ani_03.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/DANIEL_Fly_Ani_04.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\DANIEL_Fly_Ani_04.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/DANIEL_Fly_Ani_05.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\DANIEL_Fly_Ani_05.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/DANIEL_Fly_Ani_06.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\DANIEL_Fly_Ani_06.png",
+        "smoothed": true,
+        "userAdded": true
       }
     ],
     "resourceFolders": []

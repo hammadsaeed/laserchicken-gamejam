@@ -2409,6 +2409,16 @@
         "preloadAsSound": false,
         "preloadInCache": false,
         "userAdded": false
+      },
+      {
+        "file": "assets/dash_sfx.aac",
+        "kind": "audio",
+        "metadata": "",
+        "name": "assets\\dash_sfx.aac",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": true
       }
     ],
     "resourceFolders": []

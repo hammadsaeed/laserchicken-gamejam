@@ -2561,6 +2561,24 @@
         "name": "assets\\DANIEL_Fly_Ani_06.png",
         "smoothed": true,
         "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/MY_Pothole_New.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\MY_Pothole_New.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/TUNNEL_01.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\TUNNEL_01.png",
+        "smoothed": true,
+        "userAdded": true
       }
     ],
     "resourceFolders": []

@@ -1982,6 +1982,15 @@
         "name": "assets\\Top Left Corner Wood Background Cutout.png",
         "smoothed": true,
         "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/Bush.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\Bush.png",
+        "smoothed": true,
+        "userAdded": true
       }
     ],
     "resourceFolders": []

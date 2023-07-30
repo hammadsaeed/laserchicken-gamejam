@@ -18,7 +18,7 @@
     "gridColor": 10401023,
     "gridAlpha": 0.8,
     "snap": true,
-    "zoomFactor": 0.6016128177909453,
+    "zoomFactor": 0.3538898928182035,
     "windowMask": false
   },
   "objectsGroups": [
@@ -486,6 +486,54 @@
                       },
                       {
                         "x": 86,
+                        "y": 96
+                      },
+                      {
+                        "x": 0,
+                        "y": 96
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Bush",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": true,
+              "timeBetweenFrames": 0.025,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets\\Bush.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 43,
+                    "y": 96
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 89
+                      },
+                      {
+                        "x": 93.5,
+                        "y": 89
+                      },
+                      {
+                        "x": 93.5,
                         "y": 96
                       },
                       {
@@ -4895,7 +4943,7 @@
                       },
                       "parameters": [
                         "CactusObstacle",
-                        "\"PalmTree\""
+                        "\"Bush\""
                       ]
                     }
                   ]
@@ -6664,7 +6712,6 @@
                   "colorG": 176,
                   "colorR": 74,
                   "creationTime": 0,
-                  "folded": true,
                   "name": "Obstacle spawn",
                   "source": "",
                   "type": "BuiltinCommonInstructions::Group",
@@ -8019,7 +8066,6 @@
                   "colorG": 176,
                   "colorR": 74,
                   "creationTime": 0,
-                  "folded": true,
                   "name": "Game Over",
                   "source": "",
                   "type": "BuiltinCommonInstructions::Group",
@@ -8037,7 +8083,6 @@
                       "comment": "Player loses when either of these conditions is checked :\n- Dino collided with a Cactus\n- Dino collided with an Island and is under it (= the played did not duck)\n\nAND\n- Dino IS NOT invincible"
                     },
                     {
-                      "folded": true,
                       "type": "BuiltinCommonInstructions::Standard",
                       "conditions": [
                         {

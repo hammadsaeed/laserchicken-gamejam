@@ -816,6 +816,14 @@
             "PlayerNameInput",
             "yes"
           ]
+        },
+        {
+          "type": {
+            "value": "PlayerAuthentication::DisplayAuthenticationBanner"
+          },
+          "parameters": [
+            ""
+          ]
         }
       ]
     },
@@ -829,7 +837,16 @@
           "parameters": []
         }
       ],
-      "actions": []
+      "actions": [
+        {
+          "type": {
+            "value": "PlayerAuthentication::DisplayAuthenticationBanner"
+          },
+          "parameters": [
+            ""
+          ]
+        }
+      ]
     },
     {
       "colorB": 214,
@@ -1042,7 +1059,16 @@
           "parameters": []
         }
       ],
-      "actions": [],
+      "actions": [
+        {
+          "type": {
+            "value": "PlayerAuthentication::DisplayAuthenticationBanner"
+          },
+          "parameters": [
+            ""
+          ]
+        }
+      ],
       "events": [
         {
           "type": "BuiltinCommonInstructions::Comment",

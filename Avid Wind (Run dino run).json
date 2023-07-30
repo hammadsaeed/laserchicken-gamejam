@@ -80,13 +80,8 @@
     },
     "authorIds": [],
     "authorUsernames": [],
-    "categories": [
-      "leaderboard"
-    ],
-    "playableDevices": [
-      "keyboard",
-      "mobile"
-    ],
+    "categories": ["leaderboard"],
+    "playableDevices": ["keyboard", "mobile"],
     "extensionProperties": [],
     "platforms": [
       {
@@ -2633,17 +2628,10 @@
         "file": "assets/MY_Pothole_New.png",
         "kind": "image",
         "metadata": "",
-        "name": "assets\\MY_Pothole_New.png",
-        "smoothed": true,
-        "userAdded": true
-      },
-      {
-        "alwaysLoaded": false,
-        "file": "assets/TUNNEL_01.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "assets\\TUNNEL_01.png",
-        "smoothed": true,
+        "name": "assets\\MalaysiaSong.mp3",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
         "userAdded": true
       }
     ],

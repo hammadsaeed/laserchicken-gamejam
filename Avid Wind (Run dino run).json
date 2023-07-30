@@ -2018,6 +2018,33 @@
         "name": "assets\\Bush.png",
         "smoothed": false,
         "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/MY_BG_01.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\MY_BG_01.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/MY_MG_01.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\MY_MG_01.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/MY_FG_01.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\MY_FG_01.png",
+        "smoothed": true,
+        "userAdded": true
       }
     ],
     "resourceFolders": []

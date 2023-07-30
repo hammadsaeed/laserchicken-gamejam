@@ -18,7 +18,7 @@
     "gridColor": 10401023,
     "gridAlpha": 0.8,
     "snap": true,
-    "zoomFactor": 0.34234587684923823,
+    "zoomFactor": 0.6016128177909453,
     "windowMask": false
   },
   "objectsGroups": [
@@ -5000,7 +5000,6 @@
                   "colorG": 176,
                   "colorR": 74,
                   "creationTime": 0,
-                  "folded": true,
                   "name": "Dino z-index",
                   "source": "",
                   "type": "BuiltinCommonInstructions::Group",
@@ -5097,13 +5096,11 @@
                   "colorG": 176,
                   "colorR": 74,
                   "creationTime": 0,
-                  "folded": true,
                   "name": "Dino movements",
                   "source": "",
                   "type": "BuiltinCommonInstructions::Group",
                   "events": [
                     {
-                      "folded": true,
                       "type": "BuiltinCommonInstructions::Standard",
                       "conditions": [
                         {
@@ -5315,7 +5312,6 @@
                       "colorG": 176,
                       "colorR": 74,
                       "creationTime": 0,
-                      "folded": true,
                       "name": "Controls",
                       "source": "",
                       "type": "BuiltinCommonInstructions::Group",
@@ -5613,6 +5609,20 @@
                                 },
                                 {
                                   "type": {
+                                    "value": "Tween::AddObjectPositionYTween"
+                                  },
+                                  "parameters": [
+                                    "Dino",
+                                    "",
+                                    "\"Move\"",
+                                    "Dino.Y() - 200",
+                                    "\"easeInOutQuad\"",
+                                    "400",
+                                    ""
+                                  ]
+                                },
+                                {
+                                  "type": {
                                     "value": "MettreY"
                                   },
                                   "parameters": [
@@ -5717,6 +5727,20 @@
                                     "PlatformNumber",
                                     "+",
                                     "1"
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "Tween::AddObjectPositionYTween"
+                                  },
+                                  "parameters": [
+                                    "Dino",
+                                    "",
+                                    "\"Move\"",
+                                    "Dino.Y() + 180",
+                                    "\"easeInOutQuad\"",
+                                    "400",
+                                    ""
                                   ]
                                 },
                                 {

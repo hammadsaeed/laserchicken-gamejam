@@ -18,7 +18,7 @@
     "gridColor": 10401023,
     "gridAlpha": 0.8,
     "snap": true,
-    "zoomFactor": 0.43319291935517656,
+    "zoomFactor": 0.9601845894041886,
     "windowMask": false
   },
   "objectsGroups": [],
@@ -34,13 +34,13 @@
       "angle": 0,
       "customSize": true,
       "depth": 0,
-      "height": 320,
+      "height": 96,
       "layer": "",
       "name": "Platform3",
       "persistentUuid": "c2c6a11c-e8f8-4ee6-aedb-369f62303136",
-      "width": 1152,
+      "width": 1024,
       "x": 0,
-      "y": 960,
+      "y": 1056,
       "zOrder": 14,
       "numberProperties": [],
       "stringProperties": [],
@@ -50,22 +50,7 @@
       "angle": 0,
       "customSize": true,
       "depth": 0,
-      "height": 1280,
-      "layer": "Background",
-      "name": "Background",
-      "persistentUuid": "968c9c47-08c4-44eb-917a-906d2ecee36b",
-      "width": 1024,
-      "x": 0,
-      "y": 0,
-      "zOrder": 15,
-      "numberProperties": [],
-      "stringProperties": [],
-      "initialVariables": []
-    },
-    {
-      "angle": 0,
-      "customSize": true,
-      "height": 320,
+      "height": 384,
       "layer": "",
       "name": "ScorePannel",
       "persistentUuid": "54d42257-be1c-432d-ba5e-53c9de63c893",
@@ -86,7 +71,7 @@
       "persistentUuid": "722f1233-75ba-4128-8905-4ac5dd26bc1e",
       "width": 384,
       "x": 160,
-      "y": 608,
+      "y": 605,
       "zOrder": 18,
       "numberProperties": [],
       "stringProperties": [],
@@ -95,13 +80,14 @@
     {
       "angle": 0,
       "customSize": true,
+      "depth": 0,
       "height": 41,
       "layer": "",
       "name": "PlayerNameInput",
       "persistentUuid": "a681abd2-5235-4165-a003-4a9553d79cb5",
-      "width": 320,
-      "x": 192,
-      "y": 661,
+      "width": 363,
+      "x": 170,
+      "y": 669,
       "zOrder": 19,
       "numberProperties": [],
       "stringProperties": [],
@@ -124,28 +110,30 @@
     },
     {
       "angle": 0,
-      "customSize": false,
-      "height": 0,
+      "customSize": true,
+      "depth": 0,
+      "height": 132,
       "layer": "",
-      "name": "Dino",
+      "name": "Daniel",
       "persistentUuid": "7492fade-8893-494c-88df-6c989bc40a8a",
-      "width": 0,
-      "x": 64,
-      "y": 1014,
-      "zOrder": 25,
+      "width": 293,
+      "x": 192,
+      "y": 956,
+      "zOrder": 32,
       "numberProperties": [],
       "stringProperties": [],
       "initialVariables": []
     },
     {
       "angle": 0,
-      "customSize": false,
-      "height": 0,
+      "customSize": true,
+      "depth": 32,
+      "height": 47,
       "layer": "",
       "name": "SubmitButton",
       "persistentUuid": "7b23f42a-648d-4b42-95bd-aad6c1861b5e",
-      "width": 0,
-      "x": 192,
+      "width": 160,
+      "x": 170,
       "y": 736,
       "zOrder": 26,
       "numberProperties": [],
@@ -154,13 +142,14 @@
     },
     {
       "angle": 0,
-      "customSize": false,
-      "height": 0,
+      "customSize": true,
+      "depth": 32,
+      "height": 47,
       "layer": "",
       "name": "ScoresButton",
       "persistentUuid": "c1ff6a1e-ed5f-406e-82ce-0af69ab646fe",
-      "width": 0,
-      "x": 384,
+      "width": 160,
+      "x": 374,
       "y": 736,
       "zOrder": 27,
       "numberProperties": [],
@@ -169,15 +158,112 @@
     },
     {
       "angle": 0,
-      "customSize": false,
-      "height": 0,
+      "customSize": true,
+      "depth": 32,
+      "height": 47,
       "layer": "",
       "name": "RestartButton",
       "persistentUuid": "d239a731-7dae-42f6-bfcb-f0a21413479b",
-      "width": 0,
-      "x": 288,
+      "width": 160,
+      "x": 272,
       "y": 800,
       "zOrder": 28,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 0,
+      "height": 960,
+      "layer": "",
+      "name": "BackgroundMalaysiaB",
+      "persistentUuid": "13f3fe92-9ce1-4622-9054-c5a9d9681aed",
+      "width": 1024,
+      "x": 0,
+      "y": 0,
+      "zOrder": 10,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 0,
+      "height": 960,
+      "layer": "",
+      "name": "BackgroundMalaysiaM",
+      "persistentUuid": "5ffcbd72-9044-4149-8f37-bf73a9143865",
+      "width": 1024,
+      "x": 0,
+      "y": 0,
+      "zOrder": 11,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 0,
+      "height": 960,
+      "layer": "",
+      "name": "BackgroundMalaysiaF",
+      "persistentUuid": "678403a4-2a5a-4e8a-b3da-92c1ae7c9839",
+      "width": 1024,
+      "x": 0,
+      "y": 0,
+      "zOrder": 12,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 0,
+      "height": 96,
+      "layer": "",
+      "name": "RoadTop",
+      "persistentUuid": "ca52c067-8289-4dd4-8d95-53e818cb1d4e",
+      "width": 1024,
+      "x": 0,
+      "y": 960,
+      "zOrder": 29,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 0,
+      "height": 96,
+      "layer": "",
+      "name": "RoadTop",
+      "persistentUuid": "e934458c-8842-4c6e-82eb-05cdeee6ffb0",
+      "width": 1024,
+      "x": 0,
+      "y": 1152,
+      "zOrder": 30,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 0,
+      "height": 96,
+      "layer": "",
+      "name": "Platform2",
+      "persistentUuid": "bb5649c3-5d5f-4157-b080-c4e12a637d2e",
+      "width": 1024,
+      "x": 0,
+      "y": 1248,
+      "zOrder": 31,
       "numberProperties": [],
       "stringProperties": [],
       "initialVariables": []
@@ -192,8 +278,8 @@
       "name": "ScorePannel",
       "rightMargin": 64,
       "tags": "",
-      "texture": "9patch_Desert Tile_all_64.png",
-      "tiled": true,
+      "texture": "SignBoardLarge.png",
+      "tiled": false,
       "topMargin": 64,
       "type": "PanelSpriteObject::PanelSprite",
       "width": 192,
@@ -203,7 +289,7 @@
     },
     {
       "assetStoreId": "",
-      "bold": false,
+      "bold": true,
       "italic": false,
       "name": "ScoreText",
       "smoothed": true,
@@ -213,14 +299,14 @@
       "variables": [],
       "effects": [],
       "behaviors": [],
-      "string": "Score",
-      "font": "Nathaniel-19.otf",
+      "string": "SCORE",
+      "font": "",
       "textAlignment": "",
-      "characterSize": 40,
+      "characterSize": 42,
       "color": {
-        "b": 255,
-        "g": 255,
-        "r": 255
+        "b": 28,
+        "g": 231,
+        "r": 248
       }
     },
     {
@@ -234,13 +320,13 @@
       "content": {
         "initialValue": "",
         "placeholder": "PlayerName",
-        "fontResourceName": "Nathaniel-19.otf",
+        "fontResourceName": "",
         "fontSize": 30,
         "inputType": "text",
         "textColor": "0;0;0",
-        "fillColor": "245;166;35",
+        "fillColor": "252;252;252",
         "fillOpacity": 255,
-        "borderColor": "245;166;35",
+        "borderColor": "255;255;255",
         "borderOpacity": 255,
         "borderWidth": 1,
         "readOnly": false,
@@ -253,7 +339,20 @@
       "tags": "",
       "type": "PanelSpriteButton::PanelSpriteButton",
       "variables": [],
-      "effects": [],
+      "effects": [
+        {
+          "effectType": "Outline",
+          "name": "Effect",
+          "doubleParameters": {
+            "padding": 3,
+            "thickness": 2
+          },
+          "stringParameters": {
+            "color": "255;255;255"
+          },
+          "booleanParameters": {}
+        }
+      ],
       "behaviors": [],
       "content": {
         "HoveredFadeOutDuration": 0
@@ -264,7 +363,7 @@
           "height": 47,
           "leftMargin": 20,
           "rightMargin": 20,
-          "texture": "assets\\Buttons\\RestartButton.png",
+          "texture": "SignBoardButton",
           "tiled": false,
           "topMargin": 11,
           "width": 128
@@ -274,18 +373,18 @@
           "height": 47,
           "leftMargin": 20,
           "rightMargin": 20,
-          "texture": "assets\\Buttons\\RestartButton.png",
+          "texture": "SignBoardButton",
           "tiled": false,
           "topMargin": 11,
           "width": 128
         },
         "Label": {
-          "bold": false,
+          "bold": true,
           "italic": false,
           "smoothed": true,
           "underlined": false,
           "string": "RETRY",
-          "font": "Nathaniel-19.otf",
+          "font": "",
           "textAlignment": "center",
           "characterSize": 30,
           "color": {
@@ -299,7 +398,7 @@
           "height": 47,
           "leftMargin": 20,
           "rightMargin": 20,
-          "texture": "assets\\Buttons\\RestartButton.png",
+          "texture": "SignBoardButton",
           "tiled": false,
           "topMargin": 11,
           "width": 128
@@ -312,7 +411,20 @@
       "tags": "",
       "type": "PanelSpriteButton::PanelSpriteButton",
       "variables": [],
-      "effects": [],
+      "effects": [
+        {
+          "effectType": "Outline",
+          "name": "Effect",
+          "doubleParameters": {
+            "padding": 3,
+            "thickness": 2
+          },
+          "stringParameters": {
+            "color": "255;255;255"
+          },
+          "booleanParameters": {}
+        }
+      ],
       "behaviors": [],
       "content": {
         "HoveredFadeOutDuration": 0
@@ -323,7 +435,7 @@
           "height": 47,
           "leftMargin": 20,
           "rightMargin": 20,
-          "texture": "assets\\Buttons\\SubmitButton.png",
+          "texture": "SignBoardButton",
           "tiled": false,
           "topMargin": 11,
           "width": 128
@@ -333,18 +445,18 @@
           "height": 47,
           "leftMargin": 20,
           "rightMargin": 20,
-          "texture": "assets\\Buttons\\SubmitButton.png",
+          "texture": "SignBoardButton",
           "tiled": false,
           "topMargin": 11,
           "width": 128
         },
         "Label": {
-          "bold": false,
+          "bold": true,
           "italic": false,
           "smoothed": true,
           "underlined": false,
           "string": "SUBMIT",
-          "font": "Nathaniel-19.otf",
+          "font": "",
           "textAlignment": "center",
           "characterSize": 30,
           "color": {
@@ -358,7 +470,7 @@
           "height": 47,
           "leftMargin": 20,
           "rightMargin": 20,
-          "texture": "assets\\Buttons\\SubmitButton.png",
+          "texture": "SignBoardButton",
           "tiled": false,
           "topMargin": 11,
           "width": 128
@@ -371,7 +483,20 @@
       "tags": "",
       "type": "PanelSpriteButton::PanelSpriteButton",
       "variables": [],
-      "effects": [],
+      "effects": [
+        {
+          "effectType": "Outline",
+          "name": "Effect",
+          "doubleParameters": {
+            "padding": 3,
+            "thickness": 2
+          },
+          "stringParameters": {
+            "color": "255;255;255"
+          },
+          "booleanParameters": {}
+        }
+      ],
       "behaviors": [],
       "content": {
         "HoveredFadeOutDuration": 0
@@ -382,7 +507,7 @@
           "height": 47,
           "leftMargin": 20,
           "rightMargin": 17,
-          "texture": "assets\\Buttons\\SubmitButton.png",
+          "texture": "SignBoardButton",
           "tiled": false,
           "topMargin": 11,
           "width": 128
@@ -392,18 +517,18 @@
           "height": 47,
           "leftMargin": 20,
           "rightMargin": 17,
-          "texture": "assets\\Buttons\\SubmitButton.png",
+          "texture": "SignBoardButton",
           "tiled": false,
           "topMargin": 11,
           "width": 128
         },
         "Label": {
-          "bold": false,
+          "bold": true,
           "italic": false,
           "smoothed": true,
           "underlined": false,
           "string": "SCORES",
-          "font": "Nathaniel-19.otf",
+          "font": "",
           "textAlignment": "center",
           "characterSize": 30,
           "color": {
@@ -415,9 +540,9 @@
         "Pressed": {
           "bottomMargin": 11,
           "height": 47,
-          "leftMargin": 20,
+          "leftMargin": 21,
           "rightMargin": 17,
-          "texture": "assets\\Buttons\\SubmitButton.png",
+          "texture": "SignBoardButton",
           "tiled": false,
           "topMargin": 11,
           "width": 128
@@ -427,31 +552,13 @@
     {
       "adaptCollisionMaskAutomatically": false,
       "assetStoreId": "",
-      "name": "Dino",
+      "name": "Daniel",
       "tags": "",
       "type": "Sprite",
       "updateIfNotVisible": false,
       "variables": [],
       "effects": [],
-      "behaviors": [
-        {
-          "name": "LinearMovement",
-          "type": "LinearMovement::LinearMovement",
-          "SpeedX": 200,
-          "SpeedY": 0
-        },
-        {
-          "name": "ScreenWrap",
-          "type": "ScreenWrap::ScreenWrap",
-          "HorizontalWrapping": true,
-          "VerticalWrapping": true,
-          "BorderTop": 0,
-          "BorderLeft": 0,
-          "BorderRight": 0,
-          "BorderBottom": 0,
-          "TriggerOffset": 128
-        }
-      ],
+      "behaviors": [],
       "animations": [
         {
           "name": "Run",
@@ -459,11 +566,11 @@
           "directions": [
             {
               "looping": true,
-              "timeBetweenFrames": 0.08,
+              "timeBetweenFrames": 1,
               "sprites": [
                 {
                   "hasCustomCollisionMask": false,
-                  "image": "assets\\DANIEL_Drive_Ani_00.png",
+                  "image": "assets\\DANIEL_Crash_Ani_04.png",
                   "points": [
                     {
                       "name": "DustProjection",
@@ -486,7 +593,7 @@
                 },
                 {
                   "hasCustomCollisionMask": false,
-                  "image": "assets\\DANIEL_Drive_Ani_02.png",
+                  "image": "assets\\DANIEL_Crash_Ani_04.png",
                   "points": [
                     {
                       "name": "DustProjection",
@@ -509,7 +616,7 @@
                 },
                 {
                   "hasCustomCollisionMask": false,
-                  "image": "assets\\DANIEL_Drive_Ani_03.png",
+                  "image": "assets\\DANIEL_Crash_Ani_05.png",
                   "points": [
                     {
                       "name": "DustProjection",
@@ -532,53 +639,7 @@
                 },
                 {
                   "hasCustomCollisionMask": false,
-                  "image": "assets\\DANIEL_Drive_Ani_04.png",
-                  "points": [
-                    {
-                      "name": "DustProjection",
-                      "x": 25,
-                      "y": 104
-                    }
-                  ],
-                  "originPoint": {
-                    "name": "origine",
-                    "x": 0,
-                    "y": 0
-                  },
-                  "centerPoint": {
-                    "automatic": true,
-                    "name": "centre",
-                    "x": 0,
-                    "y": 0
-                  },
-                  "customCollisionMask": []
-                },
-                {
-                  "hasCustomCollisionMask": false,
-                  "image": "assets\\DANIEL_Drive_Ani_05.png",
-                  "points": [
-                    {
-                      "name": "DustProjection",
-                      "x": 25,
-                      "y": 104
-                    }
-                  ],
-                  "originPoint": {
-                    "name": "origine",
-                    "x": 0,
-                    "y": 0
-                  },
-                  "centerPoint": {
-                    "automatic": true,
-                    "name": "centre",
-                    "x": 0,
-                    "y": 0
-                  },
-                  "customCollisionMask": []
-                },
-                {
-                  "hasCustomCollisionMask": false,
-                  "image": "assets\\DANIEL_Drive_Ani_06.png",
+                  "image": "assets\\DANIEL_Crash_Ani_05.png",
                   "points": [
                     {
                       "name": "DustProjection",
@@ -1075,49 +1136,7 @@
       "name": "Visuals",
       "source": "",
       "type": "BuiltinCommonInstructions::Group",
-      "events": [
-        {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "value": "DepartScene"
-              },
-              "parameters": [
-                ""
-              ]
-            }
-          ],
-          "actions": [],
-          "events": [
-            {
-              "type": "BuiltinCommonInstructions::Link",
-              "include": {
-                "includeConfig": 0
-              },
-              "target": "DustEmitterSetup"
-            }
-          ]
-        },
-        {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [],
-          "actions": [
-            {
-              "type": {
-                "value": "MettreXY"
-              },
-              "parameters": [
-                "DustParticles",
-                "=",
-                "Dino.PointX(\"DustProjection\")",
-                "=",
-                "Dino.PointY(\"DustProjection\")"
-              ]
-            }
-          ]
-        }
-      ],
+      "events": [],
       "parameters": []
     }
   ],
@@ -1168,16 +1187,8 @@
   ],
   "behaviorsSharedData": [
     {
-      "name": "LinearMovement",
-      "type": "LinearMovement::LinearMovement"
-    },
-    {
       "name": "Platform",
       "type": "PlatformBehavior::PlatformBehavior"
-    },
-    {
-      "name": "ScreenWrap",
-      "type": "ScreenWrap::ScreenWrap"
     }
   ]
 }

@@ -5237,7 +5237,6 @@
                       "colorG": 176,
                       "colorR": 74,
                       "creationTime": 0,
-                      "folded": true,
                       "name": "Controls",
                       "source": "",
                       "type": "BuiltinCommonInstructions::Group",
@@ -5412,6 +5411,18 @@
                                 },
                                 {
                                   "type": {
+                                    "value": "PlaySound"
+                                  },
+                                  "parameters": [
+                                    "",
+                                    "assets\\dash_sfx.aac",
+                                    "",
+                                    "",
+                                    ""
+                                  ]
+                                },
+                                {
+                                  "type": {
                                     "value": "SetAnimationName"
                                   },
                                   "parameters": [
@@ -5554,6 +5565,18 @@
                                     "Dino.Y() + 180",
                                     "\"easeInOutQuad\"",
                                     "150",
+                                    ""
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "PlaySound"
+                                  },
+                                  "parameters": [
+                                    "",
+                                    "assets\\dash_sfx.aac",
+                                    "",
+                                    "",
                                     ""
                                   ]
                                 },

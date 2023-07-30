@@ -2480,6 +2480,33 @@
         "preloadAsSound": false,
         "preloadInCache": false,
         "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/AU_BG_01.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\AU_BG_01.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/AU_MG_01.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\AU_MG_01.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/AU_FG_01.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\AU_FG_01.png",
+        "smoothed": true,
+        "userAdded": true
       }
     ],
     "resourceFolders": []

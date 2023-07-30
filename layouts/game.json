@@ -18,7 +18,7 @@
     "gridColor": 10401023,
     "gridAlpha": 0.8,
     "snap": true,
-    "zoomFactor": 0.2625673016196196,
+    "zoomFactor": 0.24571661611832746,
     "windowMask": false
   },
   "objectsGroups": [
@@ -451,6 +451,54 @@
       "width": 992,
       "x": 0,
       "y": -256,
+      "zOrder": 15,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 0,
+      "height": 960,
+      "layer": "Background",
+      "name": "BackgroundAustraliaB",
+      "persistentUuid": "dadb7fbe-e8e9-40c7-b992-73f8f396cc2d",
+      "width": 992,
+      "x": 0,
+      "y": -256,
+      "zOrder": 15,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 0,
+      "height": 960,
+      "layer": "Background",
+      "name": "BackgroundAustraliaM",
+      "persistentUuid": "f69922bf-2723-45f6-872b-f34941cf78a5",
+      "width": 992,
+      "x": 0,
+      "y": -256,
+      "zOrder": 15,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 0,
+      "height": 960,
+      "layer": "Background",
+      "name": "BackgroundAustraliaF",
+      "persistentUuid": "5ab0e98c-3336-411f-92cb-3bc42cf30b57",
+      "width": 992,
+      "x": 0,
+      "y": -250,
       "zOrder": 15,
       "numberProperties": [],
       "stringProperties": [],
@@ -3790,6 +3838,42 @@
       "variables": [],
       "effects": [],
       "behaviors": []
+    },
+    {
+      "assetStoreId": "",
+      "height": 32,
+      "name": "BackgroundAustraliaB",
+      "tags": "",
+      "texture": "assets\\AU_BG_01.png",
+      "type": "TiledSpriteObject::TiledSprite",
+      "width": 32,
+      "variables": [],
+      "effects": [],
+      "behaviors": []
+    },
+    {
+      "assetStoreId": "",
+      "height": 500,
+      "name": "BackgroundAustraliaM",
+      "tags": "",
+      "texture": "assets\\AU_MG_01.png",
+      "type": "TiledSpriteObject::TiledSprite",
+      "width": 500,
+      "variables": [],
+      "effects": [],
+      "behaviors": []
+    },
+    {
+      "assetStoreId": "",
+      "height": 500,
+      "name": "BackgroundAustraliaF",
+      "tags": "",
+      "texture": "assets\\AU_FG_01.png",
+      "type": "TiledSpriteObject::TiledSprite",
+      "width": 500,
+      "variables": [],
+      "effects": [],
+      "behaviors": []
     }
   ],
   "events": [
@@ -4245,9 +4329,29 @@
                         "value": "TiledSpriteObject::XOffset"
                       },
                       "parameters": [
-                        "Background3",
+                        "BackgroundAustraliaB",
                         "+",
-                        "(Variable(ObstacleSpeed)/500)*60*TimeDelta()"
+                        "(Variable(ObstacleSpeed)/500)*20*TimeDelta()"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "TiledSpriteObject::XOffset"
+                      },
+                      "parameters": [
+                        "BackgroundAustraliaM",
+                        "+",
+                        "(Variable(ObstacleSpeed)/500)*40*TimeDelta()"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "TiledSpriteObject::XOffset"
+                      },
+                      "parameters": [
+                        "BackgroundAustraliaF",
+                        "+",
+                        "(Variable(ObstacleSpeed)/200)*60*TimeDelta()"
                       ]
                     }
                   ]
@@ -4354,7 +4458,27 @@
                         "value": "ChangePlan"
                       },
                       "parameters": [
-                        "Background3",
+                        "BackgroundAustraliaB",
+                        "=",
+                        "14"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ChangePlan"
+                      },
+                      "parameters": [
+                        "BackgroundAustraliaM",
+                        "=",
+                        "14"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ChangePlan"
+                      },
+                      "parameters": [
+                        "BackgroundAustraliaF",
                         "=",
                         "14"
                       ]
@@ -4797,7 +4921,27 @@
                         "value": "ChangePlan"
                       },
                       "parameters": [
-                        "Background3",
+                        "BackgroundAustraliaB",
+                        "=",
+                        "17"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ChangePlan"
+                      },
+                      "parameters": [
+                        "BackgroundAustraliaM",
+                        "=",
+                        "17"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ChangePlan"
+                      },
+                      "parameters": [
+                        "BackgroundAustraliaF",
                         "=",
                         "17"
                       ]

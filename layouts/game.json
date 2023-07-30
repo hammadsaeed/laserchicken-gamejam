@@ -8118,6 +8118,16 @@
                                 },
                                 {
                                   "type": {
+                                    "value": "ModVarGlobal"
+                                  },
+                                  "parameters": [
+                                    "Coins",
+                                    "=",
+                                    "Variable(CoinCollected)"
+                                  ]
+                                },
+                                {
+                                  "type": {
                                     "value": "ChangePlan"
                                   },
                                   "parameters": [

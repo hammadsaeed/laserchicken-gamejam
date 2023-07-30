@@ -688,7 +688,7 @@
           "parameters": [
             "ScoreText",
             "=",
-            "\"Score   \" + GlobalVariableString(Score)"
+            "\"Score   \" + ToString(GlobalVariable(Score) + (GlobalVariable(Coins) * 100) - 2)"
           ]
         },
         {
@@ -711,7 +711,7 @@
           "actions": [
             {
               "type": {
-                "value": "PlayerAuthentication::DisplayAuthenticationBanner"
+                "value": "PlayerAuthentication::HideAuthenticationBanner"
               },
               "parameters": [
                 ""
@@ -945,7 +945,7 @@
                   "parameters": [
                     "",
                     "\"e23f5092-d41d-43ce-bfc7-5a3bd95c4158\"",
-                    "GlobalVariable(Score)"
+                    "GlobalVariable(Score) + (GlobalVariable(Coins) * 100) - 2"
                   ]
                 }
               ]
@@ -969,10 +969,8 @@
                   "parameters": [
                     "",
                     "\"e23f5092-d41d-43ce-bfc7-5a3bd95c4158\"",
-                    "GlobalVariable(Score)",
-                    "PlayerNameInput.Text()",
-                    "",
-                    ""
+                    "GlobalVariable(Score) + (GlobalVariable(Coins) * 100) - 2",
+                    "PlayerNameInput.Text()"
                   ]
                 },
                 {

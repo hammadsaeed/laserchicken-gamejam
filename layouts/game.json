@@ -1829,7 +1829,7 @@
           "directions": [
             {
               "looping": true,
-              "timeBetweenFrames": 0.10000000149011612,
+              "timeBetweenFrames": 0.1,
               "sprites": [
                 {
                   "hasCustomCollisionMask": true,
@@ -2611,7 +2611,7 @@
           "directions": [
             {
               "looping": false,
-              "timeBetweenFrames": 0.06,
+              "timeBetweenFrames": 0.05,
               "sprites": [
                 {
                   "hasCustomCollisionMask": true,
@@ -2700,6 +2700,552 @@
                 {
                   "hasCustomCollisionMask": true,
                   "image": "assets\\DANIEL_Crash_Ani_03.png",
+                  "points": [
+                    {
+                      "name": "DustProjection",
+                      "x": 25,
+                      "y": 103
+                    }
+                  ],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 114,
+                        "y": 78
+                      },
+                      {
+                        "x": 114,
+                        "y": 104
+                      },
+                      {
+                        "x": 32,
+                        "y": 104
+                      },
+                      {
+                        "x": 32,
+                        "y": 78
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets\\DANIEL_Crash_Ani_04.png",
+                  "points": [
+                    {
+                      "name": "DustProjection",
+                      "x": 25,
+                      "y": 103
+                    }
+                  ],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 114,
+                        "y": 78
+                      },
+                      {
+                        "x": 114,
+                        "y": 104
+                      },
+                      {
+                        "x": 32,
+                        "y": 104
+                      },
+                      {
+                        "x": 32,
+                        "y": 78
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets\\DANIEL_Crash_Ani_04.png",
+                  "points": [
+                    {
+                      "name": "DustProjection",
+                      "x": 25,
+                      "y": 103
+                    }
+                  ],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 114,
+                        "y": 78
+                      },
+                      {
+                        "x": 114,
+                        "y": 104
+                      },
+                      {
+                        "x": 32,
+                        "y": 104
+                      },
+                      {
+                        "x": 32,
+                        "y": 78
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets\\DANIEL_Crash_Ani_04.png",
+                  "points": [
+                    {
+                      "name": "DustProjection",
+                      "x": 25,
+                      "y": 103
+                    }
+                  ],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 114,
+                        "y": 78
+                      },
+                      {
+                        "x": 114,
+                        "y": 104
+                      },
+                      {
+                        "x": 32,
+                        "y": 104
+                      },
+                      {
+                        "x": 32,
+                        "y": 78
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets\\DANIEL_Crash_Ani_04.png",
+                  "points": [
+                    {
+                      "name": "DustProjection",
+                      "x": 25,
+                      "y": 103
+                    }
+                  ],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 114,
+                        "y": 78
+                      },
+                      {
+                        "x": 114,
+                        "y": 104
+                      },
+                      {
+                        "x": 32,
+                        "y": 104
+                      },
+                      {
+                        "x": 32,
+                        "y": 78
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets\\DANIEL_Crash_Ani_04.png",
+                  "points": [
+                    {
+                      "name": "DustProjection",
+                      "x": 25,
+                      "y": 103
+                    }
+                  ],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 114,
+                        "y": 78
+                      },
+                      {
+                        "x": 114,
+                        "y": 104
+                      },
+                      {
+                        "x": 32,
+                        "y": 104
+                      },
+                      {
+                        "x": 32,
+                        "y": 78
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets\\DANIEL_Crash_Ani_04.png",
+                  "points": [
+                    {
+                      "name": "DustProjection",
+                      "x": 25,
+                      "y": 103
+                    }
+                  ],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 114,
+                        "y": 78
+                      },
+                      {
+                        "x": 114,
+                        "y": 104
+                      },
+                      {
+                        "x": 32,
+                        "y": 104
+                      },
+                      {
+                        "x": 32,
+                        "y": 78
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets\\DANIEL_Crash_Ani_04.png",
+                  "points": [
+                    {
+                      "name": "DustProjection",
+                      "x": 25,
+                      "y": 103
+                    }
+                  ],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 114,
+                        "y": 78
+                      },
+                      {
+                        "x": 114,
+                        "y": 104
+                      },
+                      {
+                        "x": 32,
+                        "y": 104
+                      },
+                      {
+                        "x": 32,
+                        "y": 78
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets\\DANIEL_Crash_Ani_04.png",
+                  "points": [
+                    {
+                      "name": "DustProjection",
+                      "x": 25,
+                      "y": 103
+                    }
+                  ],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 114,
+                        "y": 78
+                      },
+                      {
+                        "x": 114,
+                        "y": 104
+                      },
+                      {
+                        "x": 32,
+                        "y": 104
+                      },
+                      {
+                        "x": 32,
+                        "y": 78
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets\\DANIEL_Crash_Ani_04.png",
+                  "points": [
+                    {
+                      "name": "DustProjection",
+                      "x": 25,
+                      "y": 103
+                    }
+                  ],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 114,
+                        "y": 78
+                      },
+                      {
+                        "x": 114,
+                        "y": 104
+                      },
+                      {
+                        "x": 32,
+                        "y": 104
+                      },
+                      {
+                        "x": 32,
+                        "y": 78
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets\\DANIEL_Crash_Ani_04.png",
+                  "points": [
+                    {
+                      "name": "DustProjection",
+                      "x": 25,
+                      "y": 103
+                    }
+                  ],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 114,
+                        "y": 78
+                      },
+                      {
+                        "x": 114,
+                        "y": 104
+                      },
+                      {
+                        "x": 32,
+                        "y": 104
+                      },
+                      {
+                        "x": 32,
+                        "y": 78
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets\\DANIEL_Crash_Ani_04.png",
+                  "points": [
+                    {
+                      "name": "DustProjection",
+                      "x": 25,
+                      "y": 103
+                    }
+                  ],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 114,
+                        "y": 78
+                      },
+                      {
+                        "x": 114,
+                        "y": 104
+                      },
+                      {
+                        "x": 32,
+                        "y": 104
+                      },
+                      {
+                        "x": 32,
+                        "y": 78
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets\\DANIEL_Crash_Ani_04.png",
+                  "points": [
+                    {
+                      "name": "DustProjection",
+                      "x": 25,
+                      "y": 103
+                    }
+                  ],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 114,
+                        "y": 78
+                      },
+                      {
+                        "x": 114,
+                        "y": 104
+                      },
+                      {
+                        "x": 32,
+                        "y": 104
+                      },
+                      {
+                        "x": 32,
+                        "y": 78
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets\\DANIEL_Crash_Ani_04.png",
                   "points": [
                     {
                       "name": "DustProjection",
@@ -3432,6 +3978,7 @@
   ],
   "events": [
     {
+      "folded": true,
       "type": "BuiltinCommonInstructions::Standard",
       "conditions": [
         {
@@ -3558,6 +4105,7 @@
           "colorG": 196,
           "colorR": 74,
           "creationTime": 0,
+          "folded": true,
           "name": "Preparing to start",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -4085,16 +4633,6 @@
                         "value": "ChangePlan"
                       },
                       "parameters": [
-                        "TrialTunnel",
-                        "=",
-                        "15"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "ChangePlan"
-                      },
-                      "parameters": [
                         "Background",
                         "=",
                         "15"
@@ -4161,6 +4699,258 @@
                 },
                 {
                   "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::Or"
+                      },
+                      "parameters": [],
+                      "subInstructions": [
+                        {
+                          "type": {
+                            "value": "VarGlobal"
+                          },
+                          "parameters": [
+                            "Score",
+                            ">",
+                            "9860"
+                          ]
+                        }
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "MettreX"
+                      },
+                      "parameters": [
+                        "TrialTunnel2",
+                        "-",
+                        "(Variable(ObstacleSpeed)/50)*60*TimeDelta()"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetAnimationName"
+                      },
+                      "parameters": [
+                        "Dino",
+                        "\"Run\""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::Or"
+                      },
+                      "parameters": [],
+                      "subInstructions": [
+                        {
+                          "type": {
+                            "value": "VarGlobal"
+                          },
+                          "parameters": [
+                            "Score",
+                            ">",
+                            "9920"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::Once"
+                      },
+                      "parameters": []
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetSceneVariableAsBoolean"
+                      },
+                      "parameters": [
+                        "ChangingCountry",
+                        "True"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::Or"
+                      },
+                      "parameters": [],
+                      "subInstructions": [
+                        {
+                          "type": {
+                            "value": "VarGlobal"
+                          },
+                          "parameters": [
+                            "Score",
+                            ">",
+                            "10000"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::Once"
+                      },
+                      "parameters": []
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "ModVarScene"
+                      },
+                      "parameters": [
+                        "CurrentCountry",
+                        "+",
+                        "1"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::Or"
+                      },
+                      "parameters": [],
+                      "subInstructions": [
+                        {
+                          "type": {
+                            "value": "VarScene"
+                          },
+                          "parameters": [
+                            "CurrentCountry",
+                            "=",
+                            "2"
+                          ]
+                        }
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "ChangePlan"
+                      },
+                      "parameters": [
+                        "Background3",
+                        "=",
+                        "17"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ChangePlan"
+                      },
+                      "parameters": [
+                        "Background2",
+                        "=",
+                        "15"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ChangePlan"
+                      },
+                      "parameters": [
+                        "TrialTunnel2",
+                        "=",
+                        "15"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ChangePlan"
+                      },
+                      "parameters": [
+                        "Background",
+                        "=",
+                        "15"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetAnimationName"
+                      },
+                      "parameters": [
+                        "CactusObstacle",
+                        "\"PalmTree\""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::Or"
+                      },
+                      "parameters": [],
+                      "subInstructions": [
+                        {
+                          "type": {
+                            "value": "VarScene"
+                          },
+                          "parameters": [
+                            "CurrentCountry",
+                            "=",
+                            "2"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::Once"
+                      },
+                      "parameters": []
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Wait"
+                      },
+                      "parameters": [
+                        "1"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetSceneVariableAsBoolean"
+                      },
+                      "parameters": [
+                        "ChangingCountry",
+                        "False"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": []
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [],
                   "actions": [
                     {
@@ -4210,6 +5000,7 @@
                   "colorG": 176,
                   "colorR": 74,
                   "creationTime": 0,
+                  "folded": true,
                   "name": "Dino z-index",
                   "source": "",
                   "type": "BuiltinCommonInstructions::Group",
@@ -4306,6 +5097,7 @@
                   "colorG": 176,
                   "colorR": 74,
                   "creationTime": 0,
+                  "folded": true,
                   "name": "Dino movements",
                   "source": "",
                   "type": "BuiltinCommonInstructions::Group",
@@ -7374,6 +8166,7 @@
                   "colorG": 176,
                   "colorR": 74,
                   "creationTime": 0,
+                  "folded": true,
                   "name": "Game Over",
                   "source": "",
                   "type": "BuiltinCommonInstructions::Group",
@@ -7391,6 +8184,7 @@
                       "comment": "Player loses when either of these conditions is checked :\n- Dino collided with a Cactus\n- Dino collided with an Island and is under it (= the played did not duck)\n\nAND\n- Dino IS NOT invincible"
                     },
                     {
+                      "folded": true,
                       "type": "BuiltinCommonInstructions::Standard",
                       "conditions": [
                         {
@@ -7609,6 +8403,7 @@
           "colorG": 147,
           "colorR": 74,
           "creationTime": 0,
+          "folded": true,
           "name": "Game lost",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",

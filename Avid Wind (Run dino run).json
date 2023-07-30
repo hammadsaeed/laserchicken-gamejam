@@ -2438,6 +2438,24 @@
         "name": "Screenshot 2023-07-30175402.png",
         "smoothed": true,
         "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/PW_Shield_01.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\PW_Shield_01.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/PW_Flight_01.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\PW_Flight_01.png",
+        "smoothed": true,
+        "userAdded": true
       }
     ],
     "resourceFolders": []

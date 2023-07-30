@@ -2390,6 +2390,15 @@
         "name": "assets\\AU_Cact_01.png",
         "smoothed": true,
         "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/PW_Magnet_01.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\PW_Magnet_01.png",
+        "smoothed": true,
+        "userAdded": true
       }
     ],
     "resourceFolders": []

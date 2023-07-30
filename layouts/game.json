@@ -1216,7 +1216,7 @@
               "sprites": [
                 {
                   "hasCustomCollisionMask": false,
-                  "image": "assets\\Circle glass_Perfect.png",
+                  "image": "assets\\PW_Magnet_01.png",
                   "points": [],
                   "originPoint": {
                     "name": "origine",

@@ -2009,6 +2009,13 @@
         "name": "assets\\BG_MY_FG_Test.png",
         "smoothed": true,
         "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/Bush.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\Bush.png"
       }
     ],
     "resourceFolders": []

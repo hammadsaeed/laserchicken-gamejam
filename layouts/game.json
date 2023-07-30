@@ -5367,6 +5367,7 @@
                           "comment": "Makes ParticleEmitter follow the Dino if he lands on an Island."
                         },
                         {
+                          "disabled": true,
                           "type": "BuiltinCommonInstructions::Standard",
                           "conditions": [
                             {
@@ -5402,6 +5403,7 @@
                       ]
                     },
                     {
+                      "disabled": true,
                       "type": "BuiltinCommonInstructions::Standard",
                       "conditions": [
                         {
